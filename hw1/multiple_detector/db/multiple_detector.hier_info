@@ -1,0 +1,20 @@
+|multiple_detector
+a[0] => Mod0.IN4
+a[1] => Mod0.IN3
+a[2] => Mod0.IN2
+a[3] => Mod0.IN1
+a[4] => Mod0.IN0
+b[0] => Mod0.IN9
+b[0] => Equal1.IN9
+b[1] => Mod0.IN8
+b[1] => Equal1.IN8
+b[2] => Mod0.IN7
+b[2] => Equal1.IN7
+b[3] => Mod0.IN6
+b[3] => Equal1.IN6
+b[4] => Mod0.IN5
+b[4] => Equal1.IN5
+is_multiple <= is_multiple.DB_MAX_OUTPUT_PORT_TYPE
+invalid_inp <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+
+

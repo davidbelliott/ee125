@@ -1,0 +1,1083 @@
+$comment
+	File created using the following command:
+		vcd file multiple_detector.msim.vcd -direction
+$end
+$date
+	Sun Apr 22 21:45:14 2018
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module multiple_detector_vlg_vec_tst $end
+$var reg 5 ! a [4:0] $end
+$var reg 5 " b [4:0] $end
+$var wire 1 # invalid_inp $end
+$var wire 1 $ is_multiple $end
+$var wire 1 % sampler $end
+$scope module i1 $end
+$var wire 1 & gnd $end
+$var wire 1 ' vcc $end
+$var wire 1 ( unknown $end
+$var tri1 1 ) devclrn $end
+$var tri1 1 * devpor $end
+$var tri1 1 + devoe $end
+$var wire 1 , Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~4_combout $end
+$var wire 1 - Mod0|auto_generated|divider|divider|add_sub_3_result_int[1]~2_combout $end
+$var wire 1 . Mod0|auto_generated|divider|divider|add_sub_3_result_int[2]~4_combout $end
+$var wire 1 / Mod0|auto_generated|divider|divider|add_sub_4_result_int[2]~4_combout $end
+$var wire 1 0 Equal1~0_combout $end
+$var wire 1 1 Mod0|auto_generated|divider|divider|StageOut[12]~5_combout $end
+$var wire 1 2 a[1]~input_o $end
+$var wire 1 3 is_multiple~output_o $end
+$var wire 1 4 invalid_inp~output_o $end
+$var wire 1 5 b[0]~input_o $end
+$var wire 1 6 b[1]~input_o $end
+$var wire 1 7 Equal1~1_combout $end
+$var wire 1 8 b[3]~input_o $end
+$var wire 1 9 a[4]~input_o $end
+$var wire 1 : b[4]~input_o $end
+$var wire 1 ; b[2]~input_o $end
+$var wire 1 < Mod0|auto_generated|divider|divider|StageOut[5]~2_combout $end
+$var wire 1 = a[3]~input_o $end
+$var wire 1 > Mod0|auto_generated|divider|divider|StageOut[5]~3_combout $end
+$var wire 1 ? Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~1 $end
+$var wire 1 @ Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~2_combout $end
+$var wire 1 A Mod0|auto_generated|divider|divider|StageOut[6]~0_combout $end
+$var wire 1 B Mod0|auto_generated|divider|divider|StageOut[6]~1_combout $end
+$var wire 1 C Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~3 $end
+$var wire 1 D Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~5 $end
+$var wire 1 E Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~6_combout $end
+$var wire 1 F Mod0|auto_generated|divider|divider|StageOut[11]~6_combout $end
+$var wire 1 G Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~0_combout $end
+$var wire 1 H a[2]~input_o $end
+$var wire 1 I Mod0|auto_generated|divider|divider|StageOut[10]~4_combout $end
+$var wire 1 J Mod0|auto_generated|divider|divider|add_sub_3_result_int[0]~1 $end
+$var wire 1 K Mod0|auto_generated|divider|divider|add_sub_3_result_int[1]~3 $end
+$var wire 1 L Mod0|auto_generated|divider|divider|add_sub_3_result_int[2]~5 $end
+$var wire 1 M Mod0|auto_generated|divider|divider|add_sub_3_result_int[3]~7 $end
+$var wire 1 N Mod0|auto_generated|divider|divider|add_sub_3_result_int[4]~8_combout $end
+$var wire 1 O Mod0|auto_generated|divider|divider|add_sub_3_result_int[0]~0_combout $end
+$var wire 1 P Mod0|auto_generated|divider|divider|StageOut[15]~8_combout $end
+$var wire 1 Q Mod0|auto_generated|divider|divider|add_sub_3_result_int[3]~6_combout $end
+$var wire 1 R Mod0|auto_generated|divider|divider|StageOut[18]~10_combout $end
+$var wire 1 S Mod0|auto_generated|divider|divider|StageOut[16]~7_combout $end
+$var wire 1 T a[0]~input_o $end
+$var wire 1 U Mod0|auto_generated|divider|divider|add_sub_4_result_int[0]~1 $end
+$var wire 1 V Mod0|auto_generated|divider|divider|add_sub_4_result_int[1]~3 $end
+$var wire 1 W Mod0|auto_generated|divider|divider|add_sub_4_result_int[2]~5 $end
+$var wire 1 X Mod0|auto_generated|divider|divider|add_sub_4_result_int[3]~7 $end
+$var wire 1 Y Mod0|auto_generated|divider|divider|add_sub_4_result_int[4]~9 $end
+$var wire 1 Z Mod0|auto_generated|divider|divider|add_sub_4_result_int[5]~10_combout $end
+$var wire 1 [ is_multiple~2_combout $end
+$var wire 1 \ Mod0|auto_generated|divider|divider|StageOut[17]~9_combout $end
+$var wire 1 ] is_multiple~3_combout $end
+$var wire 1 ^ Mod0|auto_generated|divider|divider|add_sub_4_result_int[4]~8_combout $end
+$var wire 1 _ Mod0|auto_generated|divider|divider|add_sub_4_result_int[3]~6_combout $end
+$var wire 1 ` is_multiple~0_combout $end
+$var wire 1 a Mod0|auto_generated|divider|divider|add_sub_4_result_int[1]~2_combout $end
+$var wire 1 b Mod0|auto_generated|divider|divider|add_sub_4_result_int[0]~0_combout $end
+$var wire 1 c is_multiple~1_combout $end
+$var wire 1 d is_multiple~4_combout $end
+$var wire 1 e Mod0|auto_generated|divider|divider|selnose [29] $end
+$var wire 1 f Mod0|auto_generated|divider|divider|selnose [28] $end
+$var wire 1 g Mod0|auto_generated|divider|divider|selnose [27] $end
+$var wire 1 h Mod0|auto_generated|divider|divider|selnose [26] $end
+$var wire 1 i Mod0|auto_generated|divider|divider|selnose [25] $end
+$var wire 1 j Mod0|auto_generated|divider|divider|selnose [24] $end
+$var wire 1 k Mod0|auto_generated|divider|divider|selnose [23] $end
+$var wire 1 l Mod0|auto_generated|divider|divider|selnose [22] $end
+$var wire 1 m Mod0|auto_generated|divider|divider|selnose [21] $end
+$var wire 1 n Mod0|auto_generated|divider|divider|selnose [20] $end
+$var wire 1 o Mod0|auto_generated|divider|divider|selnose [19] $end
+$var wire 1 p Mod0|auto_generated|divider|divider|selnose [18] $end
+$var wire 1 q Mod0|auto_generated|divider|divider|selnose [17] $end
+$var wire 1 r Mod0|auto_generated|divider|divider|selnose [16] $end
+$var wire 1 s Mod0|auto_generated|divider|divider|selnose [15] $end
+$var wire 1 t Mod0|auto_generated|divider|divider|selnose [14] $end
+$var wire 1 u Mod0|auto_generated|divider|divider|selnose [13] $end
+$var wire 1 v Mod0|auto_generated|divider|divider|selnose [12] $end
+$var wire 1 w Mod0|auto_generated|divider|divider|selnose [11] $end
+$var wire 1 x Mod0|auto_generated|divider|divider|selnose [10] $end
+$var wire 1 y Mod0|auto_generated|divider|divider|selnose [9] $end
+$var wire 1 z Mod0|auto_generated|divider|divider|selnose [8] $end
+$var wire 1 { Mod0|auto_generated|divider|divider|selnose [7] $end
+$var wire 1 | Mod0|auto_generated|divider|divider|selnose [6] $end
+$var wire 1 } Mod0|auto_generated|divider|divider|selnose [5] $end
+$var wire 1 ~ Mod0|auto_generated|divider|divider|selnose [4] $end
+$var wire 1 !! Mod0|auto_generated|divider|divider|selnose [3] $end
+$var wire 1 "! Mod0|auto_generated|divider|divider|selnose [2] $end
+$var wire 1 #! Mod0|auto_generated|divider|divider|selnose [1] $end
+$var wire 1 $! Mod0|auto_generated|divider|divider|selnose [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+b0 "
+x#
+x$
+x%
+0&
+1'
+x(
+1)
+1*
+1+
+x,
+x-
+x.
+x/
+x0
+x1
+02
+x3
+x4
+05
+06
+x7
+08
+09
+0:
+0;
+x<
+0=
+x>
+x?
+x@
+xA
+xB
+xC
+xD
+xE
+xF
+xG
+0H
+xI
+xJ
+xK
+xL
+xM
+xN
+xO
+xP
+xQ
+xR
+xS
+0T
+xU
+xV
+xW
+xX
+xY
+xZ
+x[
+x\
+x]
+x^
+x_
+x`
+xa
+xb
+xc
+xd
+z$!
+z#!
+z"!
+z!!
+z~
+z}
+z|
+z{
+zz
+zy
+zx
+zw
+xv
+zu
+zt
+zs
+zr
+zq
+zp
+zo
+zn
+zm
+zl
+zk
+zj
+zi
+zh
+zg
+zf
+ze
+$end
+#3883
+0>
+#4042
+0B
+#4099
+0G
+#4105
+0O
+#4122
+1<
+#4137
+0b
+#4175
+1J
+#4177
+1?
+#4207
+1U
+#4289
+10
+#4551
+0P
+#4558
+1A
+#4710
+0I
+#4729
+0K
+#4732
+0C
+#4787
+1L
+#4790
+1D
+#4795
+0V
+#4845
+0M
+#4853
+1W
+#4860
+17
+#4911
+0X
+#4969
+1Y
+#5169
+0,
+#5227
+0E
+#5246
+0@
+#5282
+0N
+#5332
+0a
+#5334
+0-
+#5406
+0Z
+#5548
+0v
+#5596
+0d
+#5618
+01
+#5947
+0S
+#5995
+0[
+#6121
+0F
+#6245
+0Q
+#6604
+0]
+#6691
+0R
+#6724
+0/
+#6866
+0.
+#7460
+0\
+#7467
+0^
+#8215
+0_
+#8382
+14
+1#
+#8543
+1`
+#9107
+1c
+#9650
+03
+0$
+#80000
+b1 "
+0%
+#80517
+15
+#84164
+07
+#84165
+0A
+#84253
+0J
+#84254
+0?
+#84284
+0U
+#84285
+1O
+#84286
+1G
+#84311
+1K
+#84312
+1C
+#84319
+1b
+#84336
+0<
+#84342
+1V
+#84369
+0L
+#84370
+0D
+#84400
+0W
+#84427
+1M
+#84458
+1X
+#84516
+0Y
+#84616
+0c
+#84706
+1P
+#84708
+1-
+#84709
+1@
+#84739
+1a
+#84766
+1.
+#84767
+1,
+#84797
+1/
+#84824
+1Q
+#84825
+1E
+#84850
+1I
+#84855
+1_
+#84882
+1N
+#84913
+1^
+#84971
+1Z
+#85131
+1v
+#85190
+11
+#85273
+1S
+#85373
+0`
+#85383
+0K
+#85405
+0V
+#85438
+0-
+#85441
+1L
+#85460
+0a
+#85463
+1W
+#85479
+0P
+#85521
+0X
+#85557
+1F
+#85571
+01
+#85572
+0I
+#85579
+1Y
+#85724
+0M
+#85746
+1R
+#85820
+0.
+#85841
+0F
+#85900
+0_
+#85958
+0^
+#86016
+0Z
+#86161
+0N
+#86162
+0S
+#86188
+1-
+#86194
+0R
+#86198
+0Q
+#86252
+1a
+#86253
+1[
+#86269
+1K
+#86327
+0L
+#86333
+1V
+#86385
+1M
+#86471
+1^
+#86605
+0[
+#86656
+1]
+#86724
+1.
+#86753
+1S
+#86774
+1P
+#86782
+1Q
+#86840
+1N
+#86888
+0W
+#86946
+1X
+#87004
+0Y
+#87156
+0S
+#87214
+0]
+#87217
+1d
+#87343
+1_
+#87437
+0P
+#87459
+1Z
+#87473
+0V
+#87528
+0a
+#87581
+1W
+#87613
+04
+0#
+#87639
+0X
+#87697
+1Y
+#87801
+0d
+#87933
+0/
+#88018
+0_
+#88076
+0^
+#88134
+0Z
+#88210
+1a
+#88211
+1[
+#88291
+1V
+#88349
+0W
+#88407
+1X
+#88465
+0Y
+#88723
+0[
+#88744
+1`
+#88746
+1/
+#88773
+1]
+#88804
+1_
+#88862
+1^
+#88920
+1Z
+#89322
+0`
+#89332
+0]
+#89334
+1d
+#89505
+1[
+#89919
+0d
+#90067
+1]
+#90628
+1d
+#94768
+13
+1$
+#160000
+b11 "
+b10 "
+1%
+#160507
+16
+#160691
+05
+#164788
+0O
+#164790
+0G
+#164813
+1<
+#164828
+0b
+#164866
+1J
+#164868
+1?
+#164898
+1U
+#240000
+b1 !
+b0 "
+0%
+#240515
+1T
+#240681
+06
+#241912
+0[
+#242176
+1b
+#242521
+0]
+#243108
+0d
+#244949
+17
+#245239
+1A
+#245410
+0K
+#245413
+0C
+#245462
+0-
+#245465
+0@
+#245468
+1L
+#245471
+1D
+#245476
+0V
+#245526
+0M
+#245528
+0a
+#245534
+1W
+#245592
+0X
+#245650
+1Y
+#245847
+0.
+#245850
+0,
+#245905
+0Q
+#245908
+0E
+#245913
+0/
+#245963
+0N
+#245971
+0_
+#246029
+0^
+#246087
+0Z
+#246229
+0v
+#246697
+1`
+#247162
+03
+0$
+#248471
+14
+1#
+#320000
+b11 !
+b10 !
+1%
+#320525
+12
+#320688
+0T
+#322339
+0b
+#322670
+1c
+#324326
+1O
+#324747
+1P
+#325493
+1a
+#325913
+0c
+#400000
+b110 !
+b100 !
+b101 !
+0%
+#400515
+1T
+#400517
+1H
+#400698
+02
+#402176
+1b
+#404234
+1G
+#404798
+1I
+#404803
+0O
+#405249
+0P
+#405378
+1-
+#405943
+1S
+#406030
+0a
+#406669
+1/
+#407245
+0`
+#480000
+b1101 !
+b10 "
+b1100 !
+1%
+#480507
+16
+#480555
+1=
+#480688
+0T
+#482339
+0b
+#484151
+1>
+#484456
+07
+#484748
+0A
+#484951
+1@
+#484975
+0-
+#485010
+1a
+#485046
+1C
+#485104
+0D
+#485105
+1V
+#485455
+0C
+#485510
+0@
+#485513
+1D
+#485542
+0/
+#485588
+0S
+#486136
+1`
+#486314
+0W
+#486340
+1/
+#486372
+1X
+#486430
+0Y
+#486769
+1_
+#486827
+1^
+#486885
+1Z
+#486916
+0`
+#487470
+1[
+#487905
+04
+0#
+#488032
+1]
+#488593
+1d
+#492733
+13
+1$
+#560000
+b11 "
+0%
+#560517
+15
+#564253
+0J
+#564284
+0U
+#564285
+1O
+#564304
+0G
+#564311
+1K
+#564319
+1b
+#564336
+0<
+#564369
+0L
+#564427
+1M
+#564706
+1P
+#564708
+1-
+#564721
+0a
+#564766
+1.
+#564824
+1Q
+#564882
+1N
+#564915
+0I
+#565452
+1a
+#565461
+0[
+#565479
+0P
+#565539
+0-
+#566070
+0]
+#566253
+1[
+#566260
+0a
+#566657
+0d
+#566815
+1]
+#567376
+1d
+#640000
+b111 "
+b101 "
+1%
+#640507
+1;
+#640681
+06
+#644241
+1<
+#644429
+0D
+#644470
+1,
+#644482
+0.
+#644499
+00
+#644502
+0/
+#644884
+1E
+#644893
+11
+#645190
+1v
+#645427
+0M
+#645436
+1-
+#645439
+1@
+#645449
+1R
+#645480
+0Q
+#645502
+1a
+#645630
+01
+#645641
+1I
+#645864
+0N
+#645909
+0d
+#645910
+1F
+#646174
+0K
+#646195
+1S
+#646199
+0^
+#646229
+0-
+#646245
+1Q
+#646253
+0R
+#646276
+1Y
+#646325
+1M
+#646477
+1P
+#646655
+0]
+#646666
+1R
+#646708
+1L
+#646713
+0Z
+#646747
+1d
+#646766
+0M
+#646842
+0S
+#646921
+1/
+#646978
+0Y
+#647004
+1^
+#647145
+0Q
+#647176
+0V
+#647231
+0a
+#647232
+0[
+#647234
+1W
+#647242
+0d
+#647292
+0X
+#647336
+1]
+#647433
+1Z
+#647493
+1Y
+#647568
+0W
+#647591
+0R
+#647626
+1X
+#647841
+0]
+#647930
+0Z
+#648316
+0Y
+#648771
+1Z
+#651296
+03
+0$
+#720000
+b10101 "
+b11101 "
+b11100 "
+b11000 "
+0%
+#720515
+1:
+#720517
+18
+#720681
+0;
+#720691
+05
+#724062
+0P
+#724071
+1\
+#724150
+1S
+#724328
+0^
+#724334
+1Q
+#724397
+0_
+#724436
+1M
+#724658
+1A
+#724772
+1G
+#724786
+1_
+#724788
+0O
+#724828
+0b
+#724835
+1a
+#724836
+1[
+#724866
+1J
+#724891
+1N
+#724898
+1U
+#724938
+1.
+#724951
+0,
+#724978
+1W
+#725019
+1D
+#725036
+0X
+#725321
+1-
+#725335
+0a
+#725415
+0_
+#725456
+0E
+#725491
+1^
+#800000
+b1000 !
+b0 !
+b1000 "
+b0 "
+1%
+#800688
+0:
+#800691
+0H
+08
+#800728
+0=
+#804582
+0I
+#804611
+0>
+#804749
+0G
+#804788
+0^
+#804798
+0M
+#804836
+0v
+#804849
+0Q
+#804856
+1Y
+#804880
+1_
+#804888
+10
+#805172
+0S
+#805206
+0-
+#805235
+0N
+#805293
+0Z
+#805459
+17
+#805882
+0[
+#805949
+0/
+#805974
+0@
+#806849
+0F
+#807594
+0.
+#808188
+0\
+#808943
+0_
+#808981
+14
+1#
+#809271
+1`
+#809835
+1c
+#1000000
