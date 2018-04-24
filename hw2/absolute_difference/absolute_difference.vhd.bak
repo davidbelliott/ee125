@@ -1,0 +1,13 @@
+--------------------------------------------------------------------------------
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+--------------------------------------------------------------------------------
+entity absolute_difference is
+	generic (
+		SIZE: positive := 6;
+		BITS: positive := 5);
+	port (
+        result:);
+end entity;
