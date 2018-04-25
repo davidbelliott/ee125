@@ -1,0 +1,375 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+
+--x[0] is x[0] at PIN_N15
+x[0] = INPUT();
+
+
+
+--x[1] is x[1] at PIN_C14
+x[1] = INPUT();
+
+
+
+--x[2] is x[2] at PIN_V5
+x[2] = INPUT();
+
+
+
+--x[3] is x[3] at PIN_J17
+x[3] = INPUT();
+
+
+
+--x[4] is x[4] at PIN_D6
+x[4] = INPUT();
+
+
+
+--x[5] is x[5] at PIN_D12
+x[5] = INPUT();
+
+
+
+--x[6] is x[6] at PIN_P18
+x[6] = INPUT();
+
+
+
+--x[7] is x[7] at PIN_A6
+x[7] = INPUT();
+
+
+--A1L4 is ssd[0]~output at IOOBUF_X7_Y0_N2
+A1L4 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--ssd[0] is ssd[0] at PIN_T7
+ssd[0] = OUTPUT();
+
+
+--A1L6 is ssd[1]~output at IOOBUF_X52_Y15_N2
+A1L6 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--ssd[1] is ssd[1] at PIN_M16
+ssd[1] = OUTPUT();
+
+
+--A1L8 is ssd[2]~output at IOOBUF_X46_Y41_N9
+A1L8 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--ssd[2] is ssd[2] at PIN_D16
+ssd[2] = OUTPUT();
+
+
+--A1L10 is ssd[3]~output at IOOBUF_X48_Y41_N9
+A1L10 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--ssd[3] is ssd[3] at PIN_C17
+ssd[3] = OUTPUT();
+
+
+--A1L12 is ssd[4]~output at IOOBUF_X46_Y41_N2
+A1L12 = OUTPUT_BUFFER.O(.I(VCC), , , , , , , , , , , , , , , , , );
+
+
+--ssd[4] is ssd[4] at PIN_D15
+ssd[4] = OUTPUT();
+
+
+--A1L14 is ssd[5]~output at IOOBUF_X52_Y23_N2
+A1L14 = OUTPUT_BUFFER.O(.I(VCC), , , , , , , , , , , , , , , , , );
+
+
+--ssd[5] is ssd[5] at PIN_J16
+ssd[5] = OUTPUT();
+
+
+--A1L16 is ssd[6]~output at IOOBUF_X46_Y41_N16
+A1L16 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--ssd[6] is ssd[6] at PIN_A17
+ssd[6] = OUTPUT();
+
+
+--A1L36 is y[0]~output at IOOBUF_X46_Y0_N16
+A1L36 = OUTPUT_BUFFER.O(.I(VCC), , , , , , , , , , , , , , , , , );
+
+
+--y[0] is y[0] at PIN_V18
+y[0] = OUTPUT();
+
+
+--A1L38 is y[1]~output at IOOBUF_X43_Y0_N9
+A1L38 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[1] is y[1] at PIN_V16
+y[1] = OUTPUT();
+
+
+--A1L40 is y[2]~output at IOOBUF_X29_Y41_N9
+A1L40 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[2] is y[2] at PIN_E10
+y[2] = OUTPUT();
+
+
+--A1L42 is y[3]~output at IOOBUF_X31_Y0_N2
+A1L42 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[3] is y[3] at PIN_U12
+y[3] = OUTPUT();
+
+
+--A1L44 is y[4]~output at IOOBUF_X52_Y27_N9
+A1L44 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[4] is y[4] at PIN_G17
+y[4] = OUTPUT();
+
+
+--A1L46 is y[5]~output at IOOBUF_X41_Y41_N16
+A1L46 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[5] is y[5] at PIN_D13
+y[5] = OUTPUT();
+
+
+--A1L48 is y[6]~output at IOOBUF_X48_Y41_N2
+A1L48 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[6] is y[6] at PIN_C16
+y[6] = OUTPUT();
+
+
+--A1L50 is y[7]~output at IOOBUF_X1_Y0_N2
+A1L50 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[7] is y[7] at PIN_N6
+y[7] = OUTPUT();
+
+
+--A1L52 is y[8]~output at IOOBUF_X12_Y0_N9
+A1L52 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[8] is y[8] at PIN_U7
+y[8] = OUTPUT();
+
+
+--A1L54 is y[9]~output at IOOBUF_X23_Y41_N9
+A1L54 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[9] is y[9] at PIN_A11
+y[9] = OUTPUT();
+
+
+--A1L56 is y[10]~output at IOOBUF_X34_Y41_N2
+A1L56 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[10] is y[10] at PIN_A14
+y[10] = OUTPUT();
+
+
+--A1L58 is y[11]~output at IOOBUF_X34_Y41_N9
+A1L58 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[11] is y[11] at PIN_A15
+y[11] = OUTPUT();
+
+
+--A1L60 is y[12]~output at IOOBUF_X31_Y0_N23
+A1L60 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[12] is y[12] at PIN_R11
+y[12] = OUTPUT();
+
+
+--A1L62 is y[13]~output at IOOBUF_X52_Y28_N9
+A1L62 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[13] is y[13] at PIN_G15
+y[13] = OUTPUT();
+
+
+--A1L64 is y[14]~output at IOOBUF_X52_Y15_N9
+A1L64 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[14] is y[14] at PIN_M17
+y[14] = OUTPUT();
+
+
+--A1L66 is y[15]~output at IOOBUF_X31_Y41_N23
+A1L66 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[15] is y[15] at PIN_B13
+y[15] = OUTPUT();
+
+
+--A1L68 is y[16]~output at IOOBUF_X50_Y41_N2
+A1L68 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[16] is y[16] at PIN_C18
+y[16] = OUTPUT();
+
+
+--A1L70 is y[17]~output at IOOBUF_X34_Y0_N2
+A1L70 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[17] is y[17] at PIN_V15
+y[17] = OUTPUT();
+
+
+--A1L72 is y[18]~output at IOOBUF_X31_Y41_N2
+A1L72 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[18] is y[18] at PIN_D11
+y[18] = OUTPUT();
+
+
+--A1L74 is y[19]~output at IOOBUF_X52_Y13_N2
+A1L74 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[19] is y[19] at PIN_L15
+y[19] = OUTPUT();
+
+
+--A1L76 is y[20]~output at IOOBUF_X52_Y10_N2
+A1L76 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[20] is y[20] at PIN_R16
+y[20] = OUTPUT();
+
+
+--A1L78 is y[21]~output at IOOBUF_X52_Y25_N9
+A1L78 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[21] is y[21] at PIN_G18
+y[21] = OUTPUT();
+
+
+--A1L80 is y[22]~output at IOOBUF_X25_Y41_N2
+A1L80 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[22] is y[22] at PIN_C10
+y[22] = OUTPUT();
+
+
+--A1L82 is y[23]~output at IOOBUF_X46_Y0_N2
+A1L82 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[23] is y[23] at PIN_T17
+y[23] = OUTPUT();
+
+
+--A1L84 is y[24]~output at IOOBUF_X52_Y27_N2
+A1L84 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[24] is y[24] at PIN_G16
+y[24] = OUTPUT();
+
+
+--A1L86 is y[25]~output at IOOBUF_X52_Y28_N2
+A1L86 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[25] is y[25] at PIN_H16
+y[25] = OUTPUT();
+
+
+--A1L88 is y[26]~output at IOOBUF_X52_Y30_N9
+A1L88 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[26] is y[26] at PIN_E18
+y[26] = OUTPUT();
+
+
+--A1L90 is y[27]~output at IOOBUF_X38_Y41_N2
+A1L90 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[27] is y[27] at PIN_A16
+y[27] = OUTPUT();
+
+
+--A1L92 is y[28]~output at IOOBUF_X52_Y31_N9
+A1L92 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[28] is y[28] at PIN_D18
+y[28] = OUTPUT();
+
+
+--A1L94 is y[29]~output at IOOBUF_X10_Y41_N2
+A1L94 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[29] is y[29] at PIN_C7
+y[29] = OUTPUT();
+
+
+--A1L96 is y[30]~output at IOOBUF_X38_Y0_N9
+A1L96 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[30] is y[30] at PIN_P12
+y[30] = OUTPUT();
+
+
+--A1L98 is y[31]~output at IOOBUF_X46_Y41_N23
+A1L98 = OUTPUT_BUFFER.O(.I(VCC), , , , , , , , , , , , , , , , , );
+
+
+--y[31] is y[31] at PIN_A18
+y[31] = OUTPUT();
+
+
+
+
+
+
+
+
+
+
+
+

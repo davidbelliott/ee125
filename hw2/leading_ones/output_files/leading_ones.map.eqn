@@ -1,0 +1,209 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--x[0] is x[0]
+x[0] = INPUT();
+
+
+--x[1] is x[1]
+x[1] = INPUT();
+
+
+--x[2] is x[2]
+x[2] = INPUT();
+
+
+--x[3] is x[3]
+x[3] = INPUT();
+
+
+--x[4] is x[4]
+x[4] = INPUT();
+
+
+--x[5] is x[5]
+x[5] = INPUT();
+
+
+--x[6] is x[6]
+x[6] = INPUT();
+
+
+--x[7] is x[7]
+x[7] = INPUT();
+
+
+--ssd[0] is ssd[0]
+ssd[0] = OUTPUT(A1L51);
+
+
+--ssd[1] is ssd[1]
+ssd[1] = OUTPUT(A1L51);
+
+
+--ssd[2] is ssd[2]
+ssd[2] = OUTPUT(A1L51);
+
+
+--ssd[3] is ssd[3]
+ssd[3] = OUTPUT(A1L51);
+
+
+--ssd[4] is ssd[4]
+ssd[4] = OUTPUT(A1L52);
+
+
+--ssd[5] is ssd[5]
+ssd[5] = OUTPUT(A1L52);
+
+
+--ssd[6] is ssd[6]
+ssd[6] = OUTPUT(A1L51);
+
+
+--y[0] is y[0]
+y[0] = OUTPUT(A1L52);
+
+
+--y[1] is y[1]
+y[1] = OUTPUT(A1L51);
+
+
+--y[2] is y[2]
+y[2] = OUTPUT(A1L51);
+
+
+--y[3] is y[3]
+y[3] = OUTPUT(A1L51);
+
+
+--y[4] is y[4]
+y[4] = OUTPUT(A1L51);
+
+
+--y[5] is y[5]
+y[5] = OUTPUT(A1L51);
+
+
+--y[6] is y[6]
+y[6] = OUTPUT(A1L51);
+
+
+--y[7] is y[7]
+y[7] = OUTPUT(A1L51);
+
+
+--y[8] is y[8]
+y[8] = OUTPUT(A1L51);
+
+
+--y[9] is y[9]
+y[9] = OUTPUT(A1L51);
+
+
+--y[10] is y[10]
+y[10] = OUTPUT(A1L51);
+
+
+--y[11] is y[11]
+y[11] = OUTPUT(A1L51);
+
+
+--y[12] is y[12]
+y[12] = OUTPUT(A1L51);
+
+
+--y[13] is y[13]
+y[13] = OUTPUT(A1L51);
+
+
+--y[14] is y[14]
+y[14] = OUTPUT(A1L51);
+
+
+--y[15] is y[15]
+y[15] = OUTPUT(A1L51);
+
+
+--y[16] is y[16]
+y[16] = OUTPUT(A1L51);
+
+
+--y[17] is y[17]
+y[17] = OUTPUT(A1L51);
+
+
+--y[18] is y[18]
+y[18] = OUTPUT(A1L51);
+
+
+--y[19] is y[19]
+y[19] = OUTPUT(A1L51);
+
+
+--y[20] is y[20]
+y[20] = OUTPUT(A1L51);
+
+
+--y[21] is y[21]
+y[21] = OUTPUT(A1L51);
+
+
+--y[22] is y[22]
+y[22] = OUTPUT(A1L51);
+
+
+--y[23] is y[23]
+y[23] = OUTPUT(A1L51);
+
+
+--y[24] is y[24]
+y[24] = OUTPUT(A1L51);
+
+
+--y[25] is y[25]
+y[25] = OUTPUT(A1L51);
+
+
+--y[26] is y[26]
+y[26] = OUTPUT(A1L51);
+
+
+--y[27] is y[27]
+y[27] = OUTPUT(A1L51);
+
+
+--y[28] is y[28]
+y[28] = OUTPUT(A1L51);
+
+
+--y[29] is y[29]
+y[29] = OUTPUT(A1L51);
+
+
+--y[30] is y[30]
+y[30] = OUTPUT(A1L51);
+
+
+--y[31] is y[31]
+y[31] = OUTPUT(A1L52);
+
+
+--A1L51 is ~GND
+A1L51 = GND;
+
+
+--A1L52 is ~VCC
+A1L52 = VCC;
+
+
