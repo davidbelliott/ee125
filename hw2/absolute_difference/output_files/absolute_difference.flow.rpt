@@ -1,5 +1,5 @@
 Flow report for absolute_difference
-Mon Apr 23 21:34:31 2018
+Tue Apr 24 20:53:41 2018
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Flow Failed - Mon Apr 23 21:34:31 2018          ;
+; Flow Status                        ; Flow Failed - Tue Apr 24 20:53:40 2018          ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; absolute_difference                             ;
 ; Top-level Entity Name              ; absolute_difference                             ;
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/23/2018 21:34:31 ;
+; Start date & time ; 04/24/2018 20:53:40 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; absolute_difference ;
 +-------------------+---------------------+
@@ -77,11 +77,13 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 273549556194476.152454447013536 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 273549556194476.152462842015992 ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; --          ; Top        ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --         ;
+; VHDL_INPUT_VERSION                  ; VHDL_2008                       ; VHDL_1993     ; --          ; --         ;
+; VHDL_SHOW_LMF_MAPPING_MESSAGES      ; Off                             ; --            ; --          ; --         ;
 +-------------------------------------+---------------------------------+---------------+-------------+------------+
 
 

@@ -1,0 +1,277 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--a[5][0] is a[5][0]
+a[5][0] = INPUT();
+
+
+--a[5][1] is a[5][1]
+a[5][1] = INPUT();
+
+
+--a[5][2] is a[5][2]
+a[5][2] = INPUT();
+
+
+--a[5][3] is a[5][3]
+a[5][3] = INPUT();
+
+
+--a[5][4] is a[5][4]
+a[5][4] = INPUT();
+
+
+--a[4][0] is a[4][0]
+a[4][0] = INPUT();
+
+
+--a[4][1] is a[4][1]
+a[4][1] = INPUT();
+
+
+--a[4][2] is a[4][2]
+a[4][2] = INPUT();
+
+
+--a[4][3] is a[4][3]
+a[4][3] = INPUT();
+
+
+--a[4][4] is a[4][4]
+a[4][4] = INPUT();
+
+
+--a[3][0] is a[3][0]
+a[3][0] = INPUT();
+
+
+--a[3][1] is a[3][1]
+a[3][1] = INPUT();
+
+
+--a[3][2] is a[3][2]
+a[3][2] = INPUT();
+
+
+--a[3][3] is a[3][3]
+a[3][3] = INPUT();
+
+
+--a[3][4] is a[3][4]
+a[3][4] = INPUT();
+
+
+--a[2][0] is a[2][0]
+a[2][0] = INPUT();
+
+
+--a[2][1] is a[2][1]
+a[2][1] = INPUT();
+
+
+--a[2][2] is a[2][2]
+a[2][2] = INPUT();
+
+
+--a[2][3] is a[2][3]
+a[2][3] = INPUT();
+
+
+--a[2][4] is a[2][4]
+a[2][4] = INPUT();
+
+
+--a[1][0] is a[1][0]
+a[1][0] = INPUT();
+
+
+--a[1][1] is a[1][1]
+a[1][1] = INPUT();
+
+
+--a[1][2] is a[1][2]
+a[1][2] = INPUT();
+
+
+--a[1][3] is a[1][3]
+a[1][3] = INPUT();
+
+
+--a[1][4] is a[1][4]
+a[1][4] = INPUT();
+
+
+--a[0][0] is a[0][0]
+a[0][0] = INPUT();
+
+
+--a[0][1] is a[0][1]
+a[0][1] = INPUT();
+
+
+--a[0][2] is a[0][2]
+a[0][2] = INPUT();
+
+
+--a[0][3] is a[0][3]
+a[0][3] = INPUT();
+
+
+--a[0][4] is a[0][4]
+a[0][4] = INPUT();
+
+
+--b[5][0] is b[5][0]
+b[5][0] = INPUT();
+
+
+--b[5][1] is b[5][1]
+b[5][1] = INPUT();
+
+
+--b[5][2] is b[5][2]
+b[5][2] = INPUT();
+
+
+--b[5][3] is b[5][3]
+b[5][3] = INPUT();
+
+
+--b[5][4] is b[5][4]
+b[5][4] = INPUT();
+
+
+--b[4][0] is b[4][0]
+b[4][0] = INPUT();
+
+
+--b[4][1] is b[4][1]
+b[4][1] = INPUT();
+
+
+--b[4][2] is b[4][2]
+b[4][2] = INPUT();
+
+
+--b[4][3] is b[4][3]
+b[4][3] = INPUT();
+
+
+--b[4][4] is b[4][4]
+b[4][4] = INPUT();
+
+
+--b[3][0] is b[3][0]
+b[3][0] = INPUT();
+
+
+--b[3][1] is b[3][1]
+b[3][1] = INPUT();
+
+
+--b[3][2] is b[3][2]
+b[3][2] = INPUT();
+
+
+--b[3][3] is b[3][3]
+b[3][3] = INPUT();
+
+
+--b[3][4] is b[3][4]
+b[3][4] = INPUT();
+
+
+--b[2][0] is b[2][0]
+b[2][0] = INPUT();
+
+
+--b[2][1] is b[2][1]
+b[2][1] = INPUT();
+
+
+--b[2][2] is b[2][2]
+b[2][2] = INPUT();
+
+
+--b[2][3] is b[2][3]
+b[2][3] = INPUT();
+
+
+--b[2][4] is b[2][4]
+b[2][4] = INPUT();
+
+
+--b[1][0] is b[1][0]
+b[1][0] = INPUT();
+
+
+--b[1][1] is b[1][1]
+b[1][1] = INPUT();
+
+
+--b[1][2] is b[1][2]
+b[1][2] = INPUT();
+
+
+--b[1][3] is b[1][3]
+b[1][3] = INPUT();
+
+
+--b[1][4] is b[1][4]
+b[1][4] = INPUT();
+
+
+--b[0][0] is b[0][0]
+b[0][0] = INPUT();
+
+
+--b[0][1] is b[0][1]
+b[0][1] = INPUT();
+
+
+--b[0][2] is b[0][2]
+b[0][2] = INPUT();
+
+
+--b[0][3] is b[0][3]
+b[0][3] = INPUT();
+
+
+--b[0][4] is b[0][4]
+b[0][4] = INPUT();
+
+
+--abs_diff[0] is abs_diff[0]
+abs_diff[0] = OUTPUT(A1L79);
+
+
+--abs_diff[1] is abs_diff[1]
+abs_diff[1] = OUTPUT(A1L79);
+
+
+--abs_diff[2] is abs_diff[2]
+abs_diff[2] = OUTPUT(A1L79);
+
+
+--abs_diff[3] is abs_diff[3]
+abs_diff[3] = OUTPUT(A1L79);
+
+
+--abs_diff[4] is abs_diff[4]
+abs_diff[4] = OUTPUT(A1L79);
+
+
+--A1L79 is ~GND
+A1L79 = GND;
+
+

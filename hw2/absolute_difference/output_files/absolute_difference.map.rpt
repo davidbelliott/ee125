@@ -1,5 +1,5 @@
 Analysis & Synthesis report for absolute_difference
-Mon Apr 23 21:34:31 2018
+Tue Apr 24 20:53:41 2018
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Apr 23 21:34:31 2018               ;
+; Analysis & Synthesis Status        ; Failed - Tue Apr 24 20:53:40 2018               ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; absolute_difference                             ;
 ; Top-level Entity Name              ; absolute_difference                             ;
@@ -63,7 +63,9 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting             ; Default Value       ;
 +----------------------------------------------------------------------------+---------------------+---------------------+
 ; Top-level entity name                                                      ; absolute_difference ; absolute_difference ;
-; Family name                                                                ; Cyclone IV GX       ; Cyclone IV GX       ;
+; Family name                                                                ; Cyclone IV GX       ; Cyclone V           ;
+; VHDL Show LMF Mapping Messages                                             ; Off                 ;                     ;
+; VHDL Version                                                               ; VHDL_2008           ; VHDL_1993           ;
 ; Use smart compilation                                                      ; Off                 ; Off                 ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                  ; On                  ;
 ; Enable compact report table                                                ; Off                 ; Off                 ;
@@ -72,7 +74,6 @@ applicable agreement for further details.
 ; Preserve fewer node names                                                  ; On                  ; On                  ;
 ; Disable OpenCore Plus hardware evaluation                                  ; Off                 ; Off                 ;
 ; Verilog Version                                                            ; Verilog_2001        ; Verilog_2001        ;
-; VHDL Version                                                               ; VHDL_1993           ; VHDL_1993           ;
 ; State Machine Processing                                                   ; Auto                ; Auto                ;
 ; Safe State Machine                                                         ; Off                 ; Off                 ;
 ; Extract Verilog State Machines                                             ; On                  ; On                  ;
@@ -160,7 +161,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Apr 23 21:34:30 2018
+    Info: Processing started: Tue Apr 24 20:53:39 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off absolute_difference -c absolute_difference
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file absolute_difference.vhd
@@ -168,12 +169,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file absolut
     Info (12023): Found entity 1: absolute_difference
 Info (12021): Found 1 design units, including 0 entities, in source file user_types.vhd
     Info (12022): Found design unit 1: user_types
-Info (12127): Elaborating entity "absolute_difference" for the top level hierarchy
-Error (10294): VHDL Type Declaration error at user_types.vhd(6): element type for array type cannot be unconstrained File: D:/Google Drive/School/Caltech/ee125_shared/ee125/hw2/absolute_difference/user_types.vhd Line: 6
-Error (12153): Can't elaborate top-level user hierarchy
+Error (10405): VHDL error at absolute_difference.vhd(31): can't determine type of object at or near identifier "resize" -- found 0 possible types File: D:/Google Drive/School/Caltech/ee125_shared/ee125/hw2/absolute_difference/absolute_difference.vhd Line: 31
+Error (10411): VHDL Type Conversion error at absolute_difference.vhd(31): can't determine type of object or expression near text or symbol "SIGNED" File: D:/Google Drive/School/Caltech/ee125_shared/ee125/hw2/absolute_difference/absolute_difference.vhd Line: 31
 Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
-    Error: Peak virtual memory: 461 megabytes
-    Error: Processing ended: Mon Apr 23 21:34:32 2018
+    Error: Peak virtual memory: 460 megabytes
+    Error: Processing ended: Tue Apr 24 20:53:41 2018
     Error: Elapsed time: 00:00:02
     Error: Total CPU time (on all processors): 00:00:01
 
