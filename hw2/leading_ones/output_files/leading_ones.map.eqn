@@ -11,20 +11,273 @@
 -- programming logic devices manufactured by Altera and sold by 
 -- Altera or its authorized distributors.  Please refer to the 
 -- applicable agreement for further details.
---x[0] is x[0]
-x[0] = INPUT();
+--A1L27 is Add6~1
+A1L27_adder_eqn = ( (!first_ones[2] & (((A1L69)))) # (first_ones[2] & ((!x[1] & ((!A1L69))) # (x[1] & (A1L3)))) ) + ( VCC ) + ( !VCC );
+A1L27 = SUM(A1L27_adder_eqn);
+
+--A1L28 is Add6~2
+A1L28_adder_eqn = ( (!first_ones[2] & (((A1L69)))) # (first_ones[2] & ((!x[1] & ((!A1L69))) # (x[1] & (A1L3)))) ) + ( VCC ) + ( !VCC );
+A1L28 = CARRY(A1L28_adder_eqn);
+
+
+--A1L3 is Add5~1
+A1L3_adder_eqn = ( !first_ones[2] $ (((!x[7]) # ((x[6] & !A1L70)))) ) + ( VCC ) + ( !VCC );
+A1L3 = SUM(A1L3_adder_eqn);
+
+--A1L4 is Add5~2
+A1L4_adder_eqn = ( !first_ones[2] $ (((!x[7]) # ((x[6] & !A1L70)))) ) + ( VCC ) + ( !VCC );
+A1L4 = CARRY(A1L4_adder_eqn);
+
+
+--A1L31 is Add6~5
+A1L31_adder_eqn = ( (first_ones[2] & (x[1] & A1L7)) ) + ( GND ) + ( A1L52 );
+A1L31 = SUM(A1L31_adder_eqn);
+
+--A1L32 is Add6~6
+A1L32_adder_eqn = ( (first_ones[2] & (x[1] & A1L7)) ) + ( GND ) + ( A1L52 );
+A1L32 = CARRY(A1L32_adder_eqn);
+
+
+--A1L7 is Add5~5
+A1L7_adder_eqn = ( (first_ones[2] & (A1L74 & !A1L1)) ) + ( GND ) + ( A1L24 );
+A1L7 = SUM(A1L7_adder_eqn);
+
+--A1L8 is Add5~6
+A1L8_adder_eqn = ( (first_ones[2] & (A1L74 & !A1L1)) ) + ( GND ) + ( A1L24 );
+A1L8 = CARRY(A1L8_adder_eqn);
+
+
+--A1L35 is Add6~9
+A1L35_adder_eqn = ( GND ) + ( GND ) + ( A1L40 );
+A1L35 = SUM(A1L35_adder_eqn);
+
+
+--A1L39 is Add6~13
+A1L39_adder_eqn = ( (first_ones[2] & (x[1] & A1L11)) ) + ( GND ) + ( A1L44 );
+A1L39 = SUM(A1L39_adder_eqn);
+
+--A1L40 is Add6~14
+A1L40_adder_eqn = ( (first_ones[2] & (x[1] & A1L11)) ) + ( GND ) + ( A1L44 );
+A1L40 = CARRY(A1L40_adder_eqn);
+
+
+--A1L11 is Add5~9
+A1L11_adder_eqn = ( GND ) + ( GND ) + ( A1L16 );
+A1L11 = SUM(A1L11_adder_eqn);
+
+
+--A1L43 is Add6~17
+A1L43_adder_eqn = ( (first_ones[2] & (x[1] & A1L15)) ) + ( GND ) + ( A1L32 );
+A1L43 = SUM(A1L43_adder_eqn);
+
+--A1L44 is Add6~18
+A1L44_adder_eqn = ( (first_ones[2] & (x[1] & A1L15)) ) + ( GND ) + ( A1L32 );
+A1L44 = CARRY(A1L44_adder_eqn);
+
+
+--A1L15 is Add5~13
+A1L15_adder_eqn = ( GND ) + ( GND ) + ( A1L8 );
+A1L15 = SUM(A1L15_adder_eqn);
+
+--A1L16 is Add5~14
+A1L16_adder_eqn = ( GND ) + ( GND ) + ( A1L8 );
+A1L16 = CARRY(A1L16_adder_eqn);
+
+
+--A1L47 is Add6~21
+A1L47_adder_eqn = ( (!first_ones[2] & (((A1L68)))) # (first_ones[2] & ((!x[1] & (A1L68)) # (x[1] & ((A1L19))))) ) + ( GND ) + ( A1L28 );
+A1L47 = SUM(A1L47_adder_eqn);
+
+--A1L48 is Add6~22
+A1L48_adder_eqn = ( (!first_ones[2] & (((A1L68)))) # (first_ones[2] & ((!x[1] & (A1L68)) # (x[1] & ((A1L19))))) ) + ( GND ) + ( A1L28 );
+A1L48 = CARRY(A1L48_adder_eqn);
+
+
+--A1L19 is Add5~17
+A1L19_adder_eqn = ( (x[7] & (!A1L72 $ (((!first_ones[2]) # (!A1L71))))) ) + ( GND ) + ( A1L4 );
+A1L19 = SUM(A1L19_adder_eqn);
+
+--A1L20 is Add5~18
+A1L20_adder_eqn = ( (x[7] & (!A1L72 $ (((!first_ones[2]) # (!A1L71))))) ) + ( GND ) + ( A1L4 );
+A1L20 = CARRY(A1L20_adder_eqn);
+
+
+--A1L51 is Add6~25
+A1L51_adder_eqn = ( (!first_ones[2] & (((A1L74)))) # (first_ones[2] & ((!x[1] & (A1L74)) # (x[1] & ((A1L23))))) ) + ( GND ) + ( A1L48 );
+A1L51 = SUM(A1L51_adder_eqn);
+
+--A1L52 is Add6~26
+A1L52_adder_eqn = ( (!first_ones[2] & (((A1L74)))) # (first_ones[2] & ((!x[1] & (A1L74)) # (x[1] & ((A1L23))))) ) + ( GND ) + ( A1L48 );
+A1L52 = CARRY(A1L52_adder_eqn);
+
+
+--A1L23 is Add5~21
+A1L23_adder_eqn = ( !A1L74 $ (((!first_ones[2]) # ((!A1L69) # (!A1L73)))) ) + ( GND ) + ( A1L20 );
+A1L23 = SUM(A1L23_adder_eqn);
+
+--A1L24 is Add5~22
+A1L24_adder_eqn = ( !A1L74 $ (((!first_ones[2]) # ((!A1L69) # (!A1L73)))) ) + ( GND ) + ( A1L20 );
+A1L24 = CARRY(A1L24_adder_eqn);
+
+
+--ssd[0] is ssd[0]
+ssd[0] = OUTPUT(WideOr4);
+
+
+--ssd[1] is ssd[1]
+ssd[1] = OUTPUT(WideOr3);
+
+
+--ssd[2] is ssd[2]
+ssd[2] = OUTPUT(A1L89);
+
+
+--ssd[3] is ssd[3]
+ssd[3] = OUTPUT(A1L87);
+
+
+--ssd[4] is ssd[4]
+ssd[4] = OUTPUT(A1L83);
+
+
+--ssd[5] is ssd[5]
+ssd[5] = OUTPUT(WideOr0);
+
+
+--ssd[6] is ssd[6]
+ssd[6] = OUTPUT(A1L84);
+
+
+--y[0] is y[0]
+y[0] = OUTPUT(A1L59);
+
+
+--y[1] is y[1]
+y[1] = OUTPUT(A1L60);
+
+
+--y[2] is y[2]
+y[2] = OUTPUT(A1L61);
+
+
+--y[3] is y[3]
+y[3] = OUTPUT(A1L62);
+
+
+--y[4] is y[4]
+y[4] = OUTPUT(A1L64);
+
+
+--y[5] is y[5]
+y[5] = OUTPUT(A1L66);
+
+
+--y[6] is y[6]
+y[6] = OUTPUT(A1L67);
+
+
+--y[7] is y[7]
+y[7] = OUTPUT(A1L134);
+
+
+--y[8] is y[8]
+y[8] = OUTPUT(A1L134);
+
+
+--y[9] is y[9]
+y[9] = OUTPUT(A1L134);
+
+
+--y[10] is y[10]
+y[10] = OUTPUT(A1L134);
+
+
+--y[11] is y[11]
+y[11] = OUTPUT(A1L134);
+
+
+--y[12] is y[12]
+y[12] = OUTPUT(A1L134);
+
+
+--y[13] is y[13]
+y[13] = OUTPUT(A1L134);
+
+
+--y[14] is y[14]
+y[14] = OUTPUT(A1L134);
+
+
+--y[15] is y[15]
+y[15] = OUTPUT(A1L134);
+
+
+--y[16] is y[16]
+y[16] = OUTPUT(A1L134);
+
+
+--y[17] is y[17]
+y[17] = OUTPUT(A1L134);
+
+
+--y[18] is y[18]
+y[18] = OUTPUT(A1L134);
+
+
+--y[19] is y[19]
+y[19] = OUTPUT(A1L134);
+
+
+--y[20] is y[20]
+y[20] = OUTPUT(A1L134);
+
+
+--y[21] is y[21]
+y[21] = OUTPUT(A1L134);
+
+
+--y[22] is y[22]
+y[22] = OUTPUT(A1L134);
+
+
+--y[23] is y[23]
+y[23] = OUTPUT(A1L134);
+
+
+--y[24] is y[24]
+y[24] = OUTPUT(A1L134);
+
+
+--y[25] is y[25]
+y[25] = OUTPUT(A1L134);
+
+
+--y[26] is y[26]
+y[26] = OUTPUT(A1L134);
+
+
+--y[27] is y[27]
+y[27] = OUTPUT(A1L134);
+
+
+--y[28] is y[28]
+y[28] = OUTPUT(A1L134);
+
+
+--y[29] is y[29]
+y[29] = OUTPUT(A1L134);
+
+
+--y[30] is y[30]
+y[30] = OUTPUT(A1L134);
+
+
+--y[31] is y[31]
+y[31] = OUTPUT(A1L134);
 
 
 --x[1] is x[1]
 x[1] = INPUT();
-
-
---x[2] is x[2]
-x[2] = INPUT();
-
-
---x[3] is x[3]
-x[3] = INPUT();
 
 
 --x[4] is x[4]
@@ -43,167 +296,139 @@ x[6] = INPUT();
 x[7] = INPUT();
 
 
---ssd[0] is ssd[0]
-ssd[0] = OUTPUT(A1L51);
+--x[2] is x[2]
+x[2] = INPUT();
 
 
---ssd[1] is ssd[1]
-ssd[1] = OUTPUT(A1L51);
+--x[3] is x[3]
+x[3] = INPUT();
 
 
---ssd[2] is ssd[2]
-ssd[2] = OUTPUT(A1L51);
+--first_ones[2] is first_ones[2]
+first_ones[2] = ( x[2] & ( x[3] & ( (x[4] & (x[5] & (x[6] & x[7]))) ) ) );
 
 
---ssd[3] is ssd[3]
-ssd[3] = OUTPUT(A1L51);
+--x[0] is x[0]
+x[0] = INPUT();
 
 
---ssd[4] is ssd[4]
-ssd[4] = OUTPUT(A1L52);
+--A1L69 is ones_count[3][0]~0
+A1L69 = ( x[3] & ( (x[7] & ((!x[6]) # (x[5]))) ) ) # ( !x[3] & ( (x[7] & ((!x[6]) # ((!x[4] & x[5])))) ) );
 
 
---ssd[5] is ssd[5]
-ssd[5] = OUTPUT(A1L52);
+--A1L59 is ones_count[0][0]~1
+A1L59 = ( A1L3 & ( A1L69 & ( (!first_ones[2]) # ((x[1] & ((!x[0]) # (A1L27)))) ) ) ) # ( !A1L3 & ( A1L69 & ( (!first_ones[2]) # ((x[1] & (x[0] & A1L27))) ) ) ) # ( A1L3 & ( !A1L69 & ( (first_ones[2] & ((!x[1]) # ((!x[0]) # (A1L27)))) ) ) ) # ( !A1L3 & ( !A1L69 & ( (first_ones[2] & ((!x[1]) # ((x[0] & A1L27)))) ) ) );
 
 
---ssd[6] is ssd[6]
-ssd[6] = OUTPUT(A1L51);
+--first_ones[1] is first_ones[1]
+first_ones[1] = (x[1] & first_ones[2]);
 
 
---y[0] is y[0]
-y[0] = OUTPUT(A1L52);
+--A1L62 is ones_count[0][3]~2
+A1L62 = (first_ones[1] & ((!x[0] & ((A1L7))) # (x[0] & (A1L31))));
 
 
---y[1] is y[1]
-y[1] = OUTPUT(A1L51);
+--first_ones[0] is first_ones[0]
+first_ones[0] = (x[1] & (first_ones[2] & x[0]));
 
 
---y[2] is y[2]
-y[2] = OUTPUT(A1L51);
+--A1L65 is ones_count[0][5]~3
+A1L65 = (first_ones[1] & (!x[0] & A1L11));
 
 
---y[3] is y[3]
-y[3] = OUTPUT(A1L51);
+--A1L63 is ones_count[0][4]~4
+A1L63 = (first_ones[1] & (!x[0] & A1L15));
 
 
---y[4] is y[4]
-y[4] = OUTPUT(A1L51);
+--A1L54 is Equal8~0
+A1L54 = ( A1L43 & ( !A1L63 & ( (!first_ones[0] & !A1L65) ) ) ) # ( !A1L43 & ( !A1L63 & ( (!A1L65 & ((!first_ones[0]) # ((!A1L35 & !A1L39)))) ) ) );
 
 
---y[5] is y[5]
-y[5] = OUTPUT(A1L51);
+--A1L68 is ones_count[2][1]~5
+A1L68 = ( x[2] & ( x[3] & ( (x[6] & x[7]) ) ) ) # ( !x[2] & ( x[3] & ( (x[6] & (x[7] & ((!x[4]) # (!x[5])))) ) ) ) # ( x[2] & ( !x[3] & ( (x[6] & (x[7] & ((!x[4]) # (!x[5])))) ) ) ) # ( !x[2] & ( !x[3] & ( (x[6] & (x[7] & ((!x[4]) # (!x[5])))) ) ) );
 
 
---y[6] is y[6]
-y[6] = OUTPUT(A1L51);
+--A1L60 is ones_count[0][1]~6
+A1L60 = ( A1L19 & ( (!first_ones[1] & (((A1L68)))) # (first_ones[1] & ((!x[0]) # ((A1L47)))) ) ) # ( !A1L19 & ( (!first_ones[1] & (((A1L68)))) # (first_ones[1] & (x[0] & (A1L47))) ) );
 
 
---y[7] is y[7]
-y[7] = OUTPUT(A1L51);
+--A1L74 is ones_count[3][2]~7
+A1L74 = (x[4] & (x[5] & (x[6] & x[7])));
 
 
---y[8] is y[8]
-y[8] = OUTPUT(A1L51);
+--A1L61 is ones_count[0][2]~8
+A1L61 = ( A1L23 & ( (!first_ones[1] & (A1L74)) # (first_ones[1] & (((!x[0]) # (A1L51)))) ) ) # ( !A1L23 & ( (!first_ones[1] & (A1L74)) # (first_ones[1] & (((x[0] & A1L51)))) ) );
 
 
---y[9] is y[9]
-y[9] = OUTPUT(A1L51);
+--WideOr4 is WideOr4
+WideOr4 = ( A1L61 & ( (A1L59 & (!A1L62 & (A1L54 & A1L60))) ) ) # ( !A1L61 & ( (!A1L62 & (A1L54 & !A1L60)) ) );
 
 
---y[10] is y[10]
-y[10] = OUTPUT(A1L51);
+--WideOr3 is WideOr3
+WideOr3 = ( A1L61 & ( (A1L59 & (!A1L62 & (A1L54 & A1L60))) ) ) # ( !A1L61 & ( (!A1L62 & (A1L54 & ((A1L60) # (A1L59)))) ) );
 
 
---y[11] is y[11]
-y[11] = OUTPUT(A1L51);
+--WideOr2 is WideOr2
+WideOr2 = ( A1L61 & ( ((!A1L54) # ((!A1L59 & A1L60))) # (A1L62) ) ) # ( !A1L61 & ( (!A1L59) # ((!A1L54) # ((A1L62 & A1L60))) ) );
 
 
---y[12] is y[12]
-y[12] = OUTPUT(A1L51);
+--A1L86 is WideOr1~0
+A1L86 = ( A1L61 & ( ((!A1L54) # (!A1L59 $ (!A1L60))) # (A1L62) ) ) # ( !A1L61 & ( (!A1L59) # (((!A1L54) # (A1L60)) # (A1L62)) ) );
 
 
---y[13] is y[13]
-y[13] = OUTPUT(A1L51);
+--A1L83 is ssd~0
+A1L83 = ( A1L61 & ( (!A1L54) # (A1L62) ) ) # ( !A1L61 & ( (!A1L54) # ((A1L60 & ((!A1L59) # (A1L62)))) ) );
 
 
---y[14] is y[14]
-y[14] = OUTPUT(A1L51);
+--WideOr0 is WideOr0
+WideOr0 = ( A1L61 & ( ((!A1L54) # (!A1L59 $ (!A1L60))) # (A1L62) ) ) # ( !A1L61 & ( (!A1L54) # ((A1L62 & A1L60)) ) );
 
 
---y[15] is y[15]
-y[15] = OUTPUT(A1L51);
+--A1L84 is ssd~1
+A1L84 = ( A1L61 & ( (!A1L59 & (!A1L62 & (A1L54 & !A1L60))) ) ) # ( !A1L61 & ( (A1L59 & (!A1L62 & (A1L54 & !A1L60))) ) );
 
 
---y[16] is y[16]
-y[16] = OUTPUT(A1L51);
+--A1L64 is ones_count[0][4]~9
+A1L64 = ((first_ones[0] & A1L43)) # (A1L63);
 
 
---y[17] is y[17]
-y[17] = OUTPUT(A1L51);
+--A1L66 is ones_count[0][5]~10
+A1L66 = ((first_ones[0] & A1L39)) # (A1L65);
 
 
---y[18] is y[18]
-y[18] = OUTPUT(A1L51);
+--A1L67 is ones_count[0][6]~11
+A1L67 = (first_ones[0] & A1L35);
 
 
---y[19] is y[19]
-y[19] = OUTPUT(A1L51);
+--A1L70 is ones_count[3][0]~12
+A1L70 = (x[5] & ((!x[4]) # (x[3])));
 
 
---y[20] is y[20]
-y[20] = OUTPUT(A1L51);
+--A1L1 is Add4~0
+A1L1 = ((!x[5]) # ((!x[6]) # (!x[7]))) # (x[4]);
 
 
---y[21] is y[21]
-y[21] = OUTPUT(A1L51);
+--A1L72 is ones_count[3][1]~13
+A1L72 = (x[6] & ((!x[4]) # (!x[5])));
 
 
---y[22] is y[22]
-y[22] = OUTPUT(A1L51);
+--A1L71 is ones_count[3][0]~14
+A1L71 = (!x[6]) # ((x[5] & ((!x[4]) # (x[3]))));
 
 
---y[23] is y[23]
-y[23] = OUTPUT(A1L51);
+--A1L73 is ones_count[3][1]~15
+A1L73 = (x[6] & (x[7] & ((!x[4]) # (!x[5]))));
 
 
---y[24] is y[24]
-y[24] = OUTPUT(A1L51);
+--A1L134 is ~GND
+A1L134 = GND;
 
 
---y[25] is y[25]
-y[25] = OUTPUT(A1L51);
+--A1L87 is WideOr1~0_wirecell
+A1L87 = !A1L86;
 
 
---y[26] is y[26]
-y[26] = OUTPUT(A1L51);
-
-
---y[27] is y[27]
-y[27] = OUTPUT(A1L51);
-
-
---y[28] is y[28]
-y[28] = OUTPUT(A1L51);
-
-
---y[29] is y[29]
-y[29] = OUTPUT(A1L51);
-
-
---y[30] is y[30]
-y[30] = OUTPUT(A1L51);
-
-
---y[31] is y[31]
-y[31] = OUTPUT(A1L52);
-
-
---A1L51 is ~GND
-A1L51 = GND;
-
-
---A1L52 is ~VCC
-A1L52 = VCC;
+--A1L89 is WideOr2~_wirecell
+A1L89 = !WideOr2;
 
 

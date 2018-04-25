@@ -19,9 +19,9 @@ ARCHITECTURE leading_ones OF leading_ones IS
 BEGIN
 	first_ones(N-1)<= x(N-1);
 	ones_count(N-1)<=1 when x(N-1)='1' else 0;
-	gen: for i in N-2 downto 1 generate
-		first_ones(i)<=first_ones(i+1) and x(i+1);
-		ones_count(i)<=ones_count(i+1) + 1 when(first_ones(i)='1') else 0;
+	gen: for i in N-2 downto 0 generate
+		first_ones(i)<=first_ones(i+1) and x(i);
+		ones_count(i)<=ones_count(i+1) + 1 when(first_ones(i)='1') else ones_count(i+1);
 	end generate;
 	y<=ones_count(0);
 	with y select
