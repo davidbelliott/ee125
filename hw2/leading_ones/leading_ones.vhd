@@ -28,16 +28,16 @@ BEGIN
 	y<=ones_count(0);	--the final sum is the last (0th) bit in the ones_count vector
 	--Encode into ssd bits
 	with y select
-		ssd <= "0000001" when 0,
-				 "1001111" when 1,
-				 "0010010" when 2,
+		ssd <=	"0000001" when 0,
+				"1001111" when 1,
+				"0010010" when 2,
 			    "0000110" when 3,
 			    "1001100" when 4,
-		       "0100100" when 5,
-		       "0100000" when 6,
-		       "0001111" when 7,
-		       "0000000" when 8,
-		       "0000100" when 9,
-	          "0110000" when others;
+				"0100100" when 5,
+				"0100000" when 6,
+				"0001111" when 7,
+				"0000000" when 8,
+				"0000100" when 9,
+				"0110000" when others;
 END ARCHITECTURE;
 -------------------------------------------------------------------------
