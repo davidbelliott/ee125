@@ -58,7 +58,6 @@ set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "D:/Google Drive/School/Caltech/ee125_shared/ee125/hw2/leading_ones/leading_ones.vwf"
 set_location_assignment PIN_AA13 -to x[7]
 set_location_assignment PIN_AA14 -to x[6]
 set_location_assignment PIN_AB15 -to x[5]
@@ -75,3 +74,4 @@ set_location_assignment PIN_Y22 -to ssd[2]
 set_location_assignment PIN_Y21 -to ssd[1]
 set_location_assignment PIN_AA22 -to ssd[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "D:/Google Drive/School/Caltech/ee125_shared/ee125/hw2/leading_ones/leading_ones.vwf"
