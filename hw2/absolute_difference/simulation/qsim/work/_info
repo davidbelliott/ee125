@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Google Drive\School\Caltech\ee125_shared\ee125\hw2\absolute_difference\simulation\qsim
+vabsolute_difference
+Z1 !s100 6h<]17n5ao=MIUSGTU8ZS2
+Z2 IJWoX=PPAKA^E7fDKISB_G1
+Z3 VIT_dM70Be4lZU>85O6U_=3
+Z4 dD:\Google Drive\School\Caltech\ee125_shared\ee125\hw2\absolute_difference\simulation\qsim
+Z5 w1524641812
+Z6 8absolute_difference.vo
+Z7 Fabsolute_difference.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|absolute_difference.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1524641813.653000
+Z12 !s107 absolute_difference.vo|
+!s101 -O0
+vabsolute_difference_vlg_check_tst
+!i10b 1
+Z13 !s100 :ooc<M;[2D@ic918Ta[dN0
+Z14 IA6^=fdOHe6gWk]^kDC9@W1
+Z15 VoBl_GN_BU7a22E8O:>ZC^0
+R4
+Z16 w1524641810
+Z17 8absolute_difference.vt
+Z18 Fabsolute_difference.vt
+L0 79
+R8
+r1
+!s85 0
+31
+Z19 !s108 1524641814.127000
+Z20 !s107 absolute_difference.vt|
+Z21 !s90 -work|work|absolute_difference.vt|
+!s101 -O0
+R10
+vabsolute_difference_vlg_sample_tst
+!i10b 1
+Z22 !s100 b;lB:`Jm1<WNk4@@:kcR>0
+Z23 IalgT_8@ZLY;VzK2]ABP4f0
+Z24 VWj>[a7=nlUV?DDK2TCGTA3
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vabsolute_difference_vlg_vec_tst
+!i10b 1
+!s100 [S[WQXN?7g3Mgo6W<KN`M1
+Id9_6@0=2m[IQz3KfK4ZmH2
+Z25 V5;[Ucng4IV>9RPAGG6T6d2
+R4
+R16
+R17
+R18
+Z26 L0 299
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
