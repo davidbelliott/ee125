@@ -1,5 +1,5 @@
 EDA Netlist Writer report for multiple_detector
-Sun Apr 22 21:47:29 2018
+Tue Apr 24 22:54:29 2018
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Apr 22 21:47:29 2018 ;
+; EDA Netlist Writer Status ; Successful - Tue Apr 24 22:54:28 2018 ;
 ; Revision Name             ; multiple_detector                     ;
 ; Top-level Entity Name     ; multiple_detector                     ;
 ; Family                    ; Cyclone IV GX                         ;
@@ -71,14 +71,14 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------------------------------------------------------------+
 ; Generated Files                                                                                                                        ;
 +----------------------------------------------------------------------------------------------------------------------------------------+
-; D:/Google Drive/School/Caltech/ee125_shared/ee125/hw1/multiple_detector/simulation/modelsim/multiple_detector_6_1200mv_85c_slow.vo     ;
-; D:/Google Drive/School/Caltech/ee125_shared/ee125/hw1/multiple_detector/simulation/modelsim/multiple_detector_6_1200mv_0c_slow.vo      ;
-; D:/Google Drive/School/Caltech/ee125_shared/ee125/hw1/multiple_detector/simulation/modelsim/multiple_detector_min_1200mv_0c_fast.vo    ;
-; D:/Google Drive/School/Caltech/ee125_shared/ee125/hw1/multiple_detector/simulation/modelsim/multiple_detector.vo                       ;
-; D:/Google Drive/School/Caltech/ee125_shared/ee125/hw1/multiple_detector/simulation/modelsim/multiple_detector_6_1200mv_85c_v_slow.sdo  ;
-; D:/Google Drive/School/Caltech/ee125_shared/ee125/hw1/multiple_detector/simulation/modelsim/multiple_detector_6_1200mv_0c_v_slow.sdo   ;
-; D:/Google Drive/School/Caltech/ee125_shared/ee125/hw1/multiple_detector/simulation/modelsim/multiple_detector_min_1200mv_0c_v_fast.sdo ;
-; D:/Google Drive/School/Caltech/ee125_shared/ee125/hw1/multiple_detector/simulation/modelsim/multiple_detector_v.sdo                    ;
+; D:/Google Drive/School/Caltech/ee125_shared/ee125/hw2/multiple_detector/simulation/modelsim/multiple_detector_6_1200mv_85c_slow.vo     ;
+; D:/Google Drive/School/Caltech/ee125_shared/ee125/hw2/multiple_detector/simulation/modelsim/multiple_detector_6_1200mv_0c_slow.vo      ;
+; D:/Google Drive/School/Caltech/ee125_shared/ee125/hw2/multiple_detector/simulation/modelsim/multiple_detector_min_1200mv_0c_fast.vo    ;
+; D:/Google Drive/School/Caltech/ee125_shared/ee125/hw2/multiple_detector/simulation/modelsim/multiple_detector.vo                       ;
+; D:/Google Drive/School/Caltech/ee125_shared/ee125/hw2/multiple_detector/simulation/modelsim/multiple_detector_6_1200mv_85c_v_slow.sdo  ;
+; D:/Google Drive/School/Caltech/ee125_shared/ee125/hw2/multiple_detector/simulation/modelsim/multiple_detector_6_1200mv_0c_v_slow.sdo   ;
+; D:/Google Drive/School/Caltech/ee125_shared/ee125/hw2/multiple_detector/simulation/modelsim/multiple_detector_min_1200mv_0c_v_fast.sdo ;
+; D:/Google Drive/School/Caltech/ee125_shared/ee125/hw2/multiple_detector/simulation/modelsim/multiple_detector_v.sdo                    ;
 +----------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -88,20 +88,20 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Apr 22 21:47:28 2018
-Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off multiple_detector -c multiple_detector
-Info (204019): Generated file multiple_detector_6_1200mv_85c_slow.vo in folder "D:/Google Drive/School/Caltech/ee125_shared/ee125/hw1/multiple_detector/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file multiple_detector_6_1200mv_0c_slow.vo in folder "D:/Google Drive/School/Caltech/ee125_shared/ee125/hw1/multiple_detector/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file multiple_detector_min_1200mv_0c_fast.vo in folder "D:/Google Drive/School/Caltech/ee125_shared/ee125/hw1/multiple_detector/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file multiple_detector.vo in folder "D:/Google Drive/School/Caltech/ee125_shared/ee125/hw1/multiple_detector/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file multiple_detector_6_1200mv_85c_v_slow.sdo in folder "D:/Google Drive/School/Caltech/ee125_shared/ee125/hw1/multiple_detector/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file multiple_detector_6_1200mv_0c_v_slow.sdo in folder "D:/Google Drive/School/Caltech/ee125_shared/ee125/hw1/multiple_detector/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file multiple_detector_min_1200mv_0c_v_fast.sdo in folder "D:/Google Drive/School/Caltech/ee125_shared/ee125/hw1/multiple_detector/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file multiple_detector_v.sdo in folder "D:/Google Drive/School/Caltech/ee125_shared/ee125/hw1/multiple_detector/simulation/modelsim/" for EDA simulation tool
+    Info: Processing started: Tue Apr 24 22:54:27 2018
+Info: Command: quartus_eda --functional=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog multiple_detector -c multiple_detector
+Info (204019): Generated file multiple_detector_6_1200mv_85c_slow.vo in folder "D:/Google Drive/School/Caltech/ee125_shared/ee125/hw2/multiple_detector/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file multiple_detector_6_1200mv_0c_slow.vo in folder "D:/Google Drive/School/Caltech/ee125_shared/ee125/hw2/multiple_detector/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file multiple_detector_min_1200mv_0c_fast.vo in folder "D:/Google Drive/School/Caltech/ee125_shared/ee125/hw2/multiple_detector/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file multiple_detector.vo in folder "D:/Google Drive/School/Caltech/ee125_shared/ee125/hw2/multiple_detector/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file multiple_detector_6_1200mv_85c_v_slow.sdo in folder "D:/Google Drive/School/Caltech/ee125_shared/ee125/hw2/multiple_detector/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file multiple_detector_6_1200mv_0c_v_slow.sdo in folder "D:/Google Drive/School/Caltech/ee125_shared/ee125/hw2/multiple_detector/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file multiple_detector_min_1200mv_0c_v_fast.sdo in folder "D:/Google Drive/School/Caltech/ee125_shared/ee125/hw2/multiple_detector/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file multiple_detector_v.sdo in folder "D:/Google Drive/School/Caltech/ee125_shared/ee125/hw2/multiple_detector/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 32-bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 414 megabytes
-    Info: Processing ended: Sun Apr 22 21:47:29 2018
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 405 megabytes
+    Info: Processing ended: Tue Apr 24 22:54:29 2018
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

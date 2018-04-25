@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 --------------------------------------------------------------------------------
 entity multiple_detector is
 	generic (
-		NUM_BITS: positive := 5);
+		NUM_BITS: natural := 5);
 	port (
 		a,b: in std_logic_vector(NUM_BITS-1 downto 0);
 		is_multiple: out boolean;

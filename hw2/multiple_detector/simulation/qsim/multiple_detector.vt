@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "04/22/2018 21:45:10"
+// Generated on "04/24/2018 22:54:27"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    multiple_detector
 // 
@@ -207,14 +207,14 @@ initial
 begin
 	a[3] = 1'b0;
 	a[3] = #480000 1'b1;
-	a[3] = #320000 1'b0;
+	a[3] = #480000 1'b0;
 end 
 // a[ 2 ]
 initial
 begin
 	a[2] = 1'b0;
 	a[2] = #400000 1'b1;
-	a[2] = #400000 1'b0;
+	a[2] = #560000 1'b0;
 end 
 // a[ 1 ]
 initial
@@ -236,21 +236,23 @@ end
 initial
 begin
 	b[4] = 1'b0;
-	b[4] = #720000 1'b1;
-	b[4] = #80000 1'b0;
+	b[4] = #800000 1'b1;
+	b[4] = #160000 1'b0;
 end 
 // b[ 3 ]
 initial
 begin
 	b[3] = 1'b0;
 	b[3] = #720000 1'b1;
-	b[3] = #80000 1'b0;
+	b[3] = #240000 1'b0;
 end 
 // b[ 2 ]
 initial
 begin
 	b[2] = 1'b0;
 	b[2] = #640000 1'b1;
+	b[2] = #160000 1'b0;
+	b[2] = #80000 1'b1;
 	b[2] = #80000 1'b0;
 end 
 // b[ 1 ]
@@ -261,6 +263,8 @@ begin
 	b[1] = #80000 1'b0;
 	b[1] = #240000 1'b1;
 	b[1] = #160000 1'b0;
+	b[1] = #240000 1'b1;
+	b[1] = #80000 1'b0;
 end 
 // b[ 0 ]
 initial
@@ -270,6 +274,8 @@ begin
 	b[0] = #80000 1'b0;
 	b[0] = #400000 1'b1;
 	b[0] = #160000 1'b0;
+	b[0] = #160000 1'b1;
+	b[0] = #80000 1'b0;
 end 
 
 multiple_detector_vlg_sample_tst tb_sample (
