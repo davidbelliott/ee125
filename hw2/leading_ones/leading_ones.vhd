@@ -12,18 +12,21 @@ ENTITY leading_ones IS
 END ENTITY;
 -------------------------------------------------------------------------
 ARCHITECTURE leading_ones OF leading_ones IS
-	--signed representations of inputs and outputs
+	--define type int_vector to store a vector of integers
 	type int_vector is array(N-1 downto 0) of integer;
+	--first_ones is a copy of the input x, but with only the leading ones set
 	signal first_ones: std_logic_vector(N-1 downto 0);
-	signal ones_count: int_vector;
+	signal ones_count: int_vector;	--vector for summing up the ones
 BEGIN
 	first_ones(N-1)<= x(N-1);
 	ones_count(N-1)<=1 when x(N-1)='1' else 0;
 	gen: for i in N-2 downto 0 generate
-		first_ones(i)<=first_ones(i+1) and x(i);
+		first_ones(i)<=first_ones(i+1) and x(i);	--cut off ones when hit zero
+		--increment sum if this element is one
 		ones_count(i)<=ones_count(i+1) + 1 when(first_ones(i)='1') else ones_count(i+1);
 	end generate;
-	y<=ones_count(0);
+	y<=ones_count(0);	--the final sum is the last (0th) bit in the ones_count vector
+	--Encode into ssd bits
 	with y select
 		ssd <= "0000001" when 0,
 				 "1001111" when 1,
