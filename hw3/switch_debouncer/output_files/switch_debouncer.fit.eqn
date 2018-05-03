@@ -11,59 +11,1035 @@
 -- programming logic devices manufactured by Altera and sold by 
 -- Altera or its authorized distributors.  Please refer to the 
 -- applicable agreement for further details.
---A1L16Q is y~reg0 at LCFF_X27_Y12_N29
-A1L16Q = DFFEAS(A1L15, GLOBAL(A1L3),  ,  ,  ,  ,  ,  ,  );
+--num_debounced[4] is num_debounced[4] at LCFF_X20_Y7_N9
+num_debounced[4] = DFFEAS(A1L110, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
 
 
---t[0] is t[0] at LCFF_X27_Y12_N23
-t[0] = DFFEAS(A1L9, GLOBAL(A1L3),  ,  ,  ,  ,  ,  ,  );
+--num_debounced[5] is num_debounced[5] at LCFF_X20_Y7_N11
+num_debounced[5] = DFFEAS(A1L113, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
 
 
---t[2] is t[2] at LCFF_X27_Y12_N21
-t[2] = DFFEAS(A1L10, GLOBAL(A1L3),  ,  ,  ,  ,  ,  ,  );
+--num_debounced[6] is num_debounced[6] at LCFF_X20_Y7_N13
+num_debounced[6] = DFFEAS(A1L116, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
 
 
---t[1] is t[1] at LCFF_X27_Y12_N15
-t[1] = DFFEAS(A1L11, GLOBAL(A1L3),  ,  ,  ,  ,  ,  ,  );
+--num_debounced[7] is num_debounced[7] at LCFF_X20_Y7_N15
+num_debounced[7] = DFFEAS(A1L119, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
 
 
---A1L14 is y~0 at LCCOMB_X27_Y12_N12
-A1L14 = (!t[1] & (t[2] & t[0]));
+--num_debounced[8] is num_debounced[8] at LCFF_X20_Y7_N17
+num_debounced[8] = DFFEAS(A1L122, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
 
 
---A1L15 is y~1 at LCCOMB_X27_Y12_N28
-A1L15 = (A1L14 & (x)) # (!A1L14 & ((A1L16Q)));
+--num_debounced[9] is num_debounced[9] at LCFF_X20_Y7_N19
+num_debounced[9] = DFFEAS(A1L125, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
 
 
---A1L9 is t~0 at LCCOMB_X27_Y12_N22
-A1L9 = (!t[0] & (x $ (A1L16Q)));
+--num_debounced[10] is num_debounced[10] at LCFF_X20_Y7_N21
+num_debounced[10] = DFFEAS(A1L128, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
 
 
---A1L4 is process_0~0 at LCCOMB_X27_Y12_N26
-A1L4 = x $ (A1L16Q);
+--num_debounced[11] is num_debounced[11] at LCFF_X20_Y7_N23
+num_debounced[11] = DFFEAS(A1L131, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
 
 
---A1L10 is t~1 at LCCOMB_X27_Y12_N20
-A1L10 = (A1L4 & (t[2] $ (((t[1] & t[0])))));
+--num_debounced[12] is num_debounced[12] at LCFF_X20_Y7_N25
+num_debounced[12] = DFFEAS(A1L134, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
 
 
---A1L11 is t~2 at LCCOMB_X27_Y12_N14
-A1L11 = (x & (!A1L16Q & (t[0] $ (t[1])))) # (!x & (A1L16Q & (t[0] $ (t[1]))));
+--num_debounced[13] is num_debounced[13] at LCFF_X20_Y7_N27
+num_debounced[13] = DFFEAS(A1L137, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
 
 
---y is y at PIN_103
+--num_debounced[14] is num_debounced[14] at LCFF_X20_Y7_N29
+num_debounced[14] = DFFEAS(A1L140, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_debounced[15] is num_debounced[15] at LCFF_X20_Y7_N31
+num_debounced[15] = DFFEAS(A1L143, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_debounced[16] is num_debounced[16] at LCFF_X20_Y6_N1
+num_debounced[16] = DFFEAS(A1L146, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_debounced[17] is num_debounced[17] at LCFF_X20_Y6_N3
+num_debounced[17] = DFFEAS(A1L149, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_debounced[18] is num_debounced[18] at LCFF_X20_Y6_N5
+num_debounced[18] = DFFEAS(A1L152, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_debounced[19] is num_debounced[19] at LCFF_X20_Y6_N7
+num_debounced[19] = DFFEAS(A1L155, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_debounced[20] is num_debounced[20] at LCFF_X20_Y6_N9
+num_debounced[20] = DFFEAS(A1L158, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_debounced[21] is num_debounced[21] at LCFF_X20_Y6_N11
+num_debounced[21] = DFFEAS(A1L161, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_debounced[22] is num_debounced[22] at LCFF_X20_Y6_N13
+num_debounced[22] = DFFEAS(A1L164, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_debounced[23] is num_debounced[23] at LCFF_X20_Y6_N15
+num_debounced[23] = DFFEAS(A1L167, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_debounced[24] is num_debounced[24] at LCFF_X20_Y6_N17
+num_debounced[24] = DFFEAS(A1L170, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_debounced[25] is num_debounced[25] at LCFF_X20_Y6_N19
+num_debounced[25] = DFFEAS(A1L173, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_debounced[26] is num_debounced[26] at LCFF_X20_Y6_N21
+num_debounced[26] = DFFEAS(A1L176, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_debounced[27] is num_debounced[27] at LCFF_X20_Y6_N23
+num_debounced[27] = DFFEAS(A1L179, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_debounced[28] is num_debounced[28] at LCFF_X20_Y6_N25
+num_debounced[28] = DFFEAS(A1L182, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_debounced[29] is num_debounced[29] at LCFF_X20_Y6_N27
+num_debounced[29] = DFFEAS(A1L185, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_debounced[30] is num_debounced[30] at LCFF_X20_Y6_N29
+num_debounced[30] = DFFEAS(A1L188, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_debounced[3] is num_debounced[3] at LCFF_X20_Y7_N7
+num_debounced[3] = DFFEAS(A1L107, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_debounced[1] is num_debounced[1] at LCFF_X20_Y7_N3
+num_debounced[1] = DFFEAS(A1L101, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_debounced[2] is num_debounced[2] at LCFF_X20_Y7_N5
+num_debounced[2] = DFFEAS(A1L104, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[4] is num_bounced[4] at LCFF_X25_Y13_N9
+num_bounced[4] = DFFEAS(A1L17, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[5] is num_bounced[5] at LCFF_X25_Y13_N11
+num_bounced[5] = DFFEAS(A1L20, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[6] is num_bounced[6] at LCFF_X25_Y13_N13
+num_bounced[6] = DFFEAS(A1L23, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[7] is num_bounced[7] at LCFF_X25_Y13_N15
+num_bounced[7] = DFFEAS(A1L26, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[8] is num_bounced[8] at LCFF_X25_Y13_N17
+num_bounced[8] = DFFEAS(A1L29, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[9] is num_bounced[9] at LCFF_X25_Y13_N19
+num_bounced[9] = DFFEAS(A1L32, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[10] is num_bounced[10] at LCFF_X25_Y13_N21
+num_bounced[10] = DFFEAS(A1L35, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[11] is num_bounced[11] at LCFF_X25_Y13_N23
+num_bounced[11] = DFFEAS(A1L38, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[12] is num_bounced[12] at LCFF_X25_Y13_N25
+num_bounced[12] = DFFEAS(A1L41, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[13] is num_bounced[13] at LCFF_X25_Y13_N27
+num_bounced[13] = DFFEAS(A1L44, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[14] is num_bounced[14] at LCFF_X25_Y13_N29
+num_bounced[14] = DFFEAS(A1L47, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[15] is num_bounced[15] at LCFF_X25_Y13_N31
+num_bounced[15] = DFFEAS(A1L50, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[16] is num_bounced[16] at LCFF_X25_Y12_N1
+num_bounced[16] = DFFEAS(A1L53, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[17] is num_bounced[17] at LCFF_X25_Y12_N3
+num_bounced[17] = DFFEAS(A1L56, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[18] is num_bounced[18] at LCFF_X25_Y12_N5
+num_bounced[18] = DFFEAS(A1L59, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[19] is num_bounced[19] at LCFF_X25_Y12_N7
+num_bounced[19] = DFFEAS(A1L62, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[20] is num_bounced[20] at LCFF_X25_Y12_N9
+num_bounced[20] = DFFEAS(A1L65, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[21] is num_bounced[21] at LCFF_X25_Y12_N11
+num_bounced[21] = DFFEAS(A1L68, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[22] is num_bounced[22] at LCFF_X25_Y12_N13
+num_bounced[22] = DFFEAS(A1L71, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[23] is num_bounced[23] at LCFF_X25_Y12_N15
+num_bounced[23] = DFFEAS(A1L74, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[24] is num_bounced[24] at LCFF_X25_Y12_N17
+num_bounced[24] = DFFEAS(A1L77, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[25] is num_bounced[25] at LCFF_X25_Y12_N19
+num_bounced[25] = DFFEAS(A1L80, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[26] is num_bounced[26] at LCFF_X25_Y12_N21
+num_bounced[26] = DFFEAS(A1L83, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[27] is num_bounced[27] at LCFF_X25_Y12_N23
+num_bounced[27] = DFFEAS(A1L86, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[28] is num_bounced[28] at LCFF_X25_Y12_N25
+num_bounced[28] = DFFEAS(A1L89, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[29] is num_bounced[29] at LCFF_X25_Y12_N27
+num_bounced[29] = DFFEAS(A1L92, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[30] is num_bounced[30] at LCFF_X25_Y12_N29
+num_bounced[30] = DFFEAS(A1L95, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[3] is num_bounced[3] at LCFF_X25_Y13_N7
+num_bounced[3] = DFFEAS(A1L14, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[1] is num_bounced[1] at LCFF_X25_Y13_N3
+num_bounced[1] = DFFEAS(A1L8, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--num_bounced[2] is num_bounced[2] at LCFF_X25_Y13_N5
+num_bounced[2] = DFFEAS(A1L11, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L101 is num_debounced[1]~30 at LCCOMB_X20_Y7_N2
+A1L101 = (num_debounced[1] & (num_debounced[0] $ (VCC))) # (!num_debounced[1] & (num_debounced[0] & VCC));
+
+--A1L102 is num_debounced[1]~31 at LCCOMB_X20_Y7_N2
+A1L102 = CARRY((num_debounced[1] & num_debounced[0]));
+
+
+--A1L104 is num_debounced[2]~32 at LCCOMB_X20_Y7_N4
+A1L104 = (num_debounced[2] & (!A1L102)) # (!num_debounced[2] & ((A1L102) # (GND)));
+
+--A1L105 is num_debounced[2]~33 at LCCOMB_X20_Y7_N4
+A1L105 = CARRY((!A1L102) # (!num_debounced[2]));
+
+
+--A1L107 is num_debounced[3]~34 at LCCOMB_X20_Y7_N6
+A1L107 = (num_debounced[3] & (A1L105 $ (GND))) # (!num_debounced[3] & (!A1L105 & VCC));
+
+--A1L108 is num_debounced[3]~35 at LCCOMB_X20_Y7_N6
+A1L108 = CARRY((num_debounced[3] & !A1L105));
+
+
+--A1L110 is num_debounced[4]~36 at LCCOMB_X20_Y7_N8
+A1L110 = (num_debounced[4] & (!A1L108)) # (!num_debounced[4] & ((A1L108) # (GND)));
+
+--A1L111 is num_debounced[4]~37 at LCCOMB_X20_Y7_N8
+A1L111 = CARRY((!A1L108) # (!num_debounced[4]));
+
+
+--A1L113 is num_debounced[5]~38 at LCCOMB_X20_Y7_N10
+A1L113 = (num_debounced[5] & (A1L111 $ (GND))) # (!num_debounced[5] & (!A1L111 & VCC));
+
+--A1L114 is num_debounced[5]~39 at LCCOMB_X20_Y7_N10
+A1L114 = CARRY((num_debounced[5] & !A1L111));
+
+
+--A1L116 is num_debounced[6]~40 at LCCOMB_X20_Y7_N12
+A1L116 = (num_debounced[6] & (!A1L114)) # (!num_debounced[6] & ((A1L114) # (GND)));
+
+--A1L117 is num_debounced[6]~41 at LCCOMB_X20_Y7_N12
+A1L117 = CARRY((!A1L114) # (!num_debounced[6]));
+
+
+--A1L119 is num_debounced[7]~42 at LCCOMB_X20_Y7_N14
+A1L119 = (num_debounced[7] & (A1L117 $ (GND))) # (!num_debounced[7] & (!A1L117 & VCC));
+
+--A1L120 is num_debounced[7]~43 at LCCOMB_X20_Y7_N14
+A1L120 = CARRY((num_debounced[7] & !A1L117));
+
+
+--A1L122 is num_debounced[8]~44 at LCCOMB_X20_Y7_N16
+A1L122 = (num_debounced[8] & (!A1L120)) # (!num_debounced[8] & ((A1L120) # (GND)));
+
+--A1L123 is num_debounced[8]~45 at LCCOMB_X20_Y7_N16
+A1L123 = CARRY((!A1L120) # (!num_debounced[8]));
+
+
+--A1L125 is num_debounced[9]~46 at LCCOMB_X20_Y7_N18
+A1L125 = (num_debounced[9] & (A1L123 $ (GND))) # (!num_debounced[9] & (!A1L123 & VCC));
+
+--A1L126 is num_debounced[9]~47 at LCCOMB_X20_Y7_N18
+A1L126 = CARRY((num_debounced[9] & !A1L123));
+
+
+--A1L128 is num_debounced[10]~48 at LCCOMB_X20_Y7_N20
+A1L128 = (num_debounced[10] & (!A1L126)) # (!num_debounced[10] & ((A1L126) # (GND)));
+
+--A1L129 is num_debounced[10]~49 at LCCOMB_X20_Y7_N20
+A1L129 = CARRY((!A1L126) # (!num_debounced[10]));
+
+
+--A1L131 is num_debounced[11]~50 at LCCOMB_X20_Y7_N22
+A1L131 = (num_debounced[11] & (A1L129 $ (GND))) # (!num_debounced[11] & (!A1L129 & VCC));
+
+--A1L132 is num_debounced[11]~51 at LCCOMB_X20_Y7_N22
+A1L132 = CARRY((num_debounced[11] & !A1L129));
+
+
+--A1L134 is num_debounced[12]~52 at LCCOMB_X20_Y7_N24
+A1L134 = (num_debounced[12] & (!A1L132)) # (!num_debounced[12] & ((A1L132) # (GND)));
+
+--A1L135 is num_debounced[12]~53 at LCCOMB_X20_Y7_N24
+A1L135 = CARRY((!A1L132) # (!num_debounced[12]));
+
+
+--A1L137 is num_debounced[13]~54 at LCCOMB_X20_Y7_N26
+A1L137 = (num_debounced[13] & (A1L135 $ (GND))) # (!num_debounced[13] & (!A1L135 & VCC));
+
+--A1L138 is num_debounced[13]~55 at LCCOMB_X20_Y7_N26
+A1L138 = CARRY((num_debounced[13] & !A1L135));
+
+
+--A1L140 is num_debounced[14]~56 at LCCOMB_X20_Y7_N28
+A1L140 = (num_debounced[14] & (!A1L138)) # (!num_debounced[14] & ((A1L138) # (GND)));
+
+--A1L141 is num_debounced[14]~57 at LCCOMB_X20_Y7_N28
+A1L141 = CARRY((!A1L138) # (!num_debounced[14]));
+
+
+--A1L143 is num_debounced[15]~58 at LCCOMB_X20_Y7_N30
+A1L143 = (num_debounced[15] & (A1L141 $ (GND))) # (!num_debounced[15] & (!A1L141 & VCC));
+
+--A1L144 is num_debounced[15]~59 at LCCOMB_X20_Y7_N30
+A1L144 = CARRY((num_debounced[15] & !A1L141));
+
+
+--A1L146 is num_debounced[16]~60 at LCCOMB_X20_Y6_N0
+A1L146 = (num_debounced[16] & (!A1L144)) # (!num_debounced[16] & ((A1L144) # (GND)));
+
+--A1L147 is num_debounced[16]~61 at LCCOMB_X20_Y6_N0
+A1L147 = CARRY((!A1L144) # (!num_debounced[16]));
+
+
+--A1L149 is num_debounced[17]~62 at LCCOMB_X20_Y6_N2
+A1L149 = (num_debounced[17] & (A1L147 $ (GND))) # (!num_debounced[17] & (!A1L147 & VCC));
+
+--A1L150 is num_debounced[17]~63 at LCCOMB_X20_Y6_N2
+A1L150 = CARRY((num_debounced[17] & !A1L147));
+
+
+--A1L152 is num_debounced[18]~64 at LCCOMB_X20_Y6_N4
+A1L152 = (num_debounced[18] & (!A1L150)) # (!num_debounced[18] & ((A1L150) # (GND)));
+
+--A1L153 is num_debounced[18]~65 at LCCOMB_X20_Y6_N4
+A1L153 = CARRY((!A1L150) # (!num_debounced[18]));
+
+
+--A1L155 is num_debounced[19]~66 at LCCOMB_X20_Y6_N6
+A1L155 = (num_debounced[19] & (A1L153 $ (GND))) # (!num_debounced[19] & (!A1L153 & VCC));
+
+--A1L156 is num_debounced[19]~67 at LCCOMB_X20_Y6_N6
+A1L156 = CARRY((num_debounced[19] & !A1L153));
+
+
+--A1L158 is num_debounced[20]~68 at LCCOMB_X20_Y6_N8
+A1L158 = (num_debounced[20] & (!A1L156)) # (!num_debounced[20] & ((A1L156) # (GND)));
+
+--A1L159 is num_debounced[20]~69 at LCCOMB_X20_Y6_N8
+A1L159 = CARRY((!A1L156) # (!num_debounced[20]));
+
+
+--A1L161 is num_debounced[21]~70 at LCCOMB_X20_Y6_N10
+A1L161 = (num_debounced[21] & (A1L159 $ (GND))) # (!num_debounced[21] & (!A1L159 & VCC));
+
+--A1L162 is num_debounced[21]~71 at LCCOMB_X20_Y6_N10
+A1L162 = CARRY((num_debounced[21] & !A1L159));
+
+
+--A1L164 is num_debounced[22]~72 at LCCOMB_X20_Y6_N12
+A1L164 = (num_debounced[22] & (!A1L162)) # (!num_debounced[22] & ((A1L162) # (GND)));
+
+--A1L165 is num_debounced[22]~73 at LCCOMB_X20_Y6_N12
+A1L165 = CARRY((!A1L162) # (!num_debounced[22]));
+
+
+--A1L167 is num_debounced[23]~74 at LCCOMB_X20_Y6_N14
+A1L167 = (num_debounced[23] & (A1L165 $ (GND))) # (!num_debounced[23] & (!A1L165 & VCC));
+
+--A1L168 is num_debounced[23]~75 at LCCOMB_X20_Y6_N14
+A1L168 = CARRY((num_debounced[23] & !A1L165));
+
+
+--A1L170 is num_debounced[24]~76 at LCCOMB_X20_Y6_N16
+A1L170 = (num_debounced[24] & (!A1L168)) # (!num_debounced[24] & ((A1L168) # (GND)));
+
+--A1L171 is num_debounced[24]~77 at LCCOMB_X20_Y6_N16
+A1L171 = CARRY((!A1L168) # (!num_debounced[24]));
+
+
+--A1L173 is num_debounced[25]~78 at LCCOMB_X20_Y6_N18
+A1L173 = (num_debounced[25] & (A1L171 $ (GND))) # (!num_debounced[25] & (!A1L171 & VCC));
+
+--A1L174 is num_debounced[25]~79 at LCCOMB_X20_Y6_N18
+A1L174 = CARRY((num_debounced[25] & !A1L171));
+
+
+--A1L176 is num_debounced[26]~80 at LCCOMB_X20_Y6_N20
+A1L176 = (num_debounced[26] & (!A1L174)) # (!num_debounced[26] & ((A1L174) # (GND)));
+
+--A1L177 is num_debounced[26]~81 at LCCOMB_X20_Y6_N20
+A1L177 = CARRY((!A1L174) # (!num_debounced[26]));
+
+
+--A1L179 is num_debounced[27]~82 at LCCOMB_X20_Y6_N22
+A1L179 = (num_debounced[27] & (A1L177 $ (GND))) # (!num_debounced[27] & (!A1L177 & VCC));
+
+--A1L180 is num_debounced[27]~83 at LCCOMB_X20_Y6_N22
+A1L180 = CARRY((num_debounced[27] & !A1L177));
+
+
+--A1L182 is num_debounced[28]~84 at LCCOMB_X20_Y6_N24
+A1L182 = (num_debounced[28] & (!A1L180)) # (!num_debounced[28] & ((A1L180) # (GND)));
+
+--A1L183 is num_debounced[28]~85 at LCCOMB_X20_Y6_N24
+A1L183 = CARRY((!A1L180) # (!num_debounced[28]));
+
+
+--A1L185 is num_debounced[29]~86 at LCCOMB_X20_Y6_N26
+A1L185 = (num_debounced[29] & (A1L183 $ (GND))) # (!num_debounced[29] & (!A1L183 & VCC));
+
+--A1L186 is num_debounced[29]~87 at LCCOMB_X20_Y6_N26
+A1L186 = CARRY((num_debounced[29] & !A1L183));
+
+
+--A1L188 is num_debounced[30]~88 at LCCOMB_X20_Y6_N28
+A1L188 = A1L186 $ (num_debounced[30]);
+
+
+--A1L8 is num_bounced[1]~30 at LCCOMB_X25_Y13_N2
+A1L8 = (num_bounced[0] & (num_bounced[1] $ (VCC))) # (!num_bounced[0] & (num_bounced[1] & VCC));
+
+--A1L9 is num_bounced[1]~31 at LCCOMB_X25_Y13_N2
+A1L9 = CARRY((num_bounced[0] & num_bounced[1]));
+
+
+--A1L11 is num_bounced[2]~32 at LCCOMB_X25_Y13_N4
+A1L11 = (num_bounced[2] & (!A1L9)) # (!num_bounced[2] & ((A1L9) # (GND)));
+
+--A1L12 is num_bounced[2]~33 at LCCOMB_X25_Y13_N4
+A1L12 = CARRY((!A1L9) # (!num_bounced[2]));
+
+
+--A1L14 is num_bounced[3]~34 at LCCOMB_X25_Y13_N6
+A1L14 = (num_bounced[3] & (A1L12 $ (GND))) # (!num_bounced[3] & (!A1L12 & VCC));
+
+--A1L15 is num_bounced[3]~35 at LCCOMB_X25_Y13_N6
+A1L15 = CARRY((num_bounced[3] & !A1L12));
+
+
+--A1L17 is num_bounced[4]~36 at LCCOMB_X25_Y13_N8
+A1L17 = (num_bounced[4] & (!A1L15)) # (!num_bounced[4] & ((A1L15) # (GND)));
+
+--A1L18 is num_bounced[4]~37 at LCCOMB_X25_Y13_N8
+A1L18 = CARRY((!A1L15) # (!num_bounced[4]));
+
+
+--A1L20 is num_bounced[5]~38 at LCCOMB_X25_Y13_N10
+A1L20 = (num_bounced[5] & (A1L18 $ (GND))) # (!num_bounced[5] & (!A1L18 & VCC));
+
+--A1L21 is num_bounced[5]~39 at LCCOMB_X25_Y13_N10
+A1L21 = CARRY((num_bounced[5] & !A1L18));
+
+
+--A1L23 is num_bounced[6]~40 at LCCOMB_X25_Y13_N12
+A1L23 = (num_bounced[6] & (!A1L21)) # (!num_bounced[6] & ((A1L21) # (GND)));
+
+--A1L24 is num_bounced[6]~41 at LCCOMB_X25_Y13_N12
+A1L24 = CARRY((!A1L21) # (!num_bounced[6]));
+
+
+--A1L26 is num_bounced[7]~42 at LCCOMB_X25_Y13_N14
+A1L26 = (num_bounced[7] & (A1L24 $ (GND))) # (!num_bounced[7] & (!A1L24 & VCC));
+
+--A1L27 is num_bounced[7]~43 at LCCOMB_X25_Y13_N14
+A1L27 = CARRY((num_bounced[7] & !A1L24));
+
+
+--A1L29 is num_bounced[8]~44 at LCCOMB_X25_Y13_N16
+A1L29 = (num_bounced[8] & (!A1L27)) # (!num_bounced[8] & ((A1L27) # (GND)));
+
+--A1L30 is num_bounced[8]~45 at LCCOMB_X25_Y13_N16
+A1L30 = CARRY((!A1L27) # (!num_bounced[8]));
+
+
+--A1L32 is num_bounced[9]~46 at LCCOMB_X25_Y13_N18
+A1L32 = (num_bounced[9] & (A1L30 $ (GND))) # (!num_bounced[9] & (!A1L30 & VCC));
+
+--A1L33 is num_bounced[9]~47 at LCCOMB_X25_Y13_N18
+A1L33 = CARRY((num_bounced[9] & !A1L30));
+
+
+--A1L35 is num_bounced[10]~48 at LCCOMB_X25_Y13_N20
+A1L35 = (num_bounced[10] & (!A1L33)) # (!num_bounced[10] & ((A1L33) # (GND)));
+
+--A1L36 is num_bounced[10]~49 at LCCOMB_X25_Y13_N20
+A1L36 = CARRY((!A1L33) # (!num_bounced[10]));
+
+
+--A1L38 is num_bounced[11]~50 at LCCOMB_X25_Y13_N22
+A1L38 = (num_bounced[11] & (A1L36 $ (GND))) # (!num_bounced[11] & (!A1L36 & VCC));
+
+--A1L39 is num_bounced[11]~51 at LCCOMB_X25_Y13_N22
+A1L39 = CARRY((num_bounced[11] & !A1L36));
+
+
+--A1L41 is num_bounced[12]~52 at LCCOMB_X25_Y13_N24
+A1L41 = (num_bounced[12] & (!A1L39)) # (!num_bounced[12] & ((A1L39) # (GND)));
+
+--A1L42 is num_bounced[12]~53 at LCCOMB_X25_Y13_N24
+A1L42 = CARRY((!A1L39) # (!num_bounced[12]));
+
+
+--A1L44 is num_bounced[13]~54 at LCCOMB_X25_Y13_N26
+A1L44 = (num_bounced[13] & (A1L42 $ (GND))) # (!num_bounced[13] & (!A1L42 & VCC));
+
+--A1L45 is num_bounced[13]~55 at LCCOMB_X25_Y13_N26
+A1L45 = CARRY((num_bounced[13] & !A1L42));
+
+
+--A1L47 is num_bounced[14]~56 at LCCOMB_X25_Y13_N28
+A1L47 = (num_bounced[14] & (!A1L45)) # (!num_bounced[14] & ((A1L45) # (GND)));
+
+--A1L48 is num_bounced[14]~57 at LCCOMB_X25_Y13_N28
+A1L48 = CARRY((!A1L45) # (!num_bounced[14]));
+
+
+--A1L50 is num_bounced[15]~58 at LCCOMB_X25_Y13_N30
+A1L50 = (num_bounced[15] & (A1L48 $ (GND))) # (!num_bounced[15] & (!A1L48 & VCC));
+
+--A1L51 is num_bounced[15]~59 at LCCOMB_X25_Y13_N30
+A1L51 = CARRY((num_bounced[15] & !A1L48));
+
+
+--A1L53 is num_bounced[16]~60 at LCCOMB_X25_Y12_N0
+A1L53 = (num_bounced[16] & (!A1L51)) # (!num_bounced[16] & ((A1L51) # (GND)));
+
+--A1L54 is num_bounced[16]~61 at LCCOMB_X25_Y12_N0
+A1L54 = CARRY((!A1L51) # (!num_bounced[16]));
+
+
+--A1L56 is num_bounced[17]~62 at LCCOMB_X25_Y12_N2
+A1L56 = (num_bounced[17] & (A1L54 $ (GND))) # (!num_bounced[17] & (!A1L54 & VCC));
+
+--A1L57 is num_bounced[17]~63 at LCCOMB_X25_Y12_N2
+A1L57 = CARRY((num_bounced[17] & !A1L54));
+
+
+--A1L59 is num_bounced[18]~64 at LCCOMB_X25_Y12_N4
+A1L59 = (num_bounced[18] & (!A1L57)) # (!num_bounced[18] & ((A1L57) # (GND)));
+
+--A1L60 is num_bounced[18]~65 at LCCOMB_X25_Y12_N4
+A1L60 = CARRY((!A1L57) # (!num_bounced[18]));
+
+
+--A1L62 is num_bounced[19]~66 at LCCOMB_X25_Y12_N6
+A1L62 = (num_bounced[19] & (A1L60 $ (GND))) # (!num_bounced[19] & (!A1L60 & VCC));
+
+--A1L63 is num_bounced[19]~67 at LCCOMB_X25_Y12_N6
+A1L63 = CARRY((num_bounced[19] & !A1L60));
+
+
+--A1L65 is num_bounced[20]~68 at LCCOMB_X25_Y12_N8
+A1L65 = (num_bounced[20] & (!A1L63)) # (!num_bounced[20] & ((A1L63) # (GND)));
+
+--A1L66 is num_bounced[20]~69 at LCCOMB_X25_Y12_N8
+A1L66 = CARRY((!A1L63) # (!num_bounced[20]));
+
+
+--A1L68 is num_bounced[21]~70 at LCCOMB_X25_Y12_N10
+A1L68 = (num_bounced[21] & (A1L66 $ (GND))) # (!num_bounced[21] & (!A1L66 & VCC));
+
+--A1L69 is num_bounced[21]~71 at LCCOMB_X25_Y12_N10
+A1L69 = CARRY((num_bounced[21] & !A1L66));
+
+
+--A1L71 is num_bounced[22]~72 at LCCOMB_X25_Y12_N12
+A1L71 = (num_bounced[22] & (!A1L69)) # (!num_bounced[22] & ((A1L69) # (GND)));
+
+--A1L72 is num_bounced[22]~73 at LCCOMB_X25_Y12_N12
+A1L72 = CARRY((!A1L69) # (!num_bounced[22]));
+
+
+--A1L74 is num_bounced[23]~74 at LCCOMB_X25_Y12_N14
+A1L74 = (num_bounced[23] & (A1L72 $ (GND))) # (!num_bounced[23] & (!A1L72 & VCC));
+
+--A1L75 is num_bounced[23]~75 at LCCOMB_X25_Y12_N14
+A1L75 = CARRY((num_bounced[23] & !A1L72));
+
+
+--A1L77 is num_bounced[24]~76 at LCCOMB_X25_Y12_N16
+A1L77 = (num_bounced[24] & (!A1L75)) # (!num_bounced[24] & ((A1L75) # (GND)));
+
+--A1L78 is num_bounced[24]~77 at LCCOMB_X25_Y12_N16
+A1L78 = CARRY((!A1L75) # (!num_bounced[24]));
+
+
+--A1L80 is num_bounced[25]~78 at LCCOMB_X25_Y12_N18
+A1L80 = (num_bounced[25] & (A1L78 $ (GND))) # (!num_bounced[25] & (!A1L78 & VCC));
+
+--A1L81 is num_bounced[25]~79 at LCCOMB_X25_Y12_N18
+A1L81 = CARRY((num_bounced[25] & !A1L78));
+
+
+--A1L83 is num_bounced[26]~80 at LCCOMB_X25_Y12_N20
+A1L83 = (num_bounced[26] & (!A1L81)) # (!num_bounced[26] & ((A1L81) # (GND)));
+
+--A1L84 is num_bounced[26]~81 at LCCOMB_X25_Y12_N20
+A1L84 = CARRY((!A1L81) # (!num_bounced[26]));
+
+
+--A1L86 is num_bounced[27]~82 at LCCOMB_X25_Y12_N22
+A1L86 = (num_bounced[27] & (A1L84 $ (GND))) # (!num_bounced[27] & (!A1L84 & VCC));
+
+--A1L87 is num_bounced[27]~83 at LCCOMB_X25_Y12_N22
+A1L87 = CARRY((num_bounced[27] & !A1L84));
+
+
+--A1L89 is num_bounced[28]~84 at LCCOMB_X25_Y12_N24
+A1L89 = (num_bounced[28] & (!A1L87)) # (!num_bounced[28] & ((A1L87) # (GND)));
+
+--A1L90 is num_bounced[28]~85 at LCCOMB_X25_Y12_N24
+A1L90 = CARRY((!A1L87) # (!num_bounced[28]));
+
+
+--A1L92 is num_bounced[29]~86 at LCCOMB_X25_Y12_N26
+A1L92 = (num_bounced[29] & (A1L90 $ (GND))) # (!num_bounced[29] & (!A1L90 & VCC));
+
+--A1L93 is num_bounced[29]~87 at LCCOMB_X25_Y12_N26
+A1L93 = CARRY((num_bounced[29] & !A1L90));
+
+
+--A1L95 is num_bounced[30]~88 at LCCOMB_X25_Y12_N28
+A1L95 = A1L93 $ (num_bounced[30]);
+
+
+--D1L1 is ssd:ssd_debounced|Equal0~0 at LCCOMB_X21_Y7_N12
+D1L1 = (!num_debounced[5] & (!num_debounced[6] & (!num_debounced[4] & !num_debounced[7])));
+
+
+--D1L2 is ssd:ssd_debounced|Equal0~1 at LCCOMB_X21_Y7_N2
+D1L2 = (!num_debounced[8] & (!num_debounced[9] & (!num_debounced[10] & !num_debounced[11])));
+
+
+--D1L3 is ssd:ssd_debounced|Equal0~2 at LCCOMB_X21_Y7_N0
+D1L3 = (!num_debounced[14] & (!num_debounced[13] & (!num_debounced[15] & !num_debounced[12])));
+
+
+--D1L4 is ssd:ssd_debounced|Equal0~3 at LCCOMB_X21_Y6_N8
+D1L4 = (!num_debounced[16] & (!num_debounced[19] & (!num_debounced[18] & !num_debounced[17])));
+
+
+--D1L5 is ssd:ssd_debounced|Equal0~4 at LCCOMB_X21_Y7_N14
+D1L5 = (D1L1 & (D1L2 & (D1L4 & D1L3)));
+
+
+--D1L6 is ssd:ssd_debounced|Equal0~5 at LCCOMB_X20_Y6_N30
+D1L6 = (!num_debounced[21] & (!num_debounced[20] & (!num_debounced[23] & !num_debounced[22])));
+
+
+--D1L7 is ssd:ssd_debounced|Equal0~6 at LCCOMB_X21_Y6_N2
+D1L7 = (!num_debounced[24] & (!num_debounced[27] & (!num_debounced[26] & !num_debounced[25])));
+
+
+--D1L8 is ssd:ssd_debounced|Equal0~7 at LCCOMB_X21_Y6_N0
+D1L8 = (!num_debounced[30] & (!num_debounced[29] & !num_debounced[28]));
+
+
+--D1L9 is ssd:ssd_debounced|Equal0~8 at LCCOMB_X21_Y6_N26
+D1L9 = (D1L7 & (D1L6 & D1L8));
+
+
+--D1L10 is ssd:ssd_debounced|Equal0~9 at LCCOMB_X22_Y7_N20
+D1L10 = (D1L9 & (!num_debounced[3] & D1L5));
+
+
+--num_debounced[0] is num_debounced[0] at LCFF_X20_Y7_N1
+num_debounced[0] = DFFEAS(A1L99, GLOBAL(C1L12),  ,  ,  ,  ,  ,  ,  );
+
+
+--D1_WideOr4 is ssd:ssd_debounced|WideOr4 at LCCOMB_X24_Y7_N20
+D1_WideOr4 = (D1L10 & ((num_debounced[2] & (num_debounced[0] & num_debounced[1])) # (!num_debounced[2] & ((!num_debounced[1])))));
+
+
+--D1_WideOr3 is ssd:ssd_debounced|WideOr3 at LCCOMB_X24_Y7_N18
+D1_WideOr3 = (D1L10 & ((num_debounced[0] & ((num_debounced[1]) # (!num_debounced[2]))) # (!num_debounced[0] & (!num_debounced[2] & num_debounced[1]))));
+
+
+--D1L16 is ssd:ssd_debounced|WideNor0~6 at LCCOMB_X22_Y7_N26
+D1L16 = (num_debounced[3]) # ((num_debounced[2] & !num_debounced[1]));
+
+
+--D1L17 is ssd:ssd_debounced|WideNor0~7 at LCCOMB_X22_Y7_N24
+D1L17 = ((D1L16) # ((!D1L5) # (!num_debounced[0]))) # (!D1L9);
+
+
+--D1L18 is ssd:ssd_debounced|WideNor0~8 at LCCOMB_X22_Y7_N22
+D1L18 = (D1L9 & (D1L21 & (!num_debounced[0] & D1L5)));
+
+
+--D1L19 is ssd:ssd_debounced|WideNor0~9 at LCCOMB_X22_Y7_N0
+D1L19 = (D1L9 & (D1L22 & (num_debounced[0] & D1L5)));
+
+
+--D1L20 is ssd:ssd_debounced|WideNor0~10 at LCCOMB_X22_Y7_N14
+D1L20 = ((D1L23) # ((num_debounced[0]) # (!D1L5))) # (!D1L9);
+
+
+--D1_WideOr2 is ssd:ssd_debounced|WideOr2 at LCCOMB_X22_Y7_N12
+D1_WideOr2 = ((D1L17 & (!D1L18 & !D1L19))) # (!D1L20);
+
+
+--D1L27 is ssd:ssd_debounced|WideOr1~0 at LCCOMB_X24_Y7_N0
+D1L27 = ((num_debounced[0] & (num_debounced[2] $ (num_debounced[1]))) # (!num_debounced[0] & ((num_debounced[1]) # (!num_debounced[2])))) # (!D1L10);
+
+
+--D1L11 is ssd:ssd_debounced|Equal2~0 at LCCOMB_X22_Y7_N2
+D1L11 = (!num_debounced[2] & (!num_debounced[0] & !num_debounced[3]));
+
+
+--D1L12 is ssd:ssd_debounced|Equal2~1 at LCCOMB_X22_Y7_N16
+D1L12 = (D1L9 & (D1L11 & (num_debounced[1] & D1L5)));
+
+
+--D1_ssd[4] is ssd:ssd_debounced|ssd[4] at LCCOMB_X22_Y7_N10
+D1_ssd[4] = (D1L12) # ((D1L17 & (!D1L18 & !D1L19)));
+
+
+--D1L25 is ssd:ssd_debounced|WideOr0~0 at LCCOMB_X22_Y7_N4
+D1L25 = (!num_debounced[3] & (num_debounced[0] $ (num_debounced[1])));
+
+
+--D1L26 is ssd:ssd_debounced|WideOr0~1 at LCCOMB_X22_Y7_N6
+D1L26 = (D1L9 & (D1L25 & (D1L5 & num_debounced[2])));
+
+
+--D1_WideOr0 is ssd:ssd_debounced|WideOr0 at LCCOMB_X22_Y7_N28
+D1_WideOr0 = (D1L26) # ((!D1L18 & (D1L17 & !D1L19)));
+
+
+--D1_ssd[6] is ssd:ssd_debounced|ssd[6] at LCCOMB_X24_Y7_N22
+D1_ssd[6] = (D1L10 & (!num_debounced[1] & (num_debounced[0] $ (num_debounced[2]))));
+
+
+--D2L1 is ssd:ssd_bounced|Equal0~0 at LCCOMB_X24_Y13_N12
+D2L1 = (!num_bounced[6] & (!num_bounced[5] & (!num_bounced[7] & !num_bounced[4])));
+
+
+--D2L2 is ssd:ssd_bounced|Equal0~1 at LCCOMB_X24_Y13_N2
+D2L2 = (!num_bounced[10] & (!num_bounced[9] & (!num_bounced[8] & !num_bounced[11])));
+
+
+--D2L3 is ssd:ssd_bounced|Equal0~2 at LCCOMB_X24_Y13_N0
+D2L3 = (!num_bounced[15] & (!num_bounced[14] & (!num_bounced[13] & !num_bounced[12])));
+
+
+--D2L4 is ssd:ssd_bounced|Equal0~3 at LCCOMB_X25_Y12_N30
+D2L4 = (!num_bounced[19] & (!num_bounced[17] & (!num_bounced[18] & !num_bounced[16])));
+
+
+--D2L5 is ssd:ssd_bounced|Equal0~4 at LCCOMB_X24_Y13_N18
+D2L5 = (D2L1 & (D2L2 & (D2L4 & D2L3)));
+
+
+--D2L6 is ssd:ssd_bounced|Equal0~5 at LCCOMB_X26_Y12_N12
+D2L6 = (!num_bounced[22] & (!num_bounced[21] & (!num_bounced[23] & !num_bounced[20])));
+
+
+--D2L7 is ssd:ssd_bounced|Equal0~6 at LCCOMB_X26_Y12_N26
+D2L7 = (!num_bounced[27] & (!num_bounced[25] & (!num_bounced[26] & !num_bounced[24])));
+
+
+--D2L8 is ssd:ssd_bounced|Equal0~7 at LCCOMB_X26_Y12_N0
+D2L8 = (!num_bounced[29] & (!num_bounced[30] & !num_bounced[28]));
+
+
+--D2L9 is ssd:ssd_bounced|Equal0~8 at LCCOMB_X26_Y12_N2
+D2L9 = (D2L6 & (D2L8 & D2L7));
+
+
+--D2L10 is ssd:ssd_bounced|Equal0~9 at LCCOMB_X26_Y13_N4
+D2L10 = (D2L5 & (!num_bounced[3] & D2L9));
+
+
+--num_bounced[0] is num_bounced[0] at LCFF_X25_Y13_N1
+num_bounced[0] = DFFEAS(A1L6, GLOBAL(A1L207),  ,  ,  ,  ,  ,  ,  );
+
+
+--D2_WideOr4 is ssd:ssd_bounced|WideOr4 at LCCOMB_X26_Y13_N22
+D2_WideOr4 = (D2L10 & ((num_bounced[2] & (num_bounced[0] & num_bounced[1])) # (!num_bounced[2] & ((!num_bounced[1])))));
+
+
+--D2_WideOr3 is ssd:ssd_bounced|WideOr3 at LCCOMB_X26_Y13_N0
+D2_WideOr3 = (D2L10 & ((num_bounced[0] & ((num_bounced[1]) # (!num_bounced[2]))) # (!num_bounced[0] & (!num_bounced[2] & num_bounced[1]))));
+
+
+--D2L20 is ssd:ssd_bounced|WideNor0~0 at LCCOMB_X26_Y13_N14
+D2L20 = (((num_bounced[2] & !num_bounced[1])) # (!D2L10)) # (!num_bounced[0]);
+
+
+--D2L11 is ssd:ssd_bounced|Equal0~10 at LCCOMB_X26_Y13_N28
+D2L11 = (!num_bounced[0] & (D2L5 & (!num_bounced[3] & D2L9)));
+
+
+--D2L14 is ssd:ssd_bounced|Equal8~0 at LCCOMB_X26_Y13_N26
+D2L14 = (!num_bounced[2] & (num_bounced[3] & !num_bounced[1]));
+
+
+--D2L15 is ssd:ssd_bounced|Equal8~1 at LCCOMB_X26_Y13_N8
+D2L15 = (D2L9 & (D2L5 & (!num_bounced[0] & D2L14)));
+
+
+--D2L21 is ssd:ssd_bounced|WideNor0~1 at LCCOMB_X26_Y13_N18
+D2L21 = (D2L15) # (D2L11);
+
+
+--D2L16 is ssd:ssd_bounced|Equal9~0 at LCCOMB_X26_Y13_N12
+D2L16 = (D2L9 & (D2L5 & (num_bounced[0] & D2L14)));
+
+
+--D2L13 is ssd:ssd_bounced|Equal4~0 at LCCOMB_X26_Y13_N2
+D2L13 = (num_bounced[2] & !num_bounced[1]);
+
+
+--D2L22 is ssd:ssd_bounced|WideNor0~2 at LCCOMB_X26_Y13_N24
+D2L22 = (D2L16) # ((num_bounced[0] & (D2L13 & D2L10)));
+
+
+--D2L23 is ssd:ssd_bounced|WideNor0~3 at LCCOMB_X26_Y13_N6
+D2L23 = (!D2L15 & (((!num_bounced[1] & num_bounced[2])) # (!D2L11)));
+
+
+--D2_WideOr2 is ssd:ssd_bounced|WideOr2 at LCCOMB_X27_Y13_N0
+D2_WideOr2 = ((D2L20 & (!D2L21 & !D2L22))) # (!D2L23);
+
+
+--D2L26 is ssd:ssd_bounced|WideOr1~0 at LCCOMB_X26_Y13_N16
+D2L26 = ((num_bounced[0] & (num_bounced[2] $ (num_bounced[1]))) # (!num_bounced[0] & ((num_bounced[1]) # (!num_bounced[2])))) # (!D2L10);
+
+
+--D2L12 is ssd:ssd_bounced|Equal2~0 at LCCOMB_X26_Y13_N30
+D2L12 = (num_bounced[1] & (!num_bounced[2] & D2L11));
+
+
+--D2_ssd[4] is ssd:ssd_bounced|ssd[4] at LCCOMB_X27_Y13_N18
+D2_ssd[4] = (D2L12) # ((D2L20 & (!D2L21 & !D2L22)));
+
+
+--D2L25 is ssd:ssd_bounced|WideOr0~0 at LCCOMB_X26_Y13_N20
+D2L25 = (D2L10 & (num_bounced[2] & (num_bounced[0] $ (num_bounced[1]))));
+
+
+--D2_WideOr0 is ssd:ssd_bounced|WideOr0 at LCCOMB_X27_Y13_N16
+D2_WideOr0 = (D2L25) # ((D2L20 & (!D2L21 & !D2L22)));
+
+
+--D2_ssd[6] is ssd:ssd_bounced|ssd[6] at LCCOMB_X26_Y13_N10
+D2_ssd[6] = (D2L10 & (!num_bounced[1] & (num_bounced[0] $ (num_bounced[2]))));
+
+
+--C1_y is switch_debouncer:debouncer|y at LCFF_X1_Y6_N29
+C1_y = DFFEAS(C1L11, GLOBAL(A1L3),  ,  ,  ,  ,  ,  ,  );
+
+
+--C1_t[0] is switch_debouncer:debouncer|t[0] at LCFF_X1_Y6_N25
+C1_t[0] = DFFEAS(C1L6, GLOBAL(A1L3),  ,  ,  ,  ,  ,  ,  );
+
+
+--C1_t[2] is switch_debouncer:debouncer|t[2] at LCFF_X1_Y6_N13
+C1_t[2] = DFFEAS(C1L7, GLOBAL(A1L3),  ,  ,  ,  ,  ,  ,  );
+
+
+--C1_t[1] is switch_debouncer:debouncer|t[1] at LCFF_X1_Y6_N9
+C1_t[1] = DFFEAS(C1L8, GLOBAL(A1L3),  ,  ,  ,  ,  ,  ,  );
+
+
+--C1L10 is switch_debouncer:debouncer|y~0 at LCCOMB_X1_Y6_N18
+C1L10 = (!C1_t[1] & (C1_t[0] & C1_t[2]));
+
+
+--C1L11 is switch_debouncer:debouncer|y~1 at LCCOMB_X1_Y6_N28
+C1L11 = (C1L10 & (x)) # (!C1L10 & ((C1_y)));
+
+
+--C1L6 is switch_debouncer:debouncer|t~0 at LCCOMB_X1_Y6_N24
+C1L6 = (!C1_t[0] & (x $ (C1_y)));
+
+
+--C1L1 is switch_debouncer:debouncer|process_0~0 at LCCOMB_X1_Y6_N30
+C1L1 = x $ (C1_y);
+
+
+--C1L7 is switch_debouncer:debouncer|t~1 at LCCOMB_X1_Y6_N12
+C1L7 = (C1L1 & (C1_t[2] $ (((C1_t[1] & C1_t[0])))));
+
+
+--C1L8 is switch_debouncer:debouncer|t~2 at LCCOMB_X1_Y6_N8
+C1L8 = (C1_y & (!x & (C1_t[1] $ (C1_t[0])))) # (!C1_y & (x & (C1_t[1] $ (C1_t[0]))));
+
+
+--D1L21 is ssd:ssd_debounced|WideNor0~11 at LCCOMB_X22_Y7_N18
+D1L21 = ((!num_debounced[2] & !num_debounced[1])) # (!num_debounced[3]);
+
+
+--D1L22 is ssd:ssd_debounced|WideNor0~12 at LCCOMB_X22_Y7_N8
+D1L22 = (!num_debounced[1] & (num_debounced[2] $ (num_debounced[3])));
+
+
+--D1L23 is ssd:ssd_debounced|WideNor0~13 at LCCOMB_X22_Y7_N30
+D1L23 = (num_debounced[1] & ((num_debounced[3]))) # (!num_debounced[1] & (num_debounced[2]));
+
+
+--A1L99 is num_debounced[0]~90 at LCCOMB_X20_Y7_N0
+A1L99 = !num_debounced[0];
+
+
+--A1L6 is num_bounced[0]~90 at LCCOMB_X25_Y13_N0
+A1L6 = !num_bounced[0];
+
+
+--ssd_debounced_pins[0] is ssd_debounced_pins[0] at PIN_86
 --operation mode is output
 
-y = OUTPUT(A1L16Q);
+ssd_debounced_pins[0] = OUTPUT(D1_WideOr4);
 
 
---x is x at PIN_104
+--ssd_debounced_pins[1] is ssd_debounced_pins[1] at PIN_87
+--operation mode is output
+
+ssd_debounced_pins[1] = OUTPUT(D1_WideOr3);
+
+
+--ssd_debounced_pins[2] is ssd_debounced_pins[2] at PIN_64
+--operation mode is output
+
+ssd_debounced_pins[2] = OUTPUT(!D1_WideOr2);
+
+
+--ssd_debounced_pins[3] is ssd_debounced_pins[3] at PIN_93
+--operation mode is output
+
+ssd_debounced_pins[3] = OUTPUT(!D1L27);
+
+
+--ssd_debounced_pins[4] is ssd_debounced_pins[4] at PIN_92
+--operation mode is output
+
+ssd_debounced_pins[4] = OUTPUT(D1_ssd[4]);
+
+
+--ssd_debounced_pins[5] is ssd_debounced_pins[5] at PIN_65
+--operation mode is output
+
+ssd_debounced_pins[5] = OUTPUT(D1_WideOr0);
+
+
+--ssd_debounced_pins[6] is ssd_debounced_pins[6] at PIN_81
+--operation mode is output
+
+ssd_debounced_pins[6] = OUTPUT(D1_ssd[6]);
+
+
+--ssd_bounced_pins[0] is ssd_bounced_pins[0] at PIN_112
+--operation mode is output
+
+ssd_bounced_pins[0] = OUTPUT(D2_WideOr4);
+
+
+--ssd_bounced_pins[1] is ssd_bounced_pins[1] at PIN_114
+--operation mode is output
+
+ssd_bounced_pins[1] = OUTPUT(D2_WideOr3);
+
+
+--ssd_bounced_pins[2] is ssd_bounced_pins[2] at PIN_113
+--operation mode is output
+
+ssd_bounced_pins[2] = OUTPUT(!D2_WideOr2);
+
+
+--ssd_bounced_pins[3] is ssd_bounced_pins[3] at PIN_115
+--operation mode is output
+
+ssd_bounced_pins[3] = OUTPUT(!D2L26);
+
+
+--ssd_bounced_pins[4] is ssd_bounced_pins[4] at PIN_103
+--operation mode is output
+
+ssd_bounced_pins[4] = OUTPUT(D2_ssd[4]);
+
+
+--ssd_bounced_pins[5] is ssd_bounced_pins[5] at PIN_104
+--operation mode is output
+
+ssd_bounced_pins[5] = OUTPUT(D2_WideOr0);
+
+
+--ssd_bounced_pins[6] is ssd_bounced_pins[6] at PIN_119
+--operation mode is output
+
+ssd_bounced_pins[6] = OUTPUT(D2_ssd[6]);
+
+
+--x is x at PIN_17
 --operation mode is input
 
 x = INPUT();
 
 
---clk is clk at PIN_17
+--clk is clk at PIN_18
 --operation mode is input
 
 clk = INPUT();
@@ -72,7 +1048,15 @@ clk = INPUT();
 
 
 
---A1L3 is clk~clkctrl at CLKCTRL_G2
+--A1L3 is clk~clkctrl at CLKCTRL_G1
 A1L3 = cycloneii_clkctrl(.INCLK[0] = clk) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+
+--C1L12 is switch_debouncer:debouncer|y~clkctrl at CLKCTRL_G0
+C1L12 = cycloneii_clkctrl(.INCLK[0] = C1_y) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+
+--A1L207 is x~clkctrl at CLKCTRL_G2
+A1L207 = cycloneii_clkctrl(.INCLK[0] = x) WITH (clock_type = "Global Clock", ena_register_mode = "none");
 
 

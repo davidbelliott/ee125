@@ -1,5 +1,5 @@
 Simulator report for switch_debouncer
-Wed May 02 19:59:42 2018
+Wed May 02 20:40:19 2018
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -45,9 +45,9 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 14 nodes     ;
-; Simulation Coverage         ;     100.00 % ;
-; Total Number of Transitions ; 244          ;
+; Simulation Netlist Size     ; 210 nodes    ;
+; Simulation Coverage         ;      12.31 % ;
+; Total Number of Transitions ; 376          ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
 ; Device                      ; EP2C5T144C6  ;
@@ -95,53 +95,540 @@ Please use Quartus II 64-Bit to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;     100.00 % ;
-; Total nodes checked                                 ; 14           ;
-; Total output ports checked                          ; 14           ;
-; Total output ports with complete 1/0-value coverage ; 14           ;
-; Total output ports with no 1/0-value coverage       ; 0            ;
-; Total output ports with no 1-value coverage         ; 0            ;
-; Total output ports with no 0-value coverage         ; 0            ;
+; Total coverage as a percentage                      ;      12.31 % ;
+; Total nodes checked                                 ; 210          ;
+; Total output ports checked                          ; 268          ;
+; Total output ports with complete 1/0-value coverage ; 33           ;
+; Total output ports with no 1/0-value coverage       ; 231          ;
+; Total output ports with no 1-value coverage         ; 233          ;
+; Total output ports with no 0-value coverage         ; 233          ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+----------------------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                                      ;
-+-------------------------------+-------------------------------+------------------+
-; Node Name                     ; Output Port Name              ; Output Port Type ;
-+-------------------------------+-------------------------------+------------------+
-; |switch_debouncer|y~reg0      ; |switch_debouncer|y~reg0      ; regout           ;
-; |switch_debouncer|t[0]        ; |switch_debouncer|t[0]        ; regout           ;
-; |switch_debouncer|t[2]        ; |switch_debouncer|t[2]        ; regout           ;
-; |switch_debouncer|t[1]        ; |switch_debouncer|t[1]        ; regout           ;
-; |switch_debouncer|y~0         ; |switch_debouncer|y~0         ; combout          ;
-; |switch_debouncer|y~1         ; |switch_debouncer|y~1         ; combout          ;
-; |switch_debouncer|t~0         ; |switch_debouncer|t~0         ; combout          ;
-; |switch_debouncer|process_0~0 ; |switch_debouncer|process_0~0 ; combout          ;
-; |switch_debouncer|t~1         ; |switch_debouncer|t~1         ; combout          ;
-; |switch_debouncer|t~2         ; |switch_debouncer|t~2         ; combout          ;
-; |switch_debouncer|y           ; |switch_debouncer|y           ; padio            ;
-; |switch_debouncer|x           ; |switch_debouncer|x~corein    ; combout          ;
-; |switch_debouncer|clk         ; |switch_debouncer|clk~corein  ; combout          ;
-; |switch_debouncer|clk~clkctrl ; |switch_debouncer|clk~clkctrl ; outclk           ;
-+-------------------------------+-------------------------------+------------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                        ;
++--------------------------------------------------------+--------------------------------------------------------+------------------+
+; Node Name                                              ; Output Port Name                                       ; Output Port Type ;
++--------------------------------------------------------+--------------------------------------------------------+------------------+
+; |debouncer_demo|num_bounced[1]                         ; |debouncer_demo|num_bounced[1]                         ; regout           ;
+; |debouncer_demo|num_bounced[1]~30                      ; |debouncer_demo|num_bounced[1]~30                      ; combout          ;
+; |debouncer_demo|num_bounced[1]~30                      ; |debouncer_demo|num_bounced[1]~31                      ; cout             ;
+; |debouncer_demo|num_bounced[2]~32                      ; |debouncer_demo|num_bounced[2]~32                      ; combout          ;
+; |debouncer_demo|num_bounced[0]                         ; |debouncer_demo|num_bounced[0]                         ; regout           ;
+; |debouncer_demo|ssd:ssd_bounced|WideOr3                ; |debouncer_demo|ssd:ssd_bounced|WideOr3                ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|WideNor0~0             ; |debouncer_demo|ssd:ssd_bounced|WideNor0~0             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal0~10              ; |debouncer_demo|ssd:ssd_bounced|Equal0~10              ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|WideNor0~1             ; |debouncer_demo|ssd:ssd_bounced|WideNor0~1             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|WideNor0~3             ; |debouncer_demo|ssd:ssd_bounced|WideNor0~3             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|WideOr2                ; |debouncer_demo|ssd:ssd_bounced|WideOr2                ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|WideOr1~0              ; |debouncer_demo|ssd:ssd_bounced|WideOr1~0              ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal2~0               ; |debouncer_demo|ssd:ssd_bounced|Equal2~0               ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|ssd[4]                 ; |debouncer_demo|ssd:ssd_bounced|ssd[4]                 ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|WideOr0~0              ; |debouncer_demo|ssd:ssd_bounced|WideOr0~0              ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|WideOr0                ; |debouncer_demo|ssd:ssd_bounced|WideOr0                ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|ssd[6]                 ; |debouncer_demo|ssd:ssd_bounced|ssd[6]                 ; combout          ;
+; |debouncer_demo|switch_debouncer:debouncer|t[0]        ; |debouncer_demo|switch_debouncer:debouncer|t[0]        ; regout           ;
+; |debouncer_demo|switch_debouncer:debouncer|t[1]        ; |debouncer_demo|switch_debouncer:debouncer|t[1]        ; regout           ;
+; |debouncer_demo|switch_debouncer:debouncer|t~0         ; |debouncer_demo|switch_debouncer:debouncer|t~0         ; combout          ;
+; |debouncer_demo|switch_debouncer:debouncer|process_0~0 ; |debouncer_demo|switch_debouncer:debouncer|process_0~0 ; combout          ;
+; |debouncer_demo|switch_debouncer:debouncer|t~2         ; |debouncer_demo|switch_debouncer:debouncer|t~2         ; combout          ;
+; |debouncer_demo|num_bounced[0]~90                      ; |debouncer_demo|num_bounced[0]~90                      ; combout          ;
+; |debouncer_demo|ssd_bounced_pins[1]                    ; |debouncer_demo|ssd_bounced_pins[1]                    ; padio            ;
+; |debouncer_demo|ssd_bounced_pins[2]                    ; |debouncer_demo|ssd_bounced_pins[2]                    ; padio            ;
+; |debouncer_demo|ssd_bounced_pins[3]                    ; |debouncer_demo|ssd_bounced_pins[3]                    ; padio            ;
+; |debouncer_demo|ssd_bounced_pins[4]                    ; |debouncer_demo|ssd_bounced_pins[4]                    ; padio            ;
+; |debouncer_demo|ssd_bounced_pins[5]                    ; |debouncer_demo|ssd_bounced_pins[5]                    ; padio            ;
+; |debouncer_demo|ssd_bounced_pins[6]                    ; |debouncer_demo|ssd_bounced_pins[6]                    ; padio            ;
+; |debouncer_demo|x                                      ; |debouncer_demo|x~corein                               ; combout          ;
+; |debouncer_demo|clk                                    ; |debouncer_demo|clk~corein                             ; combout          ;
+; |debouncer_demo|clk~clkctrl                            ; |debouncer_demo|clk~clkctrl                            ; outclk           ;
+; |debouncer_demo|x~clkctrl                              ; |debouncer_demo|x~clkctrl                              ; outclk           ;
++--------------------------------------------------------+--------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+-------------------------------------------------+
-; Missing 1-Value Coverage                        ;
-+-----------+------------------+------------------+
-; Node Name ; Output Port Name ; Output Port Type ;
-+-----------+------------------+------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                       ;
++------------------------------------------------------+------------------------------------------------------+------------------+
+; Node Name                                            ; Output Port Name                                     ; Output Port Type ;
++------------------------------------------------------+------------------------------------------------------+------------------+
+; |debouncer_demo|num_debounced[4]                     ; |debouncer_demo|num_debounced[4]                     ; regout           ;
+; |debouncer_demo|num_debounced[5]                     ; |debouncer_demo|num_debounced[5]                     ; regout           ;
+; |debouncer_demo|num_debounced[6]                     ; |debouncer_demo|num_debounced[6]                     ; regout           ;
+; |debouncer_demo|num_debounced[7]                     ; |debouncer_demo|num_debounced[7]                     ; regout           ;
+; |debouncer_demo|num_debounced[8]                     ; |debouncer_demo|num_debounced[8]                     ; regout           ;
+; |debouncer_demo|num_debounced[9]                     ; |debouncer_demo|num_debounced[9]                     ; regout           ;
+; |debouncer_demo|num_debounced[10]                    ; |debouncer_demo|num_debounced[10]                    ; regout           ;
+; |debouncer_demo|num_debounced[11]                    ; |debouncer_demo|num_debounced[11]                    ; regout           ;
+; |debouncer_demo|num_debounced[12]                    ; |debouncer_demo|num_debounced[12]                    ; regout           ;
+; |debouncer_demo|num_debounced[13]                    ; |debouncer_demo|num_debounced[13]                    ; regout           ;
+; |debouncer_demo|num_debounced[14]                    ; |debouncer_demo|num_debounced[14]                    ; regout           ;
+; |debouncer_demo|num_debounced[15]                    ; |debouncer_demo|num_debounced[15]                    ; regout           ;
+; |debouncer_demo|num_debounced[16]                    ; |debouncer_demo|num_debounced[16]                    ; regout           ;
+; |debouncer_demo|num_debounced[17]                    ; |debouncer_demo|num_debounced[17]                    ; regout           ;
+; |debouncer_demo|num_debounced[18]                    ; |debouncer_demo|num_debounced[18]                    ; regout           ;
+; |debouncer_demo|num_debounced[19]                    ; |debouncer_demo|num_debounced[19]                    ; regout           ;
+; |debouncer_demo|num_debounced[20]                    ; |debouncer_demo|num_debounced[20]                    ; regout           ;
+; |debouncer_demo|num_debounced[21]                    ; |debouncer_demo|num_debounced[21]                    ; regout           ;
+; |debouncer_demo|num_debounced[22]                    ; |debouncer_demo|num_debounced[22]                    ; regout           ;
+; |debouncer_demo|num_debounced[23]                    ; |debouncer_demo|num_debounced[23]                    ; regout           ;
+; |debouncer_demo|num_debounced[24]                    ; |debouncer_demo|num_debounced[24]                    ; regout           ;
+; |debouncer_demo|num_debounced[25]                    ; |debouncer_demo|num_debounced[25]                    ; regout           ;
+; |debouncer_demo|num_debounced[26]                    ; |debouncer_demo|num_debounced[26]                    ; regout           ;
+; |debouncer_demo|num_debounced[27]                    ; |debouncer_demo|num_debounced[27]                    ; regout           ;
+; |debouncer_demo|num_debounced[28]                    ; |debouncer_demo|num_debounced[28]                    ; regout           ;
+; |debouncer_demo|num_debounced[29]                    ; |debouncer_demo|num_debounced[29]                    ; regout           ;
+; |debouncer_demo|num_debounced[30]                    ; |debouncer_demo|num_debounced[30]                    ; regout           ;
+; |debouncer_demo|num_debounced[3]                     ; |debouncer_demo|num_debounced[3]                     ; regout           ;
+; |debouncer_demo|num_debounced[1]                     ; |debouncer_demo|num_debounced[1]                     ; regout           ;
+; |debouncer_demo|num_debounced[2]                     ; |debouncer_demo|num_debounced[2]                     ; regout           ;
+; |debouncer_demo|num_bounced[4]                       ; |debouncer_demo|num_bounced[4]                       ; regout           ;
+; |debouncer_demo|num_bounced[5]                       ; |debouncer_demo|num_bounced[5]                       ; regout           ;
+; |debouncer_demo|num_bounced[6]                       ; |debouncer_demo|num_bounced[6]                       ; regout           ;
+; |debouncer_demo|num_bounced[7]                       ; |debouncer_demo|num_bounced[7]                       ; regout           ;
+; |debouncer_demo|num_bounced[8]                       ; |debouncer_demo|num_bounced[8]                       ; regout           ;
+; |debouncer_demo|num_bounced[9]                       ; |debouncer_demo|num_bounced[9]                       ; regout           ;
+; |debouncer_demo|num_bounced[10]                      ; |debouncer_demo|num_bounced[10]                      ; regout           ;
+; |debouncer_demo|num_bounced[11]                      ; |debouncer_demo|num_bounced[11]                      ; regout           ;
+; |debouncer_demo|num_bounced[12]                      ; |debouncer_demo|num_bounced[12]                      ; regout           ;
+; |debouncer_demo|num_bounced[13]                      ; |debouncer_demo|num_bounced[13]                      ; regout           ;
+; |debouncer_demo|num_bounced[14]                      ; |debouncer_demo|num_bounced[14]                      ; regout           ;
+; |debouncer_demo|num_bounced[15]                      ; |debouncer_demo|num_bounced[15]                      ; regout           ;
+; |debouncer_demo|num_bounced[16]                      ; |debouncer_demo|num_bounced[16]                      ; regout           ;
+; |debouncer_demo|num_bounced[17]                      ; |debouncer_demo|num_bounced[17]                      ; regout           ;
+; |debouncer_demo|num_bounced[18]                      ; |debouncer_demo|num_bounced[18]                      ; regout           ;
+; |debouncer_demo|num_bounced[19]                      ; |debouncer_demo|num_bounced[19]                      ; regout           ;
+; |debouncer_demo|num_bounced[20]                      ; |debouncer_demo|num_bounced[20]                      ; regout           ;
+; |debouncer_demo|num_bounced[21]                      ; |debouncer_demo|num_bounced[21]                      ; regout           ;
+; |debouncer_demo|num_bounced[22]                      ; |debouncer_demo|num_bounced[22]                      ; regout           ;
+; |debouncer_demo|num_bounced[23]                      ; |debouncer_demo|num_bounced[23]                      ; regout           ;
+; |debouncer_demo|num_bounced[24]                      ; |debouncer_demo|num_bounced[24]                      ; regout           ;
+; |debouncer_demo|num_bounced[25]                      ; |debouncer_demo|num_bounced[25]                      ; regout           ;
+; |debouncer_demo|num_bounced[26]                      ; |debouncer_demo|num_bounced[26]                      ; regout           ;
+; |debouncer_demo|num_bounced[27]                      ; |debouncer_demo|num_bounced[27]                      ; regout           ;
+; |debouncer_demo|num_bounced[28]                      ; |debouncer_demo|num_bounced[28]                      ; regout           ;
+; |debouncer_demo|num_bounced[29]                      ; |debouncer_demo|num_bounced[29]                      ; regout           ;
+; |debouncer_demo|num_bounced[30]                      ; |debouncer_demo|num_bounced[30]                      ; regout           ;
+; |debouncer_demo|num_bounced[3]                       ; |debouncer_demo|num_bounced[3]                       ; regout           ;
+; |debouncer_demo|num_debounced[1]~30                  ; |debouncer_demo|num_debounced[1]~30                  ; combout          ;
+; |debouncer_demo|num_debounced[1]~30                  ; |debouncer_demo|num_debounced[1]~31                  ; cout             ;
+; |debouncer_demo|num_debounced[2]~32                  ; |debouncer_demo|num_debounced[2]~32                  ; combout          ;
+; |debouncer_demo|num_debounced[2]~32                  ; |debouncer_demo|num_debounced[2]~33                  ; cout             ;
+; |debouncer_demo|num_debounced[3]~34                  ; |debouncer_demo|num_debounced[3]~34                  ; combout          ;
+; |debouncer_demo|num_debounced[3]~34                  ; |debouncer_demo|num_debounced[3]~35                  ; cout             ;
+; |debouncer_demo|num_debounced[4]~36                  ; |debouncer_demo|num_debounced[4]~36                  ; combout          ;
+; |debouncer_demo|num_debounced[4]~36                  ; |debouncer_demo|num_debounced[4]~37                  ; cout             ;
+; |debouncer_demo|num_debounced[5]~38                  ; |debouncer_demo|num_debounced[5]~38                  ; combout          ;
+; |debouncer_demo|num_debounced[5]~38                  ; |debouncer_demo|num_debounced[5]~39                  ; cout             ;
+; |debouncer_demo|num_debounced[6]~40                  ; |debouncer_demo|num_debounced[6]~40                  ; combout          ;
+; |debouncer_demo|num_debounced[6]~40                  ; |debouncer_demo|num_debounced[6]~41                  ; cout             ;
+; |debouncer_demo|num_debounced[7]~42                  ; |debouncer_demo|num_debounced[7]~42                  ; combout          ;
+; |debouncer_demo|num_debounced[7]~42                  ; |debouncer_demo|num_debounced[7]~43                  ; cout             ;
+; |debouncer_demo|num_debounced[8]~44                  ; |debouncer_demo|num_debounced[8]~44                  ; combout          ;
+; |debouncer_demo|num_debounced[8]~44                  ; |debouncer_demo|num_debounced[8]~45                  ; cout             ;
+; |debouncer_demo|num_debounced[9]~46                  ; |debouncer_demo|num_debounced[9]~46                  ; combout          ;
+; |debouncer_demo|num_debounced[9]~46                  ; |debouncer_demo|num_debounced[9]~47                  ; cout             ;
+; |debouncer_demo|num_debounced[10]~48                 ; |debouncer_demo|num_debounced[10]~48                 ; combout          ;
+; |debouncer_demo|num_debounced[10]~48                 ; |debouncer_demo|num_debounced[10]~49                 ; cout             ;
+; |debouncer_demo|num_debounced[11]~50                 ; |debouncer_demo|num_debounced[11]~50                 ; combout          ;
+; |debouncer_demo|num_debounced[11]~50                 ; |debouncer_demo|num_debounced[11]~51                 ; cout             ;
+; |debouncer_demo|num_debounced[12]~52                 ; |debouncer_demo|num_debounced[12]~52                 ; combout          ;
+; |debouncer_demo|num_debounced[12]~52                 ; |debouncer_demo|num_debounced[12]~53                 ; cout             ;
+; |debouncer_demo|num_debounced[13]~54                 ; |debouncer_demo|num_debounced[13]~54                 ; combout          ;
+; |debouncer_demo|num_debounced[13]~54                 ; |debouncer_demo|num_debounced[13]~55                 ; cout             ;
+; |debouncer_demo|num_debounced[14]~56                 ; |debouncer_demo|num_debounced[14]~56                 ; combout          ;
+; |debouncer_demo|num_debounced[14]~56                 ; |debouncer_demo|num_debounced[14]~57                 ; cout             ;
+; |debouncer_demo|num_debounced[15]~58                 ; |debouncer_demo|num_debounced[15]~58                 ; combout          ;
+; |debouncer_demo|num_debounced[15]~58                 ; |debouncer_demo|num_debounced[15]~59                 ; cout             ;
+; |debouncer_demo|num_debounced[16]~60                 ; |debouncer_demo|num_debounced[16]~60                 ; combout          ;
+; |debouncer_demo|num_debounced[16]~60                 ; |debouncer_demo|num_debounced[16]~61                 ; cout             ;
+; |debouncer_demo|num_debounced[17]~62                 ; |debouncer_demo|num_debounced[17]~62                 ; combout          ;
+; |debouncer_demo|num_debounced[17]~62                 ; |debouncer_demo|num_debounced[17]~63                 ; cout             ;
+; |debouncer_demo|num_debounced[18]~64                 ; |debouncer_demo|num_debounced[18]~64                 ; combout          ;
+; |debouncer_demo|num_debounced[18]~64                 ; |debouncer_demo|num_debounced[18]~65                 ; cout             ;
+; |debouncer_demo|num_debounced[19]~66                 ; |debouncer_demo|num_debounced[19]~66                 ; combout          ;
+; |debouncer_demo|num_debounced[19]~66                 ; |debouncer_demo|num_debounced[19]~67                 ; cout             ;
+; |debouncer_demo|num_debounced[20]~68                 ; |debouncer_demo|num_debounced[20]~68                 ; combout          ;
+; |debouncer_demo|num_debounced[20]~68                 ; |debouncer_demo|num_debounced[20]~69                 ; cout             ;
+; |debouncer_demo|num_debounced[21]~70                 ; |debouncer_demo|num_debounced[21]~70                 ; combout          ;
+; |debouncer_demo|num_debounced[21]~70                 ; |debouncer_demo|num_debounced[21]~71                 ; cout             ;
+; |debouncer_demo|num_debounced[22]~72                 ; |debouncer_demo|num_debounced[22]~72                 ; combout          ;
+; |debouncer_demo|num_debounced[22]~72                 ; |debouncer_demo|num_debounced[22]~73                 ; cout             ;
+; |debouncer_demo|num_debounced[23]~74                 ; |debouncer_demo|num_debounced[23]~74                 ; combout          ;
+; |debouncer_demo|num_debounced[23]~74                 ; |debouncer_demo|num_debounced[23]~75                 ; cout             ;
+; |debouncer_demo|num_debounced[24]~76                 ; |debouncer_demo|num_debounced[24]~76                 ; combout          ;
+; |debouncer_demo|num_debounced[24]~76                 ; |debouncer_demo|num_debounced[24]~77                 ; cout             ;
+; |debouncer_demo|num_debounced[25]~78                 ; |debouncer_demo|num_debounced[25]~78                 ; combout          ;
+; |debouncer_demo|num_debounced[25]~78                 ; |debouncer_demo|num_debounced[25]~79                 ; cout             ;
+; |debouncer_demo|num_debounced[26]~80                 ; |debouncer_demo|num_debounced[26]~80                 ; combout          ;
+; |debouncer_demo|num_debounced[26]~80                 ; |debouncer_demo|num_debounced[26]~81                 ; cout             ;
+; |debouncer_demo|num_debounced[27]~82                 ; |debouncer_demo|num_debounced[27]~82                 ; combout          ;
+; |debouncer_demo|num_debounced[27]~82                 ; |debouncer_demo|num_debounced[27]~83                 ; cout             ;
+; |debouncer_demo|num_debounced[28]~84                 ; |debouncer_demo|num_debounced[28]~84                 ; combout          ;
+; |debouncer_demo|num_debounced[28]~84                 ; |debouncer_demo|num_debounced[28]~85                 ; cout             ;
+; |debouncer_demo|num_debounced[29]~86                 ; |debouncer_demo|num_debounced[29]~86                 ; combout          ;
+; |debouncer_demo|num_debounced[29]~86                 ; |debouncer_demo|num_debounced[29]~87                 ; cout             ;
+; |debouncer_demo|num_debounced[30]~88                 ; |debouncer_demo|num_debounced[30]~88                 ; combout          ;
+; |debouncer_demo|num_bounced[2]~32                    ; |debouncer_demo|num_bounced[2]~33                    ; cout             ;
+; |debouncer_demo|num_bounced[3]~34                    ; |debouncer_demo|num_bounced[3]~34                    ; combout          ;
+; |debouncer_demo|num_bounced[3]~34                    ; |debouncer_demo|num_bounced[3]~35                    ; cout             ;
+; |debouncer_demo|num_bounced[4]~36                    ; |debouncer_demo|num_bounced[4]~36                    ; combout          ;
+; |debouncer_demo|num_bounced[4]~36                    ; |debouncer_demo|num_bounced[4]~37                    ; cout             ;
+; |debouncer_demo|num_bounced[5]~38                    ; |debouncer_demo|num_bounced[5]~38                    ; combout          ;
+; |debouncer_demo|num_bounced[5]~38                    ; |debouncer_demo|num_bounced[5]~39                    ; cout             ;
+; |debouncer_demo|num_bounced[6]~40                    ; |debouncer_demo|num_bounced[6]~40                    ; combout          ;
+; |debouncer_demo|num_bounced[6]~40                    ; |debouncer_demo|num_bounced[6]~41                    ; cout             ;
+; |debouncer_demo|num_bounced[7]~42                    ; |debouncer_demo|num_bounced[7]~42                    ; combout          ;
+; |debouncer_demo|num_bounced[7]~42                    ; |debouncer_demo|num_bounced[7]~43                    ; cout             ;
+; |debouncer_demo|num_bounced[8]~44                    ; |debouncer_demo|num_bounced[8]~44                    ; combout          ;
+; |debouncer_demo|num_bounced[8]~44                    ; |debouncer_demo|num_bounced[8]~45                    ; cout             ;
+; |debouncer_demo|num_bounced[9]~46                    ; |debouncer_demo|num_bounced[9]~46                    ; combout          ;
+; |debouncer_demo|num_bounced[9]~46                    ; |debouncer_demo|num_bounced[9]~47                    ; cout             ;
+; |debouncer_demo|num_bounced[10]~48                   ; |debouncer_demo|num_bounced[10]~48                   ; combout          ;
+; |debouncer_demo|num_bounced[10]~48                   ; |debouncer_demo|num_bounced[10]~49                   ; cout             ;
+; |debouncer_demo|num_bounced[11]~50                   ; |debouncer_demo|num_bounced[11]~50                   ; combout          ;
+; |debouncer_demo|num_bounced[11]~50                   ; |debouncer_demo|num_bounced[11]~51                   ; cout             ;
+; |debouncer_demo|num_bounced[12]~52                   ; |debouncer_demo|num_bounced[12]~52                   ; combout          ;
+; |debouncer_demo|num_bounced[12]~52                   ; |debouncer_demo|num_bounced[12]~53                   ; cout             ;
+; |debouncer_demo|num_bounced[13]~54                   ; |debouncer_demo|num_bounced[13]~54                   ; combout          ;
+; |debouncer_demo|num_bounced[13]~54                   ; |debouncer_demo|num_bounced[13]~55                   ; cout             ;
+; |debouncer_demo|num_bounced[14]~56                   ; |debouncer_demo|num_bounced[14]~56                   ; combout          ;
+; |debouncer_demo|num_bounced[14]~56                   ; |debouncer_demo|num_bounced[14]~57                   ; cout             ;
+; |debouncer_demo|num_bounced[15]~58                   ; |debouncer_demo|num_bounced[15]~58                   ; combout          ;
+; |debouncer_demo|num_bounced[15]~58                   ; |debouncer_demo|num_bounced[15]~59                   ; cout             ;
+; |debouncer_demo|num_bounced[16]~60                   ; |debouncer_demo|num_bounced[16]~60                   ; combout          ;
+; |debouncer_demo|num_bounced[16]~60                   ; |debouncer_demo|num_bounced[16]~61                   ; cout             ;
+; |debouncer_demo|num_bounced[17]~62                   ; |debouncer_demo|num_bounced[17]~62                   ; combout          ;
+; |debouncer_demo|num_bounced[17]~62                   ; |debouncer_demo|num_bounced[17]~63                   ; cout             ;
+; |debouncer_demo|num_bounced[18]~64                   ; |debouncer_demo|num_bounced[18]~64                   ; combout          ;
+; |debouncer_demo|num_bounced[18]~64                   ; |debouncer_demo|num_bounced[18]~65                   ; cout             ;
+; |debouncer_demo|num_bounced[19]~66                   ; |debouncer_demo|num_bounced[19]~66                   ; combout          ;
+; |debouncer_demo|num_bounced[19]~66                   ; |debouncer_demo|num_bounced[19]~67                   ; cout             ;
+; |debouncer_demo|num_bounced[20]~68                   ; |debouncer_demo|num_bounced[20]~68                   ; combout          ;
+; |debouncer_demo|num_bounced[20]~68                   ; |debouncer_demo|num_bounced[20]~69                   ; cout             ;
+; |debouncer_demo|num_bounced[21]~70                   ; |debouncer_demo|num_bounced[21]~70                   ; combout          ;
+; |debouncer_demo|num_bounced[21]~70                   ; |debouncer_demo|num_bounced[21]~71                   ; cout             ;
+; |debouncer_demo|num_bounced[22]~72                   ; |debouncer_demo|num_bounced[22]~72                   ; combout          ;
+; |debouncer_demo|num_bounced[22]~72                   ; |debouncer_demo|num_bounced[22]~73                   ; cout             ;
+; |debouncer_demo|num_bounced[23]~74                   ; |debouncer_demo|num_bounced[23]~74                   ; combout          ;
+; |debouncer_demo|num_bounced[23]~74                   ; |debouncer_demo|num_bounced[23]~75                   ; cout             ;
+; |debouncer_demo|num_bounced[24]~76                   ; |debouncer_demo|num_bounced[24]~76                   ; combout          ;
+; |debouncer_demo|num_bounced[24]~76                   ; |debouncer_demo|num_bounced[24]~77                   ; cout             ;
+; |debouncer_demo|num_bounced[25]~78                   ; |debouncer_demo|num_bounced[25]~78                   ; combout          ;
+; |debouncer_demo|num_bounced[25]~78                   ; |debouncer_demo|num_bounced[25]~79                   ; cout             ;
+; |debouncer_demo|num_bounced[26]~80                   ; |debouncer_demo|num_bounced[26]~80                   ; combout          ;
+; |debouncer_demo|num_bounced[26]~80                   ; |debouncer_demo|num_bounced[26]~81                   ; cout             ;
+; |debouncer_demo|num_bounced[27]~82                   ; |debouncer_demo|num_bounced[27]~82                   ; combout          ;
+; |debouncer_demo|num_bounced[27]~82                   ; |debouncer_demo|num_bounced[27]~83                   ; cout             ;
+; |debouncer_demo|num_bounced[28]~84                   ; |debouncer_demo|num_bounced[28]~84                   ; combout          ;
+; |debouncer_demo|num_bounced[28]~84                   ; |debouncer_demo|num_bounced[28]~85                   ; cout             ;
+; |debouncer_demo|num_bounced[29]~86                   ; |debouncer_demo|num_bounced[29]~86                   ; combout          ;
+; |debouncer_demo|num_bounced[29]~86                   ; |debouncer_demo|num_bounced[29]~87                   ; cout             ;
+; |debouncer_demo|num_bounced[30]~88                   ; |debouncer_demo|num_bounced[30]~88                   ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal0~0           ; |debouncer_demo|ssd:ssd_debounced|Equal0~0           ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal0~1           ; |debouncer_demo|ssd:ssd_debounced|Equal0~1           ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal0~2           ; |debouncer_demo|ssd:ssd_debounced|Equal0~2           ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal0~3           ; |debouncer_demo|ssd:ssd_debounced|Equal0~3           ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal0~4           ; |debouncer_demo|ssd:ssd_debounced|Equal0~4           ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal0~5           ; |debouncer_demo|ssd:ssd_debounced|Equal0~5           ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal0~6           ; |debouncer_demo|ssd:ssd_debounced|Equal0~6           ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal0~7           ; |debouncer_demo|ssd:ssd_debounced|Equal0~7           ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal0~8           ; |debouncer_demo|ssd:ssd_debounced|Equal0~8           ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal0~9           ; |debouncer_demo|ssd:ssd_debounced|Equal0~9           ; combout          ;
+; |debouncer_demo|num_debounced[0]                     ; |debouncer_demo|num_debounced[0]                     ; regout           ;
+; |debouncer_demo|ssd:ssd_debounced|WideOr4            ; |debouncer_demo|ssd:ssd_debounced|WideOr4            ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideOr3            ; |debouncer_demo|ssd:ssd_debounced|WideOr3            ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideNor0~6         ; |debouncer_demo|ssd:ssd_debounced|WideNor0~6         ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideNor0~7         ; |debouncer_demo|ssd:ssd_debounced|WideNor0~7         ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideNor0~8         ; |debouncer_demo|ssd:ssd_debounced|WideNor0~8         ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideNor0~9         ; |debouncer_demo|ssd:ssd_debounced|WideNor0~9         ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideNor0~10        ; |debouncer_demo|ssd:ssd_debounced|WideNor0~10        ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideOr2            ; |debouncer_demo|ssd:ssd_debounced|WideOr2            ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideOr1~0          ; |debouncer_demo|ssd:ssd_debounced|WideOr1~0          ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal2~0           ; |debouncer_demo|ssd:ssd_debounced|Equal2~0           ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal2~1           ; |debouncer_demo|ssd:ssd_debounced|Equal2~1           ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|ssd[4]             ; |debouncer_demo|ssd:ssd_debounced|ssd[4]             ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideOr0~0          ; |debouncer_demo|ssd:ssd_debounced|WideOr0~0          ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideOr0~1          ; |debouncer_demo|ssd:ssd_debounced|WideOr0~1          ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideOr0            ; |debouncer_demo|ssd:ssd_debounced|WideOr0            ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|ssd[6]             ; |debouncer_demo|ssd:ssd_debounced|ssd[6]             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal0~0             ; |debouncer_demo|ssd:ssd_bounced|Equal0~0             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal0~1             ; |debouncer_demo|ssd:ssd_bounced|Equal0~1             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal0~2             ; |debouncer_demo|ssd:ssd_bounced|Equal0~2             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal0~3             ; |debouncer_demo|ssd:ssd_bounced|Equal0~3             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal0~4             ; |debouncer_demo|ssd:ssd_bounced|Equal0~4             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal0~5             ; |debouncer_demo|ssd:ssd_bounced|Equal0~5             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal0~6             ; |debouncer_demo|ssd:ssd_bounced|Equal0~6             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal0~7             ; |debouncer_demo|ssd:ssd_bounced|Equal0~7             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal0~8             ; |debouncer_demo|ssd:ssd_bounced|Equal0~8             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal0~9             ; |debouncer_demo|ssd:ssd_bounced|Equal0~9             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|WideOr4              ; |debouncer_demo|ssd:ssd_bounced|WideOr4              ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal8~0             ; |debouncer_demo|ssd:ssd_bounced|Equal8~0             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal8~1             ; |debouncer_demo|ssd:ssd_bounced|Equal8~1             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal9~0             ; |debouncer_demo|ssd:ssd_bounced|Equal9~0             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|WideNor0~2           ; |debouncer_demo|ssd:ssd_bounced|WideNor0~2           ; combout          ;
+; |debouncer_demo|switch_debouncer:debouncer|y         ; |debouncer_demo|switch_debouncer:debouncer|y         ; regout           ;
+; |debouncer_demo|switch_debouncer:debouncer|t[2]      ; |debouncer_demo|switch_debouncer:debouncer|t[2]      ; regout           ;
+; |debouncer_demo|switch_debouncer:debouncer|y~0       ; |debouncer_demo|switch_debouncer:debouncer|y~0       ; combout          ;
+; |debouncer_demo|switch_debouncer:debouncer|y~1       ; |debouncer_demo|switch_debouncer:debouncer|y~1       ; combout          ;
+; |debouncer_demo|switch_debouncer:debouncer|t~1       ; |debouncer_demo|switch_debouncer:debouncer|t~1       ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideNor0~11        ; |debouncer_demo|ssd:ssd_debounced|WideNor0~11        ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideNor0~12        ; |debouncer_demo|ssd:ssd_debounced|WideNor0~12        ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideNor0~13        ; |debouncer_demo|ssd:ssd_debounced|WideNor0~13        ; combout          ;
+; |debouncer_demo|num_debounced[0]~90                  ; |debouncer_demo|num_debounced[0]~90                  ; combout          ;
+; |debouncer_demo|ssd_debounced_pins[0]                ; |debouncer_demo|ssd_debounced_pins[0]                ; padio            ;
+; |debouncer_demo|ssd_debounced_pins[1]                ; |debouncer_demo|ssd_debounced_pins[1]                ; padio            ;
+; |debouncer_demo|ssd_debounced_pins[2]                ; |debouncer_demo|ssd_debounced_pins[2]                ; padio            ;
+; |debouncer_demo|ssd_debounced_pins[3]                ; |debouncer_demo|ssd_debounced_pins[3]                ; padio            ;
+; |debouncer_demo|ssd_debounced_pins[4]                ; |debouncer_demo|ssd_debounced_pins[4]                ; padio            ;
+; |debouncer_demo|ssd_debounced_pins[5]                ; |debouncer_demo|ssd_debounced_pins[5]                ; padio            ;
+; |debouncer_demo|ssd_debounced_pins[6]                ; |debouncer_demo|ssd_debounced_pins[6]                ; padio            ;
+; |debouncer_demo|ssd_bounced_pins[0]                  ; |debouncer_demo|ssd_bounced_pins[0]                  ; padio            ;
+; |debouncer_demo|switch_debouncer:debouncer|y~clkctrl ; |debouncer_demo|switch_debouncer:debouncer|y~clkctrl ; outclk           ;
++------------------------------------------------------+------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+-------------------------------------------------+
-; Missing 0-Value Coverage                        ;
-+-----------+------------------+------------------+
-; Node Name ; Output Port Name ; Output Port Type ;
-+-----------+------------------+------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                       ;
++------------------------------------------------------+------------------------------------------------------+------------------+
+; Node Name                                            ; Output Port Name                                     ; Output Port Type ;
++------------------------------------------------------+------------------------------------------------------+------------------+
+; |debouncer_demo|num_debounced[4]                     ; |debouncer_demo|num_debounced[4]                     ; regout           ;
+; |debouncer_demo|num_debounced[5]                     ; |debouncer_demo|num_debounced[5]                     ; regout           ;
+; |debouncer_demo|num_debounced[6]                     ; |debouncer_demo|num_debounced[6]                     ; regout           ;
+; |debouncer_demo|num_debounced[7]                     ; |debouncer_demo|num_debounced[7]                     ; regout           ;
+; |debouncer_demo|num_debounced[8]                     ; |debouncer_demo|num_debounced[8]                     ; regout           ;
+; |debouncer_demo|num_debounced[9]                     ; |debouncer_demo|num_debounced[9]                     ; regout           ;
+; |debouncer_demo|num_debounced[10]                    ; |debouncer_demo|num_debounced[10]                    ; regout           ;
+; |debouncer_demo|num_debounced[11]                    ; |debouncer_demo|num_debounced[11]                    ; regout           ;
+; |debouncer_demo|num_debounced[12]                    ; |debouncer_demo|num_debounced[12]                    ; regout           ;
+; |debouncer_demo|num_debounced[13]                    ; |debouncer_demo|num_debounced[13]                    ; regout           ;
+; |debouncer_demo|num_debounced[14]                    ; |debouncer_demo|num_debounced[14]                    ; regout           ;
+; |debouncer_demo|num_debounced[15]                    ; |debouncer_demo|num_debounced[15]                    ; regout           ;
+; |debouncer_demo|num_debounced[16]                    ; |debouncer_demo|num_debounced[16]                    ; regout           ;
+; |debouncer_demo|num_debounced[17]                    ; |debouncer_demo|num_debounced[17]                    ; regout           ;
+; |debouncer_demo|num_debounced[18]                    ; |debouncer_demo|num_debounced[18]                    ; regout           ;
+; |debouncer_demo|num_debounced[19]                    ; |debouncer_demo|num_debounced[19]                    ; regout           ;
+; |debouncer_demo|num_debounced[20]                    ; |debouncer_demo|num_debounced[20]                    ; regout           ;
+; |debouncer_demo|num_debounced[21]                    ; |debouncer_demo|num_debounced[21]                    ; regout           ;
+; |debouncer_demo|num_debounced[22]                    ; |debouncer_demo|num_debounced[22]                    ; regout           ;
+; |debouncer_demo|num_debounced[23]                    ; |debouncer_demo|num_debounced[23]                    ; regout           ;
+; |debouncer_demo|num_debounced[24]                    ; |debouncer_demo|num_debounced[24]                    ; regout           ;
+; |debouncer_demo|num_debounced[25]                    ; |debouncer_demo|num_debounced[25]                    ; regout           ;
+; |debouncer_demo|num_debounced[26]                    ; |debouncer_demo|num_debounced[26]                    ; regout           ;
+; |debouncer_demo|num_debounced[27]                    ; |debouncer_demo|num_debounced[27]                    ; regout           ;
+; |debouncer_demo|num_debounced[28]                    ; |debouncer_demo|num_debounced[28]                    ; regout           ;
+; |debouncer_demo|num_debounced[29]                    ; |debouncer_demo|num_debounced[29]                    ; regout           ;
+; |debouncer_demo|num_debounced[30]                    ; |debouncer_demo|num_debounced[30]                    ; regout           ;
+; |debouncer_demo|num_debounced[3]                     ; |debouncer_demo|num_debounced[3]                     ; regout           ;
+; |debouncer_demo|num_debounced[1]                     ; |debouncer_demo|num_debounced[1]                     ; regout           ;
+; |debouncer_demo|num_debounced[2]                     ; |debouncer_demo|num_debounced[2]                     ; regout           ;
+; |debouncer_demo|num_bounced[4]                       ; |debouncer_demo|num_bounced[4]                       ; regout           ;
+; |debouncer_demo|num_bounced[5]                       ; |debouncer_demo|num_bounced[5]                       ; regout           ;
+; |debouncer_demo|num_bounced[6]                       ; |debouncer_demo|num_bounced[6]                       ; regout           ;
+; |debouncer_demo|num_bounced[7]                       ; |debouncer_demo|num_bounced[7]                       ; regout           ;
+; |debouncer_demo|num_bounced[8]                       ; |debouncer_demo|num_bounced[8]                       ; regout           ;
+; |debouncer_demo|num_bounced[9]                       ; |debouncer_demo|num_bounced[9]                       ; regout           ;
+; |debouncer_demo|num_bounced[10]                      ; |debouncer_demo|num_bounced[10]                      ; regout           ;
+; |debouncer_demo|num_bounced[11]                      ; |debouncer_demo|num_bounced[11]                      ; regout           ;
+; |debouncer_demo|num_bounced[12]                      ; |debouncer_demo|num_bounced[12]                      ; regout           ;
+; |debouncer_demo|num_bounced[13]                      ; |debouncer_demo|num_bounced[13]                      ; regout           ;
+; |debouncer_demo|num_bounced[14]                      ; |debouncer_demo|num_bounced[14]                      ; regout           ;
+; |debouncer_demo|num_bounced[15]                      ; |debouncer_demo|num_bounced[15]                      ; regout           ;
+; |debouncer_demo|num_bounced[16]                      ; |debouncer_demo|num_bounced[16]                      ; regout           ;
+; |debouncer_demo|num_bounced[17]                      ; |debouncer_demo|num_bounced[17]                      ; regout           ;
+; |debouncer_demo|num_bounced[18]                      ; |debouncer_demo|num_bounced[18]                      ; regout           ;
+; |debouncer_demo|num_bounced[19]                      ; |debouncer_demo|num_bounced[19]                      ; regout           ;
+; |debouncer_demo|num_bounced[20]                      ; |debouncer_demo|num_bounced[20]                      ; regout           ;
+; |debouncer_demo|num_bounced[21]                      ; |debouncer_demo|num_bounced[21]                      ; regout           ;
+; |debouncer_demo|num_bounced[22]                      ; |debouncer_demo|num_bounced[22]                      ; regout           ;
+; |debouncer_demo|num_bounced[23]                      ; |debouncer_demo|num_bounced[23]                      ; regout           ;
+; |debouncer_demo|num_bounced[24]                      ; |debouncer_demo|num_bounced[24]                      ; regout           ;
+; |debouncer_demo|num_bounced[25]                      ; |debouncer_demo|num_bounced[25]                      ; regout           ;
+; |debouncer_demo|num_bounced[26]                      ; |debouncer_demo|num_bounced[26]                      ; regout           ;
+; |debouncer_demo|num_bounced[27]                      ; |debouncer_demo|num_bounced[27]                      ; regout           ;
+; |debouncer_demo|num_bounced[28]                      ; |debouncer_demo|num_bounced[28]                      ; regout           ;
+; |debouncer_demo|num_bounced[29]                      ; |debouncer_demo|num_bounced[29]                      ; regout           ;
+; |debouncer_demo|num_bounced[30]                      ; |debouncer_demo|num_bounced[30]                      ; regout           ;
+; |debouncer_demo|num_bounced[3]                       ; |debouncer_demo|num_bounced[3]                       ; regout           ;
+; |debouncer_demo|num_bounced[2]                       ; |debouncer_demo|num_bounced[2]                       ; regout           ;
+; |debouncer_demo|num_debounced[1]~30                  ; |debouncer_demo|num_debounced[1]~30                  ; combout          ;
+; |debouncer_demo|num_debounced[1]~30                  ; |debouncer_demo|num_debounced[1]~31                  ; cout             ;
+; |debouncer_demo|num_debounced[2]~32                  ; |debouncer_demo|num_debounced[2]~32                  ; combout          ;
+; |debouncer_demo|num_debounced[2]~32                  ; |debouncer_demo|num_debounced[2]~33                  ; cout             ;
+; |debouncer_demo|num_debounced[3]~34                  ; |debouncer_demo|num_debounced[3]~34                  ; combout          ;
+; |debouncer_demo|num_debounced[3]~34                  ; |debouncer_demo|num_debounced[3]~35                  ; cout             ;
+; |debouncer_demo|num_debounced[4]~36                  ; |debouncer_demo|num_debounced[4]~36                  ; combout          ;
+; |debouncer_demo|num_debounced[4]~36                  ; |debouncer_demo|num_debounced[4]~37                  ; cout             ;
+; |debouncer_demo|num_debounced[5]~38                  ; |debouncer_demo|num_debounced[5]~38                  ; combout          ;
+; |debouncer_demo|num_debounced[5]~38                  ; |debouncer_demo|num_debounced[5]~39                  ; cout             ;
+; |debouncer_demo|num_debounced[6]~40                  ; |debouncer_demo|num_debounced[6]~40                  ; combout          ;
+; |debouncer_demo|num_debounced[6]~40                  ; |debouncer_demo|num_debounced[6]~41                  ; cout             ;
+; |debouncer_demo|num_debounced[7]~42                  ; |debouncer_demo|num_debounced[7]~42                  ; combout          ;
+; |debouncer_demo|num_debounced[7]~42                  ; |debouncer_demo|num_debounced[7]~43                  ; cout             ;
+; |debouncer_demo|num_debounced[8]~44                  ; |debouncer_demo|num_debounced[8]~44                  ; combout          ;
+; |debouncer_demo|num_debounced[8]~44                  ; |debouncer_demo|num_debounced[8]~45                  ; cout             ;
+; |debouncer_demo|num_debounced[9]~46                  ; |debouncer_demo|num_debounced[9]~46                  ; combout          ;
+; |debouncer_demo|num_debounced[9]~46                  ; |debouncer_demo|num_debounced[9]~47                  ; cout             ;
+; |debouncer_demo|num_debounced[10]~48                 ; |debouncer_demo|num_debounced[10]~48                 ; combout          ;
+; |debouncer_demo|num_debounced[10]~48                 ; |debouncer_demo|num_debounced[10]~49                 ; cout             ;
+; |debouncer_demo|num_debounced[11]~50                 ; |debouncer_demo|num_debounced[11]~50                 ; combout          ;
+; |debouncer_demo|num_debounced[11]~50                 ; |debouncer_demo|num_debounced[11]~51                 ; cout             ;
+; |debouncer_demo|num_debounced[12]~52                 ; |debouncer_demo|num_debounced[12]~52                 ; combout          ;
+; |debouncer_demo|num_debounced[12]~52                 ; |debouncer_demo|num_debounced[12]~53                 ; cout             ;
+; |debouncer_demo|num_debounced[13]~54                 ; |debouncer_demo|num_debounced[13]~54                 ; combout          ;
+; |debouncer_demo|num_debounced[13]~54                 ; |debouncer_demo|num_debounced[13]~55                 ; cout             ;
+; |debouncer_demo|num_debounced[14]~56                 ; |debouncer_demo|num_debounced[14]~56                 ; combout          ;
+; |debouncer_demo|num_debounced[14]~56                 ; |debouncer_demo|num_debounced[14]~57                 ; cout             ;
+; |debouncer_demo|num_debounced[15]~58                 ; |debouncer_demo|num_debounced[15]~58                 ; combout          ;
+; |debouncer_demo|num_debounced[15]~58                 ; |debouncer_demo|num_debounced[15]~59                 ; cout             ;
+; |debouncer_demo|num_debounced[16]~60                 ; |debouncer_demo|num_debounced[16]~60                 ; combout          ;
+; |debouncer_demo|num_debounced[16]~60                 ; |debouncer_demo|num_debounced[16]~61                 ; cout             ;
+; |debouncer_demo|num_debounced[17]~62                 ; |debouncer_demo|num_debounced[17]~62                 ; combout          ;
+; |debouncer_demo|num_debounced[17]~62                 ; |debouncer_demo|num_debounced[17]~63                 ; cout             ;
+; |debouncer_demo|num_debounced[18]~64                 ; |debouncer_demo|num_debounced[18]~64                 ; combout          ;
+; |debouncer_demo|num_debounced[18]~64                 ; |debouncer_demo|num_debounced[18]~65                 ; cout             ;
+; |debouncer_demo|num_debounced[19]~66                 ; |debouncer_demo|num_debounced[19]~66                 ; combout          ;
+; |debouncer_demo|num_debounced[19]~66                 ; |debouncer_demo|num_debounced[19]~67                 ; cout             ;
+; |debouncer_demo|num_debounced[20]~68                 ; |debouncer_demo|num_debounced[20]~68                 ; combout          ;
+; |debouncer_demo|num_debounced[20]~68                 ; |debouncer_demo|num_debounced[20]~69                 ; cout             ;
+; |debouncer_demo|num_debounced[21]~70                 ; |debouncer_demo|num_debounced[21]~70                 ; combout          ;
+; |debouncer_demo|num_debounced[21]~70                 ; |debouncer_demo|num_debounced[21]~71                 ; cout             ;
+; |debouncer_demo|num_debounced[22]~72                 ; |debouncer_demo|num_debounced[22]~72                 ; combout          ;
+; |debouncer_demo|num_debounced[22]~72                 ; |debouncer_demo|num_debounced[22]~73                 ; cout             ;
+; |debouncer_demo|num_debounced[23]~74                 ; |debouncer_demo|num_debounced[23]~74                 ; combout          ;
+; |debouncer_demo|num_debounced[23]~74                 ; |debouncer_demo|num_debounced[23]~75                 ; cout             ;
+; |debouncer_demo|num_debounced[24]~76                 ; |debouncer_demo|num_debounced[24]~76                 ; combout          ;
+; |debouncer_demo|num_debounced[24]~76                 ; |debouncer_demo|num_debounced[24]~77                 ; cout             ;
+; |debouncer_demo|num_debounced[25]~78                 ; |debouncer_demo|num_debounced[25]~78                 ; combout          ;
+; |debouncer_demo|num_debounced[25]~78                 ; |debouncer_demo|num_debounced[25]~79                 ; cout             ;
+; |debouncer_demo|num_debounced[26]~80                 ; |debouncer_demo|num_debounced[26]~80                 ; combout          ;
+; |debouncer_demo|num_debounced[26]~80                 ; |debouncer_demo|num_debounced[26]~81                 ; cout             ;
+; |debouncer_demo|num_debounced[27]~82                 ; |debouncer_demo|num_debounced[27]~82                 ; combout          ;
+; |debouncer_demo|num_debounced[27]~82                 ; |debouncer_demo|num_debounced[27]~83                 ; cout             ;
+; |debouncer_demo|num_debounced[28]~84                 ; |debouncer_demo|num_debounced[28]~84                 ; combout          ;
+; |debouncer_demo|num_debounced[28]~84                 ; |debouncer_demo|num_debounced[28]~85                 ; cout             ;
+; |debouncer_demo|num_debounced[29]~86                 ; |debouncer_demo|num_debounced[29]~86                 ; combout          ;
+; |debouncer_demo|num_debounced[29]~86                 ; |debouncer_demo|num_debounced[29]~87                 ; cout             ;
+; |debouncer_demo|num_debounced[30]~88                 ; |debouncer_demo|num_debounced[30]~88                 ; combout          ;
+; |debouncer_demo|num_bounced[2]~32                    ; |debouncer_demo|num_bounced[2]~33                    ; cout             ;
+; |debouncer_demo|num_bounced[3]~34                    ; |debouncer_demo|num_bounced[3]~34                    ; combout          ;
+; |debouncer_demo|num_bounced[3]~34                    ; |debouncer_demo|num_bounced[3]~35                    ; cout             ;
+; |debouncer_demo|num_bounced[4]~36                    ; |debouncer_demo|num_bounced[4]~36                    ; combout          ;
+; |debouncer_demo|num_bounced[4]~36                    ; |debouncer_demo|num_bounced[4]~37                    ; cout             ;
+; |debouncer_demo|num_bounced[5]~38                    ; |debouncer_demo|num_bounced[5]~38                    ; combout          ;
+; |debouncer_demo|num_bounced[5]~38                    ; |debouncer_demo|num_bounced[5]~39                    ; cout             ;
+; |debouncer_demo|num_bounced[6]~40                    ; |debouncer_demo|num_bounced[6]~40                    ; combout          ;
+; |debouncer_demo|num_bounced[6]~40                    ; |debouncer_demo|num_bounced[6]~41                    ; cout             ;
+; |debouncer_demo|num_bounced[7]~42                    ; |debouncer_demo|num_bounced[7]~42                    ; combout          ;
+; |debouncer_demo|num_bounced[7]~42                    ; |debouncer_demo|num_bounced[7]~43                    ; cout             ;
+; |debouncer_demo|num_bounced[8]~44                    ; |debouncer_demo|num_bounced[8]~44                    ; combout          ;
+; |debouncer_demo|num_bounced[8]~44                    ; |debouncer_demo|num_bounced[8]~45                    ; cout             ;
+; |debouncer_demo|num_bounced[9]~46                    ; |debouncer_demo|num_bounced[9]~46                    ; combout          ;
+; |debouncer_demo|num_bounced[9]~46                    ; |debouncer_demo|num_bounced[9]~47                    ; cout             ;
+; |debouncer_demo|num_bounced[10]~48                   ; |debouncer_demo|num_bounced[10]~48                   ; combout          ;
+; |debouncer_demo|num_bounced[10]~48                   ; |debouncer_demo|num_bounced[10]~49                   ; cout             ;
+; |debouncer_demo|num_bounced[11]~50                   ; |debouncer_demo|num_bounced[11]~50                   ; combout          ;
+; |debouncer_demo|num_bounced[11]~50                   ; |debouncer_demo|num_bounced[11]~51                   ; cout             ;
+; |debouncer_demo|num_bounced[12]~52                   ; |debouncer_demo|num_bounced[12]~52                   ; combout          ;
+; |debouncer_demo|num_bounced[12]~52                   ; |debouncer_demo|num_bounced[12]~53                   ; cout             ;
+; |debouncer_demo|num_bounced[13]~54                   ; |debouncer_demo|num_bounced[13]~54                   ; combout          ;
+; |debouncer_demo|num_bounced[13]~54                   ; |debouncer_demo|num_bounced[13]~55                   ; cout             ;
+; |debouncer_demo|num_bounced[14]~56                   ; |debouncer_demo|num_bounced[14]~56                   ; combout          ;
+; |debouncer_demo|num_bounced[14]~56                   ; |debouncer_demo|num_bounced[14]~57                   ; cout             ;
+; |debouncer_demo|num_bounced[15]~58                   ; |debouncer_demo|num_bounced[15]~58                   ; combout          ;
+; |debouncer_demo|num_bounced[15]~58                   ; |debouncer_demo|num_bounced[15]~59                   ; cout             ;
+; |debouncer_demo|num_bounced[16]~60                   ; |debouncer_demo|num_bounced[16]~60                   ; combout          ;
+; |debouncer_demo|num_bounced[16]~60                   ; |debouncer_demo|num_bounced[16]~61                   ; cout             ;
+; |debouncer_demo|num_bounced[17]~62                   ; |debouncer_demo|num_bounced[17]~62                   ; combout          ;
+; |debouncer_demo|num_bounced[17]~62                   ; |debouncer_demo|num_bounced[17]~63                   ; cout             ;
+; |debouncer_demo|num_bounced[18]~64                   ; |debouncer_demo|num_bounced[18]~64                   ; combout          ;
+; |debouncer_demo|num_bounced[18]~64                   ; |debouncer_demo|num_bounced[18]~65                   ; cout             ;
+; |debouncer_demo|num_bounced[19]~66                   ; |debouncer_demo|num_bounced[19]~66                   ; combout          ;
+; |debouncer_demo|num_bounced[19]~66                   ; |debouncer_demo|num_bounced[19]~67                   ; cout             ;
+; |debouncer_demo|num_bounced[20]~68                   ; |debouncer_demo|num_bounced[20]~68                   ; combout          ;
+; |debouncer_demo|num_bounced[20]~68                   ; |debouncer_demo|num_bounced[20]~69                   ; cout             ;
+; |debouncer_demo|num_bounced[21]~70                   ; |debouncer_demo|num_bounced[21]~70                   ; combout          ;
+; |debouncer_demo|num_bounced[21]~70                   ; |debouncer_demo|num_bounced[21]~71                   ; cout             ;
+; |debouncer_demo|num_bounced[22]~72                   ; |debouncer_demo|num_bounced[22]~72                   ; combout          ;
+; |debouncer_demo|num_bounced[22]~72                   ; |debouncer_demo|num_bounced[22]~73                   ; cout             ;
+; |debouncer_demo|num_bounced[23]~74                   ; |debouncer_demo|num_bounced[23]~74                   ; combout          ;
+; |debouncer_demo|num_bounced[23]~74                   ; |debouncer_demo|num_bounced[23]~75                   ; cout             ;
+; |debouncer_demo|num_bounced[24]~76                   ; |debouncer_demo|num_bounced[24]~76                   ; combout          ;
+; |debouncer_demo|num_bounced[24]~76                   ; |debouncer_demo|num_bounced[24]~77                   ; cout             ;
+; |debouncer_demo|num_bounced[25]~78                   ; |debouncer_demo|num_bounced[25]~78                   ; combout          ;
+; |debouncer_demo|num_bounced[25]~78                   ; |debouncer_demo|num_bounced[25]~79                   ; cout             ;
+; |debouncer_demo|num_bounced[26]~80                   ; |debouncer_demo|num_bounced[26]~80                   ; combout          ;
+; |debouncer_demo|num_bounced[26]~80                   ; |debouncer_demo|num_bounced[26]~81                   ; cout             ;
+; |debouncer_demo|num_bounced[27]~82                   ; |debouncer_demo|num_bounced[27]~82                   ; combout          ;
+; |debouncer_demo|num_bounced[27]~82                   ; |debouncer_demo|num_bounced[27]~83                   ; cout             ;
+; |debouncer_demo|num_bounced[28]~84                   ; |debouncer_demo|num_bounced[28]~84                   ; combout          ;
+; |debouncer_demo|num_bounced[28]~84                   ; |debouncer_demo|num_bounced[28]~85                   ; cout             ;
+; |debouncer_demo|num_bounced[29]~86                   ; |debouncer_demo|num_bounced[29]~86                   ; combout          ;
+; |debouncer_demo|num_bounced[29]~86                   ; |debouncer_demo|num_bounced[29]~87                   ; cout             ;
+; |debouncer_demo|num_bounced[30]~88                   ; |debouncer_demo|num_bounced[30]~88                   ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal0~0           ; |debouncer_demo|ssd:ssd_debounced|Equal0~0           ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal0~1           ; |debouncer_demo|ssd:ssd_debounced|Equal0~1           ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal0~2           ; |debouncer_demo|ssd:ssd_debounced|Equal0~2           ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal0~3           ; |debouncer_demo|ssd:ssd_debounced|Equal0~3           ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal0~4           ; |debouncer_demo|ssd:ssd_debounced|Equal0~4           ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal0~5           ; |debouncer_demo|ssd:ssd_debounced|Equal0~5           ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal0~6           ; |debouncer_demo|ssd:ssd_debounced|Equal0~6           ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal0~7           ; |debouncer_demo|ssd:ssd_debounced|Equal0~7           ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal0~8           ; |debouncer_demo|ssd:ssd_debounced|Equal0~8           ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal0~9           ; |debouncer_demo|ssd:ssd_debounced|Equal0~9           ; combout          ;
+; |debouncer_demo|num_debounced[0]                     ; |debouncer_demo|num_debounced[0]                     ; regout           ;
+; |debouncer_demo|ssd:ssd_debounced|WideOr4            ; |debouncer_demo|ssd:ssd_debounced|WideOr4            ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideOr3            ; |debouncer_demo|ssd:ssd_debounced|WideOr3            ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideNor0~6         ; |debouncer_demo|ssd:ssd_debounced|WideNor0~6         ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideNor0~7         ; |debouncer_demo|ssd:ssd_debounced|WideNor0~7         ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideNor0~8         ; |debouncer_demo|ssd:ssd_debounced|WideNor0~8         ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideNor0~9         ; |debouncer_demo|ssd:ssd_debounced|WideNor0~9         ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideNor0~10        ; |debouncer_demo|ssd:ssd_debounced|WideNor0~10        ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideOr2            ; |debouncer_demo|ssd:ssd_debounced|WideOr2            ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideOr1~0          ; |debouncer_demo|ssd:ssd_debounced|WideOr1~0          ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal2~0           ; |debouncer_demo|ssd:ssd_debounced|Equal2~0           ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|Equal2~1           ; |debouncer_demo|ssd:ssd_debounced|Equal2~1           ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|ssd[4]             ; |debouncer_demo|ssd:ssd_debounced|ssd[4]             ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideOr0~0          ; |debouncer_demo|ssd:ssd_debounced|WideOr0~0          ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideOr0~1          ; |debouncer_demo|ssd:ssd_debounced|WideOr0~1          ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideOr0            ; |debouncer_demo|ssd:ssd_debounced|WideOr0            ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|ssd[6]             ; |debouncer_demo|ssd:ssd_debounced|ssd[6]             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal0~0             ; |debouncer_demo|ssd:ssd_bounced|Equal0~0             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal0~1             ; |debouncer_demo|ssd:ssd_bounced|Equal0~1             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal0~2             ; |debouncer_demo|ssd:ssd_bounced|Equal0~2             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal0~3             ; |debouncer_demo|ssd:ssd_bounced|Equal0~3             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal0~4             ; |debouncer_demo|ssd:ssd_bounced|Equal0~4             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal0~5             ; |debouncer_demo|ssd:ssd_bounced|Equal0~5             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal0~6             ; |debouncer_demo|ssd:ssd_bounced|Equal0~6             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal0~7             ; |debouncer_demo|ssd:ssd_bounced|Equal0~7             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal0~8             ; |debouncer_demo|ssd:ssd_bounced|Equal0~8             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal0~9             ; |debouncer_demo|ssd:ssd_bounced|Equal0~9             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal8~0             ; |debouncer_demo|ssd:ssd_bounced|Equal8~0             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal8~1             ; |debouncer_demo|ssd:ssd_bounced|Equal8~1             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal9~0             ; |debouncer_demo|ssd:ssd_bounced|Equal9~0             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|Equal4~0             ; |debouncer_demo|ssd:ssd_bounced|Equal4~0             ; combout          ;
+; |debouncer_demo|ssd:ssd_bounced|WideNor0~2           ; |debouncer_demo|ssd:ssd_bounced|WideNor0~2           ; combout          ;
+; |debouncer_demo|switch_debouncer:debouncer|y         ; |debouncer_demo|switch_debouncer:debouncer|y         ; regout           ;
+; |debouncer_demo|switch_debouncer:debouncer|t[2]      ; |debouncer_demo|switch_debouncer:debouncer|t[2]      ; regout           ;
+; |debouncer_demo|switch_debouncer:debouncer|y~0       ; |debouncer_demo|switch_debouncer:debouncer|y~0       ; combout          ;
+; |debouncer_demo|switch_debouncer:debouncer|y~1       ; |debouncer_demo|switch_debouncer:debouncer|y~1       ; combout          ;
+; |debouncer_demo|switch_debouncer:debouncer|t~1       ; |debouncer_demo|switch_debouncer:debouncer|t~1       ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideNor0~11        ; |debouncer_demo|ssd:ssd_debounced|WideNor0~11        ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideNor0~12        ; |debouncer_demo|ssd:ssd_debounced|WideNor0~12        ; combout          ;
+; |debouncer_demo|ssd:ssd_debounced|WideNor0~13        ; |debouncer_demo|ssd:ssd_debounced|WideNor0~13        ; combout          ;
+; |debouncer_demo|num_debounced[0]~90                  ; |debouncer_demo|num_debounced[0]~90                  ; combout          ;
+; |debouncer_demo|ssd_debounced_pins[0]                ; |debouncer_demo|ssd_debounced_pins[0]                ; padio            ;
+; |debouncer_demo|ssd_debounced_pins[1]                ; |debouncer_demo|ssd_debounced_pins[1]                ; padio            ;
+; |debouncer_demo|ssd_debounced_pins[2]                ; |debouncer_demo|ssd_debounced_pins[2]                ; padio            ;
+; |debouncer_demo|ssd_debounced_pins[3]                ; |debouncer_demo|ssd_debounced_pins[3]                ; padio            ;
+; |debouncer_demo|ssd_debounced_pins[4]                ; |debouncer_demo|ssd_debounced_pins[4]                ; padio            ;
+; |debouncer_demo|ssd_debounced_pins[5]                ; |debouncer_demo|ssd_debounced_pins[5]                ; padio            ;
+; |debouncer_demo|ssd_debounced_pins[6]                ; |debouncer_demo|ssd_debounced_pins[6]                ; padio            ;
+; |debouncer_demo|switch_debouncer:debouncer|y~clkctrl ; |debouncer_demo|switch_debouncer:debouncer|y~clkctrl ; outclk           ;
++------------------------------------------------------+------------------------------------------------------+------------------+
 
 
 +---------------------+
@@ -157,18 +644,18 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Simulator
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Wed May 02 19:59:41 2018
+    Info: Processing started: Wed May 02 20:40:18 2018
 Info: Command: quartus_sim --simulation_results_format=VWF switch_debouncer -c switch_debouncer
 Info (324025): Using vector source file "C:/Users/ellio/Documents/ee_125/hw3/switch_debouncer/Waveform.vwf"
 Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info (310002): Simulation partitioned into 1 sub-simulations
-Info (328053): Simulation coverage is     100.00 %
-Info (328052): Number of transitions in simulation is 244
+Info (328053): Simulation coverage is      12.31 %
+Info (328052): Number of transitions in simulation is 376
 Info (324045): Vector file switch_debouncer.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
 Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 392 megabytes
-    Info: Processing ended: Wed May 02 19:59:42 2018
+    Info: Peak virtual memory: 394 megabytes
+    Info: Processing ended: Wed May 02 20:40:19 2018
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 

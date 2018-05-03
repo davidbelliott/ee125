@@ -1,5 +1,5 @@
 Analysis & Synthesis report for switch_debouncer
-Wed May 02 19:55:01 2018
+Wed May 02 20:38:56 2018
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -14,10 +14,13 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |switch_debouncer
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Equations
- 12. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |debouncer_demo
+ 10. Parameter Settings for User Entity Instance: switch_debouncer:debouncer
+ 11. Port Connectivity Checks: "ssd:ssd_bounced"
+ 12. Port Connectivity Checks: "ssd:ssd_debounced"
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Equations
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -43,16 +46,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 02 19:55:01 2018      ;
+; Analysis & Synthesis Status        ; Successful - Wed May 02 20:38:56 2018      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; switch_debouncer                           ;
-; Top-level Entity Name              ; switch_debouncer                           ;
+; Top-level Entity Name              ; debouncer_demo                             ;
 ; Family                             ; Cyclone II                                 ;
-; Total logic elements               ; 6                                          ;
-;     Total combinational functions  ; 6                                          ;
-;     Dedicated logic registers      ; 4                                          ;
-; Total registers                    ; 4                                          ;
-; Total pins                         ; 3                                          ;
+; Total logic elements               ; 125                                        ;
+;     Total combinational functions  ; 125                                        ;
+;     Dedicated logic registers      ; 66                                         ;
+; Total registers                    ; 66                                         ;
+; Total pins                         ; 16                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -65,7 +68,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                                      ; switch_debouncer   ; switch_debouncer   ;
+; Top-level entity name                                                      ; debouncer_demo     ; switch_debouncer   ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -161,46 +164,51 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                              ; Library ;
 +----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
 ; switch_debouncer.vhd             ; yes             ; User VHDL File  ; C:/Users/ellio/Documents/ee_125/hw3/switch_debouncer/switch_debouncer.vhd ;         ;
+; debouncer_demo.vhd               ; yes             ; User VHDL File  ; C:/Users/ellio/Documents/ee_125/hw3/switch_debouncer/debouncer_demo.vhd   ;         ;
+; ssd.vhd                          ; yes             ; User VHDL File  ; C:/Users/ellio/Documents/ee_125/hw3/switch_debouncer/ssd.vhd              ;         ;
 +----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-; Estimated Total logic elements              ; 6      ;
-;                                             ;        ;
-; Total combinational functions               ; 6      ;
-; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 2      ;
-;     -- 3 input functions                    ; 3      ;
-;     -- <=2 input functions                  ; 1      ;
-;                                             ;        ;
-; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 6      ;
-;     -- arithmetic mode                      ; 0      ;
-;                                             ;        ;
-; Total registers                             ; 4      ;
-;     -- Dedicated logic registers            ; 4      ;
-;     -- I/O registers                        ; 0      ;
-;                                             ;        ;
-; I/O pins                                    ; 3      ;
-; Embedded Multiplier 9-bit elements          ; 0      ;
-; Maximum fan-out node                        ; y~reg0 ;
-; Maximum fan-out                             ; 5      ;
-; Total fan-out                               ; 28     ;
-; Average fan-out                             ; 2.15   ;
-+---------------------------------------------+--------+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                ;
++---------------------------------------------+------------------------------+
+; Resource                                    ; Usage                        ;
++---------------------------------------------+------------------------------+
+; Estimated Total logic elements              ; 125                          ;
+;                                             ;                              ;
+; Total combinational functions               ; 125                          ;
+; Logic element usage by number of LUT inputs ;                              ;
+;     -- 4 input functions                    ; 43                           ;
+;     -- 3 input functions                    ; 19                           ;
+;     -- <=2 input functions                  ; 63                           ;
+;                                             ;                              ;
+; Logic elements by mode                      ;                              ;
+;     -- normal mode                          ; 67                           ;
+;     -- arithmetic mode                      ; 58                           ;
+;                                             ;                              ;
+; Total registers                             ; 66                           ;
+;     -- Dedicated logic registers            ; 66                           ;
+;     -- I/O registers                        ; 0                            ;
+;                                             ;                              ;
+; I/O pins                                    ; 16                           ;
+; Embedded Multiplier 9-bit elements          ; 0                            ;
+; Maximum fan-out node                        ; switch_debouncer:debouncer|y ;
+; Maximum fan-out                             ; 35                           ;
+; Total fan-out                               ; 497                          ;
+; Average fan-out                             ; 2.40                         ;
++---------------------------------------------+------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |switch_debouncer          ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 3    ; 0            ; |switch_debouncer   ;              ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                     ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------+
+; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Library Name ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------+
+; |debouncer_demo                 ; 125 (62)          ; 66 (62)      ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |debouncer_demo                            ;              ;
+;    |ssd:ssd_bounced|            ; 28 (28)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |debouncer_demo|ssd:ssd_bounced            ;              ;
+;    |ssd:ssd_debounced|          ; 29 (29)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |debouncer_demo|ssd:ssd_debounced          ;              ;
+;    |switch_debouncer:debouncer| ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |debouncer_demo|switch_debouncer:debouncer ;              ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -209,7 +217,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 4     ;
+; Total registers                              ; 66    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -219,14 +227,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |switch_debouncer ;
-+----------------+-------+---------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                    ;
-+----------------+-------+---------------------------------------------------------+
-; t_debounce     ; 5     ; Signed Integer                                          ;
-+----------------+-------+---------------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |debouncer_demo ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; t_debounce     ; 5     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: switch_debouncer:debouncer ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; t_debounce     ; 5     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "ssd:ssd_bounced" ;
++---------+-------+----------+----------------+
+; Port    ; Type  ; Severity ; Details        ;
++---------+-------+----------+----------------+
+; num[31] ; Input ; Info     ; Stuck at GND   ;
++---------+-------+----------+----------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "ssd:ssd_debounced" ;
++---------+-------+----------+------------------+
+; Port    ; Type  ; Severity ; Details          ;
++---------+-------+----------+------------------+
+; num[31] ; Input ; Info     ; Stuck at GND     ;
++---------+-------+----------+------------------+
 
 
 +-------------------------------+
@@ -250,23 +286,31 @@ The equations can be found in C:/Users/ellio/Documents/ee_125/hw3/switch_debounc
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Wed May 02 19:55:00 2018
+    Info: Processing started: Wed May 02 20:38:55 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off switch_debouncer -c switch_debouncer
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file switch_debouncer.vhd
     Info (12022): Found design unit 1: switch_debouncer-switch_debouncer
     Info (12023): Found entity 1: switch_debouncer
-Info (12127): Elaborating entity "switch_debouncer" for the top level hierarchy
+Info (12021): Found 2 design units, including 1 entities, in source file debouncer_demo.vhd
+    Info (12022): Found design unit 1: debouncer_demo-debouncer_demo
+    Info (12023): Found entity 1: debouncer_demo
+Info (12021): Found 2 design units, including 1 entities, in source file ssd.vhd
+    Info (12022): Found design unit 1: ssd-ssd
+    Info (12023): Found entity 1: ssd
+Info (12127): Elaborating entity "debouncer_demo" for the top level hierarchy
+Info (12129): Elaborating entity "switch_debouncer" using architecture "A:switch_debouncer" for hierarchy "switch_debouncer:debouncer"
+Info (12129): Elaborating entity "ssd" using architecture "A:ssd" for hierarchy "ssd:ssd_debounced"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 9 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 141 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 6 logic cells
+    Info (21059): Implemented 14 output pins
+    Info (21061): Implemented 125 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 554 megabytes
-    Info: Processing ended: Wed May 02 19:55:01 2018
+    Info: Processing ended: Wed May 02 20:38:56 2018
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 
