@@ -1,0 +1,339 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--ssd[0] is ssd[0]
+ssd[0] = OUTPUT(A1L57Q);
+
+
+--ssd[1] is ssd[1]
+ssd[1] = OUTPUT(A1L59Q);
+
+
+--ssd[2] is ssd[2]
+ssd[2] = OUTPUT(A1L61Q);
+
+
+--ssd[3] is ssd[3]
+ssd[3] = OUTPUT(A1L63Q);
+
+
+--ssd[4] is ssd[4]
+ssd[4] = OUTPUT(A1L65Q);
+
+
+--ssd[5] is ssd[5]
+ssd[5] = OUTPUT(A1L67Q);
+
+
+--ssd[6] is ssd[6]
+ssd[6] = OUTPUT(A1L69Q);
+
+
+--cnt[0] is cnt[0]
+cnt[0] = OUTPUT(A1L4Q);
+
+
+--cnt[1] is cnt[1]
+cnt[1] = OUTPUT(A1L6Q);
+
+
+--cnt[2] is cnt[2]
+cnt[2] = OUTPUT(A1L8Q);
+
+
+--cnt[3] is cnt[3]
+cnt[3] = OUTPUT(A1L10Q);
+
+
+--cnt[4] is cnt[4]
+cnt[4] = OUTPUT(A1L79);
+
+
+--cnt[5] is cnt[5]
+cnt[5] = OUTPUT(A1L79);
+
+
+--cnt[6] is cnt[6]
+cnt[6] = OUTPUT(A1L79);
+
+
+--cnt[7] is cnt[7]
+cnt[7] = OUTPUT(A1L79);
+
+
+--cnt[8] is cnt[8]
+cnt[8] = OUTPUT(A1L79);
+
+
+--cnt[9] is cnt[9]
+cnt[9] = OUTPUT(A1L79);
+
+
+--cnt[10] is cnt[10]
+cnt[10] = OUTPUT(A1L79);
+
+
+--cnt[11] is cnt[11]
+cnt[11] = OUTPUT(A1L79);
+
+
+--cnt[12] is cnt[12]
+cnt[12] = OUTPUT(A1L79);
+
+
+--cnt[13] is cnt[13]
+cnt[13] = OUTPUT(A1L79);
+
+
+--cnt[14] is cnt[14]
+cnt[14] = OUTPUT(A1L79);
+
+
+--cnt[15] is cnt[15]
+cnt[15] = OUTPUT(A1L79);
+
+
+--cnt[16] is cnt[16]
+cnt[16] = OUTPUT(A1L79);
+
+
+--cnt[17] is cnt[17]
+cnt[17] = OUTPUT(A1L79);
+
+
+--cnt[18] is cnt[18]
+cnt[18] = OUTPUT(A1L79);
+
+
+--cnt[19] is cnt[19]
+cnt[19] = OUTPUT(A1L79);
+
+
+--cnt[20] is cnt[20]
+cnt[20] = OUTPUT(A1L79);
+
+
+--cnt[21] is cnt[21]
+cnt[21] = OUTPUT(A1L79);
+
+
+--cnt[22] is cnt[22]
+cnt[22] = OUTPUT(A1L79);
+
+
+--cnt[23] is cnt[23]
+cnt[23] = OUTPUT(A1L79);
+
+
+--cnt[24] is cnt[24]
+cnt[24] = OUTPUT(A1L79);
+
+
+--cnt[25] is cnt[25]
+cnt[25] = OUTPUT(A1L79);
+
+
+--cnt[26] is cnt[26]
+cnt[26] = OUTPUT(A1L79);
+
+
+--cnt[27] is cnt[27]
+cnt[27] = OUTPUT(A1L79);
+
+
+--cnt[28] is cnt[28]
+cnt[28] = OUTPUT(A1L79);
+
+
+--cnt[29] is cnt[29]
+cnt[29] = OUTPUT(A1L79);
+
+
+--cnt[30] is cnt[30]
+cnt[30] = OUTPUT(A1L79);
+
+
+--cnt[31] is cnt[31]
+cnt[31] = OUTPUT(A1L79);
+
+
+--A1L57Q is ssd[0]~reg0
+--register power-up is low
+
+A1L57Q = DFFEAS(A1L44, clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L59Q is ssd[1]~reg0
+--register power-up is low
+
+A1L59Q = DFFEAS(A1L43, clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L61Q is ssd[2]~reg0
+--register power-up is low
+
+A1L61Q = DFFEAS(A1L42, clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L63Q is ssd[3]~reg0
+--register power-up is low
+
+A1L63Q = DFFEAS(A1L39, clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L65Q is ssd[4]~reg0
+--register power-up is low
+
+A1L65Q = DFFEAS(A1L41, clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L67Q is ssd[5]~reg0
+--register power-up is low
+
+A1L67Q = DFFEAS(A1L40, clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L69Q is ssd[6]~reg0
+--register power-up is low
+
+A1L69Q = DFFEAS(A1L39, clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L4Q is cnt[0]~reg0
+--register power-up is low
+
+A1L4Q = DFFEAS(A1L52, clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L6Q is cnt[1]~reg0
+--register power-up is low
+
+A1L6Q = DFFEAS(A1L49, clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L8Q is cnt[2]~reg0
+--register power-up is low
+
+A1L8Q = DFFEAS(A1L53, clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L10Q is cnt[3]~reg0
+--register power-up is low
+
+A1L10Q = DFFEAS(A1L54, clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--x[2] is x[2]
+x[2] = INPUT();
+
+
+--x[3] is x[3]
+x[3] = INPUT();
+
+
+--x[0] is x[0]
+x[0] = INPUT();
+
+
+--x[1] is x[1]
+x[1] = INPUT();
+
+
+--A1L45 is process_0~0
+A1L45 = (x[2] & (x[3] & (x[0] & x[1])));
+
+
+--x[6] is x[6]
+x[6] = INPUT();
+
+
+--x[7] is x[7]
+x[7] = INPUT();
+
+
+--x[4] is x[4]
+x[4] = INPUT();
+
+
+--x[5] is x[5]
+x[5] = INPUT();
+
+
+--A1L46 is process_0~1
+A1L46 = (((!x[5]) # (!x[4])) # (!x[7])) # (!x[6]);
+
+
+--A1L47 is process_0~2
+A1L47 = (x[2] & (x[3] & ((!x[1]) # (!x[0]))));
+
+
+--A1L48 is process_0~3
+A1L48 = (x[4] & x[5]);
+
+
+--A1L49 is process_0~4
+A1L49 = (x[6] & (x[7] & ((A1L47) # (!A1L48))));
+
+
+--A1L50 is process_0~5
+A1L50 = (x[7] & (((x[5] & !x[4])) # (!x[6])));
+
+
+--A1L51 is process_0~6
+A1L51 = (x[3] & (((x[1] & !x[0])) # (!x[2])));
+
+
+--A1L52 is process_0~7
+A1L52 = (A1L50) # ((A1L51 & !A1L46));
+
+
+--A1L44 is Mux5~0
+A1L44 = (A1L46 & (((!A1L49)))) # (!A1L46 & (!A1L45 & (A1L49 & A1L52)));
+
+
+--clk is clk
+clk = INPUT();
+
+
+--A1L53 is process_0~8
+A1L53 = (!A1L45 & !A1L46);
+
+
+--A1L41 is Mux2~0
+A1L41 = (x[6] & (x[7] & !x[5]));
+
+
+--A1L54 is process_0~9
+A1L54 = (!A1L46 & A1L45);
+
+
+--A1L43 is Mux4~2
+A1L43 = (A1L45 & (((A1L49) # (A1L52)))) # (!A1L45 & (A1L46 & ((A1L49) # (A1L52))));
+
+
+--A1L42 is Mux3~2
+A1L42 = (A1L45 & (((A1L52)))) # (!A1L45 & ((A1L46 & (A1L52)) # (!A1L46 & ((!A1L49)))));
+
+
+--A1L39 is Mux0~2
+A1L39 = (!A1L49 & (A1L52 $ (((!A1L45 & !A1L46)))));
+
+
+--A1L40 is Mux1~2
+A1L40 = (!A1L45 & (!A1L46 & (A1L49 $ (A1L52))));
+
+
+--A1L79 is ~GND
+A1L79 = GND;
+
+

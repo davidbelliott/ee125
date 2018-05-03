@@ -1,0 +1,545 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L93Q is ssd[0]~reg0 at FF_X17_Y1_N17
+--register power-up is low
+
+A1L93Q = DFFEAS(A1L79, GLOBAL(A1L4),  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L96Q is ssd[1]~reg0 at FF_X17_Y1_N19
+--register power-up is low
+
+A1L96Q = DFFEAS(A1L78, GLOBAL(A1L4),  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L99Q is ssd[2]~reg0 at FF_X17_Y1_N21
+--register power-up is low
+
+A1L99Q = DFFEAS(A1L77, GLOBAL(A1L4),  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L102Q is ssd[3]~reg0 at FF_X17_Y1_N15
+--register power-up is low
+
+A1L102Q = DFFEAS(A1L74, GLOBAL(A1L4),  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L105Q is ssd[4]~reg0 at FF_X17_Y1_N1
+--register power-up is low
+
+A1L105Q = DFFEAS(A1L76, GLOBAL(A1L4),  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L108Q is ssd[5]~reg0 at FF_X17_Y1_N3
+--register power-up is low
+
+A1L108Q = DFFEAS(A1L75, GLOBAL(A1L4),  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L111Q is ssd[6]~reg0 at FF_X18_Y1_N25
+--register power-up is low
+
+A1L111Q = DFFEAS(A1L112, GLOBAL(A1L4),  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L8Q is cnt[0]~reg0 at FF_X17_Y1_N29
+--register power-up is low
+
+A1L8Q = DFFEAS(A1L87, GLOBAL(A1L4),  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L11Q is cnt[1]~reg0 at FF_X17_Y1_N31
+--register power-up is low
+
+A1L11Q = DFFEAS(A1L84, GLOBAL(A1L4),  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L14Q is cnt[2]~reg0 at FF_X17_Y1_N9
+--register power-up is low
+
+A1L14Q = DFFEAS(A1L88, GLOBAL(A1L4),  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L17Q is cnt[3]~reg0 at FF_X17_Y1_N27
+--register power-up is low
+
+A1L17Q = DFFEAS(A1L89, GLOBAL(A1L4),  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L80 is process_0~0 at LCCOMB_X17_Y1_N12
+A1L80 = (A1L121 & (A1L115 & (A1L119 & A1L117)));
+
+
+--A1L81 is process_0~1 at LCCOMB_X17_Y1_N6
+A1L81 = (((!A1L129) # (!A1L125)) # (!A1L127)) # (!A1L123);
+
+
+--A1L82 is process_0~2 at LCCOMB_X17_Y1_N24
+A1L82 = (A1L121 & (A1L119 & ((!A1L117) # (!A1L115))));
+
+
+--A1L83 is process_0~3 at LCCOMB_X17_Y1_N10
+A1L83 = (A1L125 & A1L123);
+
+
+--A1L84 is process_0~4 at LCCOMB_X17_Y1_N30
+A1L84 = (A1L129 & (A1L127 & ((A1L82) # (!A1L83))));
+
+
+--A1L85 is process_0~5 at LCCOMB_X17_Y1_N4
+A1L85 = (A1L129 & (((!A1L123 & A1L125)) # (!A1L127)));
+
+
+--A1L86 is process_0~6 at LCCOMB_X17_Y1_N22
+A1L86 = (A1L121 & (((!A1L115 & A1L117)) # (!A1L119)));
+
+
+--A1L87 is process_0~7 at LCCOMB_X17_Y1_N28
+A1L87 = (A1L85) # ((A1L86 & !A1L81));
+
+
+--A1L79 is Mux5~0 at LCCOMB_X17_Y1_N16
+A1L79 = (A1L81 & (((!A1L84)))) # (!A1L81 & (A1L87 & (A1L84 & !A1L80)));
+
+
+--A1L88 is process_0~8 at LCCOMB_X17_Y1_N8
+A1L88 = (!A1L81 & !A1L80);
+
+
+--A1L76 is Mux2~0 at LCCOMB_X17_Y1_N0
+A1L76 = (A1L127 & (!A1L125 & A1L129));
+
+
+--A1L89 is process_0~9 at LCCOMB_X17_Y1_N26
+A1L89 = (!A1L81 & A1L80);
+
+
+--A1L78 is Mux4~2 at LCCOMB_X17_Y1_N18
+A1L78 = (A1L81 & ((A1L87) # ((A1L84)))) # (!A1L81 & (A1L80 & ((A1L87) # (A1L84))));
+
+
+--A1L77 is Mux3~2 at LCCOMB_X17_Y1_N20
+A1L77 = (A1L81 & (A1L87)) # (!A1L81 & ((A1L80 & (A1L87)) # (!A1L80 & ((!A1L84)))));
+
+
+--A1L74 is Mux0~2 at LCCOMB_X17_Y1_N14
+A1L74 = (!A1L84 & (A1L87 $ (((!A1L81 & !A1L80)))));
+
+
+--A1L75 is Mux1~2 at LCCOMB_X17_Y1_N2
+A1L75 = (!A1L81 & (!A1L80 & (A1L87 $ (A1L84))));
+
+
+--A1L92 is ssd[0]~output at IOOBUF_X14_Y41_N9
+A1L92 = OUTPUT_BUFFER.O(.I(A1L93Q), , , , , , , , , , , , , , , , , );
+
+
+--ssd[0] is ssd[0] at PIN_C8
+ssd[0] = OUTPUT();
+
+
+--A1L95 is ssd[1]~output at IOOBUF_X16_Y0_N2
+A1L95 = OUTPUT_BUFFER.O(.I(A1L96Q), , , , , , , , , , , , , , , , , );
+
+
+--ssd[1] is ssd[1] at PIN_V8
+ssd[1] = OUTPUT();
+
+
+--A1L98 is ssd[2]~output at IOOBUF_X23_Y0_N9
+A1L98 = OUTPUT_BUFFER.O(.I(A1L99Q), , , , , , , , , , , , , , , , , );
+
+
+--ssd[2] is ssd[2] at PIN_T10
+ssd[2] = OUTPUT();
+
+
+--A1L101 is ssd[3]~output at IOOBUF_X10_Y0_N2
+A1L101 = OUTPUT_BUFFER.O(.I(A1L102Q), , , , , , , , , , , , , , , , , );
+
+
+--ssd[3] is ssd[3] at PIN_N7
+ssd[3] = OUTPUT();
+
+
+--A1L104 is ssd[4]~output at IOOBUF_X10_Y0_N9
+A1L104 = OUTPUT_BUFFER.O(.I(A1L105Q), , , , , , , , , , , , , , , , , );
+
+
+--ssd[4] is ssd[4] at PIN_M7
+ssd[4] = OUTPUT();
+
+
+--A1L107 is ssd[5]~output at IOOBUF_X12_Y0_N9
+A1L107 = OUTPUT_BUFFER.O(.I(A1L108Q), , , , , , , , , , , , , , , , , );
+
+
+--ssd[5] is ssd[5] at PIN_U7
+ssd[5] = OUTPUT();
+
+
+--A1L110 is ssd[6]~output at IOOBUF_X18_Y0_N2
+A1L110 = OUTPUT_BUFFER.O(.I(A1L111Q), , , , , , , , , , , , , , , , , );
+
+
+--ssd[6] is ssd[6] at PIN_T9
+ssd[6] = OUTPUT();
+
+
+--A1L7 is cnt[0]~output at IOOBUF_X12_Y0_N2
+A1L7 = OUTPUT_BUFFER.O(.I(A1L8Q), , , , , , , , , , , , , , , , , );
+
+
+--cnt[0] is cnt[0] at PIN_V7
+cnt[0] = OUTPUT();
+
+
+--A1L10 is cnt[1]~output at IOOBUF_X29_Y0_N2
+A1L10 = OUTPUT_BUFFER.O(.I(A1L11Q), , , , , , , , , , , , , , , , , );
+
+
+--cnt[1] is cnt[1] at PIN_V13
+cnt[1] = OUTPUT();
+
+
+--A1L13 is cnt[2]~output at IOOBUF_X21_Y0_N9
+A1L13 = OUTPUT_BUFFER.O(.I(A1L14Q), , , , , , , , , , , , , , , , , );
+
+
+--cnt[2] is cnt[2] at PIN_V9
+cnt[2] = OUTPUT();
+
+
+--A1L16 is cnt[3]~output at IOOBUF_X14_Y0_N2
+A1L16 = OUTPUT_BUFFER.O(.I(A1L17Q), , , , , , , , , , , , , , , , , );
+
+
+--cnt[3] is cnt[3] at PIN_R8
+cnt[3] = OUTPUT();
+
+
+--A1L19 is cnt[4]~output at IOOBUF_X43_Y0_N9
+A1L19 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[4] is cnt[4] at PIN_V16
+cnt[4] = OUTPUT();
+
+
+--A1L21 is cnt[5]~output at IOOBUF_X46_Y0_N9
+A1L21 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[5] is cnt[5] at PIN_T16
+cnt[5] = OUTPUT();
+
+
+--A1L23 is cnt[6]~output at IOOBUF_X31_Y0_N9
+A1L23 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[6] is cnt[6] at PIN_T12
+cnt[6] = OUTPUT();
+
+
+--A1L25 is cnt[7]~output at IOOBUF_X25_Y41_N9
+A1L25 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[7] is cnt[7] at PIN_C11
+cnt[7] = OUTPUT();
+
+
+--A1L27 is cnt[8]~output at IOOBUF_X1_Y0_N2
+A1L27 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[8] is cnt[8] at PIN_N6
+cnt[8] = OUTPUT();
+
+
+--A1L29 is cnt[9]~output at IOOBUF_X46_Y41_N23
+A1L29 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[9] is cnt[9] at PIN_A18
+cnt[9] = OUTPUT();
+
+
+--A1L31 is cnt[10]~output at IOOBUF_X21_Y41_N9
+A1L31 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[10] is cnt[10] at PIN_B10
+cnt[10] = OUTPUT();
+
+
+--A1L33 is cnt[11]~output at IOOBUF_X46_Y0_N16
+A1L33 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[11] is cnt[11] at PIN_V18
+cnt[11] = OUTPUT();
+
+
+--A1L35 is cnt[12]~output at IOOBUF_X36_Y0_N9
+A1L35 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[12] is cnt[12] at PIN_R12
+cnt[12] = OUTPUT();
+
+
+--A1L37 is cnt[13]~output at IOOBUF_X52_Y12_N9
+A1L37 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[13] is cnt[13] at PIN_P18
+cnt[13] = OUTPUT();
+
+
+--A1L39 is cnt[14]~output at IOOBUF_X5_Y0_N2
+A1L39 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[14] is cnt[14] at PIN_U6
+cnt[14] = OUTPUT();
+
+
+--A1L41 is cnt[15]~output at IOOBUF_X41_Y0_N2
+A1L41 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[15] is cnt[15] at PIN_U16
+cnt[15] = OUTPUT();
+
+
+--A1L43 is cnt[16]~output at IOOBUF_X21_Y41_N2
+A1L43 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[16] is cnt[16] at PIN_B9
+cnt[16] = OUTPUT();
+
+
+--A1L45 is cnt[17]~output at IOOBUF_X52_Y27_N9
+A1L45 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[17] is cnt[17] at PIN_G17
+cnt[17] = OUTPUT();
+
+
+--A1L47 is cnt[18]~output at IOOBUF_X38_Y41_N9
+A1L47 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[18] is cnt[18] at PIN_B16
+cnt[18] = OUTPUT();
+
+
+--A1L49 is cnt[19]~output at IOOBUF_X29_Y0_N9
+A1L49 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[19] is cnt[19] at PIN_U13
+cnt[19] = OUTPUT();
+
+
+--A1L51 is cnt[20]~output at IOOBUF_X23_Y41_N9
+A1L51 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[20] is cnt[20] at PIN_A11
+cnt[20] = OUTPUT();
+
+
+--A1L53 is cnt[21]~output at IOOBUF_X52_Y9_N9
+A1L53 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[21] is cnt[21] at PIN_N15
+cnt[21] = OUTPUT();
+
+
+--A1L55 is cnt[22]~output at IOOBUF_X52_Y28_N2
+A1L55 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[22] is cnt[22] at PIN_H16
+cnt[22] = OUTPUT();
+
+
+--A1L57 is cnt[23]~output at IOOBUF_X31_Y0_N23
+A1L57 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[23] is cnt[23] at PIN_R11
+cnt[23] = OUTPUT();
+
+
+--A1L59 is cnt[24]~output at IOOBUF_X34_Y0_N9
+A1L59 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[24] is cnt[24] at PIN_V14
+cnt[24] = OUTPUT();
+
+
+--A1L61 is cnt[25]~output at IOOBUF_X43_Y0_N2
+A1L61 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[25] is cnt[25] at PIN_V17
+cnt[25] = OUTPUT();
+
+
+--A1L63 is cnt[26]~output at IOOBUF_X18_Y41_N9
+A1L63 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[26] is cnt[26] at PIN_D9
+cnt[26] = OUTPUT();
+
+
+--A1L65 is cnt[27]~output at IOOBUF_X43_Y41_N9
+A1L65 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[27] is cnt[27] at PIN_D14
+cnt[27] = OUTPUT();
+
+
+--A1L67 is cnt[28]~output at IOOBUF_X31_Y41_N2
+A1L67 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[28] is cnt[28] at PIN_D11
+cnt[28] = OUTPUT();
+
+
+--A1L69 is cnt[29]~output at IOOBUF_X48_Y41_N2
+A1L69 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[29] is cnt[29] at PIN_C16
+cnt[29] = OUTPUT();
+
+
+--A1L71 is cnt[30]~output at IOOBUF_X34_Y41_N9
+A1L71 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[30] is cnt[30] at PIN_A15
+cnt[30] = OUTPUT();
+
+
+--A1L73 is cnt[31]~output at IOOBUF_X52_Y32_N9
+A1L73 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--cnt[31] is cnt[31] at PIN_E15
+cnt[31] = OUTPUT();
+
+
+--A1L119 is x[2]~input at IOIBUF_X16_Y41_N1
+A1L119 = INPUT_BUFFER(.I(x[2]), );
+
+
+--x[2] is x[2] at PIN_A8
+x[2] = INPUT();
+
+
+--A1L121 is x[3]~input at IOIBUF_X16_Y0_N8
+A1L121 = INPUT_BUFFER(.I(x[3]), );
+
+
+--x[3] is x[3] at PIN_U9
+x[3] = INPUT();
+
+
+--A1L115 is x[0]~input at IOIBUF_X18_Y0_N8
+A1L115 = INPUT_BUFFER(.I(x[0]), );
+
+
+--x[0] is x[0] at PIN_R9
+x[0] = INPUT();
+
+
+--A1L117 is x[1]~input at IOIBUF_X23_Y0_N1
+A1L117 = INPUT_BUFFER(.I(x[1]), );
+
+
+--x[1] is x[1] at PIN_U10
+x[1] = INPUT();
+
+
+--A1L127 is x[6]~input at IOIBUF_X21_Y0_N1
+A1L127 = INPUT_BUFFER(.I(x[6]), );
+
+
+--x[6] is x[6] at PIN_V10
+x[6] = INPUT();
+
+
+--A1L129 is x[7]~input at IOIBUF_X14_Y0_N8
+A1L129 = INPUT_BUFFER(.I(x[7]), );
+
+
+--x[7] is x[7] at PIN_T8
+x[7] = INPUT();
+
+
+--A1L123 is x[4]~input at IOIBUF_X25_Y0_N1
+A1L123 = INPUT_BUFFER(.I(x[4]), );
+
+
+--x[4] is x[4] at PIN_R10
+x[4] = INPUT();
+
+
+--A1L125 is x[5]~input at IOIBUF_X25_Y0_N8
+A1L125 = INPUT_BUFFER(.I(x[5]), );
+
+
+--x[5] is x[5] at PIN_P10
+x[5] = INPUT();
+
+
+--A1L3 is clk~input at IOIBUF_X27_Y0_N15
+A1L3 = INPUT_BUFFER(.I(clk), );
+
+
+--clk is clk at PIN_M10
+clk = INPUT();
+
+
+
+
+
+
+
+
+
+
+
+
+--A1L4 is clk~inputclkctrl at CLKCTRL_G17
+A1L4 = cycloneiv_clkctrl(.INCLK[0] = A1L3) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+
+--A1L112 is ssd[6]~reg0feeder at LCCOMB_X18_Y1_N24
+A1L112 = A1L74;
+
+

@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Google Drive\School\Caltech\ee125_shared\ee125\hw3\leading_ones_sequential\simulation\qsim
+vleading_ones_sequential
+Z1 !s100 _JeLOiW4;5Hacze[DbHQ13
+Z2 IoMQ`Zg<7nAYzeY=WCL9CR3
+Z3 VI?hMFWMLWL2K99W2^dCl92
+Z4 dD:\Google Drive\School\Caltech\ee125_shared\ee125\hw3\leading_ones_sequential\simulation\qsim
+Z5 w1525317632
+Z6 8leading_ones_sequential.vo
+Z7 Fleading_ones_sequential.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|leading_ones_sequential.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1525317633.797000
+Z12 !s107 leading_ones_sequential.vo|
+!s101 -O0
+vleading_ones_sequential_vlg_check_tst
+!i10b 1
+Z13 !s100 ]T3Bo`8=5HR>5ZFA1imiz0
+Z14 IWQon?a_5Uk7CXGSe@J1ha2
+Z15 VNC`DV=RPC=YBQ6nmDa]F>1
+R4
+Z16 w1525317631
+Z17 8leading_ones_sequential.vt
+Z18 Fleading_ones_sequential.vt
+L0 59
+R8
+r1
+!s85 0
+31
+Z19 !s108 1525317634.137000
+Z20 !s107 leading_ones_sequential.vt|
+Z21 !s90 -work|work|leading_ones_sequential.vt|
+!s101 -O0
+R10
+vleading_ones_sequential_vlg_sample_tst
+!i10b 1
+Z22 !s100 nZKJAP4B1J0[[B?mEj92z2
+Z23 IjS;Sb@Nh3lSkgM?dbHYnG1
+Z24 V;CZ?HM>egjzfIbcROUOk:0
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vleading_ones_sequential_vlg_vec_tst
+!i10b 1
+!s100 bzDS9O`_Y@fUb_6lH?3@D1
+ICcfP=2zW_DP@`L_ZFhO1c3
+Z25 VgY7`mS=O_eD=_Qj39W14i2
+R4
+R16
+R17
+R18
+Z26 L0 845
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10

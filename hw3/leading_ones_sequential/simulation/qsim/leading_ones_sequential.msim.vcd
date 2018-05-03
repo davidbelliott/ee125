@@ -1,0 +1,1010 @@
+$comment
+	File created using the following command:
+		vcd file leading_ones_sequential.msim.vcd -direction
+$end
+$date
+	Wed May 02 20:20:35 2018
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module leading_ones_sequential_vlg_vec_tst $end
+$var reg 1 ! clk $end
+$var reg 8 " x [7:0] $end
+$var wire 1 # cnt [31] $end
+$var wire 1 $ cnt [30] $end
+$var wire 1 % cnt [29] $end
+$var wire 1 & cnt [28] $end
+$var wire 1 ' cnt [27] $end
+$var wire 1 ( cnt [26] $end
+$var wire 1 ) cnt [25] $end
+$var wire 1 * cnt [24] $end
+$var wire 1 + cnt [23] $end
+$var wire 1 , cnt [22] $end
+$var wire 1 - cnt [21] $end
+$var wire 1 . cnt [20] $end
+$var wire 1 / cnt [19] $end
+$var wire 1 0 cnt [18] $end
+$var wire 1 1 cnt [17] $end
+$var wire 1 2 cnt [16] $end
+$var wire 1 3 cnt [15] $end
+$var wire 1 4 cnt [14] $end
+$var wire 1 5 cnt [13] $end
+$var wire 1 6 cnt [12] $end
+$var wire 1 7 cnt [11] $end
+$var wire 1 8 cnt [10] $end
+$var wire 1 9 cnt [9] $end
+$var wire 1 : cnt [8] $end
+$var wire 1 ; cnt [7] $end
+$var wire 1 < cnt [6] $end
+$var wire 1 = cnt [5] $end
+$var wire 1 > cnt [4] $end
+$var wire 1 ? cnt [3] $end
+$var wire 1 @ cnt [2] $end
+$var wire 1 A cnt [1] $end
+$var wire 1 B cnt [0] $end
+$var wire 1 C ssd [6] $end
+$var wire 1 D ssd [5] $end
+$var wire 1 E ssd [4] $end
+$var wire 1 F ssd [3] $end
+$var wire 1 G ssd [2] $end
+$var wire 1 H ssd [1] $end
+$var wire 1 I ssd [0] $end
+$var wire 1 J sampler $end
+$scope module i1 $end
+$var wire 1 K gnd $end
+$var wire 1 L vcc $end
+$var wire 1 M unknown $end
+$var tri1 1 N devclrn $end
+$var tri1 1 O devpor $end
+$var tri1 1 P devoe $end
+$var wire 1 Q process_0~3_combout $end
+$var wire 1 R x[3]~input_o $end
+$var wire 1 S x[4]~input_o $end
+$var wire 1 T ssd[0]~output_o $end
+$var wire 1 U ssd[1]~output_o $end
+$var wire 1 V ssd[2]~output_o $end
+$var wire 1 W ssd[3]~output_o $end
+$var wire 1 X ssd[4]~output_o $end
+$var wire 1 Y ssd[5]~output_o $end
+$var wire 1 Z ssd[6]~output_o $end
+$var wire 1 [ cnt[0]~output_o $end
+$var wire 1 \ cnt[1]~output_o $end
+$var wire 1 ] cnt[2]~output_o $end
+$var wire 1 ^ cnt[3]~output_o $end
+$var wire 1 _ cnt[4]~output_o $end
+$var wire 1 ` cnt[5]~output_o $end
+$var wire 1 a cnt[6]~output_o $end
+$var wire 1 b cnt[7]~output_o $end
+$var wire 1 c cnt[8]~output_o $end
+$var wire 1 d cnt[9]~output_o $end
+$var wire 1 e cnt[10]~output_o $end
+$var wire 1 f cnt[11]~output_o $end
+$var wire 1 g cnt[12]~output_o $end
+$var wire 1 h cnt[13]~output_o $end
+$var wire 1 i cnt[14]~output_o $end
+$var wire 1 j cnt[15]~output_o $end
+$var wire 1 k cnt[16]~output_o $end
+$var wire 1 l cnt[17]~output_o $end
+$var wire 1 m cnt[18]~output_o $end
+$var wire 1 n cnt[19]~output_o $end
+$var wire 1 o cnt[20]~output_o $end
+$var wire 1 p cnt[21]~output_o $end
+$var wire 1 q cnt[22]~output_o $end
+$var wire 1 r cnt[23]~output_o $end
+$var wire 1 s cnt[24]~output_o $end
+$var wire 1 t cnt[25]~output_o $end
+$var wire 1 u cnt[26]~output_o $end
+$var wire 1 v cnt[27]~output_o $end
+$var wire 1 w cnt[28]~output_o $end
+$var wire 1 x cnt[29]~output_o $end
+$var wire 1 y cnt[30]~output_o $end
+$var wire 1 z cnt[31]~output_o $end
+$var wire 1 { clk~input_o $end
+$var wire 1 | clk~inputclkctrl_outclk $end
+$var wire 1 } x[6]~input_o $end
+$var wire 1 ~ x[5]~input_o $end
+$var wire 1 !! x[7]~input_o $end
+$var wire 1 "! process_0~5_combout $end
+$var wire 1 #! x[0]~input_o $end
+$var wire 1 $! x[2]~input_o $end
+$var wire 1 %! x[1]~input_o $end
+$var wire 1 &! process_0~6_combout $end
+$var wire 1 '! process_0~1_combout $end
+$var wire 1 (! process_0~7_combout $end
+$var wire 1 )! process_0~2_combout $end
+$var wire 1 *! process_0~4_combout $end
+$var wire 1 +! process_0~0_combout $end
+$var wire 1 ,! Mux5~0_combout $end
+$var wire 1 -! ssd[0]~reg0_q $end
+$var wire 1 .! Mux4~2_combout $end
+$var wire 1 /! ssd[1]~reg0_q $end
+$var wire 1 0! Mux3~2_combout $end
+$var wire 1 1! ssd[2]~reg0_q $end
+$var wire 1 2! Mux0~2_combout $end
+$var wire 1 3! ssd[3]~reg0_q $end
+$var wire 1 4! Mux2~0_combout $end
+$var wire 1 5! ssd[4]~reg0_q $end
+$var wire 1 6! Mux1~2_combout $end
+$var wire 1 7! ssd[5]~reg0_q $end
+$var wire 1 8! ssd[6]~reg0feeder_combout $end
+$var wire 1 9! ssd[6]~reg0_q $end
+$var wire 1 :! cnt[0]~reg0_q $end
+$var wire 1 ;! cnt[1]~reg0_q $end
+$var wire 1 <! process_0~8_combout $end
+$var wire 1 =! cnt[2]~reg0_q $end
+$var wire 1 >! process_0~9_combout $end
+$var wire 1 ?! cnt[3]~reg0_q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+b0 "
+xB
+xA
+x@
+x?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+0#
+xI
+xH
+xG
+xF
+xE
+xD
+xC
+xJ
+0K
+1L
+xM
+1N
+1O
+1P
+xQ
+0R
+0S
+xT
+xU
+xV
+xW
+xX
+xY
+xZ
+x[
+x\
+x]
+x^
+0_
+0`
+0a
+0b
+0c
+0d
+0e
+0f
+0g
+0h
+0i
+0j
+0k
+0l
+0m
+0n
+0o
+0p
+0q
+0r
+0s
+0t
+0u
+0v
+0w
+0x
+0y
+0z
+0{
+x|
+0}
+0~
+0!!
+x"!
+0#!
+0$!
+0%!
+x&!
+x'!
+x(!
+x)!
+x*!
+x+!
+x,!
+0-!
+x.!
+0/!
+x0!
+01!
+x2!
+03!
+x4!
+05!
+x6!
+07!
+x8!
+09!
+0:!
+0;!
+x<!
+0=!
+x>!
+0?!
+$end
+#367
+0|
+#3063
+0Z
+0C
+#3098
+0U
+0H
+#3300
+0[
+0B
+#3314
+0Y
+0D
+#3417
+0V
+0G
+#3448
+0]
+0@
+#3466
+0X
+0E
+#3539
+0W
+0F
+#3641
+0"!
+04!
+#3650
+1'!
+#3693
+0+!
+#3734
+0)!
+#3754
+0&!
+#3769
+0*!
+#3879
+0\
+0A
+#3898
+0Q
+#4007
+0(!
+#4064
+0^
+0?
+#4248
+0>!
+#4260
+1,!
+#4288
+06!
+#4290
+0<!
+#4659
+00!
+#4660
+0.!
+#4662
+02!
+#5093
+08!
+#5756
+0T
+0I
+#30000
+1!
+0J
+#30497
+1{
+#30877
+1|
+#32727
+1-!
+#38506
+1T
+1I
+#60000
+0!
+1J
+#60671
+0{
+#61038
+0|
+#90000
+1!
+0J
+#90497
+1{
+#90877
+1|
+#120000
+b10000000 "
+b11000000 "
+b11100000 "
+b11110000 "
+b11111000 "
+b11111100 "
+b11111110 "
+b11111111 "
+0!
+1J
+#120497
+1~
+1S
+1#!
+#120507
+1!!
+#120517
+1R
+1$!
+#120527
+1%!
+#120537
+1}
+#120671
+0{
+#121038
+0|
+#123994
+1&!
+#124153
+1Q
+#124157
+1*!
+#124394
+0'!
+#124602
+0,!
+#124604
+1.!
+#124733
+0*!
+#124763
+1+!
+#124765
+0&!
+#124809
+1(!
+#125106
+1>!
+#125210
+0(!
+#125388
+10!
+#125397
+12!
+#125836
+18!
+#125862
+00!
+#125863
+0.!
+#125865
+02!
+#126296
+08!
+#150000
+1!
+0J
+#150497
+1{
+#150877
+1|
+#152727
+0-!
+1?!
+#156822
+1^
+1?
+#158483
+0T
+0I
+#180000
+0!
+1J
+#180671
+0{
+#181038
+0|
+#210000
+1!
+0J
+#210497
+1{
+#210877
+1|
+#240000
+b11011111 "
+b11010111 "
+b11010110 "
+0!
+1J
+#240671
+0{
+0~
+0#!
+#240691
+0R
+#241038
+0|
+#244373
+0+!
+#244698
+1'!
+14!
+#244699
+0Q
+#244747
+0>!
+#244753
+1<!
+#244755
+12!
+#244756
+10!
+#245194
+18!
+#245302
+1*!
+#245321
+1,!
+#245330
+02!
+#245332
+00!
+#245338
+0<!
+#245747
+0,!
+#245749
+1.!
+#245761
+08!
+#270000
+1!
+0J
+#270497
+1{
+#270877
+1|
+#272727
+1/!
+15!
+1;!
+0?!
+#275910
+1U
+1H
+#276278
+1X
+1E
+#276721
+1\
+1A
+#276791
+0^
+0?
+#300000
+0!
+1J
+#300671
+0{
+#301038
+0|
+#330000
+1!
+0J
+#330497
+1{
+#330877
+1|
+#360000
+b1010110 "
+b1000110 "
+b1000010 "
+b1100010 "
+b1100011 "
+0!
+1J
+#360497
+1~
+1#!
+#360671
+0{
+0S
+#360681
+0!!
+#360691
+0$!
+#361038
+0|
+#364260
+1Q
+04!
+#364552
+0*!
+#364569
+0Q
+#365041
+0.!
+#365043
+1,!
+#390000
+1!
+0J
+#390497
+1{
+#390877
+1|
+#392727
+1-!
+0/!
+05!
+0;!
+#395825
+0U
+0H
+#396193
+0X
+0E
+#396606
+0\
+0A
+#398506
+1T
+1I
+#420000
+0!
+1J
+#420671
+0{
+#421038
+0|
+#450000
+1!
+0J
+#450497
+1{
+#450877
+1|
+#480000
+b1100001 "
+b11100001 "
+b11110001 "
+b11110000 "
+0!
+1J
+#480497
+1S
+#480507
+1!!
+#480671
+0{
+0#!
+#480701
+0%!
+#481038
+0|
+#483917
+1"!
+#484153
+1Q
+#484157
+1*!
+#484394
+0"!
+0'!
+#484481
+1(!
+#484602
+0,!
+#484604
+1.!
+#484733
+0*!
+#485004
+0(!
+#485090
+1<!
+#485091
+0.!
+#485220
+10!
+#485228
+16!
+#485640
+12!
+#485641
+06!
+#486079
+18!
+#510000
+1!
+0J
+#510497
+1{
+#510877
+1|
+#512727
+0-!
+11!
+13!
+19!
+1=!
+#515875
+1Z
+1C
+#516244
+1V
+1G
+#516276
+1]
+1@
+#516349
+1W
+1F
+#518483
+0T
+0I
+#540000
+0!
+1J
+#540671
+0{
+#541038
+0|
+#570000
+1!
+0J
+#570497
+1{
+#570877
+1|
+#600000
+b10110000 "
+b10111000 "
+b10111100 "
+b10011100 "
+b10011110 "
+b11110 "
+b1110 "
+b1111 "
+0!
+1J
+#600497
+1#!
+#600517
+1R
+1$!
+#600527
+1%!
+#600671
+0{
+0~
+0S
+#600681
+0!!
+#600711
+0}
+#601038
+0|
+#603994
+1&!
+#604331
+1'!
+#604414
+1(!
+#604569
+0Q
+#604688
+0(!
+#604763
+1+!
+#604765
+0&!
+#604954
+1,!
+#604971
+0<!
+#605094
+02!
+#605340
+00!
+#605525
+08!
+#630000
+1!
+0J
+#630497
+1{
+#630877
+1|
+#632727
+1-!
+01!
+03!
+09!
+0=!
+#635790
+0Z
+0C
+#636144
+0V
+0G
+#636175
+0]
+0@
+#636266
+0W
+0F
+#638506
+1T
+1I
+#660000
+0!
+1J
+#660671
+0{
+#661038
+0|
+#690000
+1!
+0J
+#690497
+1{
+#690877
+1|
+#720000
+b1011 "
+b101011 "
+b10101011 "
+b10101010 "
+0!
+1J
+#720497
+1~
+#720507
+1!!
+#720671
+0{
+0#!
+#720691
+0$!
+#721038
+0|
+#723917
+1"!
+#724373
+0+!
+#724402
+1&!
+1)!
+#724481
+1(!
+#725060
+10!
+#725061
+1.!
+#725069
+12!
+#725301
+0)!
+#725508
+18!
+#750000
+1!
+0J
+#750497
+1{
+#750877
+1|
+#752727
+1/!
+11!
+13!
+19!
+1:!
+#755875
+1Z
+1C
+#755910
+1U
+1H
+#756104
+1[
+1B
+#756244
+1V
+1G
+#756349
+1W
+1F
+#780000
+0!
+1J
+#780671
+0{
+#781038
+0|
+#810000
+1!
+0J
+#810497
+1{
+#810877
+1|
+#840000
+b11101010 "
+b11100010 "
+b11100000 "
+b11110000 "
+b11110100 "
+b11010100 "
+b1010100 "
+b1010101 "
+0!
+1J
+#840497
+1S
+1#!
+#840517
+1$!
+#840537
+1}
+#840671
+0{
+0~
+#840681
+0!!
+#840691
+0R
+#840701
+0%!
+#841038
+0|
+#844054
+1*!
+#844153
+1Q
+#844394
+0"!
+#844445
+0&!
+#844499
+0,!
+#844501
+02!
+#844552
+0*!
+#844699
+0Q
+#844932
+08!
+#845004
+0(!
+#845043
+1,!
+12!
+#845482
+18!
+#845656
+00!
+#845657
+0.!
+#845659
+02!
+#846090
+08!
+#870000
+1!
+0J
+#870497
+1{
+#870877
+1|
+#872727
+0/!
+01!
+03!
+09!
+0:!
+#875790
+0Z
+0C
+#875825
+0U
+0H
+#876027
+0[
+0B
+#876144
+0V
+0G
+#876266
+0W
+0F
+#900000
+0!
+1J
+#900671
+0{
+#901038
+0|
+#930000
+1!
+0J
+#930497
+1{
+#930877
+1|
+#960000
+b10101 "
+b101 "
+b1 "
+b0 "
+0!
+1J
+#960671
+0{
+0S
+0#!
+#960691
+0$!
+#960711
+0}
+#961038
+0|
+#990000
+1!
+0J
+#990497
+1{
+#990877
+1|
+#1000000
