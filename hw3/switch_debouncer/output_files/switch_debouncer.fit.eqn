@@ -1,0 +1,78 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L16Q is y~reg0 at LCFF_X27_Y12_N29
+A1L16Q = DFFEAS(A1L15, GLOBAL(A1L3),  ,  ,  ,  ,  ,  ,  );
+
+
+--t[0] is t[0] at LCFF_X27_Y12_N23
+t[0] = DFFEAS(A1L9, GLOBAL(A1L3),  ,  ,  ,  ,  ,  ,  );
+
+
+--t[2] is t[2] at LCFF_X27_Y12_N21
+t[2] = DFFEAS(A1L10, GLOBAL(A1L3),  ,  ,  ,  ,  ,  ,  );
+
+
+--t[1] is t[1] at LCFF_X27_Y12_N15
+t[1] = DFFEAS(A1L11, GLOBAL(A1L3),  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L14 is y~0 at LCCOMB_X27_Y12_N12
+A1L14 = (!t[1] & (t[2] & t[0]));
+
+
+--A1L15 is y~1 at LCCOMB_X27_Y12_N28
+A1L15 = (A1L14 & (x)) # (!A1L14 & ((A1L16Q)));
+
+
+--A1L9 is t~0 at LCCOMB_X27_Y12_N22
+A1L9 = (!t[0] & (x $ (A1L16Q)));
+
+
+--A1L4 is process_0~0 at LCCOMB_X27_Y12_N26
+A1L4 = x $ (A1L16Q);
+
+
+--A1L10 is t~1 at LCCOMB_X27_Y12_N20
+A1L10 = (A1L4 & (t[2] $ (((t[1] & t[0])))));
+
+
+--A1L11 is t~2 at LCCOMB_X27_Y12_N14
+A1L11 = (x & (!A1L16Q & (t[0] $ (t[1])))) # (!x & (A1L16Q & (t[0] $ (t[1]))));
+
+
+--y is y at PIN_103
+--operation mode is output
+
+y = OUTPUT(A1L16Q);
+
+
+--x is x at PIN_104
+--operation mode is input
+
+x = INPUT();
+
+
+--clk is clk at PIN_17
+--operation mode is input
+
+clk = INPUT();
+
+
+
+
+
+--A1L3 is clk~clkctrl at CLKCTRL_G2
+A1L3 = cycloneii_clkctrl(.INCLK[0] = clk) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+

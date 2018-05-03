@@ -1,0 +1,56 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L9Q is q~reg0 at LCFF_X1_Y2_N25
+A1L9Q = DFFEAS(UNCONNECTED_DATAIN, GLOBAL(A1L3),  ,  ,  , d,  ,  , VCC);
+
+
+--A1L8Q is qbar~reg0 at LCFF_X1_Y2_N27
+A1L8Q = DFFEAS(A1L7, GLOBAL(A1L3),  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L7 is qbar~0 at LCCOMB_X1_Y2_N26
+A1L7 = !d;
+
+
+--q is q at PIN_30
+--operation mode is output
+
+q = OUTPUT(A1L9Q);
+
+
+--qbar is qbar at PIN_32
+--operation mode is output
+
+qbar = OUTPUT(A1L8Q);
+
+
+--d is d at PIN_43
+--operation mode is input
+
+d = INPUT();
+
+
+--clk is clk at PIN_17
+--operation mode is input
+
+clk = INPUT();
+
+
+
+
+
+--A1L3 is clk~clkctrl at CLKCTRL_G2
+A1L3 = cycloneii_clkctrl(.INCLK[0] = clk) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+

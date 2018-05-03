@@ -1,0 +1,64 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L13Q is y~reg0 at LCFF_X27_Y2_N29
+A1L13Q = DFFEAS(A1L4, GLOBAL(A1L3),  ,  ,  ,  ,  ,  ,  );
+
+
+--i[0] is i[0] at LCFF_X27_Y2_N31
+i[0] = DFFEAS(A1L7, GLOBAL(A1L3),  ,  ,  ,  ,  ,  ,  );
+
+
+--i[1] is i[1] at LCFF_X27_Y2_N9
+i[1] = DFFEAS(A1L10, GLOBAL(A1L3),  ,  ,  ,  ,  ,  ,  );
+
+
+--i[2] is i[2] at LCFF_X27_Y2_N15
+i[2] = DFFEAS(A1L11, GLOBAL(A1L3),  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L4 is Equal1~0 at LCCOMB_X27_Y2_N28
+A1L4 = (i[1]) # ((i[2]) # (i[0]));
+
+
+--A1L10 is i~0 at LCCOMB_X27_Y2_N8
+A1L10 = (i[1] & ((!i[0]))) # (!i[1] & (!i[2] & i[0]));
+
+
+--A1L11 is i~1 at LCCOMB_X27_Y2_N14
+A1L11 = (i[2] & ((!i[0]))) # (!i[2] & (i[1] & i[0]));
+
+
+--A1L7 is i[0]~2 at LCCOMB_X27_Y2_N30
+A1L7 = !i[0];
+
+
+--y is y at PIN_75
+--operation mode is output
+
+y = OUTPUT(A1L13Q);
+
+
+--clk is clk at PIN_17
+--operation mode is input
+
+clk = INPUT();
+
+
+
+
+
+--A1L3 is clk~clkctrl at CLKCTRL_G2
+A1L3 = cycloneii_clkctrl(.INCLK[0] = clk) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+
