@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "05/02/2018 20:36:47"
+// Generated on "05/02/2018 21:11:17"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    debouncer_demo
 // 
@@ -417,7 +417,13 @@ initial
 begin
 	x = 1'b0;
 	x = #30000 1'b1;
-	x = #20000 1'b0;
+	x = #30000 1'b0;
+	x = #10000 1'b1;
+	x = #50000 1'b0;
+	x = #10000 1'b1;
+	x = #50000 1'b0;
+	x = #10000 1'b1;
+	x = #60000 1'b0;
 end 
 
 // clk

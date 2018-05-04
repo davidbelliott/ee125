@@ -1,0 +1,1195 @@
+$comment
+	File created using the following command:
+		vcd file switch_debouncer.msim.vcd -direction
+$end
+$date
+	Wed May 02 21:11:22 2018
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module debouncer_demo_vlg_vec_tst $end
+$var reg 1 ! clk $end
+$var reg 1 " x $end
+$var wire 1 # ssd_bounced_pins [6] $end
+$var wire 1 $ ssd_bounced_pins [5] $end
+$var wire 1 % ssd_bounced_pins [4] $end
+$var wire 1 & ssd_bounced_pins [3] $end
+$var wire 1 ' ssd_bounced_pins [2] $end
+$var wire 1 ( ssd_bounced_pins [1] $end
+$var wire 1 ) ssd_bounced_pins [0] $end
+$var wire 1 * ssd_debounced_pins [6] $end
+$var wire 1 + ssd_debounced_pins [5] $end
+$var wire 1 , ssd_debounced_pins [4] $end
+$var wire 1 - ssd_debounced_pins [3] $end
+$var wire 1 . ssd_debounced_pins [2] $end
+$var wire 1 / ssd_debounced_pins [1] $end
+$var wire 1 0 ssd_debounced_pins [0] $end
+$var wire 1 1 sampler $end
+$scope module i1 $end
+$var wire 1 2 gnd $end
+$var wire 1 3 vcc $end
+$var wire 1 4 unknown $end
+$var tri1 1 5 devclrn $end
+$var tri1 1 6 devpor $end
+$var tri1 1 7 devoe $end
+$var wire 1 8 ssd_debounced|Equal0~1_combout $end
+$var wire 1 9 ssd_bounced|Equal0~2_combout $end
+$var wire 1 : debouncer|y~q $end
+$var wire 1 ; debouncer|y~0_combout $end
+$var wire 1 < debouncer|t~0_combout $end
+$var wire 1 = debouncer|t~1_combout $end
+$var wire 1 > debouncer|t~2_combout $end
+$var wire 1 ? x~input_o $end
+$var wire 1 @ clk~input_o $end
+$var wire 1 A ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 B x~inputCLKENA0_outclk $end
+$var wire 1 C clk~inputCLKENA0_outclk $end
+$var wire 1 D debouncer|y~feeder_combout $end
+$var wire 1 E num_debounced[0]~0_combout $end
+$var wire 1 F Add1~113_sumout $end
+$var wire 1 G num_debounced[1]~DUPLICATE_q $end
+$var wire 1 H Add1~114 $end
+$var wire 1 I Add1~117_sumout $end
+$var wire 1 J num_debounced[2]~DUPLICATE_q $end
+$var wire 1 K Add1~118 $end
+$var wire 1 L Add1~1_sumout $end
+$var wire 1 M num_debounced[3]~feeder_combout $end
+$var wire 1 N Add1~2 $end
+$var wire 1 O Add1~81_sumout $end
+$var wire 1 P num_debounced[4]~DUPLICATE_q $end
+$var wire 1 Q Add1~82 $end
+$var wire 1 R Add1~85_sumout $end
+$var wire 1 S num_debounced[5]~feeder_combout $end
+$var wire 1 T num_debounced[5]~DUPLICATE_q $end
+$var wire 1 U Add1~86 $end
+$var wire 1 V Add1~77_sumout $end
+$var wire 1 W num_debounced[6]~feeder_combout $end
+$var wire 1 X num_debounced[6]~DUPLICATE_q $end
+$var wire 1 Y Add1~78 $end
+$var wire 1 Z Add1~73_sumout $end
+$var wire 1 [ num_debounced[7]~DUPLICATE_q $end
+$var wire 1 \ Add1~74 $end
+$var wire 1 ] Add1~69_sumout $end
+$var wire 1 ^ Add1~70 $end
+$var wire 1 _ Add1~65_sumout $end
+$var wire 1 ` ssd_debounced|Equal0~3_combout $end
+$var wire 1 a Add1~66 $end
+$var wire 1 b Add1~105_sumout $end
+$var wire 1 c Add1~106 $end
+$var wire 1 d Add1~109_sumout $end
+$var wire 1 e num_debounced[11]~feeder_combout $end
+$var wire 1 f Add1~110 $end
+$var wire 1 g Add1~101_sumout $end
+$var wire 1 h num_debounced[12]~feeder_combout $end
+$var wire 1 i num_debounced[12]~DUPLICATE_q $end
+$var wire 1 j Add1~102 $end
+$var wire 1 k Add1~97_sumout $end
+$var wire 1 l Add1~98 $end
+$var wire 1 m Add1~93_sumout $end
+$var wire 1 n num_debounced[14]~feeder_combout $end
+$var wire 1 o num_debounced[14]~DUPLICATE_q $end
+$var wire 1 p Add1~94 $end
+$var wire 1 q Add1~89_sumout $end
+$var wire 1 r num_debounced[15]~feeder_combout $end
+$var wire 1 s Add1~90 $end
+$var wire 1 t Add1~57_sumout $end
+$var wire 1 u num_debounced[16]~feeder_combout $end
+$var wire 1 v num_debounced[16]~DUPLICATE_q $end
+$var wire 1 w Add1~58 $end
+$var wire 1 x Add1~61_sumout $end
+$var wire 1 y Add1~62 $end
+$var wire 1 z Add1~53_sumout $end
+$var wire 1 { Add1~54 $end
+$var wire 1 | Add1~49_sumout $end
+$var wire 1 } Add1~50 $end
+$var wire 1 ~ Add1~45_sumout $end
+$var wire 1 !! Add1~46 $end
+$var wire 1 "! Add1~41_sumout $end
+$var wire 1 #! num_debounced[21]~feeder_combout $end
+$var wire 1 $! ssd_debounced|Equal0~2_combout $end
+$var wire 1 %! Add1~42 $end
+$var wire 1 &! Add1~33_sumout $end
+$var wire 1 '! num_debounced[22]~feeder_combout $end
+$var wire 1 (! Add1~34 $end
+$var wire 1 )! Add1~37_sumout $end
+$var wire 1 *! Add1~38 $end
+$var wire 1 +! Add1~29_sumout $end
+$var wire 1 ,! Add1~30 $end
+$var wire 1 -! Add1~25_sumout $end
+$var wire 1 .! num_debounced[25]~feeder_combout $end
+$var wire 1 /! Add1~26 $end
+$var wire 1 0! Add1~21_sumout $end
+$var wire 1 1! num_debounced[26]~feeder_combout $end
+$var wire 1 2! Add1~22 $end
+$var wire 1 3! Add1~17_sumout $end
+$var wire 1 4! num_debounced[27]~feeder_combout $end
+$var wire 1 5! Add1~18 $end
+$var wire 1 6! Add1~9_sumout $end
+$var wire 1 7! num_debounced[28]~feeder_combout $end
+$var wire 1 8! Add1~10 $end
+$var wire 1 9! Add1~13_sumout $end
+$var wire 1 :! Add1~14 $end
+$var wire 1 ;! Add1~5_sumout $end
+$var wire 1 <! num_debounced[30]~feeder_combout $end
+$var wire 1 =! ssd_debounced|Equal0~0_combout $end
+$var wire 1 >! ssd_debounced|Equal0~4_combout $end
+$var wire 1 ?! ssd_debounced|Equal0~5_combout $end
+$var wire 1 @! num_debounced[3]~DUPLICATE_q $end
+$var wire 1 A! ssd_debounced|WideOr4~combout $end
+$var wire 1 B! ssd_debounced|WideOr3~combout $end
+$var wire 1 C! ssd_debounced|WideOr2~combout $end
+$var wire 1 D! ssd_debounced|WideOr1~0_combout $end
+$var wire 1 E! ssd_debounced|WideOr0~combout $end
+$var wire 1 F! num_bounced[0]~0_combout $end
+$var wire 1 G! Add0~113_sumout $end
+$var wire 1 H! Add0~114 $end
+$var wire 1 I! Add0~117_sumout $end
+$var wire 1 J! Add0~118 $end
+$var wire 1 K! Add0~1_sumout $end
+$var wire 1 L! Add0~2 $end
+$var wire 1 M! Add0~81_sumout $end
+$var wire 1 N! Add0~82 $end
+$var wire 1 O! Add0~85_sumout $end
+$var wire 1 P! Add0~86 $end
+$var wire 1 Q! Add0~77_sumout $end
+$var wire 1 R! Add0~78 $end
+$var wire 1 S! Add0~73_sumout $end
+$var wire 1 T! Add0~74 $end
+$var wire 1 U! Add0~69_sumout $end
+$var wire 1 V! Add0~70 $end
+$var wire 1 W! Add0~65_sumout $end
+$var wire 1 X! Add0~66 $end
+$var wire 1 Y! Add0~105_sumout $end
+$var wire 1 Z! Add0~106 $end
+$var wire 1 [! Add0~109_sumout $end
+$var wire 1 \! Add0~110 $end
+$var wire 1 ]! Add0~101_sumout $end
+$var wire 1 ^! Add0~102 $end
+$var wire 1 _! Add0~97_sumout $end
+$var wire 1 `! ssd_bounced|Equal0~4_combout $end
+$var wire 1 a! Add0~98 $end
+$var wire 1 b! Add0~93_sumout $end
+$var wire 1 c! Add0~94 $end
+$var wire 1 d! Add0~89_sumout $end
+$var wire 1 e! Add0~90 $end
+$var wire 1 f! Add0~57_sumout $end
+$var wire 1 g! Add0~58 $end
+$var wire 1 h! Add0~61_sumout $end
+$var wire 1 i! Add0~62 $end
+$var wire 1 j! Add0~53_sumout $end
+$var wire 1 k! Add0~54 $end
+$var wire 1 l! Add0~49_sumout $end
+$var wire 1 m! Add0~50 $end
+$var wire 1 n! Add0~45_sumout $end
+$var wire 1 o! Add0~46 $end
+$var wire 1 p! Add0~41_sumout $end
+$var wire 1 q! Add0~42 $end
+$var wire 1 r! Add0~33_sumout $end
+$var wire 1 s! Add0~34 $end
+$var wire 1 t! Add0~37_sumout $end
+$var wire 1 u! Add0~38 $end
+$var wire 1 v! Add0~29_sumout $end
+$var wire 1 w! Add0~30 $end
+$var wire 1 x! Add0~25_sumout $end
+$var wire 1 y! Add0~26 $end
+$var wire 1 z! Add0~21_sumout $end
+$var wire 1 {! Add0~22 $end
+$var wire 1 |! Add0~17_sumout $end
+$var wire 1 }! Add0~18 $end
+$var wire 1 ~! Add0~9_sumout $end
+$var wire 1 !" Add0~10 $end
+$var wire 1 "" Add0~13_sumout $end
+$var wire 1 #" Add0~14 $end
+$var wire 1 $" Add0~5_sumout $end
+$var wire 1 %" ssd_bounced|Equal0~0_combout $end
+$var wire 1 &" ssd_bounced|Equal0~1_combout $end
+$var wire 1 '" ssd_bounced|Equal0~3_combout $end
+$var wire 1 (" ssd_bounced|Equal0~5_combout $end
+$var wire 1 )" ssd_bounced|WideOr4~combout $end
+$var wire 1 *" ssd_bounced|WideOr3~combout $end
+$var wire 1 +" ssd_bounced|WideOr2~combout $end
+$var wire 1 ," ssd_bounced|WideOr1~0_combout $end
+$var wire 1 -" ssd_bounced|WideOr0~combout $end
+$var wire 1 ." ssd_bounced|ssd [6] $end
+$var wire 1 /" ssd_bounced|ssd [5] $end
+$var wire 1 0" ssd_bounced|ssd [4] $end
+$var wire 1 1" ssd_bounced|ssd [3] $end
+$var wire 1 2" ssd_bounced|ssd [2] $end
+$var wire 1 3" ssd_bounced|ssd [1] $end
+$var wire 1 4" ssd_bounced|ssd [0] $end
+$var wire 1 5" num_debounced [30] $end
+$var wire 1 6" num_debounced [29] $end
+$var wire 1 7" num_debounced [28] $end
+$var wire 1 8" num_debounced [27] $end
+$var wire 1 9" num_debounced [26] $end
+$var wire 1 :" num_debounced [25] $end
+$var wire 1 ;" num_debounced [24] $end
+$var wire 1 <" num_debounced [23] $end
+$var wire 1 =" num_debounced [22] $end
+$var wire 1 >" num_debounced [21] $end
+$var wire 1 ?" num_debounced [20] $end
+$var wire 1 @" num_debounced [19] $end
+$var wire 1 A" num_debounced [18] $end
+$var wire 1 B" num_debounced [17] $end
+$var wire 1 C" num_debounced [16] $end
+$var wire 1 D" num_debounced [15] $end
+$var wire 1 E" num_debounced [14] $end
+$var wire 1 F" num_debounced [13] $end
+$var wire 1 G" num_debounced [12] $end
+$var wire 1 H" num_debounced [11] $end
+$var wire 1 I" num_debounced [10] $end
+$var wire 1 J" num_debounced [9] $end
+$var wire 1 K" num_debounced [8] $end
+$var wire 1 L" num_debounced [7] $end
+$var wire 1 M" num_debounced [6] $end
+$var wire 1 N" num_debounced [5] $end
+$var wire 1 O" num_debounced [4] $end
+$var wire 1 P" num_debounced [3] $end
+$var wire 1 Q" num_debounced [2] $end
+$var wire 1 R" num_debounced [1] $end
+$var wire 1 S" num_debounced [0] $end
+$var wire 1 T" num_bounced [30] $end
+$var wire 1 U" num_bounced [29] $end
+$var wire 1 V" num_bounced [28] $end
+$var wire 1 W" num_bounced [27] $end
+$var wire 1 X" num_bounced [26] $end
+$var wire 1 Y" num_bounced [25] $end
+$var wire 1 Z" num_bounced [24] $end
+$var wire 1 [" num_bounced [23] $end
+$var wire 1 \" num_bounced [22] $end
+$var wire 1 ]" num_bounced [21] $end
+$var wire 1 ^" num_bounced [20] $end
+$var wire 1 _" num_bounced [19] $end
+$var wire 1 `" num_bounced [18] $end
+$var wire 1 a" num_bounced [17] $end
+$var wire 1 b" num_bounced [16] $end
+$var wire 1 c" num_bounced [15] $end
+$var wire 1 d" num_bounced [14] $end
+$var wire 1 e" num_bounced [13] $end
+$var wire 1 f" num_bounced [12] $end
+$var wire 1 g" num_bounced [11] $end
+$var wire 1 h" num_bounced [10] $end
+$var wire 1 i" num_bounced [9] $end
+$var wire 1 j" num_bounced [8] $end
+$var wire 1 k" num_bounced [7] $end
+$var wire 1 l" num_bounced [6] $end
+$var wire 1 m" num_bounced [5] $end
+$var wire 1 n" num_bounced [4] $end
+$var wire 1 o" num_bounced [3] $end
+$var wire 1 p" num_bounced [2] $end
+$var wire 1 q" num_bounced [1] $end
+$var wire 1 r" num_bounced [0] $end
+$var wire 1 s" debouncer|t [2] $end
+$var wire 1 t" debouncer|t [1] $end
+$var wire 1 u" debouncer|t [0] $end
+$var wire 1 v" ssd_debounced|ssd [6] $end
+$var wire 1 w" ssd_debounced|ssd [5] $end
+$var wire 1 x" ssd_debounced|ssd [4] $end
+$var wire 1 y" ssd_debounced|ssd [3] $end
+$var wire 1 z" ssd_debounced|ssd [2] $end
+$var wire 1 {" ssd_debounced|ssd [1] $end
+$var wire 1 |" ssd_debounced|ssd [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+1)
+0(
+0'
+0&
+0%
+0$
+0#
+10
+0/
+0.
+0-
+0,
+0+
+0*
+x1
+02
+13
+x4
+15
+16
+17
+18
+19
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+1E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+0_
+1`
+0a
+0b
+0c
+0d
+0e
+0f
+0g
+0h
+0i
+0j
+0k
+0l
+0m
+0n
+0o
+0p
+0q
+0r
+0s
+0t
+0u
+0v
+0w
+0x
+0y
+0z
+0{
+0|
+0}
+0~
+0!!
+0"!
+0#!
+1$!
+0%!
+0&!
+0'!
+0(!
+0)!
+0*!
+0+!
+0,!
+0-!
+0.!
+0/!
+00!
+01!
+02!
+03!
+04!
+05!
+06!
+07!
+08!
+09!
+0:!
+0;!
+0<!
+1=!
+1>!
+1?!
+0@!
+1A!
+0B!
+1C!
+1D!
+0E!
+1F!
+0G!
+0H!
+0I!
+0J!
+0K!
+0L!
+0M!
+0N!
+0O!
+0P!
+0Q!
+0R!
+0S!
+0T!
+0U!
+0V!
+0W!
+0X!
+0Y!
+0Z!
+0[!
+0\!
+0]!
+0^!
+0_!
+1`!
+0a!
+0b!
+0c!
+0d!
+0e!
+0f!
+0g!
+0h!
+0i!
+0j!
+0k!
+0l!
+0m!
+0n!
+0o!
+0p!
+0q!
+0r!
+0s!
+0t!
+0u!
+0v!
+0w!
+0x!
+0y!
+0z!
+0{!
+0|!
+0}!
+0~!
+0!"
+0""
+0#"
+0$"
+1%"
+1&"
+1'"
+1("
+1)"
+0*"
+1+"
+1,"
+0-"
+z4"
+z3"
+z2"
+z1"
+00"
+z/"
+0."
+0S"
+0R"
+0Q"
+0P"
+0O"
+0N"
+0M"
+0L"
+0K"
+0J"
+0I"
+0H"
+0G"
+0F"
+0E"
+0D"
+0C"
+0B"
+0A"
+0@"
+0?"
+0>"
+0="
+0<"
+0;"
+0:"
+09"
+08"
+07"
+06"
+05"
+0r"
+0q"
+0p"
+0o"
+0n"
+0m"
+0l"
+0k"
+0j"
+0i"
+0h"
+0g"
+0f"
+0e"
+0d"
+0c"
+0b"
+0a"
+0`"
+0_"
+0^"
+0]"
+0\"
+0["
+0Z"
+0Y"
+0X"
+0W"
+0V"
+0U"
+0T"
+0u"
+0t"
+0s"
+z|"
+z{"
+zz"
+zy"
+0x"
+zw"
+0v"
+$end
+#10000
+1!
+1@
+1C
+01
+#20000
+0!
+0@
+0C
+11
+#30000
+1"
+1!
+1?
+1@
+1C
+1B
+01
+1=
+1r"
+0F!
+1G!
+0+"
+0,"
+1*"
+1."
+1'
+1&
+1(
+1#
+#40000
+0!
+0@
+0C
+11
+#50000
+1!
+1@
+1C
+01
+1u"
+0=
+1>
+#60000
+0"
+0!
+0?
+0@
+0C
+0B
+11
+0>
+#70000
+1"
+1!
+1?
+1@
+1C
+1B
+01
+1>
+0u"
+1q"
+0r"
+1=
+0>
+1+"
+1,"
+1F!
+0)"
+10"
+0."
+0'
+0&
+0)
+1%
+0#
+#80000
+0!
+0@
+0C
+11
+#90000
+1!
+1@
+1C
+01
+1u"
+0=
+1>
+#100000
+0!
+0@
+0C
+11
+#110000
+1!
+1@
+1C
+01
+1t"
+0u"
+1=
+#120000
+0"
+0!
+0?
+0@
+0C
+0B
+11
+0=
+0>
+#130000
+1"
+1!
+1?
+1@
+1C
+1B
+01
+1=
+1>
+0t"
+1r"
+0>
+0F!
+1H!
+0G!
+0+"
+00"
+1I!
+1'
+0%
+#140000
+0!
+0@
+0C
+11
+#150000
+1!
+1@
+1C
+01
+1u"
+0=
+1>
+#160000
+0!
+0@
+0C
+11
+#170000
+1!
+1@
+1C
+01
+1t"
+0u"
+1=
+#180000
+0"
+0!
+0?
+0@
+0C
+0B
+11
+0=
+0>
+#190000
+1"
+1!
+1?
+1@
+1C
+1B
+01
+1=
+1>
+0t"
+1p"
+0q"
+0r"
+0>
+1J!
+0I!
+0,"
+0H!
+1F!
+0*"
+1."
+1K!
+0J!
+1I!
+1&
+0(
+1#
+0K!
+#200000
+0!
+0@
+0C
+11
+#210000
+1!
+1@
+1C
+01
+1u"
+0=
+1>
+#220000
+0!
+0@
+0C
+11
+#230000
+1!
+1@
+1C
+01
+1t"
+0u"
+1=
+#240000
+0!
+0@
+0C
+11
+#250000
+0"
+1!
+0?
+1@
+1C
+0B
+01
+0=
+0>
+1u"
+#260000
+0!
+0@
+0C
+11
+#270000
+1!
+1@
+1C
+01
+0t"
+0u"
+#280000
+0!
+0@
+0C
+11
+#290000
+1!
+1@
+1C
+01
+#300000
+0!
+0@
+0C
+11
+#310000
+1!
+1@
+1C
+01
+#320000
+0!
+0@
+0C
+11
+#330000
+1!
+1@
+1C
+01
+#340000
+0!
+0@
+0C
+11
+#350000
+1!
+1@
+1C
+01
+#360000
+0!
+0@
+0C
+11
+#370000
+1!
+1@
+1C
+01
+#380000
+0!
+0@
+0C
+11
+#390000
+1!
+1@
+1C
+01
+#400000
+0!
+0@
+0C
+11
+#410000
+1!
+1@
+1C
+01
+#420000
+0!
+0@
+0C
+11
+#430000
+1!
+1@
+1C
+01
+#440000
+0!
+0@
+0C
+11
+#450000
+1!
+1@
+1C
+01
+#460000
+0!
+0@
+0C
+11
+#470000
+1!
+1@
+1C
+01
+#480000
+0!
+0@
+0C
+11
+#490000
+1!
+1@
+1C
+01
+#500000
+0!
+0@
+0C
+11
+#510000
+1!
+1@
+1C
+01
+#520000
+0!
+0@
+0C
+11
+#530000
+1!
+1@
+1C
+01
+#540000
+0!
+0@
+0C
+11
+#550000
+1!
+1@
+1C
+01
+#560000
+0!
+0@
+0C
+11
+#570000
+1!
+1@
+1C
+01
+#580000
+0!
+0@
+0C
+11
+#590000
+1!
+1@
+1C
+01
+#600000
+0!
+0@
+0C
+11
+#610000
+1!
+1@
+1C
+01
+#620000
+0!
+0@
+0C
+11
+#630000
+1!
+1@
+1C
+01
+#640000
+0!
+0@
+0C
+11
+#650000
+1!
+1@
+1C
+01
+#660000
+0!
+0@
+0C
+11
+#670000
+1!
+1@
+1C
+01
+#680000
+0!
+0@
+0C
+11
+#690000
+1!
+1@
+1C
+01
+#700000
+0!
+0@
+0C
+11
+#710000
+1!
+1@
+1C
+01
+#720000
+0!
+0@
+0C
+11
+#730000
+1!
+1@
+1C
+01
+#740000
+0!
+0@
+0C
+11
+#750000
+1!
+1@
+1C
+01
+#760000
+0!
+0@
+0C
+11
+#770000
+1!
+1@
+1C
+01
+#780000
+0!
+0@
+0C
+11
+#790000
+1!
+1@
+1C
+01
+#800000
+0!
+0@
+0C
+11
+#810000
+1!
+1@
+1C
+01
+#820000
+0!
+0@
+0C
+11
+#830000
+1!
+1@
+1C
+01
+#840000
+0!
+0@
+0C
+11
+#850000
+1!
+1@
+1C
+01
+#860000
+0!
+0@
+0C
+11
+#870000
+1!
+1@
+1C
+01
+#880000
+0!
+0@
+0C
+11
+#890000
+1!
+1@
+1C
+01
+#900000
+0!
+0@
+0C
+11
+#910000
+1!
+1@
+1C
+01
+#920000
+0!
+0@
+0C
+11
+#930000
+1!
+1@
+1C
+01
+#940000
+0!
+0@
+0C
+11
+#950000
+1!
+1@
+1C
+01
+#960000
+0!
+0@
+0C
+11
+#970000
+1!
+1@
+1C
+01
+#980000
+0!
+0@
+0C
+11
+#990000
+1!
+1@
+1C
+01
+#1000000

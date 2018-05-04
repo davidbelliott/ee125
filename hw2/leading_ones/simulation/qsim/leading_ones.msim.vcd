@@ -3,7 +3,7 @@ $comment
 		vcd file leading_ones.msim.vcd -direction
 $end
 $date
-	Wed Apr 25 00:45:04 2018
+	Wed May 02 16:11:21 2018
 $end
 $version
 	ModelSim Version 10.1d

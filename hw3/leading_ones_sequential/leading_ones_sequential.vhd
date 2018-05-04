@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 -------------------------------------------------------------------------
 entity leading_ones_sequential is
 	generic (N: integer := 8 );	--number of input bits
-	port (x: in std_logic_vector(N-1 downto 0);
+	port (x:   in std_logic_vector(N-1 downto 0);
 			clk: in std_logic;
 			ssd: out std_logic_vector(6 downto 0);
 			cnt: buffer integer);
@@ -42,7 +42,6 @@ begin
 					when 8 => ssd <= "0000000";
 					when 9 => ssd <= "0000100";
 					when others => ssd <= "0110000";
-					
 				end case;
 			end if;
 	end process;

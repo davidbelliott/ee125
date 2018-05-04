@@ -26,11 +26,14 @@ HEADER
 	TIME_UNIT = ns;
 	DATA_OFFSET = 0.0;
 	DATA_DURATION = 1000.0;
-	SIMULATION_TIME = 1000.0;
+	SIMULATION_TIME = 0.0;
 	GRID_PHASE = 0.0;
-	GRID_PERIOD = 10.0;
+	GRID_PERIOD = 0.0;
 	GRID_DUTY_CYCLE = 50;
 }
+
+
+
 
 SIGNAL("num_bounced")
 {
@@ -860,7 +863,6 @@ TRANSITION_LIST("num_bounced[30]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[29]")
 {
 	NODE
@@ -869,7 +871,6 @@ TRANSITION_LIST("num_bounced[29]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[28]")
 {
 	NODE
@@ -878,7 +879,6 @@ TRANSITION_LIST("num_bounced[28]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[27]")
 {
 	NODE
@@ -887,7 +887,6 @@ TRANSITION_LIST("num_bounced[27]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[26]")
 {
 	NODE
@@ -896,7 +895,6 @@ TRANSITION_LIST("num_bounced[26]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[25]")
 {
 	NODE
@@ -905,7 +903,6 @@ TRANSITION_LIST("num_bounced[25]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[24]")
 {
 	NODE
@@ -914,7 +911,6 @@ TRANSITION_LIST("num_bounced[24]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[23]")
 {
 	NODE
@@ -923,7 +919,6 @@ TRANSITION_LIST("num_bounced[23]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[22]")
 {
 	NODE
@@ -932,7 +927,6 @@ TRANSITION_LIST("num_bounced[22]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[21]")
 {
 	NODE
@@ -941,7 +935,6 @@ TRANSITION_LIST("num_bounced[21]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[20]")
 {
 	NODE
@@ -950,7 +943,6 @@ TRANSITION_LIST("num_bounced[20]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[19]")
 {
 	NODE
@@ -959,7 +951,6 @@ TRANSITION_LIST("num_bounced[19]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[18]")
 {
 	NODE
@@ -968,7 +959,6 @@ TRANSITION_LIST("num_bounced[18]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[17]")
 {
 	NODE
@@ -977,7 +967,6 @@ TRANSITION_LIST("num_bounced[17]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[16]")
 {
 	NODE
@@ -986,7 +975,6 @@ TRANSITION_LIST("num_bounced[16]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[15]")
 {
 	NODE
@@ -995,7 +983,6 @@ TRANSITION_LIST("num_bounced[15]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[14]")
 {
 	NODE
@@ -1004,7 +991,6 @@ TRANSITION_LIST("num_bounced[14]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[13]")
 {
 	NODE
@@ -1013,7 +999,6 @@ TRANSITION_LIST("num_bounced[13]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[12]")
 {
 	NODE
@@ -1022,7 +1007,6 @@ TRANSITION_LIST("num_bounced[12]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[11]")
 {
 	NODE
@@ -1031,7 +1015,6 @@ TRANSITION_LIST("num_bounced[11]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[10]")
 {
 	NODE
@@ -1040,7 +1023,6 @@ TRANSITION_LIST("num_bounced[10]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[9]")
 {
 	NODE
@@ -1049,7 +1031,6 @@ TRANSITION_LIST("num_bounced[9]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[8]")
 {
 	NODE
@@ -1058,7 +1039,6 @@ TRANSITION_LIST("num_bounced[8]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[7]")
 {
 	NODE
@@ -1067,7 +1047,6 @@ TRANSITION_LIST("num_bounced[7]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[6]")
 {
 	NODE
@@ -1076,7 +1055,6 @@ TRANSITION_LIST("num_bounced[6]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[5]")
 {
 	NODE
@@ -1085,7 +1063,6 @@ TRANSITION_LIST("num_bounced[5]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[4]")
 {
 	NODE
@@ -1094,7 +1071,6 @@ TRANSITION_LIST("num_bounced[4]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[3]")
 {
 	NODE
@@ -1103,55 +1079,144 @@ TRANSITION_LIST("num_bounced[3]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 192.633;
-		LEVEL 1 FOR 807.367;
+		LEVEL 0 FOR 190.0;
+		LEVEL 1 FOR 810.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 72.633;
+		LEVEL 0 FOR 70.0;
 		LEVEL 1 FOR 120.0;
-		LEVEL 0 FOR 807.367;
+		LEVEL 0 FOR 810.0;
 	}
 }
-
 TRANSITION_LIST("num_bounced[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 32.633;
+		LEVEL 0 FOR 30.0;
 		LEVEL 1 FOR 40.0;
 		LEVEL 0 FOR 60.0;
 		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 807.367;
+		LEVEL 0 FOR 810.0;
 	}
 }
-
 TRANSITION_LIST("clk")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 50;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 10.0;
-		}
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[30]")
 {
 	NODE
@@ -1160,7 +1225,6 @@ TRANSITION_LIST("num_debounced[30]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[29]")
 {
 	NODE
@@ -1169,7 +1233,6 @@ TRANSITION_LIST("num_debounced[29]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[28]")
 {
 	NODE
@@ -1178,7 +1241,6 @@ TRANSITION_LIST("num_debounced[28]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[27]")
 {
 	NODE
@@ -1187,7 +1249,6 @@ TRANSITION_LIST("num_debounced[27]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[26]")
 {
 	NODE
@@ -1196,7 +1257,6 @@ TRANSITION_LIST("num_debounced[26]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[25]")
 {
 	NODE
@@ -1205,7 +1265,6 @@ TRANSITION_LIST("num_debounced[25]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[24]")
 {
 	NODE
@@ -1214,7 +1273,6 @@ TRANSITION_LIST("num_debounced[24]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[23]")
 {
 	NODE
@@ -1223,7 +1281,6 @@ TRANSITION_LIST("num_debounced[23]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[22]")
 {
 	NODE
@@ -1232,7 +1289,6 @@ TRANSITION_LIST("num_debounced[22]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[21]")
 {
 	NODE
@@ -1241,7 +1297,6 @@ TRANSITION_LIST("num_debounced[21]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[20]")
 {
 	NODE
@@ -1250,7 +1305,6 @@ TRANSITION_LIST("num_debounced[20]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[19]")
 {
 	NODE
@@ -1259,7 +1313,6 @@ TRANSITION_LIST("num_debounced[19]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[18]")
 {
 	NODE
@@ -1268,7 +1321,6 @@ TRANSITION_LIST("num_debounced[18]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[17]")
 {
 	NODE
@@ -1277,7 +1329,6 @@ TRANSITION_LIST("num_debounced[17]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[16]")
 {
 	NODE
@@ -1286,7 +1337,6 @@ TRANSITION_LIST("num_debounced[16]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[15]")
 {
 	NODE
@@ -1295,7 +1345,6 @@ TRANSITION_LIST("num_debounced[15]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[14]")
 {
 	NODE
@@ -1304,7 +1353,6 @@ TRANSITION_LIST("num_debounced[14]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[13]")
 {
 	NODE
@@ -1313,7 +1361,6 @@ TRANSITION_LIST("num_debounced[13]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[12]")
 {
 	NODE
@@ -1322,7 +1369,6 @@ TRANSITION_LIST("num_debounced[12]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[11]")
 {
 	NODE
@@ -1331,7 +1377,6 @@ TRANSITION_LIST("num_debounced[11]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[10]")
 {
 	NODE
@@ -1340,7 +1385,6 @@ TRANSITION_LIST("num_debounced[10]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[9]")
 {
 	NODE
@@ -1349,7 +1393,6 @@ TRANSITION_LIST("num_debounced[9]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[8]")
 {
 	NODE
@@ -1358,7 +1401,6 @@ TRANSITION_LIST("num_debounced[8]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[7]")
 {
 	NODE
@@ -1367,7 +1409,6 @@ TRANSITION_LIST("num_debounced[7]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[6]")
 {
 	NODE
@@ -1376,7 +1417,6 @@ TRANSITION_LIST("num_debounced[6]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[5]")
 {
 	NODE
@@ -1385,7 +1425,6 @@ TRANSITION_LIST("num_debounced[5]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[4]")
 {
 	NODE
@@ -1394,7 +1433,6 @@ TRANSITION_LIST("num_debounced[4]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[3]")
 {
 	NODE
@@ -1403,7 +1441,6 @@ TRANSITION_LIST("num_debounced[3]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[2]")
 {
 	NODE
@@ -1412,7 +1449,6 @@ TRANSITION_LIST("num_debounced[2]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[1]")
 {
 	NODE
@@ -1421,7 +1457,6 @@ TRANSITION_LIST("num_debounced[1]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("num_debounced[0]")
 {
 	NODE
@@ -1430,7 +1465,6 @@ TRANSITION_LIST("num_debounced[0]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("ssd_debounced_pins[6]")
 {
 	NODE
@@ -1439,7 +1473,6 @@ TRANSITION_LIST("ssd_debounced_pins[6]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("ssd_debounced_pins[5]")
 {
 	NODE
@@ -1448,7 +1481,6 @@ TRANSITION_LIST("ssd_debounced_pins[5]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("ssd_debounced_pins[4]")
 {
 	NODE
@@ -1457,7 +1489,6 @@ TRANSITION_LIST("ssd_debounced_pins[4]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("ssd_debounced_pins[3]")
 {
 	NODE
@@ -1466,7 +1497,6 @@ TRANSITION_LIST("ssd_debounced_pins[3]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("ssd_debounced_pins[2]")
 {
 	NODE
@@ -1475,7 +1505,6 @@ TRANSITION_LIST("ssd_debounced_pins[2]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("ssd_debounced_pins[1]")
 {
 	NODE
@@ -1484,7 +1513,6 @@ TRANSITION_LIST("ssd_debounced_pins[1]")
 		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("ssd_debounced_pins[0]")
 {
 	NODE
@@ -1493,92 +1521,76 @@ TRANSITION_LIST("ssd_debounced_pins[0]")
 		LEVEL 1 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("ssd_bounced_pins[6]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 37.289;
-		LEVEL 1 FOR 39.692;
-		LEVEL 0 FOR 120.308;
-		LEVEL 1 FOR 802.711;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 810.0;
 	}
 }
-
 TRANSITION_LIST("ssd_bounced_pins[5]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 77.964;
-		LEVEL 1 FOR 0.395;
-		LEVEL 0 FOR 119.43;
-		LEVEL 1 FOR 0.57;
-		LEVEL 0 FOR 801.641;
+		LEVEL 0 FOR 1000.0;
 	}
 }
-
 TRANSITION_LIST("ssd_bounced_pins[4]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 78.025;
-		LEVEL 1 FOR 60.146;
-		LEVEL 0 FOR 59.679;
-		LEVEL 1 FOR 0.57;
-		LEVEL 0 FOR 801.58;
+		LEVEL 0 FOR 70.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 870.0;
 	}
 }
-
 TRANSITION_LIST("ssd_bounced_pins[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 37.051;
-		LEVEL 1 FOR 39.689;
-		LEVEL 0 FOR 120.311;
-		LEVEL 1 FOR 802.949;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 810.0;
 	}
 }
-
 TRANSITION_LIST("ssd_bounced_pins[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 38.119;
-		LEVEL 1 FOR 39.781;
-		LEVEL 0 FOR 60.219;
-		LEVEL 1 FOR 59.606;
-		LEVEL 0 FOR 0.579;
-		LEVEL 1 FOR 801.696;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 870.0;
 	}
 }
-
 TRANSITION_LIST("ssd_bounced_pins[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 37.028;
-		LEVEL 1 FOR 159.83;
-		LEVEL 0 FOR 803.142;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 160.0;
+		LEVEL 0 FOR 810.0;
 	}
 }
-
 TRANSITION_LIST("ssd_bounced_pins[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 76.737;
-		LEVEL 0 FOR 923.263;
+		LEVEL 1 FOR 70.0;
+		LEVEL 0 FOR 930.0;
 	}
 }
-
 TRANSITION_LIST("x")
 {
 	NODE
@@ -1595,6 +1607,7 @@ TRANSITION_LIST("x")
 		LEVEL 0 FOR 750.0;
 	}
 }
+
 
 DISPLAY_LINE
 {
@@ -2413,7 +2426,6 @@ DISPLAY_LINE
 	TREE_INDEX = 81;
 	TREE_LEVEL = 0;
 }
-
 TIME_BAR
 {
 	TIME = 0;

@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Google Drive\School\Caltech\ee125_shared\ee125\hw3\switch_debouncer\simulation\qsim
+vdebouncer_demo
+Z1 I>Z;iabH0XNiA8cd`97kAU1
+Z2 VPCZeGEL:4<lVSF?ZkTG@T3
+Z3 dD:\Google Drive\School\Caltech\ee125_shared\ee125\hw3\switch_debouncer\simulation\qsim
+Z4 w1525320679
+Z5 8switch_debouncer.vo
+Z6 Fswitch_debouncer.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 mRe;X_ESWP;^[iBV1MVGe1
+!s85 0
+Z10 !s108 1525320680.736000
+Z11 !s107 switch_debouncer.vo|
+Z12 !s90 -work|work|switch_debouncer.vo|
+!s101 -O0
+vdebouncer_demo_vlg_check_tst
+!i10b 1
+!s100 12`i`LdS8][=VEf?[HR`J3
+IBknO`W?Xle3bNC<AEFk3j2
+VJ8]cg4InGOA4<<UV?JN>N3
+R3
+Z13 w1525320677
+Z14 8switch_debouncer.vt
+Z15 Fswitch_debouncer.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z16 !s108 1525320681.111000
+Z17 !s107 switch_debouncer.vt|
+Z18 !s90 -work|work|switch_debouncer.vt|
+!s101 -O0
+R8
+vdebouncer_demo_vlg_sample_tst
+!i10b 1
+!s100 :bS5B[Xg=z8_nW>Pz8]Ua1
+IM[oRF_gzk33iY9ziJ>ZJR2
+Vh9CWOm1:22DWdJFJ_?^am3
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+vdebouncer_demo_vlg_vec_tst
+!i10b 1
+!s100 T?f=iP0c85VCS4KVL0c9a2
+I^JjmW@T^D9d=8kcUn2LCI2
+V:2kG6=3Kk9WBa>^ANi;Ij0
+R3
+R13
+R14
+R15
+L0 395
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
