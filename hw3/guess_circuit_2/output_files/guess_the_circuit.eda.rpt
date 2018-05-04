@@ -1,6 +1,6 @@
 EDA Netlist Writer report for guess_the_circuit
-Tue May 01 22:24:08 2018
-Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+Fri May 04 11:01:35 2018
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue May 01 22:24:08 2018 ;
+; EDA Netlist Writer Status ; Successful - Fri May 04 11:01:35 2018 ;
 ; Revision Name             ; guess_the_circuit                     ;
 ; Top-level Entity Name     ; guess_the_circuit                     ;
 ; Family                    ; Cyclone II                            ;
@@ -66,30 +66,30 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                           ;
-+------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                      ;
-+------------------------------------------------------------------------------------------------------+
-; C:/Users/ellio/Documents/ee_125/hw3/guess_circuit_2/simulation/modelsim/guess_the_circuit.vo         ;
-; C:/Users/ellio/Documents/ee_125/hw3/guess_circuit_2/simulation/modelsim/guess_the_circuit_fast.vo    ;
-; C:/Users/ellio/Documents/ee_125/hw3/guess_circuit_2/simulation/modelsim/guess_the_circuit_v.sdo      ;
-; C:/Users/ellio/Documents/ee_125/hw3/guess_circuit_2/simulation/modelsim/guess_the_circuit_v_fast.sdo ;
-+------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                             ;
++------------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                        ;
++------------------------------------------------------------------------------------------------------------------------+
+; D:/Google Drive/School/Caltech/ee125_shared/ee125/hw3/guess_circuit_2/simulation/modelsim/guess_the_circuit.vo         ;
+; D:/Google Drive/School/Caltech/ee125_shared/ee125/hw3/guess_circuit_2/simulation/modelsim/guess_the_circuit_fast.vo    ;
+; D:/Google Drive/School/Caltech/ee125_shared/ee125/hw3/guess_circuit_2/simulation/modelsim/guess_the_circuit_v.sdo      ;
+; D:/Google Drive/School/Caltech/ee125_shared/ee125/hw3/guess_circuit_2/simulation/modelsim/guess_the_circuit_v_fast.sdo ;
++------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
 ; EDA Netlist Writer Messages ;
 +-----------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit EDA Netlist Writer
-    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Tue May 01 22:24:07 2018
+Info: Running Quartus II 32-bit EDA Netlist Writer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri May 04 11:01:34 2018
 Info: Command: quartus_eda --functional=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog guess_circuit_2 -c guess_the_circuit
-Info (204026): Generated files "guess_the_circuit.vo", "guess_the_circuit_fast.vo", "guess_the_circuit_v.sdo" and "guess_the_circuit_v_fast.sdo" in directory "C:/Users/ellio/Documents/ee_125/hw3/guess_circuit_2/simulation/modelsim/" for EDA simulation tool
-Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 439 megabytes
-    Info: Processing ended: Tue May 01 22:24:08 2018
+Info (204026): Generated files "guess_the_circuit.vo", "guess_the_circuit_fast.vo", "guess_the_circuit_v.sdo" and "guess_the_circuit_v_fast.sdo" in directory "D:/Google Drive/School/Caltech/ee125_shared/ee125/hw3/guess_circuit_2/simulation/modelsim/" for EDA simulation tool
+Info: Quartus II 32-bit EDA Netlist Writer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 385 megabytes
+    Info: Processing ended: Fri May 04 11:01:35 2018
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

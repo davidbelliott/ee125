@@ -6,9 +6,9 @@ use ieee.numeric_std.all;
 entity leading_ones_sequential is
 	generic (N: integer := 8 );	--number of input bits
 	port (x:   in std_logic_vector(N-1 downto 0);
-			clk: in std_logic;
-			ssd: out std_logic_vector(6 downto 0);
-			cnt: buffer integer);
+		  clk: in std_logic;
+	      ssd: out std_logic_vector(6 downto 0);
+		  cnt: buffer integer);
 end entity;
 -------------------------------------------------------------------------
 architecture leading_ones_sequential of leading_ones_sequential is

@@ -3,7 +3,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 -------------------------------------------------------------------------
 entity switch_debouncer is
-	generic (t_debounce: integer := 5);
+	generic (t_debounce: integer := 1000000);
 	PORT (x: in std_logic;
 			y: buffer std_logic;
 			clk: in std_logic);

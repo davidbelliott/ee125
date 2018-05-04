@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "05/02/2018 20:20:31"
+// Generated on "05/04/2018 11:11:12"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    leading_ones_sequential
 // 

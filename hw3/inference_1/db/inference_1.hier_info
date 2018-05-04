@@ -1,9 +1,0 @@
-|dff_with_qbar
-d => q~reg0.DATAIN
-d => qbar~reg0.DATAIN
-clk => qbar~reg0.CLK
-clk => q~reg0.CLK
-q << q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-qbar <= qbar~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
