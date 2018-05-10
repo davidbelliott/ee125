@@ -1,0 +1,869 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 13.0.0 Build 156 04/24/2013 SJ Web Edition"
+
+// DATE "05/09/2018 21:43:15"
+
+// 
+// Device: Altera EP2C5T144C6 Package TQFP144
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module natural_to_thermometer_test (
+	num,
+	thermometer);
+input 	[2:0] num;
+output 	[15:0] thermometer;
+
+// Design Ports Information
+// thermometer[0]	=>  Location: PIN_86,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// thermometer[1]	=>  Location: PIN_80,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// thermometer[2]	=>  Location: PIN_72,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// thermometer[3]	=>  Location: PIN_73,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// thermometer[4]	=>  Location: PIN_79,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// thermometer[5]	=>  Location: PIN_70,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// thermometer[6]	=>  Location: PIN_69,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// thermometer[7]	=>  Location: PIN_45,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// thermometer[8]	=>  Location: PIN_59,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// thermometer[9]	=>  Location: PIN_26,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// thermometer[10]	=>  Location: PIN_60,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// thermometer[11]	=>  Location: PIN_28,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// thermometer[12]	=>  Location: PIN_114,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// thermometer[13]	=>  Location: PIN_137,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// thermometer[14]	=>  Location: PIN_44,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// thermometer[15]	=>  Location: PIN_63,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// num[2]	=>  Location: PIN_88,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// num[0]	=>  Location: PIN_89,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// num[1]	=>  Location: PIN_90,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("natural_to_thermometer_v.sdo");
+// synopsys translate_on
+
+wire \LessThan0~0_combout ;
+wire \LessThan1~0_combout ;
+wire \LessThan2~0_combout ;
+wire \LessThan4~0_combout ;
+wire \LessThan5~0_combout ;
+wire \LessThan6~0_combout ;
+wire [2:0] \num~combout ;
+
+
+// Location: PIN_89,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+cycloneii_io \num[0]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(\num~combout [0]),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(num[0]));
+// synopsys translate_off
+defparam \num[0]~I .input_async_reset = "none";
+defparam \num[0]~I .input_power_up = "low";
+defparam \num[0]~I .input_register_mode = "none";
+defparam \num[0]~I .input_sync_reset = "none";
+defparam \num[0]~I .oe_async_reset = "none";
+defparam \num[0]~I .oe_power_up = "low";
+defparam \num[0]~I .oe_register_mode = "none";
+defparam \num[0]~I .oe_sync_reset = "none";
+defparam \num[0]~I .operation_mode = "input";
+defparam \num[0]~I .output_async_reset = "none";
+defparam \num[0]~I .output_power_up = "low";
+defparam \num[0]~I .output_register_mode = "none";
+defparam \num[0]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_90,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+cycloneii_io \num[1]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(\num~combout [1]),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(num[1]));
+// synopsys translate_off
+defparam \num[1]~I .input_async_reset = "none";
+defparam \num[1]~I .input_power_up = "low";
+defparam \num[1]~I .input_register_mode = "none";
+defparam \num[1]~I .input_sync_reset = "none";
+defparam \num[1]~I .oe_async_reset = "none";
+defparam \num[1]~I .oe_power_up = "low";
+defparam \num[1]~I .oe_register_mode = "none";
+defparam \num[1]~I .oe_sync_reset = "none";
+defparam \num[1]~I .operation_mode = "input";
+defparam \num[1]~I .output_async_reset = "none";
+defparam \num[1]~I .output_power_up = "low";
+defparam \num[1]~I .output_register_mode = "none";
+defparam \num[1]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_88,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+cycloneii_io \num[2]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(\num~combout [2]),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(num[2]));
+// synopsys translate_off
+defparam \num[2]~I .input_async_reset = "none";
+defparam \num[2]~I .input_power_up = "low";
+defparam \num[2]~I .input_register_mode = "none";
+defparam \num[2]~I .input_sync_reset = "none";
+defparam \num[2]~I .oe_async_reset = "none";
+defparam \num[2]~I .oe_power_up = "low";
+defparam \num[2]~I .oe_register_mode = "none";
+defparam \num[2]~I .oe_sync_reset = "none";
+defparam \num[2]~I .operation_mode = "input";
+defparam \num[2]~I .output_async_reset = "none";
+defparam \num[2]~I .output_power_up = "low";
+defparam \num[2]~I .output_register_mode = "none";
+defparam \num[2]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: LCCOMB_X27_Y3_N0
+cycloneii_lcell_comb \LessThan0~0 (
+// Equation(s):
+// \LessThan0~0_combout  = (\num~combout [0]) # ((\num~combout [1]) # (\num~combout [2]))
+
+	.dataa(vcc),
+	.datab(\num~combout [0]),
+	.datac(\num~combout [1]),
+	.datad(\num~combout [2]),
+	.cin(gnd),
+	.combout(\LessThan0~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan0~0 .lut_mask = 16'hFFFC;
+defparam \LessThan0~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X27_Y3_N2
+cycloneii_lcell_comb \LessThan1~0 (
+// Equation(s):
+// \LessThan1~0_combout  = (\num~combout [1]) # (\num~combout [2])
+
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\num~combout [1]),
+	.datad(\num~combout [2]),
+	.cin(gnd),
+	.combout(\LessThan1~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan1~0 .lut_mask = 16'hFFF0;
+defparam \LessThan1~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X27_Y3_N12
+cycloneii_lcell_comb \LessThan2~0 (
+// Equation(s):
+// \LessThan2~0_combout  = (\num~combout [2]) # ((\num~combout [0] & \num~combout [1]))
+
+	.dataa(vcc),
+	.datab(\num~combout [0]),
+	.datac(\num~combout [1]),
+	.datad(\num~combout [2]),
+	.cin(gnd),
+	.combout(\LessThan2~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan2~0 .lut_mask = 16'hFFC0;
+defparam \LessThan2~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X27_Y3_N22
+cycloneii_lcell_comb \LessThan4~0 (
+// Equation(s):
+// \LessThan4~0_combout  = (\num~combout [2] & ((\num~combout [0]) # (\num~combout [1])))
+
+	.dataa(vcc),
+	.datab(\num~combout [0]),
+	.datac(\num~combout [1]),
+	.datad(\num~combout [2]),
+	.cin(gnd),
+	.combout(\LessThan4~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan4~0 .lut_mask = 16'hFC00;
+defparam \LessThan4~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X27_Y3_N24
+cycloneii_lcell_comb \LessThan5~0 (
+// Equation(s):
+// \LessThan5~0_combout  = (\num~combout [1] & \num~combout [2])
+
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\num~combout [1]),
+	.datad(\num~combout [2]),
+	.cin(gnd),
+	.combout(\LessThan5~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan5~0 .lut_mask = 16'hF000;
+defparam \LessThan5~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X27_Y3_N26
+cycloneii_lcell_comb \LessThan6~0 (
+// Equation(s):
+// \LessThan6~0_combout  = (\num~combout [0] & (\num~combout [1] & \num~combout [2]))
+
+	.dataa(vcc),
+	.datab(\num~combout [0]),
+	.datac(\num~combout [1]),
+	.datad(\num~combout [2]),
+	.cin(gnd),
+	.combout(\LessThan6~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan6~0 .lut_mask = 16'hC000;
+defparam \LessThan6~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: PIN_86,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \thermometer[0]~I (
+	.datain(\LessThan0~0_combout ),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(thermometer[0]));
+// synopsys translate_off
+defparam \thermometer[0]~I .input_async_reset = "none";
+defparam \thermometer[0]~I .input_power_up = "low";
+defparam \thermometer[0]~I .input_register_mode = "none";
+defparam \thermometer[0]~I .input_sync_reset = "none";
+defparam \thermometer[0]~I .oe_async_reset = "none";
+defparam \thermometer[0]~I .oe_power_up = "low";
+defparam \thermometer[0]~I .oe_register_mode = "none";
+defparam \thermometer[0]~I .oe_sync_reset = "none";
+defparam \thermometer[0]~I .operation_mode = "output";
+defparam \thermometer[0]~I .output_async_reset = "none";
+defparam \thermometer[0]~I .output_power_up = "low";
+defparam \thermometer[0]~I .output_register_mode = "none";
+defparam \thermometer[0]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_80,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \thermometer[1]~I (
+	.datain(\LessThan1~0_combout ),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(thermometer[1]));
+// synopsys translate_off
+defparam \thermometer[1]~I .input_async_reset = "none";
+defparam \thermometer[1]~I .input_power_up = "low";
+defparam \thermometer[1]~I .input_register_mode = "none";
+defparam \thermometer[1]~I .input_sync_reset = "none";
+defparam \thermometer[1]~I .oe_async_reset = "none";
+defparam \thermometer[1]~I .oe_power_up = "low";
+defparam \thermometer[1]~I .oe_register_mode = "none";
+defparam \thermometer[1]~I .oe_sync_reset = "none";
+defparam \thermometer[1]~I .operation_mode = "output";
+defparam \thermometer[1]~I .output_async_reset = "none";
+defparam \thermometer[1]~I .output_power_up = "low";
+defparam \thermometer[1]~I .output_register_mode = "none";
+defparam \thermometer[1]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_72,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \thermometer[2]~I (
+	.datain(\LessThan2~0_combout ),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(thermometer[2]));
+// synopsys translate_off
+defparam \thermometer[2]~I .input_async_reset = "none";
+defparam \thermometer[2]~I .input_power_up = "low";
+defparam \thermometer[2]~I .input_register_mode = "none";
+defparam \thermometer[2]~I .input_sync_reset = "none";
+defparam \thermometer[2]~I .oe_async_reset = "none";
+defparam \thermometer[2]~I .oe_power_up = "low";
+defparam \thermometer[2]~I .oe_register_mode = "none";
+defparam \thermometer[2]~I .oe_sync_reset = "none";
+defparam \thermometer[2]~I .operation_mode = "output";
+defparam \thermometer[2]~I .output_async_reset = "none";
+defparam \thermometer[2]~I .output_power_up = "low";
+defparam \thermometer[2]~I .output_register_mode = "none";
+defparam \thermometer[2]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_73,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \thermometer[3]~I (
+	.datain(\num~combout [2]),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(thermometer[3]));
+// synopsys translate_off
+defparam \thermometer[3]~I .input_async_reset = "none";
+defparam \thermometer[3]~I .input_power_up = "low";
+defparam \thermometer[3]~I .input_register_mode = "none";
+defparam \thermometer[3]~I .input_sync_reset = "none";
+defparam \thermometer[3]~I .oe_async_reset = "none";
+defparam \thermometer[3]~I .oe_power_up = "low";
+defparam \thermometer[3]~I .oe_register_mode = "none";
+defparam \thermometer[3]~I .oe_sync_reset = "none";
+defparam \thermometer[3]~I .operation_mode = "output";
+defparam \thermometer[3]~I .output_async_reset = "none";
+defparam \thermometer[3]~I .output_power_up = "low";
+defparam \thermometer[3]~I .output_register_mode = "none";
+defparam \thermometer[3]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_79,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \thermometer[4]~I (
+	.datain(\LessThan4~0_combout ),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(thermometer[4]));
+// synopsys translate_off
+defparam \thermometer[4]~I .input_async_reset = "none";
+defparam \thermometer[4]~I .input_power_up = "low";
+defparam \thermometer[4]~I .input_register_mode = "none";
+defparam \thermometer[4]~I .input_sync_reset = "none";
+defparam \thermometer[4]~I .oe_async_reset = "none";
+defparam \thermometer[4]~I .oe_power_up = "low";
+defparam \thermometer[4]~I .oe_register_mode = "none";
+defparam \thermometer[4]~I .oe_sync_reset = "none";
+defparam \thermometer[4]~I .operation_mode = "output";
+defparam \thermometer[4]~I .output_async_reset = "none";
+defparam \thermometer[4]~I .output_power_up = "low";
+defparam \thermometer[4]~I .output_register_mode = "none";
+defparam \thermometer[4]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_70,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \thermometer[5]~I (
+	.datain(\LessThan5~0_combout ),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(thermometer[5]));
+// synopsys translate_off
+defparam \thermometer[5]~I .input_async_reset = "none";
+defparam \thermometer[5]~I .input_power_up = "low";
+defparam \thermometer[5]~I .input_register_mode = "none";
+defparam \thermometer[5]~I .input_sync_reset = "none";
+defparam \thermometer[5]~I .oe_async_reset = "none";
+defparam \thermometer[5]~I .oe_power_up = "low";
+defparam \thermometer[5]~I .oe_register_mode = "none";
+defparam \thermometer[5]~I .oe_sync_reset = "none";
+defparam \thermometer[5]~I .operation_mode = "output";
+defparam \thermometer[5]~I .output_async_reset = "none";
+defparam \thermometer[5]~I .output_power_up = "low";
+defparam \thermometer[5]~I .output_register_mode = "none";
+defparam \thermometer[5]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_69,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \thermometer[6]~I (
+	.datain(\LessThan6~0_combout ),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(thermometer[6]));
+// synopsys translate_off
+defparam \thermometer[6]~I .input_async_reset = "none";
+defparam \thermometer[6]~I .input_power_up = "low";
+defparam \thermometer[6]~I .input_register_mode = "none";
+defparam \thermometer[6]~I .input_sync_reset = "none";
+defparam \thermometer[6]~I .oe_async_reset = "none";
+defparam \thermometer[6]~I .oe_power_up = "low";
+defparam \thermometer[6]~I .oe_register_mode = "none";
+defparam \thermometer[6]~I .oe_sync_reset = "none";
+defparam \thermometer[6]~I .operation_mode = "output";
+defparam \thermometer[6]~I .output_async_reset = "none";
+defparam \thermometer[6]~I .output_power_up = "low";
+defparam \thermometer[6]~I .output_register_mode = "none";
+defparam \thermometer[6]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_45,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \thermometer[7]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(thermometer[7]));
+// synopsys translate_off
+defparam \thermometer[7]~I .input_async_reset = "none";
+defparam \thermometer[7]~I .input_power_up = "low";
+defparam \thermometer[7]~I .input_register_mode = "none";
+defparam \thermometer[7]~I .input_sync_reset = "none";
+defparam \thermometer[7]~I .oe_async_reset = "none";
+defparam \thermometer[7]~I .oe_power_up = "low";
+defparam \thermometer[7]~I .oe_register_mode = "none";
+defparam \thermometer[7]~I .oe_sync_reset = "none";
+defparam \thermometer[7]~I .operation_mode = "output";
+defparam \thermometer[7]~I .output_async_reset = "none";
+defparam \thermometer[7]~I .output_power_up = "low";
+defparam \thermometer[7]~I .output_register_mode = "none";
+defparam \thermometer[7]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_59,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \thermometer[8]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(thermometer[8]));
+// synopsys translate_off
+defparam \thermometer[8]~I .input_async_reset = "none";
+defparam \thermometer[8]~I .input_power_up = "low";
+defparam \thermometer[8]~I .input_register_mode = "none";
+defparam \thermometer[8]~I .input_sync_reset = "none";
+defparam \thermometer[8]~I .oe_async_reset = "none";
+defparam \thermometer[8]~I .oe_power_up = "low";
+defparam \thermometer[8]~I .oe_register_mode = "none";
+defparam \thermometer[8]~I .oe_sync_reset = "none";
+defparam \thermometer[8]~I .operation_mode = "output";
+defparam \thermometer[8]~I .output_async_reset = "none";
+defparam \thermometer[8]~I .output_power_up = "low";
+defparam \thermometer[8]~I .output_register_mode = "none";
+defparam \thermometer[8]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_26,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \thermometer[9]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(thermometer[9]));
+// synopsys translate_off
+defparam \thermometer[9]~I .input_async_reset = "none";
+defparam \thermometer[9]~I .input_power_up = "low";
+defparam \thermometer[9]~I .input_register_mode = "none";
+defparam \thermometer[9]~I .input_sync_reset = "none";
+defparam \thermometer[9]~I .oe_async_reset = "none";
+defparam \thermometer[9]~I .oe_power_up = "low";
+defparam \thermometer[9]~I .oe_register_mode = "none";
+defparam \thermometer[9]~I .oe_sync_reset = "none";
+defparam \thermometer[9]~I .operation_mode = "output";
+defparam \thermometer[9]~I .output_async_reset = "none";
+defparam \thermometer[9]~I .output_power_up = "low";
+defparam \thermometer[9]~I .output_register_mode = "none";
+defparam \thermometer[9]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_60,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \thermometer[10]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(thermometer[10]));
+// synopsys translate_off
+defparam \thermometer[10]~I .input_async_reset = "none";
+defparam \thermometer[10]~I .input_power_up = "low";
+defparam \thermometer[10]~I .input_register_mode = "none";
+defparam \thermometer[10]~I .input_sync_reset = "none";
+defparam \thermometer[10]~I .oe_async_reset = "none";
+defparam \thermometer[10]~I .oe_power_up = "low";
+defparam \thermometer[10]~I .oe_register_mode = "none";
+defparam \thermometer[10]~I .oe_sync_reset = "none";
+defparam \thermometer[10]~I .operation_mode = "output";
+defparam \thermometer[10]~I .output_async_reset = "none";
+defparam \thermometer[10]~I .output_power_up = "low";
+defparam \thermometer[10]~I .output_register_mode = "none";
+defparam \thermometer[10]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_28,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \thermometer[11]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(thermometer[11]));
+// synopsys translate_off
+defparam \thermometer[11]~I .input_async_reset = "none";
+defparam \thermometer[11]~I .input_power_up = "low";
+defparam \thermometer[11]~I .input_register_mode = "none";
+defparam \thermometer[11]~I .input_sync_reset = "none";
+defparam \thermometer[11]~I .oe_async_reset = "none";
+defparam \thermometer[11]~I .oe_power_up = "low";
+defparam \thermometer[11]~I .oe_register_mode = "none";
+defparam \thermometer[11]~I .oe_sync_reset = "none";
+defparam \thermometer[11]~I .operation_mode = "output";
+defparam \thermometer[11]~I .output_async_reset = "none";
+defparam \thermometer[11]~I .output_power_up = "low";
+defparam \thermometer[11]~I .output_register_mode = "none";
+defparam \thermometer[11]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_114,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \thermometer[12]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(thermometer[12]));
+// synopsys translate_off
+defparam \thermometer[12]~I .input_async_reset = "none";
+defparam \thermometer[12]~I .input_power_up = "low";
+defparam \thermometer[12]~I .input_register_mode = "none";
+defparam \thermometer[12]~I .input_sync_reset = "none";
+defparam \thermometer[12]~I .oe_async_reset = "none";
+defparam \thermometer[12]~I .oe_power_up = "low";
+defparam \thermometer[12]~I .oe_register_mode = "none";
+defparam \thermometer[12]~I .oe_sync_reset = "none";
+defparam \thermometer[12]~I .operation_mode = "output";
+defparam \thermometer[12]~I .output_async_reset = "none";
+defparam \thermometer[12]~I .output_power_up = "low";
+defparam \thermometer[12]~I .output_register_mode = "none";
+defparam \thermometer[12]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_137,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \thermometer[13]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(thermometer[13]));
+// synopsys translate_off
+defparam \thermometer[13]~I .input_async_reset = "none";
+defparam \thermometer[13]~I .input_power_up = "low";
+defparam \thermometer[13]~I .input_register_mode = "none";
+defparam \thermometer[13]~I .input_sync_reset = "none";
+defparam \thermometer[13]~I .oe_async_reset = "none";
+defparam \thermometer[13]~I .oe_power_up = "low";
+defparam \thermometer[13]~I .oe_register_mode = "none";
+defparam \thermometer[13]~I .oe_sync_reset = "none";
+defparam \thermometer[13]~I .operation_mode = "output";
+defparam \thermometer[13]~I .output_async_reset = "none";
+defparam \thermometer[13]~I .output_power_up = "low";
+defparam \thermometer[13]~I .output_register_mode = "none";
+defparam \thermometer[13]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_44,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \thermometer[14]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(thermometer[14]));
+// synopsys translate_off
+defparam \thermometer[14]~I .input_async_reset = "none";
+defparam \thermometer[14]~I .input_power_up = "low";
+defparam \thermometer[14]~I .input_register_mode = "none";
+defparam \thermometer[14]~I .input_sync_reset = "none";
+defparam \thermometer[14]~I .oe_async_reset = "none";
+defparam \thermometer[14]~I .oe_power_up = "low";
+defparam \thermometer[14]~I .oe_register_mode = "none";
+defparam \thermometer[14]~I .oe_sync_reset = "none";
+defparam \thermometer[14]~I .operation_mode = "output";
+defparam \thermometer[14]~I .output_async_reset = "none";
+defparam \thermometer[14]~I .output_power_up = "low";
+defparam \thermometer[14]~I .output_register_mode = "none";
+defparam \thermometer[14]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_63,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \thermometer[15]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(thermometer[15]));
+// synopsys translate_off
+defparam \thermometer[15]~I .input_async_reset = "none";
+defparam \thermometer[15]~I .input_power_up = "low";
+defparam \thermometer[15]~I .input_register_mode = "none";
+defparam \thermometer[15]~I .input_sync_reset = "none";
+defparam \thermometer[15]~I .oe_async_reset = "none";
+defparam \thermometer[15]~I .oe_power_up = "low";
+defparam \thermometer[15]~I .oe_register_mode = "none";
+defparam \thermometer[15]~I .oe_sync_reset = "none";
+defparam \thermometer[15]~I .operation_mode = "output";
+defparam \thermometer[15]~I .output_async_reset = "none";
+defparam \thermometer[15]~I .output_power_up = "low";
+defparam \thermometer[15]~I .output_register_mode = "none";
+defparam \thermometer[15]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+endmodule

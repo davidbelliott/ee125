@@ -1,0 +1,26 @@
+-------------------------------------------------------------------------
+library ieee;
+use ieee.std_logic_1164.all;
+-------------------------------------------------------------------------
+PACKAGE natural_to_thermometer is
+	generic BITS: integer;
+	function natural_to_thermometer(signal num: integer) return std_logic_vector;
+END natural_to_thermometer;
+-------------------------------------------------------------------------
+package body natural_to_thermometer is
+	generic BITS: integer := 8;
+	function natural_to_thermometer(signal num: integer) return std_logic_vector is
+		variable thermometer: std_logic_vector(2 ** real(BITS + 1));
+	begin
+		for i in 0 to 2 ** real(BITS + 1) loop
+			if num /= 0 then
+				thermometer(i) := 1
+			else
+				thermometer(i) := 0
+			end if;
+		end loop;
+		return thermometer;
+	end function;
+end package body;
+
+-------------------------------------------------------------------------

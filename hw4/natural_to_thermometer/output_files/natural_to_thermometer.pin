@@ -1,0 +1,322 @@
+ -- Copyright (C) 1991-2013 Altera Corporation
+ -- Your use of Altera Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Altera Program License 
+ -- Subscription Agreement, Altera MegaCore Function License 
+ -- Agreement, or other applicable license agreement, including, 
+ -- without limitation, that your use is for the sole purpose of 
+ -- programming logic devices manufactured by Altera and sold by 
+ -- Altera or its authorized distributors.  Please refer to the 
+ -- applicable agreement for further details.
+ -- 
+ -- This is a Quartus II output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus II input file. This file cannot be used
+ -- to make Quartus II pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus II help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- DNU           : Do Not Use. This pin MUST NOT be connected.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.2V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ --					Bank 1:		3.3V
+ --					Bank 2:		3.3V
+ --					Bank 3:		3.3V
+ --					Bank 4:		3.3V
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --					It can also be used to report unused dedicated pins. The connection
+ --					on the board for unused dedicated pins depends on whether this will
+ --					be used in a future design. One example is device migration. When
+ --					using device migration, refer to the device pin-tables. If it is a
+ --					GND pin in the pin table or if it will not be used in a future design
+ --					for another purpose the it MUST be connected to GND. If it is an unused
+ --					dedicated pin, then it can be connected to a valid signal on the board
+ --					(low, high, or toggling) if that signal is required for a different
+ --					revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --					This pin should be connected to GND. It may also be connected  to a
+ --					valid signal  on the board  (low, high, or toggling)  if that signal
+ --					is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin. Connect each pin marked GND* directly to GND
+ --           	    or leave it unconnected.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ -- RESERVED_OUTPUT_DRIVEN_HIGH        : Pin is output driven high.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- Pin directions (input, output or bidir) are based on device operating in user mode.
+ ---------------------------------------------------------------------------------
+
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+CHIP  "natural_to_thermometer"  ASSIGNED TO AN: EP2C8F256C6
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+GND                          : A1        : gnd    :                   :         :           :                
+VCCIO2                       : A2        : power  :                   : 3.3V    : 2         :                
+GND*                         : A3        :        :                   :         : 2         :                
+thermometer[79]              : A4        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : A5        :        :                   :         : 2         :                
+thermometer[98]              : A6        : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[84]              : A7        : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[90]              : A8        : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[106]             : A9        : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[42]              : A10       : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[122]             : A11       : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[88]              : A12       : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[120]             : A13       : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[27]              : A14       : output : 3.3-V LVTTL       :         : 2         : N              
+VCCIO2                       : A15       : power  :                   : 3.3V    : 2         :                
+GND                          : A16       : gnd    :                   :         :           :                
+VCCIO1                       : B1        : power  :                   : 3.3V    : 1         :                
+GND                          : B2        : gnd    :                   :         :           :                
+GND*                         : B3        :        :                   :         : 2         :                
+thermometer[2]               : B4        : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[116]             : B5        : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[52]              : B6        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : B7        :        :                   :         : 2         :                
+GND*                         : B8        :        :                   :         : 2         :                
+thermometer[24]              : B9        : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[104]             : B10       : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[56]              : B11       : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[10]              : B12       : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[55]              : B13       : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[30]              : B14       : output : 3.3-V LVTTL       :         : 2         : N              
+GND                          : B15       : gnd    :                   :         :           :                
+VCCIO3                       : B16       : power  :                   : 3.3V    : 3         :                
+thermometer[96]              : C1        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : C2        :        :                   :         : 1         :                
+~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C3        : input  : 3.3-V LVTTL       :         : 1         : N              
+thermometer[4]               : C4        : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[114]             : C5        : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[50]              : C6        : output : 3.3-V LVTTL       :         : 2         : N              
+VCCIO2                       : C7        : power  :                   : 3.3V    : 2         :                
+GND                          : C8        : gnd    :                   :         :           :                
+GND                          : C9        : gnd    :                   :         :           :                
+VCCIO2                       : C10       : power  :                   : 3.3V    : 2         :                
+thermometer[40]              : C11       : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[58]              : C12       : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[19]              : C13       : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[23]              : C14       : output : 3.3-V LVTTL       :         : 3         : N              
+thermometer[39]              : C15       : output : 3.3-V LVTTL       :         : 3         : N              
+thermometer[87]              : C16       : output : 3.3-V LVTTL       :         : 3         : N              
+thermometer[113]             : D1        : output : 3.3-V LVTTL       :         : 1         : N              
+thermometer[17]              : D2        : output : 3.3-V LVTTL       :         : 1         : N              
+thermometer[16]              : D3        : output : 3.3-V LVTTL       :         : 1         : N              
+thermometer[48]              : D4        : output : 3.3-V LVTTL       :         : 1         : N              
+thermometer[1]               : D5        : output : 3.3-V LVTTL       :         : 1         : N              
+thermometer[66]              : D6        : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[36]              : D7        : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[100]             : D8        : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[8]               : D9        : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[25]              : D10       : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[73]              : D11       : output : 3.3-V LVTTL       :         : 2         : N              
+GND_PLL2                     : D12       : gnd    :                   :         :           :                
+thermometer[31]              : D13       : output : 3.3-V LVTTL       :         : 3         : N              
+thermometer[7]               : D14       : output : 3.3-V LVTTL       :         : 3         : N              
+thermometer[3]               : D15       : output : 3.3-V LVTTL       :         : 3         : N              
+thermometer[11]              : D16       : output : 3.3-V LVTTL       :         : 3         : N              
+thermometer[49]              : E1        : output : 3.3-V LVTTL       :         : 1         : N              
+thermometer[80]              : E2        : output : 3.3-V LVTTL       :         : 1         : N              
+thermometer[0]               : E3        : output : 3.3-V LVTTL       :         : 1         : N              
+thermometer[33]              : E4        : output : 3.3-V LVTTL       :         : 1         : N              
+thermometer[112]             : E5        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : E6        :        :                   :         : 2         :                
+VCCIO2                       : E7        : power  :                   : 3.3V    : 2         :                
+GND                          : E8        : gnd    :                   :         :           :                
+GND                          : E9        : gnd    :                   :         :           :                
+VCCIO2                       : E10       : power  :                   : 3.3V    : 2         :                
+GNDA_PLL2                    : E11       : gnd    :                   :         :           :                
+VCCA_PLL2                    : E12       : power  :                   : 1.2V    :           :                
+thermometer[94]              : E13       : output : 3.3-V LVTTL       :         : 3         : N              
+thermometer[14]              : E14       : output : 3.3-V LVTTL       :         : 3         : N              
+thermometer[71]              : E15       : output : 3.3-V LVTTL       :         : 3         : N              
+thermometer[15]              : E16       : output : 3.3-V LVTTL       :         : 3         : N              
+DATA0                        : F1        : input  :                   :         : 1         :                
+TCK                          : F2        : input  :                   :         : 1         :                
+thermometer[64]              : F3        : output : 3.3-V LVTTL       :         : 1         : N              
+~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : F4        : input  : 3.3-V LVTTL       :         : 1         : N              
+thermometer[97]              : F5        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : F6        :        :                   :         : 2         :                
+thermometer[34]              : F7        : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[20]              : F8        : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[72]              : F9        : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[74]              : F10       : output : 3.3-V LVTTL       :         : 2         : N              
+VCCD_PLL2                    : F11       : power  :                   : 1.2V    :           :                
+GND_PLL2                     : F12       : gnd    :                   :         :           :                
+thermometer[107]             : F13       : output : 3.3-V LVTTL       :         : 3         : N              
+thermometer[119]             : F14       : output : 3.3-V LVTTL       :         : 3         : N              
+thermometer[121]             : F15       : output : 3.3-V LVTTL       :         : 3         : N              
+thermometer[92]              : F16       : output : 3.3-V LVTTL       :         : 3         : N              
+TMS                          : G1        : input  :                   :         : 1         :                
+TDO                          : G2        : output :                   :         : 1         :                
+VCCIO1                       : G3        : power  :                   : 3.3V    : 1         :                
+thermometer[65]              : G4        : output : 3.3-V LVTTL       :         : 1         : N              
+nCE                          : G5        :        :                   :         : 1         :                
+thermometer[82]              : G6        : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[18]              : G7        : output : 3.3-V LVTTL       :         : 2         : N              
+GND                          : G8        : gnd    :                   :         :           :                
+VCCINT                       : G9        : power  :                   : 1.2V    :           :                
+thermometer[9]               : G10       : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[26]              : G11       : output : 3.3-V LVTTL       :         : 2         : N              
+thermometer[28]              : G12       : output : 3.3-V LVTTL       :         : 3         : N              
+thermometer[126]             : G13       : output : 3.3-V LVTTL       :         : 3         : N              
+VCCIO3                       : G14       : power  :                   : 3.3V    : 3         :                
+thermometer[77]              : G15       : output : 3.3-V LVTTL       :         : 3         : N              
+thermometer[5]               : G16       : output : 3.3-V LVTTL       :         : 3         : N              
+GND+                         : H1        :        :                   :         : 1         :                
+GND+                         : H2        :        :                   :         : 1         :                
+GND                          : H3        : gnd    :                   :         :           :                
+DCLK                         : H4        :        :                   :         : 1         :                
+TDI                          : H5        : input  :                   :         : 1         :                
+thermometer[32]              : H6        : output : 3.3-V LVTTL       :         : 1         : N              
+VCCINT                       : H7        : power  :                   : 1.2V    :           :                
+GND                          : H8        : gnd    :                   :         :           :                
+GND                          : H9        : gnd    :                   :         :           :                
+VCCINT                       : H10       : power  :                   : 1.2V    :           :                
+thermometer[123]             : H11       : output : 3.3-V LVTTL       :         : 3         : N              
+thermometer[93]              : H12       : output : 3.3-V LVTTL       :         : 3         : N              
+thermometer[103]             : H13       : output : 3.3-V LVTTL       :         : 3         : N              
+GND                          : H14       : gnd    :                   :         :           :                
+GND+                         : H15       :        :                   :         : 3         :                
+GND+                         : H16       :        :                   :         : 3         :                
+GND+                         : J1        :        :                   :         : 1         :                
+GND+                         : J2        :        :                   :         : 1         :                
+GND                          : J3        : gnd    :                   :         :           :                
+GND*                         : J4        :        :                   :         : 1         :                
+nCONFIG                      : J5        :        :                   :         : 1         :                
+thermometer[81]              : J6        : output : 3.3-V LVTTL       :         : 1         : N              
+VCCINT                       : J7        : power  :                   : 1.2V    :           :                
+GND                          : J8        : gnd    :                   :         :           :                
+GND                          : J9        : gnd    :                   :         :           :                
+VCCINT                       : J10       : power  :                   : 1.2V    :           :                
+thermometer[89]              : J11       : output : 3.3-V LVTTL       :         : 3         : N              
+thermometer[12]              : J12       : output : 3.3-V LVTTL       :         : 3         : N              
+MSEL0                        : J13       :        :                   :         : 3         :                
+GND                          : J14       : gnd    :                   :         :           :                
+GND+                         : J15       :        :                   :         : 3         :                
+GND+                         : J16       :        :                   :         : 3         :                
+GND*                         : K1        :        :                   :         : 1         :                
+GND*                         : K2        :        :                   :         : 1         :                
+VCCIO1                       : K3        : power  :                   : 3.3V    : 1         :                
+thermometer[105]             : K4        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : K5        :        :                   :         : 1         :                
+GND*                         : K6        :        :                   :         : 4         :                
+num[6]                       : K7        : input  : 3.3-V LVTTL       :         : 4         : N              
+VCCINT                       : K8        : power  :                   : 1.2V    :           :                
+GND                          : K9        : gnd    :                   :         :           :                
+thermometer[22]              : K10       : output : 3.3-V LVTTL       :         : 4         : N              
+num[1]                       : K11       : input  : 3.3-V LVTTL       :         : 4         : N              
+MSEL1                        : K12       :        :                   :         : 3         :                
+thermometer[95]              : K13       : output : 3.3-V LVTTL       :         : 3         : N              
+VCCIO3                       : K14       : power  :                   : 3.3V    : 3         :                
+thermometer[44]              : K15       : output : 3.3-V LVTTL       :         : 3         : N              
+thermometer[108]             : K16       : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : L1        :        :                   :         : 1         :                
+GND*                         : L2        :        :                   :         : 1         :                
+num[4]                       : L3        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : L4        :        :                   :         : 1         :                
+GND_PLL1                     : L5        : gnd    :                   :         :           :                
+VCCD_PLL1                    : L6        : power  :                   : 1.2V    :           :                
+thermometer[68]              : L7        : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[67]              : L8        : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[78]              : L9        : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[37]              : L10       : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[115]             : L11       : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[54]              : L12       : output : 3.3-V LVTTL       :         : 3         : N              
+CONF_DONE                    : L13       :        :                   :         : 3         :                
+thermometer[29]              : L14       : output : 3.3-V LVTTL       :         : 3         : N              
+thermometer[109]             : L15       : output : 3.3-V LVTTL       :         : 3         : N              
+num[0]                       : L16       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : M1        :        :                   :         : 1         :                
+num[5]                       : M2        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : M3        :        :                   :         : 1         :                
+GND*                         : M4        :        :                   :         : 1         :                
+VCCA_PLL1                    : M5        : power  :                   : 1.2V    :           :                
+GNDA_PLL1                    : M6        : gnd    :                   :         :           :                
+VCCIO4                       : M7        : power  :                   : 3.3V    : 4         :                
+GND                          : M8        : gnd    :                   :         :           :                
+GND                          : M9        : gnd    :                   :         :           :                
+VCCIO4                       : M10       : power  :                   : 3.3V    : 4         :                
+thermometer[118]             : M11       : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[85]              : M12       : output : 3.3-V LVTTL       :         : 3         : N              
+nSTATUS                      : M13       :        :                   :         : 3         :                
+thermometer[91]              : M14       : output : 3.3-V LVTTL       :         : 3         : N              
+thermometer[124]             : M15       : output : 3.3-V LVTTL       :         : 3         : N              
+thermometer[76]              : M16       : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : N1        :        :                   :         : 1         :                
+GND*                         : N2        :        :                   :         : 1         :                
+thermometer[127]             : N3        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : N4        :        :                   :         : 1         :                
+GND_PLL1                     : N5        : gnd    :                   :         :           :                
+thermometer[63]              : N6        : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : N7        :        :                   :         : 4         :                
+thermometer[125]             : N8        : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[69]              : N9        : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[70]              : N10       : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[51]              : N11       : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[21]              : N12       : output : 3.3-V LVTTL       :         : 3         : N              
+thermometer[99]              : N13       : output : 3.3-V LVTTL       :         : 3         : N              
+~LVDS54p/nCEO~               : N14       : output : 3.3-V LVTTL       :         : 3         : N              
+num[2]                       : N15       : input  : 3.3-V LVTTL       :         : 3         : N              
+thermometer[111]             : N16       : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : P1        :        :                   :         : 1         :                
+GND*                         : P2        :        :                   :         : 1         :                
+GND*                         : P3        :        :                   :         : 1         :                
+GND*                         : P4        :        :                   :         : 4         :                
+GND*                         : P5        :        :                   :         : 4         :                
+thermometer[43]              : P6        : output : 3.3-V LVTTL       :         : 4         : N              
+VCCIO4                       : P7        : power  :                   : 3.3V    : 4         :                
+GND                          : P8        : gnd    :                   :         :           :                
+GND                          : P9        : gnd    :                   :         :           :                
+VCCIO4                       : P10       : power  :                   : 3.3V    : 4         :                
+thermometer[41]              : P11       : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[86]              : P12       : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[6]               : P13       : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[101]             : P14       : output : 3.3-V LVTTL       :         : 3         : N              
+num[3]                       : P15       : input  : 3.3-V LVTTL       :         : 3         : N              
+thermometer[110]             : P16       : output : 3.3-V LVTTL       :         : 3         : N              
+VCCIO1                       : R1        : power  :                   : 3.3V    : 1         :                
+GND                          : R2        : gnd    :                   :         :           :                
+GND*                         : R3        :        :                   :         : 4         :                
+GND*                         : R4        :        :                   :         : 4         :                
+GND*                         : R5        :        :                   :         : 4         :                
+GND*                         : R6        :        :                   :         : 4         :                
+thermometer[62]              : R7        : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[57]              : R8        : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[59]              : R9        : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[45]              : R10       : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[47]              : R11       : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[35]              : R12       : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[117]             : R13       : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[53]              : R14       : output : 3.3-V LVTTL       :         : 4         : N              
+GND                          : R15       : gnd    :                   :         :           :                
+VCCIO3                       : R16       : power  :                   : 3.3V    : 3         :                
+GND                          : T1        : gnd    :                   :         :           :                
+VCCIO4                       : T2        : power  :                   : 3.3V    : 4         :                
+GND*                         : T3        :        :                   :         : 4         :                
+GND*                         : T4        :        :                   :         : 4         :                
+GND*                         : T5        :        :                   :         : 4         :                
+GND*                         : T6        :        :                   :         : 4         :                
+thermometer[60]              : T7        : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[75]              : T8        : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[46]              : T9        : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[13]              : T10       : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[61]              : T11       : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[38]              : T12       : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[83]              : T13       : output : 3.3-V LVTTL       :         : 4         : N              
+thermometer[102]             : T14       : output : 3.3-V LVTTL       :         : 4         : N              
+VCCIO4                       : T15       : power  :                   : 3.3V    : 4         :                
+GND                          : T16       : gnd    :                   :         :           :                

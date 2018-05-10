@@ -1,0 +1,444 @@
+Simulator report for natural_to_thermometer
+Wed May 09 22:22:11 2018
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 280 nodes    ;
+; Simulation Coverage         ;      98.21 % ;
+; Total Number of Transitions ; 1906         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C8F256C6  ;
++-----------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                                   ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                                 ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Timing                                                                  ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                                    ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                                     ;               ;
+; Vector input source                                                                        ; C:/Users/ellio/Documents/ee_125/hw4/natural_to_thermometer/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                                      ; On            ;
+; Check outputs                                                                              ; Off                                                                     ; Off           ;
+; Report simulation coverage                                                                 ; On                                                                      ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                                      ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                                      ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                                      ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                                     ; Off           ;
+; Detect glitches                                                                            ; Off                                                                     ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                                     ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                                     ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                     ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                                     ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                      ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                              ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                     ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                     ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                    ; Auto          ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      98.21 % ;
+; Total nodes checked                                 ; 280          ;
+; Total output ports checked                          ; 280          ;
+; Total output ports with complete 1/0-value coverage ; 275          ;
+; Total output ports with no 1/0-value coverage       ; 1            ;
+; Total output ports with no 1-value coverage         ; 5            ;
+; Total output ports with no 0-value coverage         ; 1            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                      ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; Node Name                                     ; Output Port Name                              ; Output Port Type ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; |natural_to_thermometer_test|LessThan0~2      ; |natural_to_thermometer_test|LessThan0~2      ; combout          ;
+; |natural_to_thermometer_test|LessThan31~0     ; |natural_to_thermometer_test|LessThan31~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan0~3      ; |natural_to_thermometer_test|LessThan0~3      ; combout          ;
+; |natural_to_thermometer_test|LessThan1~2      ; |natural_to_thermometer_test|LessThan1~2      ; combout          ;
+; |natural_to_thermometer_test|LessThan2~2      ; |natural_to_thermometer_test|LessThan2~2      ; combout          ;
+; |natural_to_thermometer_test|LessThan0~4      ; |natural_to_thermometer_test|LessThan0~4      ; combout          ;
+; |natural_to_thermometer_test|LessThan3~4      ; |natural_to_thermometer_test|LessThan3~4      ; combout          ;
+; |natural_to_thermometer_test|LessThan20~2     ; |natural_to_thermometer_test|LessThan20~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan5~2      ; |natural_to_thermometer_test|LessThan5~2      ; combout          ;
+; |natural_to_thermometer_test|LessThan22~2     ; |natural_to_thermometer_test|LessThan22~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan7~0      ; |natural_to_thermometer_test|LessThan7~0      ; combout          ;
+; |natural_to_thermometer_test|LessThan8~2      ; |natural_to_thermometer_test|LessThan8~2      ; combout          ;
+; |natural_to_thermometer_test|LessThan9~4      ; |natural_to_thermometer_test|LessThan9~4      ; combout          ;
+; |natural_to_thermometer_test|LessThan10~2     ; |natural_to_thermometer_test|LessThan10~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan11~0     ; |natural_to_thermometer_test|LessThan11~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan76~2     ; |natural_to_thermometer_test|LessThan76~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan77~2     ; |natural_to_thermometer_test|LessThan77~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan6~2      ; |natural_to_thermometer_test|LessThan6~2      ; combout          ;
+; |natural_to_thermometer_test|LessThan14~0     ; |natural_to_thermometer_test|LessThan14~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan21~2     ; |natural_to_thermometer_test|LessThan21~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan23~0     ; |natural_to_thermometer_test|LessThan23~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan23~1     ; |natural_to_thermometer_test|LessThan23~1     ; combout          ;
+; |natural_to_thermometer_test|LessThan32~0     ; |natural_to_thermometer_test|LessThan32~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan33~0     ; |natural_to_thermometer_test|LessThan33~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan34~0     ; |natural_to_thermometer_test|LessThan34~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan35~0     ; |natural_to_thermometer_test|LessThan35~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan36~0     ; |natural_to_thermometer_test|LessThan36~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan37~0     ; |natural_to_thermometer_test|LessThan37~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan38~0     ; |natural_to_thermometer_test|LessThan38~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan39~0     ; |natural_to_thermometer_test|LessThan39~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan40~2     ; |natural_to_thermometer_test|LessThan40~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan43~0     ; |natural_to_thermometer_test|LessThan43~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan46~0     ; |natural_to_thermometer_test|LessThan46~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan48~0     ; |natural_to_thermometer_test|LessThan48~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan49~0     ; |natural_to_thermometer_test|LessThan49~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan50~0     ; |natural_to_thermometer_test|LessThan50~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan51~0     ; |natural_to_thermometer_test|LessThan51~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan52~0     ; |natural_to_thermometer_test|LessThan52~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan53~0     ; |natural_to_thermometer_test|LessThan53~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan54~0     ; |natural_to_thermometer_test|LessThan54~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan55~0     ; |natural_to_thermometer_test|LessThan55~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan56~0     ; |natural_to_thermometer_test|LessThan56~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan57~0     ; |natural_to_thermometer_test|LessThan57~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan58~0     ; |natural_to_thermometer_test|LessThan58~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan55~1     ; |natural_to_thermometer_test|LessThan55~1     ; combout          ;
+; |natural_to_thermometer_test|LessThan59~0     ; |natural_to_thermometer_test|LessThan59~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan4~2      ; |natural_to_thermometer_test|LessThan4~2      ; combout          ;
+; |natural_to_thermometer_test|LessThan60~0     ; |natural_to_thermometer_test|LessThan60~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan6~3      ; |natural_to_thermometer_test|LessThan6~3      ; combout          ;
+; |natural_to_thermometer_test|LessThan62~0     ; |natural_to_thermometer_test|LessThan62~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan64~0     ; |natural_to_thermometer_test|LessThan64~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan68~0     ; |natural_to_thermometer_test|LessThan68~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan69~0     ; |natural_to_thermometer_test|LessThan69~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan70~0     ; |natural_to_thermometer_test|LessThan70~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan71~0     ; |natural_to_thermometer_test|LessThan71~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan75~0     ; |natural_to_thermometer_test|LessThan75~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan95~0     ; |natural_to_thermometer_test|LessThan95~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan78~0     ; |natural_to_thermometer_test|LessThan78~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan79~0     ; |natural_to_thermometer_test|LessThan79~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan80~0     ; |natural_to_thermometer_test|LessThan80~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan81~0     ; |natural_to_thermometer_test|LessThan81~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan82~0     ; |natural_to_thermometer_test|LessThan82~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan83~0     ; |natural_to_thermometer_test|LessThan83~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan84~0     ; |natural_to_thermometer_test|LessThan84~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan85~0     ; |natural_to_thermometer_test|LessThan85~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan86~0     ; |natural_to_thermometer_test|LessThan86~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan87~0     ; |natural_to_thermometer_test|LessThan87~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan93~0     ; |natural_to_thermometer_test|LessThan93~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan97~0     ; |natural_to_thermometer_test|LessThan97~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan98~0     ; |natural_to_thermometer_test|LessThan98~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan99~0     ; |natural_to_thermometer_test|LessThan99~0     ; combout          ;
+; |natural_to_thermometer_test|LessThan100~0    ; |natural_to_thermometer_test|LessThan100~0    ; combout          ;
+; |natural_to_thermometer_test|LessThan101~0    ; |natural_to_thermometer_test|LessThan101~0    ; combout          ;
+; |natural_to_thermometer_test|LessThan102~0    ; |natural_to_thermometer_test|LessThan102~0    ; combout          ;
+; |natural_to_thermometer_test|LessThan103~0    ; |natural_to_thermometer_test|LessThan103~0    ; combout          ;
+; |natural_to_thermometer_test|LessThan107~0    ; |natural_to_thermometer_test|LessThan107~0    ; combout          ;
+; |natural_to_thermometer_test|LessThan108~4    ; |natural_to_thermometer_test|LessThan108~4    ; combout          ;
+; |natural_to_thermometer_test|LessThan110~0    ; |natural_to_thermometer_test|LessThan110~0    ; combout          ;
+; |natural_to_thermometer_test|LessThan119~0    ; |natural_to_thermometer_test|LessThan119~0    ; combout          ;
+; |natural_to_thermometer_test|LessThan0~5      ; |natural_to_thermometer_test|LessThan0~5      ; combout          ;
+; |natural_to_thermometer_test|LessThan1~3      ; |natural_to_thermometer_test|LessThan1~3      ; combout          ;
+; |natural_to_thermometer_test|LessThan2~3      ; |natural_to_thermometer_test|LessThan2~3      ; combout          ;
+; |natural_to_thermometer_test|LessThan3~5      ; |natural_to_thermometer_test|LessThan3~5      ; combout          ;
+; |natural_to_thermometer_test|LessThan4~3      ; |natural_to_thermometer_test|LessThan4~3      ; combout          ;
+; |natural_to_thermometer_test|LessThan5~3      ; |natural_to_thermometer_test|LessThan5~3      ; combout          ;
+; |natural_to_thermometer_test|LessThan6~4      ; |natural_to_thermometer_test|LessThan6~4      ; combout          ;
+; |natural_to_thermometer_test|LessThan8~3      ; |natural_to_thermometer_test|LessThan8~3      ; combout          ;
+; |natural_to_thermometer_test|LessThan9~5      ; |natural_to_thermometer_test|LessThan9~5      ; combout          ;
+; |natural_to_thermometer_test|LessThan10~3     ; |natural_to_thermometer_test|LessThan10~3     ; combout          ;
+; |natural_to_thermometer_test|LessThan12~2     ; |natural_to_thermometer_test|LessThan12~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan13~4     ; |natural_to_thermometer_test|LessThan13~4     ; combout          ;
+; |natural_to_thermometer_test|LessThan16~2     ; |natural_to_thermometer_test|LessThan16~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan17~2     ; |natural_to_thermometer_test|LessThan17~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan18~2     ; |natural_to_thermometer_test|LessThan18~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan19~4     ; |natural_to_thermometer_test|LessThan19~4     ; combout          ;
+; |natural_to_thermometer_test|LessThan20~3     ; |natural_to_thermometer_test|LessThan20~3     ; combout          ;
+; |natural_to_thermometer_test|LessThan21~3     ; |natural_to_thermometer_test|LessThan21~3     ; combout          ;
+; |natural_to_thermometer_test|LessThan22~3     ; |natural_to_thermometer_test|LessThan22~3     ; combout          ;
+; |natural_to_thermometer_test|LessThan24~2     ; |natural_to_thermometer_test|LessThan24~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan25~2     ; |natural_to_thermometer_test|LessThan25~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan26~2     ; |natural_to_thermometer_test|LessThan26~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan27~4     ; |natural_to_thermometer_test|LessThan27~4     ; combout          ;
+; |natural_to_thermometer_test|LessThan28~2     ; |natural_to_thermometer_test|LessThan28~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan29~2     ; |natural_to_thermometer_test|LessThan29~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan30~4     ; |natural_to_thermometer_test|LessThan30~4     ; combout          ;
+; |natural_to_thermometer_test|LessThan40~3     ; |natural_to_thermometer_test|LessThan40~3     ; combout          ;
+; |natural_to_thermometer_test|LessThan41~2     ; |natural_to_thermometer_test|LessThan41~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan42~2     ; |natural_to_thermometer_test|LessThan42~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan44~2     ; |natural_to_thermometer_test|LessThan44~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan45~2     ; |natural_to_thermometer_test|LessThan45~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan61~2     ; |natural_to_thermometer_test|LessThan61~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan65~2     ; |natural_to_thermometer_test|LessThan65~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan66~2     ; |natural_to_thermometer_test|LessThan66~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan67~4     ; |natural_to_thermometer_test|LessThan67~4     ; combout          ;
+; |natural_to_thermometer_test|LessThan72~2     ; |natural_to_thermometer_test|LessThan72~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan73~2     ; |natural_to_thermometer_test|LessThan73~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan74~2     ; |natural_to_thermometer_test|LessThan74~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan76~3     ; |natural_to_thermometer_test|LessThan76~3     ; combout          ;
+; |natural_to_thermometer_test|LessThan77~3     ; |natural_to_thermometer_test|LessThan77~3     ; combout          ;
+; |natural_to_thermometer_test|LessThan88~2     ; |natural_to_thermometer_test|LessThan88~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan89~2     ; |natural_to_thermometer_test|LessThan89~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan90~2     ; |natural_to_thermometer_test|LessThan90~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan91~2     ; |natural_to_thermometer_test|LessThan91~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan92~2     ; |natural_to_thermometer_test|LessThan92~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan94~2     ; |natural_to_thermometer_test|LessThan94~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan96~2     ; |natural_to_thermometer_test|LessThan96~2     ; combout          ;
+; |natural_to_thermometer_test|LessThan104~2    ; |natural_to_thermometer_test|LessThan104~2    ; combout          ;
+; |natural_to_thermometer_test|LessThan105~2    ; |natural_to_thermometer_test|LessThan105~2    ; combout          ;
+; |natural_to_thermometer_test|LessThan106~2    ; |natural_to_thermometer_test|LessThan106~2    ; combout          ;
+; |natural_to_thermometer_test|LessThan109~2    ; |natural_to_thermometer_test|LessThan109~2    ; combout          ;
+; |natural_to_thermometer_test|LessThan112~2    ; |natural_to_thermometer_test|LessThan112~2    ; combout          ;
+; |natural_to_thermometer_test|LessThan113~2    ; |natural_to_thermometer_test|LessThan113~2    ; combout          ;
+; |natural_to_thermometer_test|LessThan114~2    ; |natural_to_thermometer_test|LessThan114~2    ; combout          ;
+; |natural_to_thermometer_test|LessThan115~4    ; |natural_to_thermometer_test|LessThan115~4    ; combout          ;
+; |natural_to_thermometer_test|LessThan116~2    ; |natural_to_thermometer_test|LessThan116~2    ; combout          ;
+; |natural_to_thermometer_test|LessThan117~2    ; |natural_to_thermometer_test|LessThan117~2    ; combout          ;
+; |natural_to_thermometer_test|LessThan118~2    ; |natural_to_thermometer_test|LessThan118~2    ; combout          ;
+; |natural_to_thermometer_test|LessThan120~2    ; |natural_to_thermometer_test|LessThan120~2    ; combout          ;
+; |natural_to_thermometer_test|LessThan121~2    ; |natural_to_thermometer_test|LessThan121~2    ; combout          ;
+; |natural_to_thermometer_test|LessThan122~2    ; |natural_to_thermometer_test|LessThan122~2    ; combout          ;
+; |natural_to_thermometer_test|LessThan123~4    ; |natural_to_thermometer_test|LessThan123~4    ; combout          ;
+; |natural_to_thermometer_test|LessThan125~4    ; |natural_to_thermometer_test|LessThan125~4    ; combout          ;
+; |natural_to_thermometer_test|LessThan108~5    ; |natural_to_thermometer_test|LessThan108~5    ; combout          ;
+; |natural_to_thermometer_test|thermometer[0]   ; |natural_to_thermometer_test|thermometer[0]   ; padio            ;
+; |natural_to_thermometer_test|thermometer[1]   ; |natural_to_thermometer_test|thermometer[1]   ; padio            ;
+; |natural_to_thermometer_test|thermometer[2]   ; |natural_to_thermometer_test|thermometer[2]   ; padio            ;
+; |natural_to_thermometer_test|thermometer[3]   ; |natural_to_thermometer_test|thermometer[3]   ; padio            ;
+; |natural_to_thermometer_test|thermometer[4]   ; |natural_to_thermometer_test|thermometer[4]   ; padio            ;
+; |natural_to_thermometer_test|thermometer[5]   ; |natural_to_thermometer_test|thermometer[5]   ; padio            ;
+; |natural_to_thermometer_test|thermometer[6]   ; |natural_to_thermometer_test|thermometer[6]   ; padio            ;
+; |natural_to_thermometer_test|thermometer[7]   ; |natural_to_thermometer_test|thermometer[7]   ; padio            ;
+; |natural_to_thermometer_test|thermometer[8]   ; |natural_to_thermometer_test|thermometer[8]   ; padio            ;
+; |natural_to_thermometer_test|thermometer[9]   ; |natural_to_thermometer_test|thermometer[9]   ; padio            ;
+; |natural_to_thermometer_test|thermometer[10]  ; |natural_to_thermometer_test|thermometer[10]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[11]  ; |natural_to_thermometer_test|thermometer[11]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[12]  ; |natural_to_thermometer_test|thermometer[12]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[13]  ; |natural_to_thermometer_test|thermometer[13]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[14]  ; |natural_to_thermometer_test|thermometer[14]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[15]  ; |natural_to_thermometer_test|thermometer[15]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[16]  ; |natural_to_thermometer_test|thermometer[16]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[17]  ; |natural_to_thermometer_test|thermometer[17]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[18]  ; |natural_to_thermometer_test|thermometer[18]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[19]  ; |natural_to_thermometer_test|thermometer[19]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[20]  ; |natural_to_thermometer_test|thermometer[20]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[21]  ; |natural_to_thermometer_test|thermometer[21]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[22]  ; |natural_to_thermometer_test|thermometer[22]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[23]  ; |natural_to_thermometer_test|thermometer[23]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[24]  ; |natural_to_thermometer_test|thermometer[24]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[25]  ; |natural_to_thermometer_test|thermometer[25]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[26]  ; |natural_to_thermometer_test|thermometer[26]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[27]  ; |natural_to_thermometer_test|thermometer[27]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[28]  ; |natural_to_thermometer_test|thermometer[28]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[29]  ; |natural_to_thermometer_test|thermometer[29]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[30]  ; |natural_to_thermometer_test|thermometer[30]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[31]  ; |natural_to_thermometer_test|thermometer[31]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[32]  ; |natural_to_thermometer_test|thermometer[32]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[33]  ; |natural_to_thermometer_test|thermometer[33]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[34]  ; |natural_to_thermometer_test|thermometer[34]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[35]  ; |natural_to_thermometer_test|thermometer[35]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[36]  ; |natural_to_thermometer_test|thermometer[36]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[37]  ; |natural_to_thermometer_test|thermometer[37]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[38]  ; |natural_to_thermometer_test|thermometer[38]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[39]  ; |natural_to_thermometer_test|thermometer[39]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[40]  ; |natural_to_thermometer_test|thermometer[40]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[41]  ; |natural_to_thermometer_test|thermometer[41]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[42]  ; |natural_to_thermometer_test|thermometer[42]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[43]  ; |natural_to_thermometer_test|thermometer[43]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[44]  ; |natural_to_thermometer_test|thermometer[44]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[45]  ; |natural_to_thermometer_test|thermometer[45]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[46]  ; |natural_to_thermometer_test|thermometer[46]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[47]  ; |natural_to_thermometer_test|thermometer[47]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[48]  ; |natural_to_thermometer_test|thermometer[48]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[49]  ; |natural_to_thermometer_test|thermometer[49]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[50]  ; |natural_to_thermometer_test|thermometer[50]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[51]  ; |natural_to_thermometer_test|thermometer[51]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[52]  ; |natural_to_thermometer_test|thermometer[52]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[53]  ; |natural_to_thermometer_test|thermometer[53]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[54]  ; |natural_to_thermometer_test|thermometer[54]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[55]  ; |natural_to_thermometer_test|thermometer[55]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[56]  ; |natural_to_thermometer_test|thermometer[56]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[57]  ; |natural_to_thermometer_test|thermometer[57]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[58]  ; |natural_to_thermometer_test|thermometer[58]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[59]  ; |natural_to_thermometer_test|thermometer[59]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[60]  ; |natural_to_thermometer_test|thermometer[60]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[61]  ; |natural_to_thermometer_test|thermometer[61]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[62]  ; |natural_to_thermometer_test|thermometer[62]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[63]  ; |natural_to_thermometer_test|thermometer[63]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[64]  ; |natural_to_thermometer_test|thermometer[64]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[65]  ; |natural_to_thermometer_test|thermometer[65]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[66]  ; |natural_to_thermometer_test|thermometer[66]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[67]  ; |natural_to_thermometer_test|thermometer[67]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[68]  ; |natural_to_thermometer_test|thermometer[68]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[69]  ; |natural_to_thermometer_test|thermometer[69]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[70]  ; |natural_to_thermometer_test|thermometer[70]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[71]  ; |natural_to_thermometer_test|thermometer[71]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[72]  ; |natural_to_thermometer_test|thermometer[72]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[73]  ; |natural_to_thermometer_test|thermometer[73]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[74]  ; |natural_to_thermometer_test|thermometer[74]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[75]  ; |natural_to_thermometer_test|thermometer[75]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[76]  ; |natural_to_thermometer_test|thermometer[76]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[77]  ; |natural_to_thermometer_test|thermometer[77]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[78]  ; |natural_to_thermometer_test|thermometer[78]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[79]  ; |natural_to_thermometer_test|thermometer[79]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[80]  ; |natural_to_thermometer_test|thermometer[80]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[81]  ; |natural_to_thermometer_test|thermometer[81]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[82]  ; |natural_to_thermometer_test|thermometer[82]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[83]  ; |natural_to_thermometer_test|thermometer[83]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[84]  ; |natural_to_thermometer_test|thermometer[84]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[85]  ; |natural_to_thermometer_test|thermometer[85]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[86]  ; |natural_to_thermometer_test|thermometer[86]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[87]  ; |natural_to_thermometer_test|thermometer[87]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[88]  ; |natural_to_thermometer_test|thermometer[88]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[89]  ; |natural_to_thermometer_test|thermometer[89]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[90]  ; |natural_to_thermometer_test|thermometer[90]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[91]  ; |natural_to_thermometer_test|thermometer[91]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[92]  ; |natural_to_thermometer_test|thermometer[92]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[93]  ; |natural_to_thermometer_test|thermometer[93]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[94]  ; |natural_to_thermometer_test|thermometer[94]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[95]  ; |natural_to_thermometer_test|thermometer[95]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[96]  ; |natural_to_thermometer_test|thermometer[96]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[97]  ; |natural_to_thermometer_test|thermometer[97]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[98]  ; |natural_to_thermometer_test|thermometer[98]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[99]  ; |natural_to_thermometer_test|thermometer[99]  ; padio            ;
+; |natural_to_thermometer_test|thermometer[100] ; |natural_to_thermometer_test|thermometer[100] ; padio            ;
+; |natural_to_thermometer_test|thermometer[101] ; |natural_to_thermometer_test|thermometer[101] ; padio            ;
+; |natural_to_thermometer_test|thermometer[102] ; |natural_to_thermometer_test|thermometer[102] ; padio            ;
+; |natural_to_thermometer_test|thermometer[103] ; |natural_to_thermometer_test|thermometer[103] ; padio            ;
+; |natural_to_thermometer_test|thermometer[104] ; |natural_to_thermometer_test|thermometer[104] ; padio            ;
+; |natural_to_thermometer_test|thermometer[105] ; |natural_to_thermometer_test|thermometer[105] ; padio            ;
+; |natural_to_thermometer_test|thermometer[106] ; |natural_to_thermometer_test|thermometer[106] ; padio            ;
+; |natural_to_thermometer_test|thermometer[107] ; |natural_to_thermometer_test|thermometer[107] ; padio            ;
+; |natural_to_thermometer_test|thermometer[108] ; |natural_to_thermometer_test|thermometer[108] ; padio            ;
+; |natural_to_thermometer_test|thermometer[109] ; |natural_to_thermometer_test|thermometer[109] ; padio            ;
+; |natural_to_thermometer_test|thermometer[110] ; |natural_to_thermometer_test|thermometer[110] ; padio            ;
+; |natural_to_thermometer_test|thermometer[111] ; |natural_to_thermometer_test|thermometer[111] ; padio            ;
+; |natural_to_thermometer_test|thermometer[112] ; |natural_to_thermometer_test|thermometer[112] ; padio            ;
+; |natural_to_thermometer_test|thermometer[113] ; |natural_to_thermometer_test|thermometer[113] ; padio            ;
+; |natural_to_thermometer_test|thermometer[114] ; |natural_to_thermometer_test|thermometer[114] ; padio            ;
+; |natural_to_thermometer_test|thermometer[115] ; |natural_to_thermometer_test|thermometer[115] ; padio            ;
+; |natural_to_thermometer_test|thermometer[116] ; |natural_to_thermometer_test|thermometer[116] ; padio            ;
+; |natural_to_thermometer_test|thermometer[117] ; |natural_to_thermometer_test|thermometer[117] ; padio            ;
+; |natural_to_thermometer_test|thermometer[118] ; |natural_to_thermometer_test|thermometer[118] ; padio            ;
+; |natural_to_thermometer_test|thermometer[119] ; |natural_to_thermometer_test|thermometer[119] ; padio            ;
+; |natural_to_thermometer_test|thermometer[120] ; |natural_to_thermometer_test|thermometer[120] ; padio            ;
+; |natural_to_thermometer_test|thermometer[121] ; |natural_to_thermometer_test|thermometer[121] ; padio            ;
+; |natural_to_thermometer_test|thermometer[122] ; |natural_to_thermometer_test|thermometer[122] ; padio            ;
+; |natural_to_thermometer_test|thermometer[123] ; |natural_to_thermometer_test|thermometer[123] ; padio            ;
+; |natural_to_thermometer_test|thermometer[125] ; |natural_to_thermometer_test|thermometer[125] ; padio            ;
+; |natural_to_thermometer_test|num[4]           ; |natural_to_thermometer_test|num[4]~corein    ; combout          ;
+; |natural_to_thermometer_test|num[0]           ; |natural_to_thermometer_test|num[0]~corein    ; combout          ;
+; |natural_to_thermometer_test|num[1]           ; |natural_to_thermometer_test|num[1]~corein    ; combout          ;
+; |natural_to_thermometer_test|num[2]           ; |natural_to_thermometer_test|num[2]~corein    ; combout          ;
+; |natural_to_thermometer_test|num[3]           ; |natural_to_thermometer_test|num[3]~corein    ; combout          ;
+; |natural_to_thermometer_test|num[5]           ; |natural_to_thermometer_test|num[5]~corein    ; combout          ;
+; |natural_to_thermometer_test|num[6]           ; |natural_to_thermometer_test|num[6]~corein    ; combout          ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                         ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; Node Name                                     ; Output Port Name                              ; Output Port Type ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; |natural_to_thermometer_test|LessThan124~2    ; |natural_to_thermometer_test|LessThan124~2    ; combout          ;
+; |natural_to_thermometer_test|LessThan126~4    ; |natural_to_thermometer_test|LessThan126~4    ; combout          ;
+; |natural_to_thermometer_test|thermometer[124] ; |natural_to_thermometer_test|thermometer[124] ; padio            ;
+; |natural_to_thermometer_test|thermometer[126] ; |natural_to_thermometer_test|thermometer[126] ; padio            ;
+; |natural_to_thermometer_test|thermometer[127] ; |natural_to_thermometer_test|thermometer[127] ; padio            ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                         ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; Node Name                                     ; Output Port Name                              ; Output Port Type ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; |natural_to_thermometer_test|thermometer[127] ; |natural_to_thermometer_test|thermometer[127] ; padio            ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Wed May 09 22:22:10 2018
+Info: Command: quartus_sim --simulation_results_format=VWF natural_to_thermometer -c natural_to_thermometer
+Info (324025): Using vector source file "C:/Users/ellio/Documents/ee_125/hw4/natural_to_thermometer/Waveform.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      98.21 %
+Info (328052): Number of transitions in simulation is 1906
+Info (324045): Vector file natural_to_thermometer.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 399 megabytes
+    Info: Processing ended: Wed May 09 22:22:11 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

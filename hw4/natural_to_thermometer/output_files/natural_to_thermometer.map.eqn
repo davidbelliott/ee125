@@ -1,0 +1,1149 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--thermometer[0] is thermometer[0]
+thermometer[0] = OUTPUT(A1L4);
+
+
+--thermometer[1] is thermometer[1]
+thermometer[1] = OUTPUT(A1L6);
+
+
+--thermometer[2] is thermometer[2]
+thermometer[2] = OUTPUT(A1L8);
+
+
+--thermometer[3] is thermometer[3]
+thermometer[3] = OUTPUT(A1L11);
+
+
+--thermometer[4] is thermometer[4]
+thermometer[4] = OUTPUT(A1L13);
+
+
+--thermometer[5] is thermometer[5]
+thermometer[5] = OUTPUT(A1L15);
+
+
+--thermometer[6] is thermometer[6]
+thermometer[6] = OUTPUT(A1L18);
+
+
+--thermometer[7] is thermometer[7]
+thermometer[7] = OUTPUT(A1L19);
+
+
+--thermometer[8] is thermometer[8]
+thermometer[8] = OUTPUT(A1L21);
+
+
+--thermometer[9] is thermometer[9]
+thermometer[9] = OUTPUT(A1L23);
+
+
+--thermometer[10] is thermometer[10]
+thermometer[10] = OUTPUT(A1L25);
+
+
+--thermometer[11] is thermometer[11]
+thermometer[11] = OUTPUT(A1L26);
+
+
+--thermometer[12] is thermometer[12]
+thermometer[12] = OUTPUT(A1L27);
+
+
+--thermometer[13] is thermometer[13]
+thermometer[13] = OUTPUT(A1L28);
+
+
+--thermometer[14] is thermometer[14]
+thermometer[14] = OUTPUT(A1L29);
+
+
+--thermometer[15] is thermometer[15]
+thermometer[15] = OUTPUT(A1L10);
+
+
+--thermometer[16] is thermometer[16]
+thermometer[16] = OUTPUT(A1L30);
+
+
+--thermometer[17] is thermometer[17]
+thermometer[17] = OUTPUT(A1L31);
+
+
+--thermometer[18] is thermometer[18]
+thermometer[18] = OUTPUT(A1L32);
+
+
+--thermometer[19] is thermometer[19]
+thermometer[19] = OUTPUT(A1L33);
+
+
+--thermometer[20] is thermometer[20]
+thermometer[20] = OUTPUT(A1L35);
+
+
+--thermometer[21] is thermometer[21]
+thermometer[21] = OUTPUT(A1L37);
+
+
+--thermometer[22] is thermometer[22]
+thermometer[22] = OUTPUT(A1L39);
+
+
+--thermometer[23] is thermometer[23]
+thermometer[23] = OUTPUT(A1L40);
+
+
+--thermometer[24] is thermometer[24]
+thermometer[24] = OUTPUT(A1L42);
+
+
+--thermometer[25] is thermometer[25]
+thermometer[25] = OUTPUT(A1L43);
+
+
+--thermometer[26] is thermometer[26]
+thermometer[26] = OUTPUT(A1L44);
+
+
+--thermometer[27] is thermometer[27]
+thermometer[27] = OUTPUT(A1L45);
+
+
+--thermometer[28] is thermometer[28]
+thermometer[28] = OUTPUT(A1L46);
+
+
+--thermometer[29] is thermometer[29]
+thermometer[29] = OUTPUT(A1L47);
+
+
+--thermometer[30] is thermometer[30]
+thermometer[30] = OUTPUT(A1L48);
+
+
+--thermometer[31] is thermometer[31]
+thermometer[31] = OUTPUT(A1L50);
+
+
+--thermometer[32] is thermometer[32]
+thermometer[32] = OUTPUT(A1L51);
+
+
+--thermometer[33] is thermometer[33]
+thermometer[33] = OUTPUT(A1L52);
+
+
+--thermometer[34] is thermometer[34]
+thermometer[34] = OUTPUT(A1L53);
+
+
+--thermometer[35] is thermometer[35]
+thermometer[35] = OUTPUT(A1L54);
+
+
+--thermometer[36] is thermometer[36]
+thermometer[36] = OUTPUT(A1L55);
+
+
+--thermometer[37] is thermometer[37]
+thermometer[37] = OUTPUT(A1L56);
+
+
+--thermometer[38] is thermometer[38]
+thermometer[38] = OUTPUT(A1L57);
+
+
+--thermometer[39] is thermometer[39]
+thermometer[39] = OUTPUT(A1L58);
+
+
+--thermometer[40] is thermometer[40]
+thermometer[40] = OUTPUT(A1L61);
+
+
+--thermometer[41] is thermometer[41]
+thermometer[41] = OUTPUT(A1L62);
+
+
+--thermometer[42] is thermometer[42]
+thermometer[42] = OUTPUT(A1L63);
+
+
+--thermometer[43] is thermometer[43]
+thermometer[43] = OUTPUT(A1L64);
+
+
+--thermometer[44] is thermometer[44]
+thermometer[44] = OUTPUT(A1L65);
+
+
+--thermometer[45] is thermometer[45]
+thermometer[45] = OUTPUT(A1L66);
+
+
+--thermometer[46] is thermometer[46]
+thermometer[46] = OUTPUT(A1L67);
+
+
+--thermometer[47] is thermometer[47]
+thermometer[47] = OUTPUT(A1L60);
+
+
+--thermometer[48] is thermometer[48]
+thermometer[48] = OUTPUT(A1L68);
+
+
+--thermometer[49] is thermometer[49]
+thermometer[49] = OUTPUT(A1L69);
+
+
+--thermometer[50] is thermometer[50]
+thermometer[50] = OUTPUT(A1L70);
+
+
+--thermometer[51] is thermometer[51]
+thermometer[51] = OUTPUT(A1L71);
+
+
+--thermometer[52] is thermometer[52]
+thermometer[52] = OUTPUT(A1L72);
+
+
+--thermometer[53] is thermometer[53]
+thermometer[53] = OUTPUT(A1L73);
+
+
+--thermometer[54] is thermometer[54]
+thermometer[54] = OUTPUT(A1L74);
+
+
+--thermometer[55] is thermometer[55]
+thermometer[55] = OUTPUT(A1L75);
+
+
+--thermometer[56] is thermometer[56]
+thermometer[56] = OUTPUT(A1L77);
+
+
+--thermometer[57] is thermometer[57]
+thermometer[57] = OUTPUT(A1L78);
+
+
+--thermometer[58] is thermometer[58]
+thermometer[58] = OUTPUT(A1L79);
+
+
+--thermometer[59] is thermometer[59]
+thermometer[59] = OUTPUT(A1L80);
+
+
+--thermometer[60] is thermometer[60]
+thermometer[60] = OUTPUT(A1L81);
+
+
+--thermometer[61] is thermometer[61]
+thermometer[61] = OUTPUT(A1L82);
+
+
+--thermometer[62] is thermometer[62]
+thermometer[62] = OUTPUT(A1L83);
+
+
+--thermometer[63] is thermometer[63]
+thermometer[63] = OUTPUT(num[6]);
+
+
+--thermometer[64] is thermometer[64]
+thermometer[64] = OUTPUT(A1L84);
+
+
+--thermometer[65] is thermometer[65]
+thermometer[65] = OUTPUT(A1L85);
+
+
+--thermometer[66] is thermometer[66]
+thermometer[66] = OUTPUT(A1L86);
+
+
+--thermometer[67] is thermometer[67]
+thermometer[67] = OUTPUT(A1L87);
+
+
+--thermometer[68] is thermometer[68]
+thermometer[68] = OUTPUT(A1L88);
+
+
+--thermometer[69] is thermometer[69]
+thermometer[69] = OUTPUT(A1L89);
+
+
+--thermometer[70] is thermometer[70]
+thermometer[70] = OUTPUT(A1L90);
+
+
+--thermometer[71] is thermometer[71]
+thermometer[71] = OUTPUT(A1L91);
+
+
+--thermometer[72] is thermometer[72]
+thermometer[72] = OUTPUT(A1L92);
+
+
+--thermometer[73] is thermometer[73]
+thermometer[73] = OUTPUT(A1L93);
+
+
+--thermometer[74] is thermometer[74]
+thermometer[74] = OUTPUT(A1L94);
+
+
+--thermometer[75] is thermometer[75]
+thermometer[75] = OUTPUT(A1L95);
+
+
+--thermometer[76] is thermometer[76]
+thermometer[76] = OUTPUT(A1L97);
+
+
+--thermometer[77] is thermometer[77]
+thermometer[77] = OUTPUT(A1L99);
+
+
+--thermometer[78] is thermometer[78]
+thermometer[78] = OUTPUT(A1L100);
+
+
+--thermometer[79] is thermometer[79]
+thermometer[79] = OUTPUT(A1L101);
+
+
+--thermometer[80] is thermometer[80]
+thermometer[80] = OUTPUT(A1L102);
+
+
+--thermometer[81] is thermometer[81]
+thermometer[81] = OUTPUT(A1L103);
+
+
+--thermometer[82] is thermometer[82]
+thermometer[82] = OUTPUT(A1L104);
+
+
+--thermometer[83] is thermometer[83]
+thermometer[83] = OUTPUT(A1L105);
+
+
+--thermometer[84] is thermometer[84]
+thermometer[84] = OUTPUT(A1L106);
+
+
+--thermometer[85] is thermometer[85]
+thermometer[85] = OUTPUT(A1L107);
+
+
+--thermometer[86] is thermometer[86]
+thermometer[86] = OUTPUT(A1L108);
+
+
+--thermometer[87] is thermometer[87]
+thermometer[87] = OUTPUT(A1L109);
+
+
+--thermometer[88] is thermometer[88]
+thermometer[88] = OUTPUT(A1L110);
+
+
+--thermometer[89] is thermometer[89]
+thermometer[89] = OUTPUT(A1L111);
+
+
+--thermometer[90] is thermometer[90]
+thermometer[90] = OUTPUT(A1L112);
+
+
+--thermometer[91] is thermometer[91]
+thermometer[91] = OUTPUT(A1L113);
+
+
+--thermometer[92] is thermometer[92]
+thermometer[92] = OUTPUT(A1L114);
+
+
+--thermometer[93] is thermometer[93]
+thermometer[93] = OUTPUT(A1L115);
+
+
+--thermometer[94] is thermometer[94]
+thermometer[94] = OUTPUT(A1L116);
+
+
+--thermometer[95] is thermometer[95]
+thermometer[95] = OUTPUT(A1L117);
+
+
+--thermometer[96] is thermometer[96]
+thermometer[96] = OUTPUT(A1L118);
+
+
+--thermometer[97] is thermometer[97]
+thermometer[97] = OUTPUT(A1L119);
+
+
+--thermometer[98] is thermometer[98]
+thermometer[98] = OUTPUT(A1L120);
+
+
+--thermometer[99] is thermometer[99]
+thermometer[99] = OUTPUT(A1L121);
+
+
+--thermometer[100] is thermometer[100]
+thermometer[100] = OUTPUT(A1L122);
+
+
+--thermometer[101] is thermometer[101]
+thermometer[101] = OUTPUT(A1L123);
+
+
+--thermometer[102] is thermometer[102]
+thermometer[102] = OUTPUT(A1L124);
+
+
+--thermometer[103] is thermometer[103]
+thermometer[103] = OUTPUT(A1L125);
+
+
+--thermometer[104] is thermometer[104]
+thermometer[104] = OUTPUT(A1L126);
+
+
+--thermometer[105] is thermometer[105]
+thermometer[105] = OUTPUT(A1L127);
+
+
+--thermometer[106] is thermometer[106]
+thermometer[106] = OUTPUT(A1L128);
+
+
+--thermometer[107] is thermometer[107]
+thermometer[107] = OUTPUT(A1L129);
+
+
+--thermometer[108] is thermometer[108]
+thermometer[108] = OUTPUT(A1L131);
+
+
+--thermometer[109] is thermometer[109]
+thermometer[109] = OUTPUT(A1L132);
+
+
+--thermometer[110] is thermometer[110]
+thermometer[110] = OUTPUT(A1L133);
+
+
+--thermometer[111] is thermometer[111]
+thermometer[111] = OUTPUT(A1L130);
+
+
+--thermometer[112] is thermometer[112]
+thermometer[112] = OUTPUT(A1L134);
+
+
+--thermometer[113] is thermometer[113]
+thermometer[113] = OUTPUT(A1L135);
+
+
+--thermometer[114] is thermometer[114]
+thermometer[114] = OUTPUT(A1L136);
+
+
+--thermometer[115] is thermometer[115]
+thermometer[115] = OUTPUT(A1L137);
+
+
+--thermometer[116] is thermometer[116]
+thermometer[116] = OUTPUT(A1L138);
+
+
+--thermometer[117] is thermometer[117]
+thermometer[117] = OUTPUT(A1L139);
+
+
+--thermometer[118] is thermometer[118]
+thermometer[118] = OUTPUT(A1L140);
+
+
+--thermometer[119] is thermometer[119]
+thermometer[119] = OUTPUT(A1L141);
+
+
+--thermometer[120] is thermometer[120]
+thermometer[120] = OUTPUT(A1L142);
+
+
+--thermometer[121] is thermometer[121]
+thermometer[121] = OUTPUT(A1L143);
+
+
+--thermometer[122] is thermometer[122]
+thermometer[122] = OUTPUT(A1L144);
+
+
+--thermometer[123] is thermometer[123]
+thermometer[123] = OUTPUT(A1L145);
+
+
+--thermometer[124] is thermometer[124]
+thermometer[124] = OUTPUT(A1L146);
+
+
+--thermometer[125] is thermometer[125]
+thermometer[125] = OUTPUT(A1L147);
+
+
+--thermometer[126] is thermometer[126]
+thermometer[126] = OUTPUT(A1L148);
+
+
+--thermometer[127] is thermometer[127]
+thermometer[127] = OUTPUT(A1L286);
+
+
+--num[4] is num[4]
+num[4] = INPUT();
+
+
+--num[0] is num[0]
+num[0] = INPUT();
+
+
+--num[1] is num[1]
+num[1] = INPUT();
+
+
+--num[2] is num[2]
+num[2] = INPUT();
+
+
+--num[3] is num[3]
+num[3] = INPUT();
+
+
+--A1L1 is LessThan0~2
+A1L1 = (!num[0] & (!num[1] & (!num[2] & !num[3])));
+
+
+--num[5] is num[5]
+num[5] = INPUT();
+
+
+--num[6] is num[6]
+num[6] = INPUT();
+
+
+--A1L49 is LessThan31~0
+A1L49 = (!num[5] & !num[6]);
+
+
+--A1L2 is LessThan0~3
+A1L2 = (!num[1] & (!num[2] & !num[3]));
+
+
+--A1L5 is LessThan1~2
+A1L5 = (!num[4] & !num[5]);
+
+
+--A1L7 is LessThan2~2
+A1L7 = (!num[2] & (!num[3] & ((!num[1]) # (!num[0]))));
+
+
+--A1L3 is LessThan0~4
+A1L3 = (!num[2] & !num[3]);
+
+
+--A1L9 is LessThan3~4
+A1L9 = (!num[4] & (!num[5] & !num[6]));
+
+
+--A1L34 is LessThan20~2
+A1L34 = (!num[3] & (((!num[0] & !num[1])) # (!num[2])));
+
+
+--A1L14 is LessThan5~2
+A1L14 = (!num[4] & (!num[3] & ((!num[2]) # (!num[1]))));
+
+
+--A1L38 is LessThan22~2
+A1L38 = (!num[3] & (((!num[2]) # (!num[1])) # (!num[0])));
+
+
+--A1L19 is LessThan7~0
+A1L19 = (num[4]) # ((num[3]) # ((num[5]) # (num[6])));
+
+
+--A1L20 is LessThan8~2
+A1L20 = (num[3] & ((num[0]) # ((num[1]) # (num[2]))));
+
+
+--A1L22 is LessThan9~4
+A1L22 = (num[3] & ((num[1]) # (num[2])));
+
+
+--A1L24 is LessThan10~2
+A1L24 = (num[3] & ((num[2]) # ((num[0] & num[1]))));
+
+
+--A1L26 is LessThan11~0
+A1L26 = ((num[2] & num[3])) # (!A1L9);
+
+
+--A1L96 is LessThan76~2
+A1L96 = (num[2] & (num[3] & ((num[0]) # (num[1]))));
+
+
+--A1L98 is LessThan77~2
+A1L98 = (num[1] & (num[2] & num[3]));
+
+
+--A1L16 is LessThan6~2
+A1L16 = (num[0] & (num[1] & num[2]));
+
+
+--A1L29 is LessThan14~0
+A1L29 = ((num[3] & A1L16)) # (!A1L9);
+
+
+--A1L36 is LessThan21~2
+A1L36 = (num[4] & ((num[3]) # ((num[1] & num[2]))));
+
+
+--A1L40 is LessThan23~0
+A1L40 = (num[5]) # ((num[6]) # ((num[4] & num[3])));
+
+
+--A1L41 is LessThan23~1
+A1L41 = (num[4] & num[3]);
+
+
+--A1L51 is LessThan32~0
+A1L51 = (num[6]) # ((num[5] & ((num[4]) # (!A1L1))));
+
+
+--A1L52 is LessThan33~0
+A1L52 = (num[6]) # ((num[5] & ((num[4]) # (!A1L2))));
+
+
+--A1L53 is LessThan34~0
+A1L53 = (num[6]) # ((num[5] & ((num[4]) # (!A1L7))));
+
+
+--A1L54 is LessThan35~0
+A1L54 = (num[6]) # ((num[5] & ((num[4]) # (!A1L3))));
+
+
+--A1L55 is LessThan36~0
+A1L55 = (num[6]) # ((num[5] & ((num[4]) # (!A1L34))));
+
+
+--A1L56 is LessThan37~0
+A1L56 = (num[6]) # ((num[5] & !A1L14));
+
+
+--A1L57 is LessThan38~0
+A1L57 = (num[6]) # ((num[5] & ((num[4]) # (!A1L38))));
+
+
+--A1L58 is LessThan39~0
+A1L58 = (num[6]) # ((num[5] & ((num[4]) # (num[3]))));
+
+
+--A1L59 is LessThan40~2
+A1L59 = (!num[6] & ((!num[5]) # (!num[4])));
+
+
+--A1L64 is LessThan43~0
+A1L64 = ((num[2] & (num[3] & num[5]))) # (!A1L59);
+
+
+--A1L67 is LessThan46~0
+A1L67 = ((num[3] & (num[5] & A1L16))) # (!A1L59);
+
+
+--A1L68 is LessThan48~0
+A1L68 = (num[6]) # ((num[4] & (num[5] & !A1L1)));
+
+
+--A1L69 is LessThan49~0
+A1L69 = (num[6]) # ((num[4] & (num[5] & !A1L2)));
+
+
+--A1L70 is LessThan50~0
+A1L70 = (num[6]) # ((num[4] & (num[5] & !A1L7)));
+
+
+--A1L71 is LessThan51~0
+A1L71 = (num[6]) # ((num[4] & (num[5] & !A1L3)));
+
+
+--A1L72 is LessThan52~0
+A1L72 = (num[6]) # ((num[4] & (num[5] & !A1L34)));
+
+
+--A1L73 is LessThan53~0
+A1L73 = (num[6]) # ((num[5] & A1L36));
+
+
+--A1L74 is LessThan54~0
+A1L74 = (num[6]) # ((num[4] & (num[5] & !A1L38)));
+
+
+--A1L75 is LessThan55~0
+A1L75 = (num[6]) # ((num[4] & (num[3] & num[5])));
+
+
+--A1L77 is LessThan56~0
+A1L77 = (num[6]) # ((num[4] & (num[5] & A1L20)));
+
+
+--A1L78 is LessThan57~0
+A1L78 = (num[6]) # ((num[4] & (num[5] & A1L22)));
+
+
+--A1L79 is LessThan58~0
+A1L79 = (num[6]) # ((num[4] & (num[5] & A1L24)));
+
+
+--A1L76 is LessThan55~1
+A1L76 = (num[4] & (num[3] & num[5]));
+
+
+--A1L80 is LessThan59~0
+A1L80 = (num[6]) # ((num[2] & A1L76));
+
+
+--A1L12 is LessThan4~2
+A1L12 = (num[2] & ((num[0]) # (num[1])));
+
+
+--A1L81 is LessThan60~0
+A1L81 = (num[6]) # ((A1L12 & A1L76));
+
+
+--A1L17 is LessThan6~3
+A1L17 = (num[1] & num[2]);
+
+
+--A1L83 is LessThan62~0
+A1L83 = (num[6]) # ((A1L16 & A1L76));
+
+
+--A1L84 is LessThan64~0
+A1L84 = (num[6] & ((num[4]) # ((num[5]) # (!A1L1))));
+
+
+--A1L88 is LessThan68~0
+A1L88 = (num[6] & ((num[3]) # ((A1L12) # (!A1L5))));
+
+
+--A1L89 is LessThan69~0
+A1L89 = (num[6] & ((num[3]) # ((A1L17) # (!A1L5))));
+
+
+--A1L90 is LessThan70~0
+A1L90 = (num[6] & ((num[3]) # ((A1L16) # (!A1L5))));
+
+
+--A1L91 is LessThan71~0
+A1L91 = (num[6] & ((num[4]) # ((num[3]) # (num[5]))));
+
+
+--A1L95 is LessThan75~0
+A1L95 = (num[6] & (((num[2] & num[3])) # (!A1L5)));
+
+
+--A1L117 is LessThan95~0
+A1L117 = (num[5] & num[6]);
+
+
+--A1L100 is LessThan78~0
+A1L100 = (num[6] & (((num[0] & A1L98)) # (!A1L5)));
+
+
+--A1L101 is LessThan79~0
+A1L101 = (num[6] & ((num[4]) # (num[5])));
+
+
+--A1L102 is LessThan80~0
+A1L102 = (num[6] & ((num[5]) # ((num[4] & !A1L1))));
+
+
+--A1L103 is LessThan81~0
+A1L103 = (num[6] & ((num[5]) # ((num[4] & !A1L2))));
+
+
+--A1L104 is LessThan82~0
+A1L104 = (num[6] & ((num[5]) # ((num[4] & !A1L7))));
+
+
+--A1L105 is LessThan83~0
+A1L105 = (num[6] & ((num[5]) # ((num[4] & !A1L3))));
+
+
+--A1L106 is LessThan84~0
+A1L106 = (num[6] & ((num[5]) # ((num[4] & !A1L34))));
+
+
+--A1L107 is LessThan85~0
+A1L107 = (num[6] & ((num[5]) # (A1L36)));
+
+
+--A1L108 is LessThan86~0
+A1L108 = (num[6] & ((num[5]) # ((num[4] & !A1L38))));
+
+
+--A1L109 is LessThan87~0
+A1L109 = (num[6] & ((num[5]) # ((num[4] & num[3]))));
+
+
+--A1L115 is LessThan93~0
+A1L115 = (num[6] & ((num[5]) # ((num[4] & A1L98))));
+
+
+--A1L119 is LessThan97~0
+A1L119 = (num[5] & (num[6] & ((num[4]) # (!A1L2))));
+
+
+--A1L120 is LessThan98~0
+A1L120 = (num[5] & (num[6] & ((num[4]) # (!A1L7))));
+
+
+--A1L121 is LessThan99~0
+A1L121 = (num[5] & (num[6] & ((num[4]) # (!A1L3))));
+
+
+--A1L122 is LessThan100~0
+A1L122 = (num[5] & (num[6] & ((num[4]) # (!A1L34))));
+
+
+--A1L123 is LessThan101~0
+A1L123 = (num[5] & (num[6] & !A1L14));
+
+
+--A1L124 is LessThan102~0
+A1L124 = (num[5] & (num[6] & ((num[4]) # (!A1L38))));
+
+
+--A1L125 is LessThan103~0
+A1L125 = (num[5] & (num[6] & ((num[4]) # (num[3]))));
+
+
+--A1L129 is LessThan107~0
+A1L129 = (A1L117 & ((num[4]) # ((num[2] & num[3]))));
+
+
+--A1L130 is LessThan108~4
+A1L130 = (num[4] & (num[5] & num[6]));
+
+
+--A1L133 is LessThan110~0
+A1L133 = (A1L130) # ((num[3] & (A1L16 & A1L117)));
+
+
+--A1L141 is LessThan119~0
+A1L141 = (num[4] & (num[3] & (num[5] & num[6])));
+
+
+--A1L4 is LessThan0~5
+A1L4 = (num[5]) # ((num[6]) # ((num[4]) # (!A1L1)));
+
+
+--A1L6 is LessThan1~3
+A1L6 = (num[4]) # ((num[5]) # ((num[6]) # (!A1L2)));
+
+
+--A1L8 is LessThan2~3
+A1L8 = (num[4]) # ((num[5]) # ((num[6]) # (!A1L7)));
+
+
+--A1L11 is LessThan3~5
+A1L11 = (num[2]) # ((num[3]) # (!A1L9));
+
+
+--A1L13 is LessThan4~3
+A1L13 = (num[5]) # ((num[6]) # ((num[4]) # (!A1L34)));
+
+
+--A1L15 is LessThan5~3
+A1L15 = (num[5]) # ((num[6]) # (!A1L14));
+
+
+--A1L18 is LessThan6~4
+A1L18 = (num[5]) # ((num[6]) # ((num[4]) # (!A1L38)));
+
+
+--A1L21 is LessThan8~3
+A1L21 = (num[4]) # ((num[5]) # ((num[6]) # (A1L20)));
+
+
+--A1L23 is LessThan9~5
+A1L23 = ((num[3] & ((num[1]) # (num[2])))) # (!A1L9);
+
+
+--A1L25 is LessThan10~3
+A1L25 = (num[4]) # ((num[5]) # ((num[6]) # (A1L24)));
+
+
+--A1L27 is LessThan12~2
+A1L27 = (num[4]) # ((num[5]) # ((num[6]) # (A1L96)));
+
+
+--A1L28 is LessThan13~4
+A1L28 = ((num[1] & (num[2] & num[3]))) # (!A1L9);
+
+
+--A1L30 is LessThan16~2
+A1L30 = (num[5]) # ((num[6]) # ((num[4] & !A1L1)));
+
+
+--A1L31 is LessThan17~2
+A1L31 = (num[5]) # ((num[6]) # ((num[4] & !A1L2)));
+
+
+--A1L32 is LessThan18~2
+A1L32 = (num[5]) # ((num[6]) # ((num[4] & !A1L7)));
+
+
+--A1L33 is LessThan19~4
+A1L33 = ((num[4] & ((num[2]) # (num[3])))) # (!A1L49);
+
+
+--A1L35 is LessThan20~3
+A1L35 = (num[5]) # ((num[6]) # ((num[4] & !A1L34)));
+
+
+--A1L37 is LessThan21~3
+A1L37 = (num[5]) # ((num[6]) # (A1L36));
+
+
+--A1L39 is LessThan22~3
+A1L39 = (num[5]) # ((num[6]) # ((num[4] & !A1L38)));
+
+
+--A1L42 is LessThan24~2
+A1L42 = (num[5]) # ((num[6]) # ((num[4] & A1L20)));
+
+
+--A1L43 is LessThan25~2
+A1L43 = (num[5]) # ((num[6]) # ((num[4] & A1L22)));
+
+
+--A1L44 is LessThan26~2
+A1L44 = (num[5]) # ((num[6]) # ((num[4] & A1L24)));
+
+
+--A1L45 is LessThan27~4
+A1L45 = ((num[4] & (num[3] & num[2]))) # (!A1L49);
+
+
+--A1L46 is LessThan28~2
+A1L46 = (num[5]) # ((num[6]) # ((num[4] & A1L96)));
+
+
+--A1L47 is LessThan29~2
+A1L47 = (num[5]) # ((num[6]) # ((num[4] & A1L98)));
+
+
+--A1L48 is LessThan30~4
+A1L48 = ((num[4] & (num[3] & A1L16))) # (!A1L49);
+
+
+--A1L61 is LessThan40~3
+A1L61 = (num[6]) # ((num[5] & ((num[4]) # (A1L20))));
+
+
+--A1L62 is LessThan41~2
+A1L62 = (num[6]) # ((num[5] & ((num[4]) # (A1L22))));
+
+
+--A1L63 is LessThan42~2
+A1L63 = (num[6]) # ((num[5] & ((num[4]) # (A1L24))));
+
+
+--A1L65 is LessThan44~2
+A1L65 = (num[6]) # ((num[5] & ((num[4]) # (A1L96))));
+
+
+--A1L66 is LessThan45~2
+A1L66 = (num[6]) # ((num[5] & ((num[4]) # (A1L98))));
+
+
+--A1L82 is LessThan61~2
+A1L82 = (num[6]) # ((num[1] & (num[2] & A1L76)));
+
+
+--A1L85 is LessThan65~2
+A1L85 = (num[6] & ((num[4]) # ((num[5]) # (!A1L2))));
+
+
+--A1L86 is LessThan66~2
+A1L86 = (num[6] & ((num[4]) # ((num[5]) # (!A1L7))));
+
+
+--A1L87 is LessThan67~4
+A1L87 = (num[6] & ((num[2]) # ((num[3]) # (!A1L5))));
+
+
+--A1L92 is LessThan72~2
+A1L92 = (num[6] & ((num[4]) # ((num[5]) # (A1L20))));
+
+
+--A1L93 is LessThan73~2
+A1L93 = (num[6] & ((num[4]) # ((num[5]) # (A1L22))));
+
+
+--A1L94 is LessThan74~2
+A1L94 = (num[6] & ((num[4]) # ((num[5]) # (A1L24))));
+
+
+--A1L97 is LessThan76~3
+A1L97 = (num[6] & ((num[5]) # ((num[4]) # (A1L96))));
+
+
+--A1L99 is LessThan77~3
+A1L99 = (num[6] & ((num[5]) # ((num[4]) # (A1L98))));
+
+
+--A1L110 is LessThan88~2
+A1L110 = (num[6] & ((num[5]) # ((num[4] & A1L20))));
+
+
+--A1L111 is LessThan89~2
+A1L111 = (num[6] & ((num[5]) # ((num[4] & A1L22))));
+
+
+--A1L112 is LessThan90~2
+A1L112 = (num[6] & ((num[5]) # ((num[4] & A1L24))));
+
+
+--A1L113 is LessThan91~2
+A1L113 = (num[6] & ((num[5]) # ((num[2] & A1L41))));
+
+
+--A1L114 is LessThan92~2
+A1L114 = (num[6] & ((num[5]) # ((num[4] & A1L96))));
+
+
+--A1L116 is LessThan94~2
+A1L116 = (num[6] & ((num[5]) # ((A1L16 & A1L41))));
+
+
+--A1L118 is LessThan96~2
+A1L118 = (num[5] & (num[6] & ((num[4]) # (!A1L1))));
+
+
+--A1L126 is LessThan104~2
+A1L126 = (num[5] & (num[6] & ((num[4]) # (A1L20))));
+
+
+--A1L127 is LessThan105~2
+A1L127 = (num[5] & (num[6] & ((num[4]) # (A1L22))));
+
+
+--A1L128 is LessThan106~2
+A1L128 = (num[5] & (num[6] & ((num[4]) # (A1L24))));
+
+
+--A1L132 is LessThan109~2
+A1L132 = (num[5] & (num[6] & ((num[4]) # (A1L98))));
+
+
+--A1L134 is LessThan112~2
+A1L134 = (num[5] & (num[6] & (num[4] & !A1L1)));
+
+
+--A1L135 is LessThan113~2
+A1L135 = (num[5] & (num[6] & (num[4] & !A1L2)));
+
+
+--A1L136 is LessThan114~2
+A1L136 = (num[5] & (num[6] & (num[4] & !A1L7)));
+
+
+--A1L137 is LessThan115~4
+A1L137 = (num[5] & (num[6] & (num[4] & !A1L3)));
+
+
+--A1L138 is LessThan116~2
+A1L138 = (num[5] & (num[6] & (num[4] & !A1L34)));
+
+
+--A1L139 is LessThan117~2
+A1L139 = (num[5] & (num[6] & A1L36));
+
+
+--A1L140 is LessThan118~2
+A1L140 = (num[5] & (num[6] & (num[4] & !A1L38)));
+
+
+--A1L142 is LessThan120~2
+A1L142 = (num[5] & (num[6] & (num[4] & A1L20)));
+
+
+--A1L143 is LessThan121~2
+A1L143 = (num[5] & (num[6] & (num[4] & A1L22)));
+
+
+--A1L144 is LessThan122~2
+A1L144 = (num[5] & (num[6] & (num[4] & A1L24)));
+
+
+--A1L145 is LessThan123~4
+A1L145 = (num[4] & (num[3] & (num[2] & A1L117)));
+
+
+--A1L146 is LessThan124~2
+A1L146 = (num[4] & (num[5] & (num[6] & A1L96)));
+
+
+--A1L147 is LessThan125~4
+A1L147 = (num[1] & (num[2] & (num[3] & A1L130)));
+
+
+--A1L148 is LessThan126~4
+A1L148 = (num[4] & (num[3] & (A1L16 & A1L117)));
+
+
+--A1L131 is LessThan108~5
+A1L131 = (num[5] & (num[6] & ((num[4]) # (A1L96))));
+
+
+--A1L286 is ~GND
+A1L286 = GND;
+
+
+--A1L50 is LessThan31~0_wirecell
+A1L50 = !A1L49;
+
+
+--A1L10 is LessThan3~4_wirecell
+A1L10 = !A1L9;
+
+
+--A1L60 is LessThan40~2_wirecell
+A1L60 = !A1L59;
+
+
