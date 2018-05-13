@@ -1,0 +1,62 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--B1_x is tflipflop:cell0|x at LCCOMB_X1_Y6_N24
+B1_x = (a & b);
+
+
+--clk is clk at PIN_80
+--operation mode is input
+
+clk = INPUT();
+
+
+--q_vec[3] is q_vec[3] at PIN_103
+--operation mode is output
+
+q_vec[3] = OUTPUT(GND);
+
+
+--q_vec[2] is q_vec[2] at PIN_63
+--operation mode is output
+
+q_vec[2] = OUTPUT(GND);
+
+
+--q_vec[1] is q_vec[1] at PIN_112
+--operation mode is output
+
+q_vec[1] = OUTPUT(GND);
+
+
+--q_vec[0] is q_vec[0] at PIN_32
+--operation mode is output
+
+q_vec[0] = OUTPUT(B1_x);
+
+
+--a is a at PIN_17
+--operation mode is input
+
+a = INPUT();
+
+
+--b is b at PIN_18
+--operation mode is input
+
+b = INPUT();
+
+
+
+
+

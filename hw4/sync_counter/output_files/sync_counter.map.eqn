@@ -1,0 +1,49 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--clk is clk
+clk = INPUT();
+
+
+--q_vec[3] is q_vec[3]
+q_vec[3] = OUTPUT(A1L9);
+
+
+--q_vec[2] is q_vec[2]
+q_vec[2] = OUTPUT(A1L9);
+
+
+--q_vec[1] is q_vec[1]
+q_vec[1] = OUTPUT(A1L9);
+
+
+--q_vec[0] is q_vec[0]
+q_vec[0] = OUTPUT(B1_x);
+
+
+--a is a
+a = INPUT();
+
+
+--b is b
+b = INPUT();
+
+
+--B1_x is tflipflop:cell0|x
+B1_x = (a & b);
+
+
+--A1L9 is ~GND
+A1L9 = GND;
+
+

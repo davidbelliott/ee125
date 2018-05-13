@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Google Drive\School\Caltech\ee125_shared\ee125\hw4\sync_counter\simulation\qsim
+vsync_counter
+Z1 !s100 zP@XFf>Fm1JA75a;VC>=]3
+Z2 IBikP2Q2mOGVlnL@I4`K[11
+Z3 Vl>1B=E5S]E8hMKb7OGijY1
+Z4 dD:\Google Drive\School\Caltech\ee125_shared\ee125\hw4\sync_counter\simulation\qsim
+Z5 w1525927544
+Z6 8sync_counter.vo
+Z7 Fsync_counter.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|sync_counter.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1525927545.953000
+Z12 !s107 sync_counter.vo|
+!s101 -O0
+vsync_counter_vlg_check_tst
+!i10b 1
+Z13 !s100 :MNLMARW:YNY^JN<XWZ;91
+Z14 IR^mbbK0?`K15BDDmI8Y?C0
+Z15 V6AM]Xh`GKkUC@d0C;7YDI1
+R4
+Z16 w1525927543
+Z17 8sync_counter.vt
+Z18 Fsync_counter.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z19 !s108 1525927546.221000
+Z20 !s107 sync_counter.vt|
+Z21 !s90 -work|work|sync_counter.vt|
+!s101 -O0
+R10
+vsync_counter_vlg_sample_tst
+!i10b 1
+Z22 !s100 6CNJLW2l20GR:6b@:R=MZ3
+Z23 IEHI_W=3eG2RM<cDEkEAIR1
+Z24 V?gh70RSmXK::gBADlO;CO1
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vsync_counter_vlg_vec_tst
+!i10b 1
+!s100 >nznbA16eKV72F5JO[;9b0
+IIaZ2>ZX_mBzQL`Y=;`^eb1
+Z25 VO3?4@lbJC;WLHoL58n=5K2
+R4
+R16
+R17
+R18
+Z26 L0 209
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
