@@ -3,7 +3,7 @@ $comment
 		vcd file log2_prob.msim.vcd -direction
 $end
 $date
-	Sun May 13 22:37:55 2018
+	Mon May 14 12:24:20 2018
 $end
 $version
 	ModelSim Version 10.1d

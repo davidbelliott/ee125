@@ -14,10 +14,13 @@ entity log2_prob is
 end entity;
 -------------------------------------------------------------------------
 architecture problem_one of log2_prob is
-	function ceil_log2 (input: positive) return integer is
+	function ceil_log2 (input: std_logic_vector(BITS - 1  downto 0)) 
+		return integer is
 		variable i: integer := 0;
+		variable inp_int: integer:= 0;
 	begin
-		while (2 ** i < input and i <= BITS) loop
+		inp_int := to_integer(unsigned(x));
+		while (2 ** i < inp_int and i <= BITS) loop
 			i := i + 1;
 		end loop;
 		return i;
@@ -25,10 +28,9 @@ architecture problem_one of log2_prob is
 	
 	signal x_int: integer;
 begin
-	x_int <= positive(to_integer(unsigned(x)));
 	-- generically:
-	-- y <= std_logic_vector(to_unsigned(ceil_log2(x_int), ceil_log2(BITS));
+	-- y <= std_logic_vector(to_unsigned(ceil_log2(x), ceil_log2(BITS));
 	-- for simulation:
-	y <= std_logic_vector(to_unsigned(ceil_log2(x_int), 4));
+	y <= std_logic_vector(to_unsigned(ceil_log2(x), 4));
 end architecture;
 -------------------------------------------------------------------------
