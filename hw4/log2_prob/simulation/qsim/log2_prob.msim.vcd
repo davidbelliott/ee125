@@ -1,0 +1,502 @@
+$comment
+	File created using the following command:
+		vcd file log2_prob.msim.vcd -direction
+$end
+$date
+	Sun May 13 16:49:46 2018
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module log2_prob_vlg_vec_tst $end
+$var reg 8 ! x [7:0] $end
+$var wire 1 " y [3] $end
+$var wire 1 # y [2] $end
+$var wire 1 $ y [1] $end
+$var wire 1 % y [0] $end
+$var wire 1 & sampler $end
+$scope module i1 $end
+$var wire 1 ' gnd $end
+$var wire 1 ( vcc $end
+$var wire 1 ) unknown $end
+$var tri1 1 * devclrn $end
+$var tri1 1 + devpor $end
+$var tri1 1 , devoe $end
+$var wire 1 - ceil_log2~5_combout $end
+$var wire 1 . LessThan5~0_combout $end
+$var wire 1 / ceil_log2~9_combout $end
+$var wire 1 0 ceil_log2~8_combout $end
+$var wire 1 1 ceil_log2~3_combout $end
+$var wire 1 2 ceil_log2~13_combout $end
+$var wire 1 3 ceil_log2~12_combout $end
+$var wire 1 4 ceil_log2~2_combout $end
+$var wire 1 5 ceil_log2~10_combout $end
+$var wire 1 6 LessThan2~0_combout $end
+$var wire 1 7 ceil_log2~11_combout $end
+$var wire 1 8 ceil_log2~21_combout $end
+$var wire 1 9 LessThan5~1_combout $end
+$var wire 1 : ceil_log2~4_combout $end
+$var wire 1 ; ceil_log2~7_combout $end
+$var wire 1 < ceil_log2~14_combout $end
+$var wire 1 = ceil_log2~16_combout $end
+$var wire 1 > ceil_log2~6_combout $end
+$var wire 1 ? ceil_log2~15_combout $end
+$var wire 1 @ ceil_log2~17_combout $end
+$var wire 1 A ceil_log2~18_combout $end
+$var wire 1 B ceil_log2~19_combout $end
+$var wire 1 C ceil_log2~20_combout $end
+$var wire 1 D x~combout [7] $end
+$var wire 1 E x~combout [6] $end
+$var wire 1 F x~combout [5] $end
+$var wire 1 G x~combout [4] $end
+$var wire 1 H x~combout [3] $end
+$var wire 1 I x~combout [2] $end
+$var wire 1 J x~combout [1] $end
+$var wire 1 K x~combout [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1 !
+x%
+x$
+x#
+x"
+x&
+0'
+1(
+x)
+1*
+1+
+1,
+x-
+x.
+x/
+x0
+x1
+x2
+x3
+x4
+x5
+x6
+x7
+x8
+x9
+x:
+x;
+x<
+x=
+x>
+x?
+x@
+xA
+xB
+xC
+1K
+0J
+0I
+0H
+0G
+0F
+0E
+0D
+$end
+#1410
+1-
+#1516
+14
+#5438
+1C
+#5444
+0:
+#5502
+09
+#5531
+0>
+#5534
+10
+#5538
+13
+#5678
+08
+#5863
+05
+#5866
+0/
+#5933
+1.
+#5978
+01
+#6077
+02
+06
+#6214
+0?
+#6242
+0;
+#7141
+07
+#7297
+0A
+#7318
+0=
+#7656
+0<
+#7958
+0B
+#7981
+0@
+#9581
+0"
+#11355
+0%
+#11733
+0$
+#11970
+0#
+#80000
+b11 !
+b10 !
+0&
+#80850
+1J
+#80860
+0K
+#86716
+1/
+#88150
+17
+#88665
+1<
+#92364
+1%
+#160000
+b11 !
+1&
+#160860
+1K
+#166794
+15
+#168072
+07
+#168249
+1=
+#168587
+0<
+#168912
+1@
+#172286
+0%
+#172664
+1$
+#240000
+b111 !
+b101 !
+b100 !
+0&
+#240850
+0J
+#240860
+0K
+#240989
+1I
+#242526
+04
+#242572
+16
+#243728
+17
+#244243
+1<
+#246838
+11
+#247942
+1%
+#248012
+06
+#249168
+07
+#249683
+0<
+#253382
+0%
+#320000
+b100100 !
+b110100 !
+b111100 !
+b111110 !
+b111111 !
+1&
+#320850
+1J
+#320860
+1K
+#320979
+1H
+#320989
+1F
+1G
+#322192
+00
+03
+#322193
+1>
+#322399
+0-
+#322466
+19
+#322544
+16
+#322545
+12
+#322904
+1;
+#323178
+1?
+#323196
+0;
+#323462
+0@
+#323700
+17
+#323829
+0=
+#323832
+1A
+#324323
+1@
+#324493
+1B
+#326136
+01
+#328505
+1#
+#400000
+b1111111 !
+b1111011 !
+b1011011 !
+b1001011 !
+b1000011 !
+b1000001 !
+b1000000 !
+0&
+#400850
+0J
+#400852
+1E
+#400860
+0K
+#400979
+0H
+#400989
+0F
+0G
+0I
+#402399
+1-
+#402466
+09
+#402497
+10
+#402526
+14
+#403040
+02
+06
+#403178
+0?
+#403196
+1;
+#403297
+13
+#403300
+0>
+#404011
+0;
+#404192
+1=
+#404196
+07
+#404197
+0A
+#404323
+0@
+#404855
+1@
+#404858
+0B
+#406354
+19
+#406383
+1>
+#406386
+00
+#406390
+03
+#406530
+18
+#406786
+1?
+#406791
+08
+#406793
+0.
+#406838
+11
+#406929
+12
+16
+#407660
+0@
+#407931
+1@
+#408085
+17
+#408213
+0=
+#408216
+1A
+#408870
+0#
+#408877
+1B
+#412889
+1#
+#480000
+b0 !
+b100 !
+b100100 !
+1&
+#480852
+0E
+#480989
+1F
+1I
+#482193
+04
+#482569
+1.
+#482745
+18
+#483409
+1;
+#484552
+1<
+#486530
+08
+#487194
+0;
+#488251
+1%
+#488337
+0<
+#492036
+0%
+#560000
+b10100100 !
+b10110100 !
+b10111100 !
+b10111110 !
+b10111111 !
+b11111111 !
+0&
+#560850
+1J
+#560852
+1D
+1E
+#560860
+1K
+#560979
+1H
+#560989
+1G
+#562399
+0-
+#566136
+01
+#566290
+0C
+#566390
+0>
+#566402
+0A
+#566530
+18
+#566793
+0?
+#567063
+0B
+#567938
+0@
+#570433
+1"
+#571075
+0#
+#571690
+0$
+#640000
+b11111011 !
+b11011011 !
+b1011011 !
+b1001011 !
+b1000011 !
+b1000001 !
+b1000000 !
+b0 !
+1&
+#640850
+0J
+#640852
+0D
+0E
+#640860
+0K
+#640979
+0H
+#640989
+0F
+0G
+0I
+#642399
+1-
+#642526
+14
+#646290
+1C
+#646354
+09
+#646386
+10
+#646390
+13
+#646402
+1A
+#646530
+08
+#646713
+05
+#646716
+0/
+#646793
+0.
+#646838
+11
+#646929
+02
+06
+#647063
+1B
+#647991
+07
+#648147
+0A
+#648808
+0B
+#650433
+0"
+#1000000

@@ -1,0 +1,180 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L2 is ceil_log2~2 at LCCOMB_X12_Y10_N8
+A1L2 = (!x[2] & (!x[3] & (!x[4] & !x[5])));
+
+
+--A1L3 is ceil_log2~3 at LCCOMB_X10_Y7_N8
+A1L3 = (!x[0] & !x[1]);
+
+
+--A1L4 is ceil_log2~4 at LCCOMB_X12_Y10_N18
+A1L4 = (A1L3 & (!x[6] & (x[7] & A1L2)));
+
+
+--A1L5 is ceil_log2~5 at LCCOMB_X12_Y10_N28
+A1L5 = ((!x[2] & (!x[3] & A1L3))) # (!x[4]);
+
+
+--A1L6 is ceil_log2~6 at LCCOMB_X12_Y10_N6
+A1L6 = (!x[7] & (((x[6]) # (x[5])) # (!A1L5)));
+
+
+--A1L23 is LessThan5~0 at LCCOMB_X12_Y10_N0
+A1L23 = (x[2]) # ((x[4]) # ((x[1]) # (x[0])));
+
+
+--A1L24 is LessThan5~1 at LCCOMB_X12_Y10_N10
+A1L24 = (x[6]) # ((x[5] & ((A1L23) # (x[3]))));
+
+
+--A1L7 is ceil_log2~7 at LCCOMB_X12_Y10_N20
+A1L7 = (A1L4) # ((A1L6 & ((A1L21) # (!A1L24))));
+
+
+--A1L8 is ceil_log2~8 at LCCOMB_X12_Y10_N14
+A1L8 = (!x[4] & (!x[6] & !x[5]));
+
+
+--A1L22 is LessThan2~0 at LCCOMB_X12_Y10_N24
+A1L22 = (x[3]) # (((x[2] & !A1L3)) # (!A1L8));
+
+
+--A1L9 is ceil_log2~9 at LCCOMB_X12_Y10_N2
+A1L9 = (x[1]) # ((x[6]) # (!A1L2));
+
+
+--A1L10 is ceil_log2~10 at LCCOMB_X12_Y10_N12
+A1L10 = (x[6]) # (((x[1] & x[0])) # (!A1L2));
+
+
+--A1L11 is ceil_log2~11 at LCCOMB_X9_Y8_N8
+A1L11 = (x[7]) # ((A1L10 & ((A1L22))) # (!A1L10 & (A1L9)));
+
+
+--A1L12 is ceil_log2~12 at LCCOMB_X12_Y10_N22
+A1L12 = (A1L5 & (!x[7] & (!x[6] & !x[5])));
+
+
+--A1L13 is ceil_log2~13 at LCCOMB_X12_Y10_N16
+A1L13 = ((x[3] & ((x[2]) # (!A1L3)))) # (!A1L8);
+
+
+--A1L14 is ceil_log2~14 at LCCOMB_X9_Y8_N10
+A1L14 = (A1L7) # ((!A1L13 & (A1L12 & A1L11)));
+
+
+--A1L15 is ceil_log2~15 at LCCOMB_X12_Y10_N26
+A1L15 = (A1L4) # ((A1L24 & A1L6));
+
+
+--A1L16 is ceil_log2~16 at LCCOMB_X9_Y8_N28
+A1L16 = (x[7] & (((!A1L13)))) # (!x[7] & (A1L10 & ((!A1L22) # (!A1L13))));
+
+
+--A1L17 is ceil_log2~17 at LCCOMB_X9_Y8_N22
+A1L17 = (A1L15) # ((A1L16 & A1L12));
+
+
+--A1L18 is ceil_log2~18 at LCCOMB_X9_Y8_N0
+A1L18 = (A1L10 & (!x[7] & (A1L13 & A1L22)));
+
+
+--A1L19 is ceil_log2~19 at LCCOMB_X9_Y8_N2
+A1L19 = (A1L18) # (A1L4);
+
+
+--A1L20 is ceil_log2~20 at LCCOMB_X12_Y10_N4
+A1L20 = ((A1L3 & (!x[6] & A1L2))) # (!x[7]);
+
+
+--A1L21 is ceil_log2~21 at LCCOMB_X12_Y10_N30
+A1L21 = (x[6] & ((x[1]) # ((x[0]) # (!A1L2))));
+
+
+--y[0] is y[0] at PIN_133
+--operation mode is output
+
+y[0] = OUTPUT(A1L14);
+
+
+--y[1] is y[1] at PIN_55
+--operation mode is output
+
+y[1] = OUTPUT(A1L17);
+
+
+--y[2] is y[2] at PIN_9
+--operation mode is output
+
+y[2] = OUTPUT(A1L19);
+
+
+--y[3] is y[3] at PIN_113
+--operation mode is output
+
+y[3] = OUTPUT(!A1L20);
+
+
+--x[7] is x[7] at PIN_7
+--operation mode is input
+
+x[7] = INPUT();
+
+
+--x[2] is x[2] at PIN_17
+--operation mode is input
+
+x[2] = INPUT();
+
+
+--x[3] is x[3] at PIN_18
+--operation mode is input
+
+x[3] = INPUT();
+
+
+--x[4] is x[4] at PIN_21
+--operation mode is input
+
+x[4] = INPUT();
+
+
+--x[5] is x[5] at PIN_22
+--operation mode is input
+
+x[5] = INPUT();
+
+
+--x[0] is x[0] at PIN_45
+--operation mode is input
+
+x[0] = INPUT();
+
+
+--x[1] is x[1] at PIN_132
+--operation mode is input
+
+x[1] = INPUT();
+
+
+--x[6] is x[6] at PIN_8
+--operation mode is input
+
+x[6] = INPUT();
+
+
+
+
+

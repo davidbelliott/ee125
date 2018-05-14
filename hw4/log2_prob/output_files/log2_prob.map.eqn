@@ -1,0 +1,157 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--y[0] is y[0]
+y[0] = OUTPUT(A1L13);
+
+
+--y[1] is y[1]
+y[1] = OUTPUT(A1L16);
+
+
+--y[2] is y[2]
+y[2] = OUTPUT(A1L18);
+
+
+--y[3] is y[3]
+y[3] = OUTPUT(A1L20);
+
+
+--x[7] is x[7]
+x[7] = INPUT();
+
+
+--x[2] is x[2]
+x[2] = INPUT();
+
+
+--x[3] is x[3]
+x[3] = INPUT();
+
+
+--x[4] is x[4]
+x[4] = INPUT();
+
+
+--x[5] is x[5]
+x[5] = INPUT();
+
+
+--A1L1 is ceil_log2~2
+A1L1 = (!x[2] & (!x[3] & (!x[4] & !x[5])));
+
+
+--x[0] is x[0]
+x[0] = INPUT();
+
+
+--x[1] is x[1]
+x[1] = INPUT();
+
+
+--A1L2 is ceil_log2~3
+A1L2 = (!x[0] & !x[1]);
+
+
+--x[6] is x[6]
+x[6] = INPUT();
+
+
+--A1L3 is ceil_log2~4
+A1L3 = (x[7] & (A1L1 & (A1L2 & !x[6])));
+
+
+--A1L4 is ceil_log2~5
+A1L4 = ((A1L2 & (!x[2] & !x[3]))) # (!x[4]);
+
+
+--A1L5 is ceil_log2~6
+A1L5 = (!x[7] & ((x[6]) # ((x[5]) # (!A1L4))));
+
+
+--A1L23 is LessThan5~0
+A1L23 = (x[0]) # ((x[1]) # ((x[2]) # (x[4])));
+
+
+--A1L24 is LessThan5~1
+A1L24 = (x[6]) # ((x[5] & ((x[3]) # (A1L23))));
+
+
+--A1L6 is ceil_log2~7
+A1L6 = (A1L3) # ((A1L5 & ((A1L21) # (!A1L24))));
+
+
+--A1L7 is ceil_log2~8
+A1L7 = (!x[6] & (!x[4] & !x[5]));
+
+
+--A1L22 is LessThan2~0
+A1L22 = (x[3]) # (((x[2] & !A1L2)) # (!A1L7));
+
+
+--A1L8 is ceil_log2~9
+A1L8 = (x[1]) # ((x[6]) # (!A1L1));
+
+
+--A1L9 is ceil_log2~10
+A1L9 = (x[6]) # (((x[0] & x[1])) # (!A1L1));
+
+
+--A1L10 is ceil_log2~11
+A1L10 = (x[7]) # ((A1L9 & (A1L22)) # (!A1L9 & ((A1L8))));
+
+
+--A1L11 is ceil_log2~12
+A1L11 = (A1L4 & (!x[7] & (!x[6] & !x[5])));
+
+
+--A1L12 is ceil_log2~13
+A1L12 = ((x[3] & ((x[2]) # (!A1L2)))) # (!A1L7);
+
+
+--A1L13 is ceil_log2~14
+A1L13 = (A1L6) # ((A1L10 & (A1L11 & !A1L12)));
+
+
+--A1L14 is ceil_log2~15
+A1L14 = (A1L3) # ((A1L24 & A1L5));
+
+
+--A1L15 is ceil_log2~16
+A1L15 = (x[7] & (((!A1L12)))) # (!x[7] & (A1L9 & ((!A1L12) # (!A1L22))));
+
+
+--A1L16 is ceil_log2~17
+A1L16 = (A1L14) # ((A1L11 & A1L15));
+
+
+--A1L17 is ceil_log2~18
+A1L17 = (A1L9 & (A1L22 & (A1L12 & !x[7])));
+
+
+--A1L18 is ceil_log2~19
+A1L18 = (A1L3) # (A1L17);
+
+
+--A1L19 is ceil_log2~20
+A1L19 = ((A1L1 & (A1L2 & !x[6]))) # (!x[7]);
+
+
+--A1L21 is ceil_log2~21
+A1L21 = (x[6] & ((x[0]) # ((x[1]) # (!A1L1))));
+
+
+--A1L20 is ceil_log2~20_wirecell
+A1L20 = !A1L19;
+
+
