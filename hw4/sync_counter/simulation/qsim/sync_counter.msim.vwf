@@ -62,17 +62,7 @@ SIGNAL("sync_counter_vlg_vec_tst|clk")
 	PARENT = "";
 }
 
-SIGNAL("sync_counter_vlg_vec_tst|q_vec[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("sync_counter_vlg_vec_tst|q_vec[1]")
+SIGNAL("sync_counter_vlg_vec_tst|q_vec[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -92,7 +82,17 @@ SIGNAL("sync_counter_vlg_vec_tst|q_vec[2]")
 	PARENT = "";
 }
 
-SIGNAL("sync_counter_vlg_vec_tst|q_vec[3]")
+SIGNAL("sync_counter_vlg_vec_tst|q_vec[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("sync_counter_vlg_vec_tst|q_vec[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -172,16 +172,6 @@ SIGNAL("sync_counter_vlg_vec_tst|i1|devoe")
 	PARENT = "";
 }
 
-SIGNAL("sync_counter_vlg_vec_tst|i1|a~combout")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
 SIGNAL("sync_counter_vlg_vec_tst|i1|b~combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -192,7 +182,117 @@ SIGNAL("sync_counter_vlg_vec_tst|i1|b~combout")
 	PARENT = "";
 }
 
-SIGNAL("sync_counter_vlg_vec_tst|i1|cell0|x~combout")
+SIGNAL("sync_counter_vlg_vec_tst|i1|clk~combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("sync_counter_vlg_vec_tst|i1|clk~clkctrl_outclk")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("sync_counter_vlg_vec_tst|i1|a~combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("sync_counter_vlg_vec_tst|i1|cell|q~0_combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("sync_counter_vlg_vec_tst|i1|cell|q~regout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("sync_counter_vlg_vec_tst|i1|gen:1:cells|q~0_combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("sync_counter_vlg_vec_tst|i1|gen:1:cells|q~regout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("sync_counter_vlg_vec_tst|i1|gen:2:cells|x~combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("sync_counter_vlg_vec_tst|i1|gen:2:cells|q~0_combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("sync_counter_vlg_vec_tst|i1|gen:2:cells|q~regout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("sync_counter_vlg_vec_tst|i1|gen:3:cells|q~0_combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("sync_counter_vlg_vec_tst|i1|gen:3:cells|q~regout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -207,8 +307,11 @@ TRANSITION_LIST("sync_counter_vlg_vec_tst|a")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 940.0;
+		LEVEL 1 FOR 480.0;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 160.0;
 	}
 }
 
@@ -217,8 +320,9 @@ TRANSITION_LIST("sync_counter_vlg_vec_tst|b")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 940.0;
+		LEVEL 1 FOR 600.0;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 160.0;
 	}
 }
 
@@ -264,23 +368,14 @@ TRANSITION_LIST("sync_counter_vlg_vec_tst|clk")
 	}
 }
 
-TRANSITION_LIST("sync_counter_vlg_vec_tst|q_vec[0]")
+TRANSITION_LIST("sync_counter_vlg_vec_tst|q_vec[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 4.354;
-		LEVEL 1 FOR 60.646;
-		LEVEL 0 FOR 935.0;
-	}
-}
-
-TRANSITION_LIST("sync_counter_vlg_vec_tst|q_vec[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL X FOR 3.477;
+		LEVEL 0 FOR 452.595;
+		LEVEL 1 FOR 543.928;
 	}
 }
 
@@ -289,16 +384,46 @@ TRANSITION_LIST("sync_counter_vlg_vec_tst|q_vec[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL X FOR 3.178;
+		LEVEL 0 FOR 212.595;
+		LEVEL 1 FOR 240.0;
+		LEVEL 0 FOR 544.227;
 	}
 }
 
-TRANSITION_LIST("sync_counter_vlg_vec_tst|q_vec[3]")
+TRANSITION_LIST("sync_counter_vlg_vec_tst|q_vec[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL X FOR 3.166;
+		LEVEL 0 FOR 92.595;
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 480.0;
+		LEVEL 1 FOR 64.239;
+	}
+}
+
+TRANSITION_LIST("sync_counter_vlg_vec_tst|q_vec[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 3.185;
+		LEVEL 0 FOR 32.595;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 420.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 4.22;
 	}
 }
 
@@ -398,34 +523,261 @@ TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|devoe")
 	}
 }
 
-TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|a~combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 60.989;
-		LEVEL 0 FOR 939.011;
-	}
-}
-
 TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|b~combout")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 60.979;
-		LEVEL 0 FOR 939.021;
+		LEVEL 1 FOR 600.979;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 159.021;
 	}
 }
 
-TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|cell0|x~combout")
+TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|clk~combout")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 0.781;
-		LEVEL 1 FOR 60.646;
-		LEVEL 0 FOR 938.573;
+		LEVEL 0 FOR 30.989;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 9.011;
+	}
+}
+
+TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|clk~clkctrl_outclk")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 0.122;
+		LEVEL 0 FOR 30.989;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 8.889;
+	}
+}
+
+TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|a~combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 480.852;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 159.148;
+	}
+}
+
+TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|cell|q~0_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 4.916;
+		LEVEL 1 FOR 28.002;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 32.85;
+		LEVEL 0 FOR 360.0;
+		LEVEL 1 FOR 27.15;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 7.082;
+	}
+}
+
+TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|cell|q~regout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 32.595;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 420.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 7.405;
+	}
+}
+
+TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|gen:1:cells|q~0_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 0.642;
+		LEVEL 0 FOR 32.595;
+		LEVEL 1 FOR 59.681;
+		LEVEL 0 FOR 0.319;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 59.681;
+		LEVEL 1 FOR 0.319;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 59.681;
+		LEVEL 0 FOR 0.319;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 59.681;
+		LEVEL 1 FOR 0.319;
+		LEVEL 0 FOR 420.0;
+		LEVEL 1 FOR 59.681;
+		LEVEL 0 FOR 0.319;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 6.763;
+	}
+}
+
+TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|gen:1:cells|q~regout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 92.595;
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 480.0;
+		LEVEL 1 FOR 67.405;
+	}
+}
+
+TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|gen:2:cells|x~combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 0.456;
+		LEVEL 0 FOR 152.728;
+		LEVEL 1 FOR 59.867;
+		LEVEL 0 FOR 180.133;
+		LEVEL 1 FOR 59.867;
+		LEVEL 0 FOR 540.133;
+		LEVEL 1 FOR 6.816;
+	}
+}
+
+TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|gen:2:cells|q~0_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 0.851;
+		LEVEL 0 FOR 152.728;
+		LEVEL 1 FOR 59.339;
+		LEVEL 0 FOR 0.528;
+		LEVEL 1 FOR 180.133;
+		LEVEL 0 FOR 59.339;
+		LEVEL 1 FOR 0.528;
+		LEVEL 0 FOR 540.133;
+		LEVEL 1 FOR 6.421;
+	}
+}
+
+TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|gen:2:cells|q~regout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 212.595;
+		LEVEL 1 FOR 240.0;
+		LEVEL 0 FOR 547.405;
+	}
+}
+
+TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|gen:3:cells|q~0_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 0.909;
+		LEVEL 0 FOR 392.671;
+		LEVEL 1 FOR 59.338;
+		LEVEL 0 FOR 0.586;
+		LEVEL 1 FOR 546.496;
+	}
+}
+
+TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|gen:3:cells|q~regout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 452.595;
+		LEVEL 1 FOR 547.405;
 	}
 }
 
@@ -458,7 +810,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "sync_counter_vlg_vec_tst|q_vec[0]";
+	CHANNEL = "sync_counter_vlg_vec_tst|q_vec[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
@@ -467,7 +819,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "sync_counter_vlg_vec_tst|q_vec[1]";
+	CHANNEL = "sync_counter_vlg_vec_tst|q_vec[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 4;
@@ -476,7 +828,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "sync_counter_vlg_vec_tst|q_vec[2]";
+	CHANNEL = "sync_counter_vlg_vec_tst|q_vec[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 5;
@@ -485,7 +837,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "sync_counter_vlg_vec_tst|q_vec[3]";
+	CHANNEL = "sync_counter_vlg_vec_tst|q_vec[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 6;
@@ -557,7 +909,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "sync_counter_vlg_vec_tst|i1|a~combout";
+	CHANNEL = "sync_counter_vlg_vec_tst|i1|b~combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 14;
@@ -566,7 +918,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "sync_counter_vlg_vec_tst|i1|b~combout";
+	CHANNEL = "sync_counter_vlg_vec_tst|i1|clk~combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 15;
@@ -575,10 +927,100 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "sync_counter_vlg_vec_tst|i1|cell0|x~combout";
+	CHANNEL = "sync_counter_vlg_vec_tst|i1|clk~clkctrl_outclk";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 16;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sync_counter_vlg_vec_tst|i1|a~combout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 17;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sync_counter_vlg_vec_tst|i1|cell|q~0_combout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 18;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sync_counter_vlg_vec_tst|i1|cell|q~regout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 19;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sync_counter_vlg_vec_tst|i1|gen:1:cells|q~0_combout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 20;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sync_counter_vlg_vec_tst|i1|gen:1:cells|q~regout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 21;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sync_counter_vlg_vec_tst|i1|gen:2:cells|x~combout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 22;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sync_counter_vlg_vec_tst|i1|gen:2:cells|q~0_combout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 23;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sync_counter_vlg_vec_tst|i1|gen:2:cells|q~regout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 24;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sync_counter_vlg_vec_tst|i1|gen:3:cells|q~0_combout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 25;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sync_counter_vlg_vec_tst|i1|gen:3:cells|q~regout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 26;
 	TREE_LEVEL = 0;
 }
 ;

@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "05/09/2018 21:45:43"
+// Generated on "05/13/2018 23:49:01"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    sync_counter
 // 
@@ -62,16 +62,16 @@ module sync_counter_vlg_check_tst (
 	q_vec,
 	sampler_rx
 );
-input [0:3] q_vec;
+input [3:0] q_vec;
 input sampler_rx;
 
-reg [0:3] q_vec_expected;
+reg [3:0] q_vec_expected;
 
-reg [0:3] q_vec_prev;
+reg [3:0] q_vec_prev;
 
-reg [0:3] q_vec_expected_prev;
+reg [3:0] q_vec_expected_prev;
 
-reg [0:3] last_q_vec_exp;
+reg [3:0] last_q_vec_exp;
 
 reg trigger;
 
@@ -213,7 +213,7 @@ reg a;
 reg b;
 reg clk;
 // wires                                               
-wire [0:3] q_vec;
+wire [3:0] q_vec;
 
 wire sampler;                             
 
@@ -243,14 +243,18 @@ end
 initial
 begin
 	a = 1'b1;
-	a = #60000 1'b0;
+	a = #480000 1'b0;
+	a = #120000 1'b1;
+	a = #120000 1'b0;
+	a = #120000 1'b1;
 end 
 
 // b
 initial
 begin
 	b = 1'b1;
-	b = #60000 1'b0;
+	b = #600000 1'b0;
+	b = #240000 1'b1;
 end 
 
 sync_counter_vlg_sample_tst tb_sample (

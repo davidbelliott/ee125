@@ -11,24 +11,36 @@
 -- programming logic devices manufactured by Altera and sold by 
 -- Altera or its authorized distributors.  Please refer to the 
 -- applicable agreement for further details.
---clk is clk
-clk = INPUT();
-
-
---q_vec[3] is q_vec[3]
-q_vec[3] = OUTPUT(A1L9);
-
-
---q_vec[2] is q_vec[2]
-q_vec[2] = OUTPUT(A1L9);
+--q_vec[0] is q_vec[0]
+q_vec[0] = OUTPUT(B1_q);
 
 
 --q_vec[1] is q_vec[1]
-q_vec[1] = OUTPUT(A1L9);
+q_vec[1] = OUTPUT(B2_q);
 
 
---q_vec[0] is q_vec[0]
-q_vec[0] = OUTPUT(B1_x);
+--q_vec[2] is q_vec[2]
+q_vec[2] = OUTPUT(B3_q);
+
+
+--q_vec[3] is q_vec[3]
+q_vec[3] = OUTPUT(B4_q);
+
+
+--B1_q is tflipflop:cell|q
+B1_q = DFFEAS(B1L2, clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--B2_q is tflipflop:\gen:1:cells|q
+B2_q = DFFEAS(B2L2, clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--B3_q is tflipflop:\gen:2:cells|q
+B3_q = DFFEAS(B3L2, clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--B4_q is tflipflop:\gen:3:cells|q
+B4_q = DFFEAS(B4L2, clk,  ,  ,  ,  ,  ,  ,  );
 
 
 --a is a
@@ -39,11 +51,27 @@ a = INPUT();
 b = INPUT();
 
 
---B1_x is tflipflop:cell0|x
-B1_x = (a & b);
+--B1L2 is tflipflop:cell|q~0
+B1L2 = B1_q $ (((a & b)));
 
 
---A1L9 is ~GND
-A1L9 = GND;
+--clk is clk
+clk = INPUT();
+
+
+--B2L2 is tflipflop:\gen:1:cells|q~0
+B2L2 = B2_q $ (((B1_q & (a & b))));
+
+
+--B3_x is tflipflop:\gen:2:cells|x
+B3_x = (B1_q & (B2_q & (a & b)));
+
+
+--B3L2 is tflipflop:\gen:2:cells|q~0
+B3L2 = B3_q $ (B3_x);
+
+
+--B4L2 is tflipflop:\gen:3:cells|q~0
+B4L2 = B4_q $ (((B3_q & B3_x)));
 
 

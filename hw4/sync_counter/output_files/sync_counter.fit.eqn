@@ -11,41 +11,67 @@
 -- programming logic devices manufactured by Altera and sold by 
 -- Altera or its authorized distributors.  Please refer to the 
 -- applicable agreement for further details.
---B1_x is tflipflop:cell0|x at LCCOMB_X1_Y6_N24
-B1_x = (a & b);
+--B1_q is tflipflop:cell|q at LCFF_X1_Y5_N9
+B1_q = DFFEAS(B1L2, GLOBAL(A1L5),  ,  ,  ,  ,  ,  ,  );
 
 
---clk is clk at PIN_80
---operation mode is input
-
-clk = INPUT();
+--B2_q is tflipflop:\gen:1:cells|q at LCFF_X1_Y5_N7
+B2_q = DFFEAS(B2L2, GLOBAL(A1L5),  ,  ,  ,  ,  ,  ,  );
 
 
---q_vec[3] is q_vec[3] at PIN_103
+--B3_q is tflipflop:\gen:2:cells|q at LCFF_X1_Y5_N25
+B3_q = DFFEAS(B3L2, GLOBAL(A1L5),  ,  ,  ,  ,  ,  ,  );
+
+
+--B4_q is tflipflop:\gen:3:cells|q at LCFF_X1_Y5_N31
+B4_q = DFFEAS(B4L2, GLOBAL(A1L5),  ,  ,  ,  ,  ,  ,  );
+
+
+--B1L2 is tflipflop:cell|q~0 at LCCOMB_X1_Y5_N8
+B1L2 = B1_q $ (((b & a)));
+
+
+--B2L2 is tflipflop:\gen:1:cells|q~0 at LCCOMB_X1_Y5_N6
+B2L2 = B2_q $ (((b & (a & B1_q))));
+
+
+--B3_x is tflipflop:\gen:2:cells|x at LCCOMB_X1_Y5_N28
+B3_x = (b & (a & (B1_q & B2_q)));
+
+
+--B3L2 is tflipflop:\gen:2:cells|q~0 at LCCOMB_X1_Y5_N24
+B3L2 = B3_q $ (B3_x);
+
+
+--B4L2 is tflipflop:\gen:3:cells|q~0 at LCCOMB_X1_Y5_N30
+B4L2 = B4_q $ (((B3_q & B3_x)));
+
+
+--q_vec[0] is q_vec[0] at PIN_27
 --operation mode is output
 
-q_vec[3] = OUTPUT(GND);
+q_vec[0] = OUTPUT(B1_q);
 
 
---q_vec[2] is q_vec[2] at PIN_63
+--q_vec[1] is q_vec[1] at PIN_24
 --operation mode is output
 
-q_vec[2] = OUTPUT(GND);
+q_vec[1] = OUTPUT(B2_q);
 
 
---q_vec[1] is q_vec[1] at PIN_112
+--q_vec[2] is q_vec[2] at PIN_26
 --operation mode is output
 
-q_vec[1] = OUTPUT(GND);
+q_vec[2] = OUTPUT(B3_q);
 
 
---q_vec[0] is q_vec[0] at PIN_32
+--q_vec[3] is q_vec[3] at PIN_28
 --operation mode is output
 
-q_vec[0] = OUTPUT(B1_x);
+q_vec[3] = OUTPUT(B4_q);
 
 
---a is a at PIN_17
+--a is a at PIN_25
 --operation mode is input
 
 a = INPUT();
@@ -57,6 +83,16 @@ a = INPUT();
 b = INPUT();
 
 
+--clk is clk at PIN_17
+--operation mode is input
 
+clk = INPUT();
+
+
+
+
+
+--A1L5 is clk~clkctrl at CLKCTRL_G2
+A1L5 = cycloneii_clkctrl(.INCLK[0] = clk) WITH (clock_type = "Global Clock", ena_register_mode = "none");
 
 

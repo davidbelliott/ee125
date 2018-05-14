@@ -1,45 +1,45 @@
 |sync_counter
-a => tflipflop:cell0.a
-b => tflipflop:cell0.b
-clk => tflipflop:cell0.clk
+a => tflipflop:cell.a
+b => tflipflop:cell.b
+clk => tflipflop:cell.clk
 clk => tflipflop:gen:1:cells.clk
 clk => tflipflop:gen:2:cells.clk
 clk => tflipflop:gen:3:cells.clk
-q_vec[3] <= tflipflop:gen:3:cells.q
-q_vec[2] <= tflipflop:gen:2:cells.q
-q_vec[1] <= tflipflop:gen:1:cells.q
-q_vec[0] <= tflipflop:cell0.x
+q_vec[0] << tflipflop:cell.q
+q_vec[1] << tflipflop:gen:1:cells.q
+q_vec[2] << tflipflop:gen:2:cells.q
+q_vec[3] << tflipflop:gen:3:cells.q
 
 
-|sync_counter|tflipflop:cell0
-a => q.IN0
-b => q.IN1
+|sync_counter|tflipflop:cell
+a => x.IN0
+b => x.IN1
 clk => q~reg0.CLK
+x <= x.DB_MAX_OUTPUT_PORT_TYPE
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-x <= q.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |sync_counter|tflipflop:\gen:1:cells
-a => q.IN0
-b => q.IN1
+a => x.IN0
+b => x.IN1
 clk => q~reg0.CLK
+x <= x.DB_MAX_OUTPUT_PORT_TYPE
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-x <= q.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |sync_counter|tflipflop:\gen:2:cells
-a => q.IN0
-b => q.IN1
+a => x.IN0
+b => x.IN1
 clk => q~reg0.CLK
+x <= x.DB_MAX_OUTPUT_PORT_TYPE
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-x <= q.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |sync_counter|tflipflop:\gen:3:cells
-a => q.IN0
-b => q.IN1
+a => x.IN0
+b => x.IN1
 clk => q~reg0.CLK
+x <= x.DB_MAX_OUTPUT_PORT_TYPE
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-x <= q.DB_MAX_OUTPUT_PORT_TYPE
 
 

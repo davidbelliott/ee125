@@ -1,5 +1,5 @@
 Analysis & Synthesis report for sync_counter
-Sat May 12 22:07:18 2018
+Sun May 13 23:45:07 2018
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,13 +13,12 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |sync_counter
- 11. Port Connectivity Checks: "tflipflop:\gen:3:cells"
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Equations
- 14. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |sync_counter
+ 10. Port Connectivity Checks: "tflipflop:\gen:3:cells"
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Equations
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -45,15 +44,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May 12 22:07:18 2018           ;
+; Analysis & Synthesis Status        ; Successful - Sun May 13 23:45:07 2018           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; sync_counter                                    ;
 ; Top-level Entity Name              ; sync_counter                                    ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 1                                               ;
-;     Total combinational functions  ; 1                                               ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
+; Total logic elements               ; 5                                               ;
+;     Total combinational functions  ; 5                                               ;
+;     Dedicated logic registers      ; 4                                               ;
+; Total registers                    ; 4                                               ;
 ; Total pins                         ; 7                                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -166,57 +165,48 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                     ;
-+---------------------------------------------+-------------------+
-; Resource                                    ; Usage             ;
-+---------------------------------------------+-------------------+
-; Estimated Total logic elements              ; 1                 ;
-;                                             ;                   ;
-; Total combinational functions               ; 1                 ;
-; Logic element usage by number of LUT inputs ;                   ;
-;     -- 4 input functions                    ; 0                 ;
-;     -- 3 input functions                    ; 0                 ;
-;     -- <=2 input functions                  ; 1                 ;
-;                                             ;                   ;
-; Logic elements by mode                      ;                   ;
-;     -- normal mode                          ; 1                 ;
-;     -- arithmetic mode                      ; 0                 ;
-;                                             ;                   ;
-; Total registers                             ; 0                 ;
-;     -- Dedicated logic registers            ; 0                 ;
-;     -- I/O registers                        ; 0                 ;
-;                                             ;                   ;
-; I/O pins                                    ; 7                 ;
-; Embedded Multiplier 9-bit elements          ; 0                 ;
-; Maximum fan-out node                        ; tflipflop:cell0|x ;
-; Maximum fan-out                             ; 1                 ;
-; Total fan-out                               ; 3                 ;
-; Average fan-out                             ; 0.38              ;
-+---------------------------------------------+-------------------+
++----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                    ;
++---------------------------------------------+------------------+
+; Resource                                    ; Usage            ;
++---------------------------------------------+------------------+
+; Estimated Total logic elements              ; 5                ;
+;                                             ;                  ;
+; Total combinational functions               ; 5                ;
+; Logic element usage by number of LUT inputs ;                  ;
+;     -- 4 input functions                    ; 2                ;
+;     -- 3 input functions                    ; 2                ;
+;     -- <=2 input functions                  ; 1                ;
+;                                             ;                  ;
+; Logic elements by mode                      ;                  ;
+;     -- normal mode                          ; 5                ;
+;     -- arithmetic mode                      ; 0                ;
+;                                             ;                  ;
+; Total registers                             ; 4                ;
+;     -- Dedicated logic registers            ; 4                ;
+;     -- I/O registers                        ; 0                ;
+;                                             ;                  ;
+; I/O pins                                    ; 7                ;
+; Embedded Multiplier 9-bit elements          ; 0                ;
+; Maximum fan-out node                        ; tflipflop:cell|q ;
+; Maximum fan-out                             ; 4                ;
+; Total fan-out                               ; 28               ;
+; Average fan-out                             ; 1.75             ;
++---------------------------------------------+------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                   ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
-; |sync_counter              ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 7    ; 0            ; |sync_counter                 ; work         ;
-;    |tflipflop:cell0|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sync_counter|tflipflop:cell0 ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                           ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
+; Compilation Hierarchy Node  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Library Name ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
+; |sync_counter               ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 7    ; 0            ; |sync_counter                        ; work         ;
+;    |tflipflop:\gen:1:cells| ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sync_counter|tflipflop:\gen:1:cells ; work         ;
+;    |tflipflop:\gen:2:cells| ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sync_counter|tflipflop:\gen:2:cells ; work         ;
+;    |tflipflop:\gen:3:cells| ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sync_counter|tflipflop:\gen:3:cells ; work         ;
+;    |tflipflop:cell|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sync_counter|tflipflop:cell         ; work         ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                  ;
-+---------------------------------------+---------------------------------------------+
-; Register name                         ; Reason for Removal                          ;
-+---------------------------------------+---------------------------------------------+
-; tflipflop:\gen:3:cells|q              ; Stuck at GND due to stuck port clock_enable ;
-; tflipflop:\gen:2:cells|q              ; Stuck at GND due to stuck port clock_enable ;
-; tflipflop:\gen:1:cells|q              ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 3 ;                                             ;
-+---------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -224,7 +214,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 4     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -274,7 +264,7 @@ The equations can be found in D:/Google Drive/School/Caltech/ee125_shared/ee125/
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat May 12 22:07:12 2018
+    Info: Processing started: Sun May 13 23:45:03 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sync_counter -c sync_counter
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 4 design units, including 2 entities, in source file sync_counter.vhd
@@ -283,24 +273,19 @@ Info (12021): Found 4 design units, including 2 entities, in source file sync_co
     Info (12023): Found entity 1: tflipflop
     Info (12023): Found entity 2: sync_counter
 Info (12127): Elaborating entity "sync_counter" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at sync_counter.vhd(31): used implicit default value for signal "a_vec" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Info (12128): Elaborating entity "tflipflop" for hierarchy "tflipflop:cell0"
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "q_vec[3]" is stuck at GND
-    Warning (13410): Pin "q_vec[2]" is stuck at GND
-    Warning (13410): Pin "q_vec[1]" is stuck at GND
+Info (12128): Elaborating entity "tflipflop" for hierarchy "tflipflop:cell"
+Warning (10492): VHDL Process Statement warning at sync_counter.vhd(15): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at sync_counter.vhd(15): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk"
-Info (21057): Implemented 8 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 12 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 1 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 441 megabytes
-    Info: Processing ended: Sat May 12 22:07:19 2018
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:03
+    Info (21061): Implemented 5 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 453 megabytes
+    Info: Processing ended: Sun May 13 23:45:07 2018
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:02
 
 
