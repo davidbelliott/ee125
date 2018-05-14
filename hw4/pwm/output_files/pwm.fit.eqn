@@ -1,0 +1,148 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--C1_pwm is pwm:pwm|pwm at LCFF_X1_Y5_N29
+C1_pwm = DFFEAS(C1L14, GLOBAL(A1L19),  ,  ,  ,  ,  ,  ,  );
+
+
+--C1_count[0] is pwm:pwm|count[0] at LCFF_X1_Y5_N15
+C1_count[0] = DFFEAS(C1L3, GLOBAL(A1L19),  ,  ,  ,  ,  ,  ,  );
+
+
+--C1_count[1] is pwm:pwm|count[1] at LCFF_X1_Y5_N5
+C1_count[1] = DFFEAS(C1L5, GLOBAL(A1L19),  ,  ,  ,  ,  ,  ,  );
+
+
+--C1_count[2] is pwm:pwm|count[2] at LCFF_X1_Y5_N27
+C1_count[2] = DFFEAS(C1L7, GLOBAL(A1L19),  ,  ,  ,  ,  ,  ,  );
+
+
+--C1L13 is pwm:pwm|pwm~0 at LCCOMB_X1_Y5_N20
+C1L13 = (C1_pwm) # ((!C1_count[1] & !C1_count[2]));
+
+
+--C1L8 is pwm:pwm|count~0 at LCCOMB_X1_Y5_N22
+C1L8 = (C1_count[1] & (!C1_count[0])) # (!C1_count[1] & ((C1_count[0]) # (!C1_count[2])));
+
+
+--C1L9 is pwm:pwm|count~1 at LCCOMB_X1_Y5_N24
+C1L9 = (C1_count[1] & ((C1_count[2]))) # (!C1_count[1] & ((!C1_count[2]) # (!C1_count[0])));
+
+
+--C1L10 is pwm:pwm|count~2 at LCCOMB_X1_Y5_N18
+C1L10 = (!C1_count[0] & ((C1_count[1]) # (C1_count[2])));
+
+
+--C1L11 is pwm:pwm|Equal2~0 at LCCOMB_X1_Y5_N0
+C1L11 = (duty[2] & (!C1L9 & (duty[0] $ (!C1L10)))) # (!duty[2] & (C1L9 & (duty[0] $ (!C1L10))));
+
+
+--C1L14 is pwm:pwm|pwm~1 at LCCOMB_X1_Y5_N28
+C1L14 = (C1L13 & ((duty[1] $ (!C1L8)) # (!C1L11)));
+
+
+--pwm_clk is pwm_clk at LCFF_X27_Y7_N7
+pwm_clk = DFFEAS(A1L18, GLOBAL(A1L3),  ,  ,  ,  ,  ,  ,  );
+
+
+--cycles[1] is cycles[1] at LCFF_X27_Y7_N1
+cycles[1] = DFFEAS(A1L11, GLOBAL(A1L3),  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L18 is pwm_clk~0 at LCCOMB_X27_Y7_N6
+A1L18 = pwm_clk $ (!cycles[1]);
+
+
+--cycles[0] is cycles[0] at LCFF_X27_Y7_N19
+cycles[0] = DFFEAS(A1L12, GLOBAL(A1L3),  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L11 is cycles~0 at LCCOMB_X27_Y7_N0
+A1L11 = (!cycles[0]) # (!cycles[1]);
+
+
+--A1L12 is cycles~1 at LCCOMB_X27_Y7_N18
+A1L12 = (!cycles[0] & cycles[1]);
+
+
+--pwm_out is pwm_out at PIN_28
+--operation mode is output
+
+pwm_out = OUTPUT(C1_pwm);
+
+
+--count[0] is count[0] at PIN_26
+--operation mode is output
+
+count[0] = OUTPUT(C1_count[0]);
+
+
+--count[1] is count[1] at PIN_24
+--operation mode is output
+
+count[1] = OUTPUT(!C1_count[1]);
+
+
+--count[2] is count[2] at PIN_25
+--operation mode is output
+
+count[2] = OUTPUT(!C1_count[2]);
+
+
+--duty[1] is duty[1] at PIN_27
+--operation mode is input
+
+duty[1] = INPUT();
+
+
+--duty[2] is duty[2] at PIN_18
+--operation mode is input
+
+duty[2] = INPUT();
+
+
+--duty[0] is duty[0] at PIN_21
+--operation mode is input
+
+duty[0] = INPUT();
+
+
+--clk is clk at PIN_17
+--operation mode is input
+
+clk = INPUT();
+
+
+
+
+
+--A1L19 is pwm_clk~clkctrl at CLKCTRL_G5
+A1L19 = cycloneii_clkctrl(.INCLK[0] = pwm_clk) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+
+--A1L3 is clk~clkctrl at CLKCTRL_G2
+A1L3 = cycloneii_clkctrl(.INCLK[0] = clk) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+
+--C1L5 is pwm:pwm|count[1]~feeder at LCCOMB_X1_Y5_N4
+C1L5 = C1L8;
+
+
+--C1L7 is pwm:pwm|count[2]~feeder at LCCOMB_X1_Y5_N26
+C1L7 = C1L9;
+
+
+--C1L3 is pwm:pwm|count[0]~feeder at LCCOMB_X1_Y5_N14
+C1L3 = C1L10;
+
+

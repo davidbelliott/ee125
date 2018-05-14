@@ -1,0 +1,27 @@
+|pwm_demo
+clk => pwm_clk.CLK
+clk => cycles[0].CLK
+clk => cycles[1].CLK
+duty[0] => pwm:pwm.duty[0]
+duty[1] => pwm:pwm.duty[1]
+duty[2] => pwm:pwm.duty[2]
+pwm_out <= pwm:pwm.pwm
+count[0] <= pwm:pwm.count_vec[0]
+count[1] <= pwm:pwm.count_vec[1]
+count[2] <= pwm:pwm.count_vec[2]
+
+
+|pwm_demo|pwm:pwm
+duty[0] => Equal2.IN5
+duty[1] => Equal2.IN4
+duty[2] => Equal2.IN3
+pwm_clk => pwm~reg0.CLK
+pwm_clk => count[0].CLK
+pwm_clk => count[1].CLK
+pwm_clk => count[2].CLK
+pwm <= pwm~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count_vec[0] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
+count_vec[1] <= count[1].DB_MAX_OUTPUT_PORT_TYPE
+count_vec[2] <= count[2].DB_MAX_OUTPUT_PORT_TYPE
+
+

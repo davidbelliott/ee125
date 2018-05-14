@@ -1,0 +1,117 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--pwm_out is pwm_out
+pwm_out = OUTPUT(B1_pwm);
+
+
+--count[0] is count[0]
+count[0] = OUTPUT(B1_count[0]);
+
+
+--count[1] is count[1]
+count[1] = OUTPUT(B1L4);
+
+
+--count[2] is count[2]
+count[2] = OUTPUT(B1L6);
+
+
+--B1_pwm is pwm:pwm|pwm
+B1_pwm = DFFEAS(B1L13, pwm_clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1_count[0] is pwm:pwm|count[0]
+B1_count[0] = DFFEAS(B1L9, pwm_clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1_count[1] is pwm:pwm|count[1]
+B1_count[1] = DFFEAS(B1L7, pwm_clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1_count[2] is pwm:pwm|count[2]
+B1_count[2] = DFFEAS(B1L8, pwm_clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1L12 is pwm:pwm|pwm~0
+B1L12 = (B1_pwm) # ((!B1_count[1] & !B1_count[2]));
+
+
+--duty[1] is duty[1]
+duty[1] = INPUT();
+
+
+--B1L7 is pwm:pwm|count~0
+B1L7 = (B1_count[0] & (!B1_count[1])) # (!B1_count[0] & ((B1_count[1]) # (!B1_count[2])));
+
+
+--duty[2] is duty[2]
+duty[2] = INPUT();
+
+
+--B1L8 is pwm:pwm|count~1
+B1L8 = (B1_count[1] & ((B1_count[2]))) # (!B1_count[1] & ((!B1_count[2]) # (!B1_count[0])));
+
+
+--B1L9 is pwm:pwm|count~2
+B1L9 = (!B1_count[0] & ((B1_count[1]) # (B1_count[2])));
+
+
+--duty[0] is duty[0]
+duty[0] = INPUT();
+
+
+--B1L10 is pwm:pwm|Equal2~0
+B1L10 = (duty[2] & (!B1L8 & (B1L9 $ (!duty[0])))) # (!duty[2] & (B1L8 & (B1L9 $ (!duty[0]))));
+
+
+--B1L13 is pwm:pwm|pwm~1
+B1L13 = (B1L12 & ((duty[1] $ (!B1L7)) # (!B1L10)));
+
+
+--pwm_clk is pwm_clk
+pwm_clk = DFFEAS(A1L16, clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--cycles[1] is cycles[1]
+cycles[1] = DFFEAS(A1L9, clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L16 is pwm_clk~0
+A1L16 = pwm_clk $ (!cycles[1]);
+
+
+--clk is clk
+clk = INPUT();
+
+
+--cycles[0] is cycles[0]
+cycles[0] = DFFEAS(A1L10, clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L9 is cycles~0
+A1L9 = (!cycles[0]) # (!cycles[1]);
+
+
+--A1L10 is cycles~1
+A1L10 = (!cycles[0] & cycles[1]);
+
+
+--B1L4 is pwm:pwm|count[1]~_wirecell
+B1L4 = !B1_count[1];
+
+
+--B1L6 is pwm:pwm|count[2]~_wirecell
+B1L6 = !B1_count[2];
+
+
