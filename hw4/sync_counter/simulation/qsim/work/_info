@@ -8,7 +8,7 @@ Z1 !s100 ^]XImlXNK>:S2k^c`i>210
 Z2 I515ckaUEQfQmedhF3N3HY0
 Z3 VK0h1`J[2b^^BBhB383W=W3
 Z4 dD:\Google Drive\School\Caltech\ee125_shared\ee125\hw4\sync_counter\simulation\qsim
-Z5 w1526280542
+Z5 w1526281753
 Z6 8sync_counter.vo
 Z7 Fsync_counter.vo
 L0 31
@@ -19,7 +19,7 @@ Z9 !s90 -work|work|sync_counter.vo|
 Z10 o-work work -O0
 !i10b 1
 !s85 0
-Z11 !s108 1526280543.351000
+Z11 !s108 1526281754.248000
 Z12 !s107 sync_counter.vo|
 !s101 -O0
 vsync_counter_vlg_check_tst
@@ -28,7 +28,7 @@ Z13 !s100 YAeGCRmoKMN:5MP_NmAWI1
 Z14 I;miCQC]^<S3I??dATBWMK0
 Z15 VNPS@aikzdM>d=@aaQ?[Jf0
 R4
-Z16 w1526280541
+Z16 w1526281751
 Z17 8sync_counter.vt
 Z18 Fsync_counter.vt
 L0 61
@@ -36,7 +36,7 @@ R8
 r1
 !s85 0
 31
-Z19 !s108 1526280543.608000
+Z19 !s108 1526281754.550000
 Z20 !s107 sync_counter.vt|
 Z21 !s90 -work|work|sync_counter.vt|
 !s101 -O0
@@ -62,8 +62,8 @@ R21
 R10
 vsync_counter_vlg_vec_tst
 !i10b 1
-!s100 PMZT>kofIKaSW]?2MLmoJ0
-IBoBDBKSgd7KVS?HT2k2kF3
+!s100 2f;@E2ag<jR9JoQVNdl?42
+IKTWR4<i6ZF[SZ9aWLEHZ<2
 Z25 VO3?4@lbJC;WLHoL58n=5K2
 R4
 R16

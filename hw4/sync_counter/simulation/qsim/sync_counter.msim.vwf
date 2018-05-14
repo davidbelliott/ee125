@@ -307,11 +307,7 @@ TRANSITION_LIST("sync_counter_vlg_vec_tst|a")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 480.0;
-		LEVEL 0 FOR 120.0;
-		LEVEL 1 FOR 120.0;
-		LEVEL 0 FOR 120.0;
-		LEVEL 1 FOR 160.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -320,9 +316,7 @@ TRANSITION_LIST("sync_counter_vlg_vec_tst|b")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 600.0;
-		LEVEL 0 FOR 240.0;
-		LEVEL 1 FOR 160.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -375,7 +369,8 @@ TRANSITION_LIST("sync_counter_vlg_vec_tst|q_vec[3]")
 		REPEAT = 1;
 		LEVEL X FOR 3.477;
 		LEVEL 0 FOR 452.595;
-		LEVEL 1 FOR 543.928;
+		LEVEL 1 FOR 480.0;
+		LEVEL 0 FOR 63.928;
 	}
 }
 
@@ -387,7 +382,9 @@ TRANSITION_LIST("sync_counter_vlg_vec_tst|q_vec[2]")
 		LEVEL X FOR 3.178;
 		LEVEL 0 FOR 212.595;
 		LEVEL 1 FOR 240.0;
-		LEVEL 0 FOR 544.227;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 240.0;
+		LEVEL 0 FOR 64.227;
 	}
 }
 
@@ -401,8 +398,11 @@ TRANSITION_LIST("sync_counter_vlg_vec_tst|q_vec[1]")
 		LEVEL 1 FOR 120.0;
 		LEVEL 0 FOR 120.0;
 		LEVEL 1 FOR 120.0;
-		LEVEL 0 FOR 480.0;
-		LEVEL 1 FOR 64.239;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 64.239;
 	}
 }
 
@@ -420,7 +420,13 @@ TRANSITION_LIST("sync_counter_vlg_vec_tst|q_vec[0]")
 		LEVEL 1 FOR 60.0;
 		LEVEL 0 FOR 60.0;
 		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 420.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 60.0;
 		LEVEL 1 FOR 60.0;
 		LEVEL 0 FOR 60.0;
 		LEVEL 1 FOR 4.22;
@@ -528,9 +534,7 @@ TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|b~combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 600.979;
-		LEVEL 0 FOR 240.0;
-		LEVEL 1 FOR 159.021;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -624,11 +628,7 @@ TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|a~combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 480.852;
-		LEVEL 0 FOR 120.0;
-		LEVEL 1 FOR 120.0;
-		LEVEL 0 FOR 120.0;
-		LEVEL 1 FOR 159.148;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -646,9 +646,13 @@ TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|cell|q~0_combout")
 		LEVEL 0 FOR 60.0;
 		LEVEL 1 FOR 60.0;
 		LEVEL 0 FOR 60.0;
-		LEVEL 1 FOR 32.85;
-		LEVEL 0 FOR 360.0;
-		LEVEL 1 FOR 27.15;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 60.0;
 		LEVEL 0 FOR 60.0;
 		LEVEL 1 FOR 60.0;
 		LEVEL 0 FOR 7.082;
@@ -668,7 +672,13 @@ TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|cell|q~regout")
 		LEVEL 1 FOR 60.0;
 		LEVEL 0 FOR 60.0;
 		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 420.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 60.0;
 		LEVEL 1 FOR 60.0;
 		LEVEL 0 FOR 60.0;
 		LEVEL 1 FOR 7.405;
@@ -693,11 +703,20 @@ TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|gen:1:cells|q~0_combout")
 		LEVEL 1 FOR 60.0;
 		LEVEL 0 FOR 59.681;
 		LEVEL 1 FOR 0.319;
-		LEVEL 0 FOR 420.0;
+		LEVEL 0 FOR 60.0;
 		LEVEL 1 FOR 59.681;
 		LEVEL 0 FOR 0.319;
 		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 6.763;
+		LEVEL 0 FOR 59.681;
+		LEVEL 1 FOR 0.319;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 59.681;
+		LEVEL 0 FOR 0.319;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 59.681;
+		LEVEL 1 FOR 0.319;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 6.763;
 	}
 }
 
@@ -710,8 +729,11 @@ TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|gen:1:cells|q~regout")
 		LEVEL 1 FOR 120.0;
 		LEVEL 0 FOR 120.0;
 		LEVEL 1 FOR 120.0;
-		LEVEL 0 FOR 480.0;
-		LEVEL 1 FOR 67.405;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 67.405;
 	}
 }
 
@@ -725,8 +747,11 @@ TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|gen:2:cells|x~combout")
 		LEVEL 1 FOR 59.867;
 		LEVEL 0 FOR 180.133;
 		LEVEL 1 FOR 59.867;
-		LEVEL 0 FOR 540.133;
-		LEVEL 1 FOR 6.816;
+		LEVEL 0 FOR 180.133;
+		LEVEL 1 FOR 59.867;
+		LEVEL 0 FOR 180.133;
+		LEVEL 1 FOR 59.867;
+		LEVEL 0 FOR 66.949;
 	}
 }
 
@@ -742,8 +767,13 @@ TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|gen:2:cells|q~0_combout")
 		LEVEL 1 FOR 180.133;
 		LEVEL 0 FOR 59.339;
 		LEVEL 1 FOR 0.528;
-		LEVEL 0 FOR 540.133;
-		LEVEL 1 FOR 6.421;
+		LEVEL 0 FOR 180.133;
+		LEVEL 1 FOR 59.339;
+		LEVEL 0 FOR 0.528;
+		LEVEL 1 FOR 180.133;
+		LEVEL 0 FOR 59.339;
+		LEVEL 1 FOR 0.528;
+		LEVEL 0 FOR 66.554;
 	}
 }
 
@@ -754,7 +784,9 @@ TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|gen:2:cells|q~regout")
 		REPEAT = 1;
 		LEVEL 0 FOR 212.595;
 		LEVEL 1 FOR 240.0;
-		LEVEL 0 FOR 547.405;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 240.0;
+		LEVEL 0 FOR 67.405;
 	}
 }
 
@@ -767,7 +799,10 @@ TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|gen:3:cells|q~0_combout")
 		LEVEL 0 FOR 392.671;
 		LEVEL 1 FOR 59.338;
 		LEVEL 0 FOR 0.586;
-		LEVEL 1 FOR 546.496;
+		LEVEL 1 FOR 420.076;
+		LEVEL 0 FOR 59.338;
+		LEVEL 1 FOR 0.586;
+		LEVEL 0 FOR 66.496;
 	}
 }
 
@@ -777,7 +812,8 @@ TRANSITION_LIST("sync_counter_vlg_vec_tst|i1|gen:3:cells|q~regout")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 452.595;
-		LEVEL 1 FOR 547.405;
+		LEVEL 1 FOR 480.0;
+		LEVEL 0 FOR 67.405;
 	}
 }
 

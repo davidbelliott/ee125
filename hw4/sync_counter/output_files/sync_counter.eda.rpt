@@ -1,5 +1,5 @@
 EDA Netlist Writer report for sync_counter
-Sun May 13 23:49:02 2018
+Mon May 14 00:09:13 2018
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun May 13 23:49:02 2018 ;
+; EDA Netlist Writer Status ; Successful - Mon May 14 00:09:13 2018 ;
 ; Revision Name             ; sync_counter                          ;
 ; Top-level Entity Name     ; sync_counter                          ;
 ; Family                    ; Cyclone II                            ;
@@ -84,12 +84,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun May 13 23:49:01 2018
+    Info: Processing started: Mon May 14 00:09:12 2018
 Info: Command: quartus_eda --functional=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog sync_counter -c sync_counter
 Info (204026): Generated files "sync_counter.vo", "sync_counter_fast.vo", "sync_counter_v.sdo" and "sync_counter_v_fast.sdo" in directory "D:/Google Drive/School/Caltech/ee125_shared/ee125/hw4/sync_counter/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 32-bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 385 megabytes
-    Info: Processing ended: Sun May 13 23:49:02 2018
+    Info: Processing ended: Mon May 14 00:09:13 2018
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
