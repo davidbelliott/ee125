@@ -547,9 +547,9 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|x[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 560.0;
+		LEVEL 0 FOR 640.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 360.0;
+		LEVEL 0 FOR 280.0;
 	}
 }
 
@@ -559,10 +559,10 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|x[6]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 400.0;
-		LEVEL 1 FOR 80.0;
+		LEVEL 1 FOR 160.0;
 		LEVEL 0 FOR 80.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 360.0;
+		LEVEL 0 FOR 280.0;
 	}
 }
 
@@ -573,9 +573,9 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|x[5]")
 		REPEAT = 1;
 		LEVEL 0 FOR 320.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 80.0;
+		LEVEL 0 FOR 160.0;
 		LEVEL 1 FOR 160.0;
-		LEVEL 0 FOR 360.0;
+		LEVEL 0 FOR 280.0;
 	}
 }
 
@@ -586,9 +586,9 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|x[4]")
 		REPEAT = 1;
 		LEVEL 0 FOR 320.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 160.0;
+		LEVEL 0 FOR 240.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 360.0;
+		LEVEL 0 FOR 280.0;
 	}
 }
 
@@ -599,9 +599,9 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|x[3]")
 		REPEAT = 1;
 		LEVEL 0 FOR 320.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 160.0;
+		LEVEL 0 FOR 240.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 360.0;
+		LEVEL 0 FOR 280.0;
 	}
 }
 
@@ -612,9 +612,9 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|x[2]")
 		REPEAT = 1;
 		LEVEL 0 FOR 240.0;
 		LEVEL 1 FOR 160.0;
-		LEVEL 0 FOR 80.0;
+		LEVEL 0 FOR 160.0;
 		LEVEL 1 FOR 160.0;
-		LEVEL 0 FOR 360.0;
+		LEVEL 0 FOR 280.0;
 	}
 }
 
@@ -627,9 +627,9 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|x[1]")
 		LEVEL 1 FOR 160.0;
 		LEVEL 0 FOR 80.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 160.0;
+		LEVEL 0 FOR 240.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 360.0;
+		LEVEL 0 FOR 280.0;
 	}
 }
 
@@ -643,9 +643,11 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|x[0]")
 		LEVEL 1 FOR 80.0;
 		LEVEL 0 FOR 80.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 160.0;
+		LEVEL 0 FOR 80.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 360.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 280.0;
 	}
 }
 
@@ -655,9 +657,9 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|y[3]")
 	{
 		REPEAT = 1;
 		LEVEL X FOR 9.581;
-		LEVEL 0 FOR 560.852;
+		LEVEL 0 FOR 640.852;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 349.567;
+		LEVEL 0 FOR 269.567;
 	}
 }
 
@@ -670,8 +672,8 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|y[2]")
 		LEVEL 0 FOR 316.535;
 		LEVEL 1 FOR 80.365;
 		LEVEL 0 FOR 4.019;
-		LEVEL 1 FOR 158.186;
-		LEVEL 0 FOR 428.925;
+		LEVEL 1 FOR 238.186;
+		LEVEL 0 FOR 348.925;
 	}
 }
 
@@ -682,8 +684,8 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|y[1]")
 		REPEAT = 1;
 		LEVEL X FOR 11.733;
 		LEVEL 0 FOR 160.931;
-		LEVEL 1 FOR 399.026;
-		LEVEL 0 FOR 428.31;
+		LEVEL 1 FOR 479.026;
+		LEVEL 0 FOR 348.31;
 	}
 }
 
@@ -697,9 +699,9 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|y[0]")
 		LEVEL 1 FOR 79.922;
 		LEVEL 0 FOR 75.656;
 		LEVEL 1 FOR 5.44;
-		LEVEL 0 FOR 234.869;
-		LEVEL 1 FOR 3.785;
-		LEVEL 0 FOR 507.964;
+		LEVEL 0 FOR 238.915;
+		LEVEL 1 FOR 79.739;
+		LEVEL 0 FOR 427.964;
 	}
 }
 
@@ -716,7 +718,8 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|sampler")
 		LEVEL 0 FOR 80.0;
 		LEVEL 1 FOR 80.0;
 		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 360.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 280.0;
 	}
 }
 
@@ -782,9 +785,9 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|ceil_log2~5_combout")
 		LEVEL X FOR 1.41;
 		LEVEL 1 FOR 320.989;
 		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 160.0;
+		LEVEL 1 FOR 240.0;
 		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 357.601;
+		LEVEL 1 FOR 277.601;
 	}
 }
 
@@ -795,9 +798,9 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|LessThan5~0_combout")
 		REPEAT = 1;
 		LEVEL X FOR 5.933;
 		LEVEL 1 FOR 400.86;
-		LEVEL 0 FOR 75.776;
-		LEVEL 1 FOR 164.224;
-		LEVEL 0 FOR 353.207;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 240.0;
+		LEVEL 0 FOR 273.207;
 	}
 }
 
@@ -808,8 +811,8 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|ceil_log2~9_combout")
 		REPEAT = 1;
 		LEVEL X FOR 5.866;
 		LEVEL 0 FOR 80.85;
-		LEVEL 1 FOR 560.0;
-		LEVEL 0 FOR 353.284;
+		LEVEL 1 FOR 640.0;
+		LEVEL 0 FOR 273.284;
 	}
 }
 
@@ -822,8 +825,8 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|ceil_log2~8_combout")
 		LEVEL 1 FOR 316.658;
 		LEVEL 0 FOR 80.305;
 		LEVEL 1 FOR 3.889;
-		LEVEL 0 FOR 240.0;
-		LEVEL 1 FOR 353.614;
+		LEVEL 0 FOR 320.0;
+		LEVEL 1 FOR 273.614;
 	}
 }
 
@@ -836,9 +839,11 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|ceil_log2~3_combout")
 		LEVEL 0 FOR 240.86;
 		LEVEL 1 FOR 79.298;
 		LEVEL 0 FOR 80.702;
-		LEVEL 1 FOR 159.298;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 79.298;
 		LEVEL 0 FOR 80.702;
-		LEVEL 1 FOR 353.162;
+		LEVEL 1 FOR 273.162;
 	}
 }
 
@@ -851,8 +856,8 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|ceil_log2~13_combout")
 		LEVEL 0 FOR 316.468;
 		LEVEL 1 FOR 80.495;
 		LEVEL 0 FOR 3.889;
-		LEVEL 1 FOR 240.0;
-		LEVEL 0 FOR 353.071;
+		LEVEL 1 FOR 320.0;
+		LEVEL 0 FOR 273.071;
 	}
 }
 
@@ -865,8 +870,8 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|ceil_log2~12_combout")
 		LEVEL 1 FOR 316.654;
 		LEVEL 0 FOR 81.105;
 		LEVEL 1 FOR 3.093;
-		LEVEL 0 FOR 240.0;
-		LEVEL 1 FOR 353.61;
+		LEVEL 0 FOR 320.0;
+		LEVEL 1 FOR 273.61;
 	}
 }
 
@@ -878,9 +883,9 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|ceil_log2~2_combout")
 		LEVEL X FOR 1.516;
 		LEVEL 1 FOR 241.01;
 		LEVEL 0 FOR 160.0;
-		LEVEL 1 FOR 79.667;
+		LEVEL 1 FOR 159.667;
 		LEVEL 0 FOR 160.333;
-		LEVEL 1 FOR 357.474;
+		LEVEL 1 FOR 277.474;
 	}
 }
 
@@ -891,8 +896,8 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|ceil_log2~10_combout")
 		REPEAT = 1;
 		LEVEL X FOR 5.863;
 		LEVEL 0 FOR 160.931;
-		LEVEL 1 FOR 479.919;
-		LEVEL 0 FOR 353.287;
+		LEVEL 1 FOR 559.919;
+		LEVEL 0 FOR 273.287;
 	}
 }
 
@@ -907,8 +912,8 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|LessThan2~0_combout")
 		LEVEL 0 FOR 74.532;
 		LEVEL 1 FOR 80.496;
 		LEVEL 0 FOR 3.889;
-		LEVEL 1 FOR 240.0;
-		LEVEL 0 FOR 353.071;
+		LEVEL 1 FOR 320.0;
+		LEVEL 0 FOR 273.071;
 	}
 }
 
@@ -925,8 +930,8 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|ceil_log2~11_combout")
 		LEVEL 0 FOR 74.532;
 		LEVEL 1 FOR 80.496;
 		LEVEL 0 FOR 3.889;
-		LEVEL 1 FOR 239.906;
-		LEVEL 0 FOR 352.009;
+		LEVEL 1 FOR 319.906;
+		LEVEL 0 FOR 272.009;
 	}
 }
 
@@ -938,11 +943,11 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|ceil_log2~21_combout")
 		LEVEL X FOR 5.678;
 		LEVEL 0 FOR 400.852;
 		LEVEL 1 FOR 0.261;
-		LEVEL 0 FOR 75.954;
-		LEVEL 1 FOR 3.785;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 79.739;
 		LEVEL 0 FOR 80.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 353.47;
+		LEVEL 0 FOR 273.47;
 	}
 }
 
@@ -955,8 +960,8 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|LessThan5~1_combout")
 		LEVEL 0 FOR 316.964;
 		LEVEL 1 FOR 80.0;
 		LEVEL 0 FOR 3.888;
-		LEVEL 1 FOR 240.0;
-		LEVEL 0 FOR 353.646;
+		LEVEL 1 FOR 320.0;
+		LEVEL 0 FOR 273.646;
 	}
 }
 
@@ -980,9 +985,9 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|ceil_log2~7_combout")
 		LEVEL 1 FOR 0.292;
 		LEVEL 0 FOR 80.0;
 		LEVEL 1 FOR 0.815;
-		LEVEL 0 FOR 79.398;
-		LEVEL 1 FOR 3.785;
-		LEVEL 0 FOR 512.806;
+		LEVEL 0 FOR 83.444;
+		LEVEL 1 FOR 79.739;
+		LEVEL 0 FOR 432.806;
 	}
 }
 
@@ -996,9 +1001,9 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|ceil_log2~14_combout")
 		LEVEL 1 FOR 79.922;
 		LEVEL 0 FOR 75.656;
 		LEVEL 1 FOR 5.44;
-		LEVEL 0 FOR 234.869;
-		LEVEL 1 FOR 3.785;
-		LEVEL 0 FOR 511.663;
+		LEVEL 0 FOR 238.915;
+		LEVEL 1 FOR 79.739;
+		LEVEL 0 FOR 431.663;
 	}
 }
 
@@ -1025,8 +1030,8 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|ceil_log2~6_combout")
 		LEVEL 0 FOR 316.662;
 		LEVEL 1 FOR 81.107;
 		LEVEL 0 FOR 3.083;
-		LEVEL 1 FOR 160.007;
-		LEVEL 0 FOR 433.61;
+		LEVEL 1 FOR 240.007;
+		LEVEL 0 FOR 353.61;
 	}
 }
 
@@ -1039,8 +1044,8 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|ceil_log2~15_combout")
 		LEVEL 0 FOR 316.964;
 		LEVEL 1 FOR 80.0;
 		LEVEL 0 FOR 3.608;
-		LEVEL 1 FOR 160.007;
-		LEVEL 0 FOR 433.207;
+		LEVEL 1 FOR 240.007;
+		LEVEL 0 FOR 353.207;
 	}
 }
 
@@ -1057,8 +1062,8 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|ceil_log2~17_combout")
 		LEVEL 0 FOR 0.532;
 		LEVEL 1 FOR 2.805;
 		LEVEL 0 FOR 0.271;
-		LEVEL 1 FOR 160.007;
-		LEVEL 0 FOR 432.062;
+		LEVEL 1 FOR 240.007;
+		LEVEL 0 FOR 352.062;
 	}
 }
 
@@ -1071,10 +1076,10 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|ceil_log2~18_combout")
 		LEVEL 0 FOR 316.535;
 		LEVEL 1 FOR 80.365;
 		LEVEL 0 FOR 4.019;
-		LEVEL 1 FOR 158.186;
+		LEVEL 1 FOR 238.186;
 		LEVEL 0 FOR 80.0;
 		LEVEL 1 FOR 1.745;
-		LEVEL 0 FOR 351.853;
+		LEVEL 0 FOR 271.853;
 	}
 }
 
@@ -1087,10 +1092,10 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|ceil_log2~19_combout")
 		LEVEL 0 FOR 316.535;
 		LEVEL 1 FOR 80.365;
 		LEVEL 0 FOR 4.019;
-		LEVEL 1 FOR 158.186;
+		LEVEL 1 FOR 238.186;
 		LEVEL 0 FOR 80.0;
 		LEVEL 1 FOR 1.745;
-		LEVEL 0 FOR 351.192;
+		LEVEL 0 FOR 271.192;
 	}
 }
 
@@ -1100,9 +1105,9 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|ceil_log2~20_combout")
 	{
 		REPEAT = 1;
 		LEVEL X FOR 5.438;
-		LEVEL 1 FOR 560.852;
+		LEVEL 1 FOR 640.852;
 		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 353.71;
+		LEVEL 1 FOR 273.71;
 	}
 }
 
@@ -1111,9 +1116,9 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|x~combout[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 560.852;
+		LEVEL 0 FOR 640.852;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 359.148;
+		LEVEL 0 FOR 279.148;
 	}
 }
 
@@ -1123,10 +1128,10 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|x~combout[6]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 400.852;
-		LEVEL 1 FOR 80.0;
+		LEVEL 1 FOR 160.0;
 		LEVEL 0 FOR 80.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 359.148;
+		LEVEL 0 FOR 279.148;
 	}
 }
 
@@ -1137,9 +1142,9 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|x~combout[5]")
 		REPEAT = 1;
 		LEVEL 0 FOR 320.989;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 80.0;
+		LEVEL 0 FOR 160.0;
 		LEVEL 1 FOR 160.0;
-		LEVEL 0 FOR 359.011;
+		LEVEL 0 FOR 279.011;
 	}
 }
 
@@ -1150,9 +1155,9 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|x~combout[4]")
 		REPEAT = 1;
 		LEVEL 0 FOR 320.989;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 160.0;
+		LEVEL 0 FOR 240.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 359.011;
+		LEVEL 0 FOR 279.011;
 	}
 }
 
@@ -1163,9 +1168,9 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|x~combout[3]")
 		REPEAT = 1;
 		LEVEL 0 FOR 320.979;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 160.0;
+		LEVEL 0 FOR 240.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 359.021;
+		LEVEL 0 FOR 279.021;
 	}
 }
 
@@ -1176,9 +1181,9 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|x~combout[2]")
 		REPEAT = 1;
 		LEVEL 0 FOR 240.989;
 		LEVEL 1 FOR 160.0;
-		LEVEL 0 FOR 80.0;
+		LEVEL 0 FOR 160.0;
 		LEVEL 1 FOR 160.0;
-		LEVEL 0 FOR 359.011;
+		LEVEL 0 FOR 279.011;
 	}
 }
 
@@ -1191,9 +1196,9 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|x~combout[1]")
 		LEVEL 1 FOR 160.0;
 		LEVEL 0 FOR 80.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 160.0;
+		LEVEL 0 FOR 240.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 359.15;
+		LEVEL 0 FOR 279.15;
 	}
 }
 
@@ -1207,9 +1212,11 @@ TRANSITION_LIST("log2_prob_vlg_vec_tst|i1|x~combout[0]")
 		LEVEL 1 FOR 80.0;
 		LEVEL 0 FOR 80.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 160.0;
+		LEVEL 0 FOR 80.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 359.14;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 279.14;
 	}
 }
 

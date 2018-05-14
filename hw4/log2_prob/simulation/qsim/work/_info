@@ -4,78 +4,78 @@ K3
 cModel Technology
 Z0 dD:\Google Drive\School\Caltech\ee125_shared\ee125\hw4\log2_prob\simulation\qsim
 vlog2_prob
-Z1 IQl5R_8lH4b_H2;YPJ5X;b1
-Z2 VTh`^k97oYBHKzl]KgZ=d<3
-Z3 dD:\Google Drive\School\Caltech\ee125_shared\ee125\hw4\log2_prob\simulation\qsim
-Z4 w1526255382
-Z5 8log2_prob.vo
-Z6 Flog2_prob.vo
+Z1 !s100 n:fLm]6Nz0@?bNjkCbadj0
+Z2 IQl5R_8lH4b_H2;YPJ5X;b1
+Z3 VTh`^k97oYBHKzl]KgZ=d<3
+Z4 dD:\Google Drive\School\Caltech\ee125_shared\ee125\hw4\log2_prob\simulation\qsim
+Z5 w1526276273
+Z6 8log2_prob.vo
+Z7 Flog2_prob.vo
 L0 31
-Z7 OV;L;10.1d;51
+Z8 OV;L;10.1d;51
 r1
 31
-Z8 !s90 -work|work|log2_prob.vo|
-Z9 o-work work -O0
+Z9 !s90 -work|work|log2_prob.vo|
+Z10 o-work work -O0
 !i10b 1
-Z10 !s100 n:fLm]6Nz0@?bNjkCbadj0
 !s85 0
-Z11 !s108 1526255384.665000
+Z11 !s108 1526276274.738000
 Z12 !s107 log2_prob.vo|
 !s101 -O0
 vlog2_prob_vlg_check_tst
 !i10b 1
-!s100 k4NYk?4z853lD8B;Yk7CK3
-I?BDH0Y;zD5d;;Y@[md=H>3
-V8]j6:VJM<FWmZBelclVNh2
-R3
-Z13 w1526255381
-Z14 8log2_prob.vt
-Z15 Flog2_prob.vt
+Z13 !s100 k4NYk?4z853lD8B;Yk7CK3
+Z14 I?BDH0Y;zD5d;;Y@[md=H>3
+Z15 V8]j6:VJM<FWmZBelclVNh2
+R4
+Z16 w1526276272
+Z17 8log2_prob.vt
+Z18 Flog2_prob.vt
 L0 57
-R7
+R8
 r1
 !s85 0
 31
-Z16 !s108 1526255385.262000
-Z17 !s107 log2_prob.vt|
-Z18 !s90 -work|work|log2_prob.vt|
+Z19 !s108 1526276275.015000
+Z20 !s107 log2_prob.vt|
+Z21 !s90 -work|work|log2_prob.vt|
 !s101 -O0
-R9
+R10
 vlog2_prob_vlg_sample_tst
 !i10b 1
-Z19 !s100 35^B07`oozi6io5BgAV6l0
-Z20 Iif:Q6cbh[LK926TBP^ELB3
-Z21 VzgNN8zVf81fG:^Yg?`P6J3
-R3
-R13
-R14
-R15
-L0 29
-R7
-r1
-!s85 0
-31
+Z22 !s100 35^B07`oozi6io5BgAV6l0
+Z23 Iif:Q6cbh[LK926TBP^ELB3
+Z24 VzgNN8zVf81fG:^Yg?`P6J3
+R4
 R16
 R17
 R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
 !s101 -O0
-R9
+R10
 vlog2_prob_vlg_vec_tst
 !i10b 1
-!s100 `l9CYoX??_CNCZ_ie:Q481
-INngXP8k3JQjXH;H[WigeS2
-Z22 VD1[8@e9IQB7md7`RV6T[O3
-R3
-R13
-R14
-R15
-L0 205
-R7
-r1
-!s85 0
-31
+!s100 5`@3oh8hWV4lJ:F8Q9NQS1
+I[^z3[_^<a5VSdj8^SWG_h3
+Z25 VD1[8@e9IQB7md7`RV6T[O3
+R4
 R16
 R17
 R18
+Z26 L0 205
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
 !s101 -O0
-R9
+R10
