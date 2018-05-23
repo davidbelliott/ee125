@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\ee125\hw5\light_rotator\simulation\qsim
+vlight_rotator
+Z1 IOKzSQd?mFIbF>fBO^f=[U1
+Z2 VW9zn]VOl@KaNfjWn;mgn20
+Z3 dD:\ee125\hw5\light_rotator\simulation\qsim
+Z4 w1527053927
+Z5 8light_rotator.vo
+Z6 Flight_rotator.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 31^;eW9WdQ1B5_2^;TUaC3
+!s85 0
+Z10 !s108 1527053929.452000
+Z11 !s107 light_rotator.vo|
+Z12 !s90 -work|work|light_rotator.vo|
+!s101 -O0
+vlight_rotator_vlg_check_tst
+!i10b 1
+!s100 @ezUH2k9?HILgALiT4[_i0
+I7bkH9h>[<P3FjBmi7cAoP3
+VZ]bOn<Yo`i5ER3:MThgD31
+R3
+Z13 w1527053926
+Z14 8light_rotator.vt
+Z15 Flight_rotator.vt
+L0 65
+R7
+r1
+!s85 0
+31
+Z16 !s108 1527053929.769000
+Z17 !s107 light_rotator.vt|
+Z18 !s90 -work|work|light_rotator.vt|
+!s101 -O0
+R8
+vlight_rotator_vlg_sample_tst
+!i10b 1
+!s100 69aD4iJKN[RO]eA>f3Bb93
+I7EBOgmOM_zh0zzaY]O`>K2
+V[0>Yza:C`WIoh4gPM]Rbc3
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+vlight_rotator_vlg_vec_tst
+!i10b 1
+!s100 @ZPlhBc:9jP6@HBLRHb?R2
+Iz81Kl3z=Q?O9`1ji2][_@0
+VBbFA57M[fBXHM0RC=S^oC1
+R3
+R13
+R14
+R15
+L0 267
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8

@@ -1,0 +1,15 @@
+
+State Machine - |light_rotator|pr_state
+Name pr_state.FA pr_state.F pr_state.EF pr_state.E pr_state.DE pr_state.D pr_state.CD pr_state.C pr_state.BC pr_state.B pr_state.AB pr_state.A 
+pr_state.A 0 0 0 0 0 0 0 0 0 0 0 0 
+pr_state.AB 0 0 0 0 0 0 0 0 0 0 1 1 
+pr_state.B 0 0 0 0 0 0 0 0 0 1 0 1 
+pr_state.BC 0 0 0 0 0 0 0 0 1 0 0 1 
+pr_state.C 0 0 0 0 0 0 0 1 0 0 0 1 
+pr_state.CD 0 0 0 0 0 0 1 0 0 0 0 1 
+pr_state.D 0 0 0 0 0 1 0 0 0 0 0 1 
+pr_state.DE 0 0 0 0 1 0 0 0 0 0 0 1 
+pr_state.E 0 0 0 1 0 0 0 0 0 0 0 1 
+pr_state.EF 0 0 1 0 0 0 0 0 0 0 0 1 
+pr_state.F 0 1 0 0 0 0 0 0 0 0 0 1 
+pr_state.FA 1 0 0 0 0 0 0 0 0 0 0 1 
