@@ -1,0 +1,122 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+----------------------------------------------------------
+ENTITY vga IS
+GENERIC (
+7 Ha: INTEGER := 96; --Hpulse
+8 Hb: INTEGER := 144; --Hpulse+HBP
+9 Hc: INTEGER := 784; --Hpulse+HBP+Hactive
+10 Hd: INTEGER := 800; --Hpulse+HBP+Hactive+HFP
+11 Va: INTEGER := 2; --Vpulse
+12 Vb: INTEGER := 35; --Vpulse+VBP
+13 Vc: INTEGER := 515; --Vpulse+VBP+Vactive
+432 Chapter 15
+
+14 Vd: INTEGER := 525); --Vpulse+VBP+Vactive+VFP
+15 PORT (
+16 clk: IN STD_LOGIC; --50MHz in our board
+17 red_switch, green_switch, blue_switch: IN STD_LOGIC;
+18 pixel_clk: BUFFER STD_LOGIC;
+19 Hsync, Vsync: BUFFER STD_LOGIC;
+20 R, G, B: OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+21 nblanck, nsync : OUT STD_LOGIC);
+22 END vga;
+23 ----------------------------------------------------------
+24 ARCHITECTURE vga OF vga IS
+25 SIGNAL Hactive, Vactive, dena: STD_LOGIC;
+26 BEGIN
+27 -------------------------------------------------------
+28 --Part 1: CONTROL GENERATOR
+29 -------------------------------------------------------
+30 --Static signals for DACs:
+31 nblanck <= '1'; --no direct blanking
+32 nsync <= '0'; --no sync on green
+33 --Create pixel clock (50MHz->25MHz):
+34 PROCESS (clk)
+35 BEGIN
+36 IF (clk'EVENT AND clk='1') THEN
+37 pixel_clk <= NOT pixel_clk;
+38 END IF;
+39 END PROCESS;
+40 --Horizontal signals generation:
+41 PROCESS (pixel_clk)
+42 VARIABLE Hcount: INTEGER RANGE 0 TO Hd;
+43 BEGIN
+44 IF (pixel_clk'EVENT AND pixel_clk='1') THEN
+45 Hcount := Hcount + 1;
+46 IF (Hcount=Ha) THEN
+47 Hsync <= '1';
+48 ELSIF (Hcount=Hb) THEN
+49 Hactive <= '1';
+50 ELSIF (Hcount=Hc) THEN
+51 Hactive <= '0';
+52 ELSIF (Hcount=Hd) THEN
+53 Hsync <= '0';
+54 Hcount := 0;
+55 END IF;
+56 END IF;
+VHDL Design of VGA Video Interfaces 433
+
+57 END PROCESS;
+58 --Vertical signals generation:
+59 PROCESS (Hsync)
+60 VARIABLE Vcount: INTEGER RANGE 0 TO Vd;
+61 BEGIN
+62 IF (Hsync'EVENT AND Hsync='0') THEN
+63 Vcount := Vcount + 1;
+64 IF (Vcount=Va) THEN
+65 Vsync <= '1';
+66 ELSIF (Vcount=Vb) THEN
+67 Vactive <= '1';
+68 ELSIF (Vcount=Vc) THEN
+69 Vactive <= '0';
+70 ELSIF (Vcount=Vd) THEN
+71 Vsync <= '0';
+72 Vcount := 0;
+73 END IF;
+74 END IF;
+75 END PROCESS;
+76 ---Display enable generation:
+77 dena <= Hactive AND Vactive;
+78 -------------------------------------------------------
+79 --Part 2: IMAGE GENERATOR
+80 -------------------------------------------------------
+81 PROCESS (Hsync, Vsync, Vactive, dena, red_switch,
+82 green_switch, blue_switch)
+83 VARIABLE line_counter: INTEGER RANGE 0 TO Vc;
+84 BEGIN
+85 IF (Vsync='0') THEN
+86 line_counter := 0;
+87 ELSIF (Hsync'EVENT AND Hsync='1') THEN
+88 IF (Vactive='1') THEN
+89 line_counter := line_counter + 1;
+90 END IF;
+91 END IF;
+92 IF (dena='1') THEN
+93 IF (line_counter=1) THEN
+94 R <= (OTHERS => '1');
+95 G <= (OTHERS => '0');
+96 B <= (OTHERS => '0');
+97 ELSIF (line_counter>1 AND line_counter<=3) THEN
+98 R <= (OTHERS => '0');
+99 G <= (OTHERS => '1');
+434 Chapter 15
+
+100 B <= (OTHERS => '0');
+101 ELSIF (line_counter>3 AND line_counter<=6) THEN
+102 R <= (OTHERS => '0');
+103 G <= (OTHERS => '0');
+104 B <= (OTHERS => '1');
+105 ELSE
+106 R <= (OTHERS => red_switch);
+107 G <= (OTHERS => green_switch);
+108 B <= (OTHERS => blue_switch);
+109 END IF;
+110 ELSE
+111 R <= (OTHERS => '0');
+112 G <= (OTHERS => '0');
+113 B <= (OTHERS => '0');
+114 END IF;
+115 END PROCESS;
+116 END vga;
+117 ----------------------------------------------------------
