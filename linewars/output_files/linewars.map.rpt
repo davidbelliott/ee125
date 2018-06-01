@@ -1,6 +1,6 @@
 Analysis & Synthesis report for linewars
-Thu May 31 19:56:46 2018
-Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+Thu May 31 22:24:08 2018
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -14,11 +14,12 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |vga
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Equations
- 13. Analysis & Synthesis Messages
+  9. Inverted Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |vga
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Equations
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -41,29 +42,29 @@ applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+-------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status         ; Successful - Thu May 31 19:56:46 2018      ;
-; Quartus II 64-Bit Version           ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
-; Revision Name                       ; linewars                                   ;
-; Top-level Entity Name               ; vga                                        ;
-; Family                              ; Cyclone V                                  ;
-; Logic utilization (in ALMs)         ; N/A                                        ;
-; Total registers                     ; 35                                         ;
-; Total pins                          ; 21                                         ;
-; Total virtual pins                  ; 0                                          ;
-; Total block memory bits             ; 0                                          ;
-; Total DSP Blocks                    ; 0                                          ;
-; Total HSSI RX PCSs                  ; 0                                          ;
-; Total HSSI PMA RX Deserializers     ; 0                                          ;
-; Total HSSI PMA RX ATT Deserializers ; 0                                          ;
-; Total HSSI TX PCSs                  ; 0                                          ;
-; Total HSSI PMA TX Serializers       ; 0                                          ;
-; Total HSSI PMA TX ATT Serializers   ; 0                                          ;
-; Total PLLs                          ; 0                                          ;
-; Total DLLs                          ; 0                                          ;
-+-------------------------------------+--------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                          ;
++-------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status         ; Successful - Thu May 31 22:24:08 2018           ;
+; Quartus II 32-bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                       ; linewars                                        ;
+; Top-level Entity Name               ; vga                                             ;
+; Family                              ; Cyclone V                                       ;
+; Logic utilization (in ALMs)         ; N/A                                             ;
+; Total registers                     ; 46                                              ;
+; Total pins                          ; 21                                              ;
+; Total virtual pins                  ; 0                                               ;
+; Total block memory bits             ; 0                                               ;
+; Total DSP Blocks                    ; 0                                               ;
+; Total HSSI RX PCSs                  ; 0                                               ;
+; Total HSSI PMA RX Deserializers     ; 0                                               ;
+; Total HSSI PMA RX ATT Deserializers ; 0                                               ;
+; Total HSSI TX PCSs                  ; 0                                               ;
+; Total HSSI PMA TX Serializers       ; 0                                               ;
+; Total HSSI PMA TX ATT Serializers   ; 0                                               ;
+; Total PLLs                          ; 0                                               ;
+; Total DLLs                          ; 0                                               ;
++-------------------------------------+-------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -164,13 +165,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                            ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                     ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
-; vga.vhd                          ; yes             ; User VHDL File  ; C:/Users/ellio/Documents/ee_125/linewars/vga.vhd ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                        ;
++----------------------------------+-----------------+-----------------+------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------+---------+
+; vga.vhd                          ; yes             ; User VHDL File  ; D:/ee125/linewars/vga.vhd    ;         ;
++----------------------------------+-----------------+-----------------+------------------------------+---------+
 
 
 +----------------------------------------------------------+
@@ -178,23 +179,23 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+------------+
 ; Resource                                    ; Usage      ;
 +---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 38         ;
+; Estimate of Logic utilization (ALMs needed) ; 53         ;
 ;                                             ;            ;
-; Combinational ALUT usage for logic          ; 62         ;
-;     -- 7 input functions                    ; 0          ;
+; Combinational ALUT usage for logic          ; 90         ;
+;     -- 7 input functions                    ; 2          ;
 ;     -- 6 input functions                    ; 13         ;
-;     -- 5 input functions                    ; 6          ;
+;     -- 5 input functions                    ; 8          ;
 ;     -- 4 input functions                    ; 6          ;
-;     -- <=3 input functions                  ; 37         ;
+;     -- <=3 input functions                  ; 61         ;
 ;                                             ;            ;
-; Dedicated logic registers                   ; 35         ;
+; Dedicated logic registers                   ; 46         ;
 ;                                             ;            ;
 ; I/O pins                                    ; 21         ;
 ; Total DSP Blocks                            ; 0          ;
 ; Maximum fan-out node                        ; Hsync~reg0 ;
-; Maximum fan-out                             ; 24         ;
-; Total fan-out                               ; 350        ;
-; Average fan-out                             ; 2.52       ;
+; Maximum fan-out                             ; 35         ;
+; Total fan-out                               ; 458        ;
+; Average fan-out                             ; 2.57       ;
 +---------------------------------------------+------------+
 
 
@@ -203,7 +204,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
-; |vga                       ; 62 (62)           ; 35 (35)      ; 0                 ; 0          ; 21   ; 0            ; |vga                ;              ;
+; |vga                       ; 90 (90)           ; 46 (46)      ; 0                 ; 0          ; 21   ; 0            ; |vga                ; work         ;
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -213,14 +214,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 35    ;
+; Total registers                              ; 46    ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 10    ;
+; Number of registers using Asynchronous Clear ; 21    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 10    ;
+; Number of registers using Clock Enable       ; 21    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; row[0]                                  ; 7       ;
+; row[4]                                  ; 4       ;
+; row[3]                                  ; 4       ;
+; row[1]                                  ; 4       ;
+; row[2]                                  ; 4       ;
+; row[6]                                  ; 4       ;
+; row[5]                                  ; 4       ;
+; row[10]                                 ; 3       ;
+; row[9]                                  ; 3       ;
+; row[8]                                  ; 3       ;
+; row[7]                                  ; 3       ;
+; Total number of inverted registers = 11 ;         ;
++-----------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------+
@@ -230,7 +251,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |vga|Hcount[9]             ;
 ; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |vga|Vcount[9]             ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |vga|G                     ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 15 LEs               ; 0 LEs                  ; No         ; |vga|R                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -263,16 +284,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------------------+
 ; Analysis & Synthesis Equations ;
 +--------------------------------+
-The equations can be found in C:/Users/ellio/Documents/ee_125/linewars/output_files/linewars.map.eqn.
+The equations can be found in D:/ee125/linewars/output_files/linewars.map.eqn.
 
 
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Thu May 31 19:56:44 2018
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu May 31 22:24:06 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off linewars -c linewars
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file vga.vhd
@@ -285,17 +306,13 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "red_switch"
-    Warning (15610): No output dependent on input pin "green_switch"
-    Warning (15610): No output dependent on input pin "blue_switch"
-Info (21057): Implemented 103 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 131 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 82 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 603 megabytes
-    Info: Processing ended: Thu May 31 19:56:46 2018
+    Info (21061): Implemented 110 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 436 megabytes
+    Info: Processing ended: Thu May 31 22:24:08 2018
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

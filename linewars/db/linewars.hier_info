@@ -1,8 +1,8 @@
 |vga
 clk => pixel_clk~reg0.CLK
-red_switch => ~NO_FANOUT~
-green_switch => ~NO_FANOUT~
-blue_switch => ~NO_FANOUT~
+red_switch => R.DATAB
+green_switch => G.DATAB
+blue_switch => B.DATAB
 pixel_clk << pixel_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Hsync << Hsync~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Vsync << Vsync~reg0.DB_MAX_OUTPUT_PORT_TYPE

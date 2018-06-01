@@ -26,20 +26,20 @@ A1L7 = CARRY(A1L7_adder_eqn);
 
 
 --A1L10 is Add0~9 at LABCELL_X20_Y44_N39
-A1L10_adder_eqn = ( GND ) + ( Hcount[3] ) + ( A1L15 );
+A1L10_adder_eqn = ( Hcount[3] ) + ( GND ) + ( A1L15 );
 A1L10 = SUM(A1L10_adder_eqn);
 
 --A1L11 is Add0~10 at LABCELL_X20_Y44_N39
-A1L11_adder_eqn = ( GND ) + ( Hcount[3] ) + ( A1L15 );
+A1L11_adder_eqn = ( Hcount[3] ) + ( GND ) + ( A1L15 );
 A1L11 = CARRY(A1L11_adder_eqn);
 
 
 --A1L14 is Add0~13 at LABCELL_X20_Y44_N36
-A1L14_adder_eqn = ( GND ) + ( Hcount[2] ) + ( A1L23 );
+A1L14_adder_eqn = ( Hcount[2] ) + ( GND ) + ( A1L23 );
 A1L14 = SUM(A1L14_adder_eqn);
 
 --A1L15 is Add0~14 at LABCELL_X20_Y44_N36
-A1L15_adder_eqn = ( GND ) + ( Hcount[2] ) + ( A1L23 );
+A1L15_adder_eqn = ( Hcount[2] ) + ( GND ) + ( A1L23 );
 A1L15 = CARRY(A1L15_adder_eqn);
 
 
@@ -53,11 +53,11 @@ A1L19 = CARRY(A1L19_adder_eqn);
 
 
 --A1L22 is Add0~21 at LABCELL_X20_Y44_N33
-A1L22_adder_eqn = ( GND ) + ( Hcount[1] ) + ( A1L19 );
+A1L22_adder_eqn = ( Hcount[1] ) + ( GND ) + ( A1L19 );
 A1L22 = SUM(A1L22_adder_eqn);
 
 --A1L23 is Add0~22 at LABCELL_X20_Y44_N33
-A1L23_adder_eqn = ( GND ) + ( Hcount[1] ) + ( A1L19 );
+A1L23_adder_eqn = ( Hcount[1] ) + ( GND ) + ( A1L19 );
 A1L23 = CARRY(A1L23_adder_eqn);
 
 
@@ -71,11 +71,11 @@ A1L27 = CARRY(A1L27_adder_eqn);
 
 
 --A1L30 is Add0~29 at LABCELL_X20_Y44_N48
-A1L30_adder_eqn = ( GND ) + ( Hcount[6] ) + ( A1L39 );
+A1L30_adder_eqn = ( Hcount[6] ) + ( GND ) + ( A1L39 );
 A1L30 = SUM(A1L30_adder_eqn);
 
 --A1L31 is Add0~30 at LABCELL_X20_Y44_N48
-A1L31_adder_eqn = ( GND ) + ( Hcount[6] ) + ( A1L39 );
+A1L31_adder_eqn = ( Hcount[6] ) + ( GND ) + ( A1L39 );
 A1L31 = CARRY(A1L31_adder_eqn);
 
 
@@ -97,664 +97,897 @@ A1L39_adder_eqn = ( Hcount[5] ) + ( GND ) + ( A1L35 );
 A1L39 = CARRY(A1L39_adder_eqn);
 
 
---A1L42 is Add1~1 at LABCELL_X20_Y43_N57
+--A1L42 is Add1~1 at LABCELL_X16_Y43_N57
 A1L42_adder_eqn = ( Vcount[9] ) + ( GND ) + ( A1L55 );
 A1L42 = SUM(A1L42_adder_eqn);
 
 
---A1L46 is Add1~5 at LABCELL_X20_Y43_N30
-A1L46_adder_eqn = ( VCC ) + ( Vcount[0] ) + ( !VCC );
+--A1L46 is Add1~5 at LABCELL_X16_Y43_N30
+A1L46_adder_eqn = ( Vcount[0] ) + ( VCC ) + ( !VCC );
 A1L46 = SUM(A1L46_adder_eqn);
 
---A1L47 is Add1~6 at LABCELL_X20_Y43_N30
-A1L47_adder_eqn = ( VCC ) + ( Vcount[0] ) + ( !VCC );
+--A1L47 is Add1~6 at LABCELL_X16_Y43_N30
+A1L47_adder_eqn = ( Vcount[0] ) + ( VCC ) + ( !VCC );
 A1L47 = CARRY(A1L47_adder_eqn);
 
 
---A1L50 is Add1~9 at LABCELL_X20_Y43_N45
+--A1L50 is Add1~9 at LABCELL_X16_Y43_N45
 A1L50_adder_eqn = ( Vcount[5] ) + ( GND ) + ( A1L63 );
 A1L50 = SUM(A1L50_adder_eqn);
 
---A1L51 is Add1~10 at LABCELL_X20_Y43_N45
+--A1L51 is Add1~10 at LABCELL_X16_Y43_N45
 A1L51_adder_eqn = ( Vcount[5] ) + ( GND ) + ( A1L63 );
 A1L51 = CARRY(A1L51_adder_eqn);
 
 
---A1L54 is Add1~13 at LABCELL_X20_Y43_N54
-A1L54_adder_eqn = ( GND ) + ( Vcount[8] ) + ( A1L59 );
+--A1L54 is Add1~13 at LABCELL_X16_Y43_N54
+A1L54_adder_eqn = ( Vcount[8] ) + ( GND ) + ( A1L59 );
 A1L54 = SUM(A1L54_adder_eqn);
 
---A1L55 is Add1~14 at LABCELL_X20_Y43_N54
-A1L55_adder_eqn = ( GND ) + ( Vcount[8] ) + ( A1L59 );
+--A1L55 is Add1~14 at LABCELL_X16_Y43_N54
+A1L55_adder_eqn = ( Vcount[8] ) + ( GND ) + ( A1L59 );
 A1L55 = CARRY(A1L55_adder_eqn);
 
 
---A1L58 is Add1~17 at LABCELL_X20_Y43_N51
-A1L58_adder_eqn = ( GND ) + ( Vcount[7] ) + ( A1L67 );
+--A1L58 is Add1~17 at LABCELL_X16_Y43_N51
+A1L58_adder_eqn = ( Vcount[7] ) + ( GND ) + ( A1L67 );
 A1L58 = SUM(A1L58_adder_eqn);
 
---A1L59 is Add1~18 at LABCELL_X20_Y43_N51
-A1L59_adder_eqn = ( GND ) + ( Vcount[7] ) + ( A1L67 );
+--A1L59 is Add1~18 at LABCELL_X16_Y43_N51
+A1L59_adder_eqn = ( Vcount[7] ) + ( GND ) + ( A1L67 );
 A1L59 = CARRY(A1L59_adder_eqn);
 
 
---A1L62 is Add1~21 at LABCELL_X20_Y43_N42
+--A1L62 is Add1~21 at LABCELL_X16_Y43_N42
 A1L62_adder_eqn = ( Vcount[4] ) + ( GND ) + ( A1L71 );
 A1L62 = SUM(A1L62_adder_eqn);
 
---A1L63 is Add1~22 at LABCELL_X20_Y43_N42
+--A1L63 is Add1~22 at LABCELL_X16_Y43_N42
 A1L63_adder_eqn = ( Vcount[4] ) + ( GND ) + ( A1L71 );
 A1L63 = CARRY(A1L63_adder_eqn);
 
 
---A1L66 is Add1~25 at LABCELL_X20_Y43_N48
-A1L66_adder_eqn = ( GND ) + ( Vcount[6] ) + ( A1L51 );
+--A1L66 is Add1~25 at LABCELL_X16_Y43_N48
+A1L66_adder_eqn = ( Vcount[6] ) + ( GND ) + ( A1L51 );
 A1L66 = SUM(A1L66_adder_eqn);
 
---A1L67 is Add1~26 at LABCELL_X20_Y43_N48
-A1L67_adder_eqn = ( GND ) + ( Vcount[6] ) + ( A1L51 );
+--A1L67 is Add1~26 at LABCELL_X16_Y43_N48
+A1L67_adder_eqn = ( Vcount[6] ) + ( GND ) + ( A1L51 );
 A1L67 = CARRY(A1L67_adder_eqn);
 
 
---A1L70 is Add1~29 at LABCELL_X20_Y43_N39
+--A1L70 is Add1~29 at LABCELL_X16_Y43_N39
 A1L70_adder_eqn = ( Vcount[3] ) + ( GND ) + ( A1L79 );
 A1L70 = SUM(A1L70_adder_eqn);
 
---A1L71 is Add1~30 at LABCELL_X20_Y43_N39
+--A1L71 is Add1~30 at LABCELL_X16_Y43_N39
 A1L71_adder_eqn = ( Vcount[3] ) + ( GND ) + ( A1L79 );
 A1L71 = CARRY(A1L71_adder_eqn);
 
 
---A1L74 is Add1~33 at LABCELL_X20_Y43_N33
-A1L74_adder_eqn = ( GND ) + ( Vcount[1] ) + ( A1L47 );
+--A1L74 is Add1~33 at LABCELL_X16_Y43_N33
+A1L74_adder_eqn = ( Vcount[1] ) + ( GND ) + ( A1L47 );
 A1L74 = SUM(A1L74_adder_eqn);
 
---A1L75 is Add1~34 at LABCELL_X20_Y43_N33
-A1L75_adder_eqn = ( GND ) + ( Vcount[1] ) + ( A1L47 );
+--A1L75 is Add1~34 at LABCELL_X16_Y43_N33
+A1L75_adder_eqn = ( Vcount[1] ) + ( GND ) + ( A1L47 );
 A1L75 = CARRY(A1L75_adder_eqn);
 
 
---A1L78 is Add1~37 at LABCELL_X20_Y43_N36
-A1L78_adder_eqn = ( GND ) + ( Vcount[2] ) + ( A1L75 );
+--A1L78 is Add1~37 at LABCELL_X16_Y43_N36
+A1L78_adder_eqn = ( Vcount[2] ) + ( GND ) + ( A1L75 );
 A1L78 = SUM(A1L78_adder_eqn);
 
---A1L79 is Add1~38 at LABCELL_X20_Y43_N36
-A1L79_adder_eqn = ( GND ) + ( Vcount[2] ) + ( A1L75 );
+--A1L79 is Add1~38 at LABCELL_X16_Y43_N36
+A1L79_adder_eqn = ( Vcount[2] ) + ( GND ) + ( A1L75 );
 A1L79 = CARRY(A1L79_adder_eqn);
 
 
---A1L82 is Add2~1 at LABCELL_X19_Y43_N9
-A1L82_adder_eqn = ( line_counter[4] ) + ( GND ) + ( A1L87 );
+--A1L82 is Add2~1 at MLABCELL_X18_Y43_N39
+A1L82_adder_eqn = ( !A1L277Q ) + ( GND ) + ( A1L87 );
 A1L82 = SUM(A1L82_adder_eqn);
 
---A1L83 is Add2~2 at LABCELL_X19_Y43_N9
-A1L83_adder_eqn = ( line_counter[4] ) + ( GND ) + ( A1L87 );
+--A1L83 is Add2~2 at MLABCELL_X18_Y43_N39
+A1L83_adder_eqn = ( !A1L277Q ) + ( GND ) + ( A1L87 );
 A1L83 = CARRY(A1L83_adder_eqn);
 
 
---A1L86 is Add2~5 at LABCELL_X19_Y43_N6
-A1L86_adder_eqn = ( GND ) + ( line_counter[3] ) + ( A1L95 );
+--A1L86 is Add2~5 at MLABCELL_X18_Y43_N36
+A1L86_adder_eqn = ( !row[3] ) + ( GND ) + ( A1L95 );
 A1L86 = SUM(A1L86_adder_eqn);
 
---A1L87 is Add2~6 at LABCELL_X19_Y43_N6
-A1L87_adder_eqn = ( GND ) + ( line_counter[3] ) + ( A1L95 );
+--A1L87 is Add2~6 at MLABCELL_X18_Y43_N36
+A1L87_adder_eqn = ( !row[3] ) + ( GND ) + ( A1L95 );
 A1L87 = CARRY(A1L87_adder_eqn);
 
 
---A1L90 is Add2~9 at LABCELL_X19_Y43_N0
-A1L90_adder_eqn = ( line_counter[1] ) + ( line_counter[0] ) + ( !VCC );
+--A1L90 is Add2~9 at MLABCELL_X18_Y43_N30
+A1L90_adder_eqn = ( !row[0] ) + ( !A1L269Q ) + ( !VCC );
 A1L90 = SUM(A1L90_adder_eqn);
 
---A1L91 is Add2~10 at LABCELL_X19_Y43_N0
-A1L91_adder_eqn = ( line_counter[1] ) + ( line_counter[0] ) + ( !VCC );
+--A1L91 is Add2~10 at MLABCELL_X18_Y43_N30
+A1L91_adder_eqn = ( !row[0] ) + ( !A1L269Q ) + ( !VCC );
 A1L91 = CARRY(A1L91_adder_eqn);
 
 
---A1L94 is Add2~13 at LABCELL_X19_Y43_N3
-A1L94_adder_eqn = ( line_counter[2] ) + ( GND ) + ( A1L91 );
+--A1L94 is Add2~13 at MLABCELL_X18_Y43_N33
+A1L94_adder_eqn = ( !A1L272Q ) + ( GND ) + ( A1L91 );
 A1L94 = SUM(A1L94_adder_eqn);
 
---A1L95 is Add2~14 at LABCELL_X19_Y43_N3
-A1L95_adder_eqn = ( line_counter[2] ) + ( GND ) + ( A1L91 );
+--A1L95 is Add2~14 at MLABCELL_X18_Y43_N33
+A1L95_adder_eqn = ( !A1L272Q ) + ( GND ) + ( A1L91 );
 A1L95 = CARRY(A1L95_adder_eqn);
 
 
---A1L98 is Add2~17 at LABCELL_X19_Y43_N15
-A1L98_adder_eqn = ( A1L194Q ) + ( GND ) + ( A1L103 );
+--A1L98 is Add2~17 at MLABCELL_X18_Y43_N45
+A1L98_adder_eqn = ( !row[6] ) + ( GND ) + ( A1L103 );
 A1L98 = SUM(A1L98_adder_eqn);
 
---A1L99 is Add2~18 at LABCELL_X19_Y43_N15
-A1L99_adder_eqn = ( A1L194Q ) + ( GND ) + ( A1L103 );
+--A1L99 is Add2~18 at MLABCELL_X18_Y43_N45
+A1L99_adder_eqn = ( !row[6] ) + ( GND ) + ( A1L103 );
 A1L99 = CARRY(A1L99_adder_eqn);
 
 
---A1L102 is Add2~21 at LABCELL_X19_Y43_N12
-A1L102_adder_eqn = ( line_counter[5] ) + ( GND ) + ( A1L83 );
+--A1L102 is Add2~21 at MLABCELL_X18_Y43_N42
+A1L102_adder_eqn = ( !row[5] ) + ( GND ) + ( A1L83 );
 A1L102 = SUM(A1L102_adder_eqn);
 
---A1L103 is Add2~22 at LABCELL_X19_Y43_N12
-A1L103_adder_eqn = ( line_counter[5] ) + ( GND ) + ( A1L83 );
+--A1L103 is Add2~22 at MLABCELL_X18_Y43_N42
+A1L103_adder_eqn = ( !row[5] ) + ( GND ) + ( A1L83 );
 A1L103 = CARRY(A1L103_adder_eqn);
 
 
---A1L106 is Add2~25 at LABCELL_X19_Y43_N21
-A1L106_adder_eqn = ( line_counter[8] ) + ( GND ) + ( A1L111 );
+--A1L106 is Add2~25 at MLABCELL_X18_Y43_N57
+A1L106_adder_eqn = ( !row[10] ) + ( GND ) + ( A1L111 );
 A1L106 = SUM(A1L106_adder_eqn);
 
---A1L107 is Add2~26 at LABCELL_X19_Y43_N21
-A1L107_adder_eqn = ( line_counter[8] ) + ( GND ) + ( A1L111 );
-A1L107 = CARRY(A1L107_adder_eqn);
 
-
---A1L110 is Add2~29 at LABCELL_X19_Y43_N18
-A1L110_adder_eqn = ( line_counter[7] ) + ( GND ) + ( A1L99 );
+--A1L110 is Add2~29 at MLABCELL_X18_Y43_N54
+A1L110_adder_eqn = ( !row[9] ) + ( GND ) + ( A1L115 );
 A1L110 = SUM(A1L110_adder_eqn);
 
---A1L111 is Add2~30 at LABCELL_X19_Y43_N18
-A1L111_adder_eqn = ( line_counter[7] ) + ( GND ) + ( A1L99 );
+--A1L111 is Add2~30 at MLABCELL_X18_Y43_N54
+A1L111_adder_eqn = ( !row[9] ) + ( GND ) + ( A1L115 );
 A1L111 = CARRY(A1L111_adder_eqn);
 
 
---A1L114 is Add2~33 at LABCELL_X19_Y43_N24
-A1L114_adder_eqn = ( GND ) + ( line_counter[9] ) + ( A1L107 );
+--A1L114 is Add2~33 at MLABCELL_X18_Y43_N51
+A1L114_adder_eqn = ( !row[8] ) + ( GND ) + ( A1L119 );
 A1L114 = SUM(A1L114_adder_eqn);
 
+--A1L115 is Add2~34 at MLABCELL_X18_Y43_N51
+A1L115_adder_eqn = ( !row[8] ) + ( GND ) + ( A1L119 );
+A1L115 = CARRY(A1L115_adder_eqn);
 
---Hcount[9] is Hcount[9] at FF_X20_Y44_N2
+
+--A1L118 is Add2~37 at MLABCELL_X18_Y43_N48
+A1L118_adder_eqn = ( !row[7] ) + ( GND ) + ( A1L99 );
+A1L118 = SUM(A1L118_adder_eqn);
+
+--A1L119 is Add2~38 at MLABCELL_X18_Y43_N48
+A1L119_adder_eqn = ( !row[7] ) + ( GND ) + ( A1L99 );
+A1L119 = CARRY(A1L119_adder_eqn);
+
+
+--A1L122 is Add3~1 at MLABCELL_X18_Y44_N33
+A1L122_adder_eqn = ( col[2] ) + ( GND ) + ( A1L147 );
+A1L122 = SUM(A1L122_adder_eqn);
+
+--A1L123 is Add3~2 at MLABCELL_X18_Y44_N33
+A1L123_adder_eqn = ( col[2] ) + ( GND ) + ( A1L147 );
+A1L123 = CARRY(A1L123_adder_eqn);
+
+
+--A1L126 is Add3~5 at MLABCELL_X18_Y44_N36
+A1L126_adder_eqn = ( col[3] ) + ( GND ) + ( A1L123 );
+A1L126 = SUM(A1L126_adder_eqn);
+
+--A1L127 is Add3~6 at MLABCELL_X18_Y44_N36
+A1L127_adder_eqn = ( col[3] ) + ( GND ) + ( A1L123 );
+A1L127 = CARRY(A1L127_adder_eqn);
+
+
+--A1L130 is Add3~9 at MLABCELL_X18_Y44_N39
+A1L130_adder_eqn = ( col[4] ) + ( GND ) + ( A1L127 );
+A1L130 = SUM(A1L130_adder_eqn);
+
+--A1L131 is Add3~10 at MLABCELL_X18_Y44_N39
+A1L131_adder_eqn = ( col[4] ) + ( GND ) + ( A1L127 );
+A1L131 = CARRY(A1L131_adder_eqn);
+
+
+--A1L134 is Add3~13 at MLABCELL_X18_Y44_N42
+A1L134_adder_eqn = ( col[5] ) + ( GND ) + ( A1L131 );
+A1L134 = SUM(A1L134_adder_eqn);
+
+--A1L135 is Add3~14 at MLABCELL_X18_Y44_N42
+A1L135_adder_eqn = ( col[5] ) + ( GND ) + ( A1L131 );
+A1L135 = CARRY(A1L135_adder_eqn);
+
+
+--A1L138 is Add3~17 at MLABCELL_X18_Y44_N54
+A1L138_adder_eqn = ( col[9] ) + ( GND ) + ( A1L151 );
+A1L138 = SUM(A1L138_adder_eqn);
+
+
+--A1L142 is Add3~21 at MLABCELL_X18_Y44_N45
+A1L142_adder_eqn = ( col[6] ) + ( GND ) + ( A1L135 );
+A1L142 = SUM(A1L142_adder_eqn);
+
+--A1L143 is Add3~22 at MLABCELL_X18_Y44_N45
+A1L143_adder_eqn = ( col[6] ) + ( GND ) + ( A1L135 );
+A1L143 = CARRY(A1L143_adder_eqn);
+
+
+--A1L146 is Add3~25 at MLABCELL_X18_Y44_N30
+A1L146_adder_eqn = ( col[1] ) + ( col[0] ) + ( !VCC );
+A1L146 = SUM(A1L146_adder_eqn);
+
+--A1L147 is Add3~26 at MLABCELL_X18_Y44_N30
+A1L147_adder_eqn = ( col[1] ) + ( col[0] ) + ( !VCC );
+A1L147 = CARRY(A1L147_adder_eqn);
+
+
+--A1L150 is Add3~29 at MLABCELL_X18_Y44_N51
+A1L150_adder_eqn = ( col[8] ) + ( GND ) + ( A1L155 );
+A1L150 = SUM(A1L150_adder_eqn);
+
+--A1L151 is Add3~30 at MLABCELL_X18_Y44_N51
+A1L151_adder_eqn = ( col[8] ) + ( GND ) + ( A1L155 );
+A1L151 = CARRY(A1L151_adder_eqn);
+
+
+--A1L154 is Add3~33 at MLABCELL_X18_Y44_N48
+A1L154_adder_eqn = ( col[7] ) + ( GND ) + ( A1L143 );
+A1L154 = SUM(A1L154_adder_eqn);
+
+--A1L155 is Add3~34 at MLABCELL_X18_Y44_N48
+A1L155_adder_eqn = ( col[7] ) + ( GND ) + ( A1L143 );
+A1L155 = CARRY(A1L155_adder_eqn);
+
+
+--Hcount[9] is Hcount[9] at FF_X20_Y44_N25
 --register power-up is low
 
-Hcount[9] = DFFEAS( , A1L206Q,  ,  ,  , A1L2,  , A1L140, VCC);
+Hcount[9] = DFFEAS( , A1L250Q,  ,  ,  , A1L2,  , A1L196, VCC);
 
 
---Hcount[8] is Hcount[8] at FF_X20_Y44_N10
+--Hcount[8] is Hcount[8] at FF_X20_Y44_N20
 --register power-up is low
 
-Hcount[8] = DFFEAS( , A1L206Q,  ,  ,  , A1L6,  , A1L140, VCC);
+Hcount[8] = DFFEAS( , A1L250Q,  ,  ,  , A1L6,  , A1L196, VCC);
 
 
---Hcount[3] is Hcount[3] at FF_X20_Y44_N20
+--Hcount[3] is Hcount[3] at FF_X20_Y44_N17
 --register power-up is low
 
-Hcount[3] = DFFEAS( , A1L206Q,  ,  ,  , A1L10,  , A1L140, VCC);
+Hcount[3] = DFFEAS(A1L230, A1L250Q,  ,  ,  ,  ,  , A1L196,  );
 
 
---Hcount[2] is Hcount[2] at FF_X20_Y44_N17
+--Hcount[2] is Hcount[2] at FF_X20_Y44_N7
 --register power-up is low
 
-Hcount[2] = DFFEAS( , A1L206Q,  ,  ,  , A1L14,  , A1L140, VCC);
+Hcount[2] = DFFEAS(A1L228, A1L250Q,  ,  ,  ,  ,  , A1L196,  );
 
 
 --Hcount[0] is Hcount[0] at FF_X20_Y44_N5
 --register power-up is low
 
-Hcount[0] = DFFEAS( , A1L206Q,  ,  ,  , A1L18,  , A1L140, VCC);
+Hcount[0] = DFFEAS(A1L225, A1L250Q,  ,  ,  ,  ,  , A1L196,  );
 
 
---Hcount[1] is Hcount[1] at FF_X20_Y44_N8
+--Hcount[1] is Hcount[1] at FF_X20_Y44_N29
 --register power-up is low
 
-Hcount[1] = DFFEAS( , A1L206Q,  ,  ,  , A1L22,  , A1L140, VCC);
+Hcount[1] = DFFEAS( , A1L250Q,  ,  ,  , A1L22,  , A1L196, VCC);
 
 
---Hcount[7] is Hcount[7] at FF_X20_Y44_N23
+--Hcount[7] is Hcount[7] at FF_X20_Y44_N2
 --register power-up is low
 
-Hcount[7] = DFFEAS( , A1L206Q,  ,  ,  , A1L26,  , A1L140, VCC);
+Hcount[7] = DFFEAS(A1L236, A1L250Q,  ,  ,  ,  ,  , A1L196,  );
 
 
---Hcount[6] is Hcount[6] at FF_X20_Y44_N14
+--Hcount[6] is Hcount[6] at FF_X20_Y44_N11
 --register power-up is low
 
-Hcount[6] = DFFEAS(A1L175, A1L206Q,  ,  ,  ,  ,  , A1L140,  );
+Hcount[6] = DFFEAS(A1L234, A1L250Q,  ,  ,  ,  ,  , A1L196,  );
 
 
---Hcount[4] is Hcount[4] at FF_X20_Y44_N26
+--Hcount[4] is Hcount[4] at FF_X20_Y44_N23
 --register power-up is low
 
-Hcount[4] = DFFEAS(A1L172, A1L206Q,  ,  ,  ,  ,  , A1L140,  );
+Hcount[4] = DFFEAS( , A1L250Q,  ,  ,  , A1L34,  , A1L196, VCC);
 
 
---Hcount[5] is Hcount[5] at FF_X20_Y44_N29
+--Hcount[5] is Hcount[5] at FF_X20_Y44_N14
 --register power-up is low
 
-Hcount[5] = DFFEAS( , A1L206Q,  ,  ,  , A1L38,  , A1L140, VCC);
+Hcount[5] = DFFEAS( , A1L250Q,  ,  ,  , A1L38,  , A1L196, VCC);
 
 
---Vcount[9] is Vcount[9] at FF_X20_Y43_N1
+--Vcount[9] is Vcount[9] at FF_X16_Y43_N13
 --register power-up is low
 
-Vcount[9] = DFFEAS( , !A1L182Q,  ,  ,  , A1L42,  , A1L146, VCC);
+Vcount[9] = DFFEAS( , !A1L242Q,  ,  ,  , A1L42,  , A1L202, VCC);
 
 
---Vcount[0] is Vcount[0] at FF_X20_Y43_N8
+--Vcount[0] is Vcount[0] at FF_X16_Y43_N20
 --register power-up is low
 
-Vcount[0] = DFFEAS( , !A1L182Q,  ,  ,  , A1L46,  , A1L146, VCC);
+Vcount[0] = DFFEAS(A1L305, !A1L242Q,  ,  ,  ,  ,  , A1L202,  );
 
 
---Vcount[5] is Vcount[5] at FF_X20_Y43_N5
+--Vcount[5] is Vcount[5] at FF_X16_Y43_N2
 --register power-up is low
 
-Vcount[5] = DFFEAS( , !A1L182Q,  ,  ,  , A1L50,  , A1L146, VCC);
+Vcount[5] = DFFEAS( , !A1L242Q,  ,  ,  , A1L50,  , A1L202, VCC);
 
 
---Vcount[8] is Vcount[8] at FF_X20_Y43_N13
+--Vcount[8] is Vcount[8] at FF_X16_Y43_N11
 --register power-up is low
 
-Vcount[8] = DFFEAS( , !A1L182Q,  ,  ,  , A1L54,  , A1L146, VCC);
+Vcount[8] = DFFEAS( , !A1L242Q,  ,  ,  , A1L54,  , A1L202, VCC);
 
 
---Vcount[7] is Vcount[7] at FF_X20_Y43_N11
+--Vcount[7] is Vcount[7] at FF_X16_Y43_N23
 --register power-up is low
 
-Vcount[7] = DFFEAS( , !A1L182Q,  ,  ,  , A1L58,  , A1L146, VCC);
+Vcount[7] = DFFEAS(A1L315, !A1L242Q,  ,  ,  ,  ,  , A1L202,  );
 
 
---Vcount[4] is Vcount[4] at FF_X20_Y43_N23
+--Vcount[4] is Vcount[4] at FF_X16_Y43_N17
 --register power-up is low
 
-Vcount[4] = DFFEAS( , !A1L182Q,  ,  ,  , A1L62,  , A1L146, VCC);
+Vcount[4] = DFFEAS( , !A1L242Q,  ,  ,  , A1L62,  , A1L202, VCC);
 
 
---Vcount[6] is Vcount[6] at FF_X20_Y43_N26
+--Vcount[6] is Vcount[6] at FF_X16_Y43_N7
 --register power-up is low
 
-Vcount[6] = DFFEAS( , !A1L182Q,  ,  ,  , A1L66,  , A1L146, VCC);
+Vcount[6] = DFFEAS( , !A1L242Q,  ,  ,  , A1L66,  , A1L202, VCC);
 
 
---Vcount[3] is Vcount[3] at FF_X20_Y43_N29
+--Vcount[3] is Vcount[3] at FF_X16_Y43_N29
 --register power-up is low
 
-Vcount[3] = DFFEAS( , !A1L182Q,  ,  ,  , A1L70,  , A1L146, VCC);
+Vcount[3] = DFFEAS( , !A1L242Q,  ,  ,  , A1L70,  , A1L202, VCC);
 
 
---Vcount[1] is Vcount[1] at FF_X20_Y43_N20
+--Vcount[1] is Vcount[1] at FF_X16_Y43_N5
 --register power-up is low
 
-Vcount[1] = DFFEAS( , !A1L182Q,  ,  ,  , A1L74,  , A1L146, VCC);
+Vcount[1] = DFFEAS(A1L307, !A1L242Q,  ,  ,  ,  ,  , A1L202,  );
 
 
---Vcount[2] is Vcount[2] at FF_X20_Y43_N17
+--Vcount[2] is Vcount[2] at FF_X16_Y43_N26
 --register power-up is low
 
-Vcount[2] = DFFEAS( , !A1L182Q,  ,  ,  , A1L78,  , A1L146, VCC);
+Vcount[2] = DFFEAS(A1L309, !A1L242Q,  ,  ,  ,  ,  , A1L202,  );
 
 
---A1L206Q is pixel_clk~reg0 at FF_X20_Y44_N47
+--A1L293 is R~3 at LABCELL_X19_Y43_N36
+A1L293 = ( !A1L170 & ( (!A1L292) # ((dena & (((A1L205 & !row[0])) # (A1L297)))) ) ) # ( A1L170 & ( ((!A1L292) # ((A1L263 & (dena)))) ) );
+
+
+--A1L297 is R~7 at MLABCELL_X18_Y44_N0
+A1L297 = ( !col[0] & ( (!col[8] & (!col[2] & (A1L291 & (!col[1] & !col[7])))) ) ) # ( col[0] & ( (!col[8] & (col[2] & (A1L290 & (col[1] & !col[7])))) ) );
+
+
+--A1L250Q is pixel_clk~reg0 at FF_X19_Y44_N23
 --register power-up is low
 
-A1L206Q = DFFEAS( , A1L131,  ,  ,  , A1L204,  ,  , VCC);
+A1L250Q = DFFEAS( , A1L174,  ,  ,  , A1L248,  ,  , VCC);
 
 
---A1L182Q is Hsync~reg0 at FF_X19_Y44_N23
+--A1L242Q is Hsync~reg0 at FF_X19_Y44_N47
 --register power-up is low
 
-A1L182Q = DFFEAS( , A1L206Q,  ,  ,  , A1L180,  ,  , VCC);
+A1L242Q = DFFEAS( , A1L250Q,  ,  ,  , A1L240,  ,  , VCC);
 
 
---A1L239Q is Vsync~reg0 at FF_X19_Y43_N44
+--A1L321Q is Vsync~reg0 at FF_X18_Y43_N26
 --register power-up is low
 
-A1L239Q = DFFEAS( , !A1L182Q,  ,  ,  , A1L237,  ,  , VCC);
+A1L321Q = DFFEAS( , !A1L242Q,  ,  ,  , A1L319,  ,  , VCC);
 
 
---Hactive is Hactive at FF_X19_Y44_N56
+--row[0] is row[0] at FF_X18_Y43_N32
 --register power-up is low
 
-Hactive = DFFEAS( , A1L206Q,  ,  ,  , A1L165,  ,  , VCC);
+row[0] = DFFEAS( , A1L242Q, A1L321Q,  , Vactive, A1L266,  ,  , VCC);
 
 
---Vactive is Vactive at FF_X19_Y43_N41
+--row[4] is row[4] at FF_X18_Y43_N19
 --register power-up is low
 
-Vactive = DFFEAS(A1L224, !A1L182Q,  ,  ,  ,  ,  ,  ,  );
+row[4] = DFFEAS(A1L276, A1L242Q, A1L321Q,  , Vactive,  ,  ,  ,  );
 
 
---line_counter[4] is line_counter[4] at FF_X19_Y43_N29
+--row[3] is row[3] at FF_X18_Y43_N1
 --register power-up is low
 
-line_counter[4] = DFFEAS( , A1L182Q, A1L239Q,  , Vactive, A1L82,  ,  , VCC);
+row[3] = DFFEAS(A1L274, A1L242Q, A1L321Q,  , Vactive,  ,  ,  ,  );
 
 
---line_counter[3] is line_counter[3] at FF_X19_Y43_N14
+--row[1] is row[1] at FF_X18_Y43_N22
 --register power-up is low
 
-line_counter[3] = DFFEAS( , A1L182Q, A1L239Q,  , Vactive, A1L86,  ,  , VCC);
+row[1] = DFFEAS(A1L268, A1L242Q, A1L321Q,  , Vactive,  ,  ,  ,  );
 
 
---line_counter[1] is line_counter[1] at FF_X19_Y43_N23
+--row[2] is row[2] at FF_X18_Y43_N10
 --register power-up is low
 
-line_counter[1] = DFFEAS( , A1L182Q, A1L239Q,  , Vactive, A1L90,  ,  , VCC);
+row[2] = DFFEAS(A1L271, A1L242Q, A1L321Q,  , Vactive,  ,  ,  ,  );
 
 
---line_counter[2] is line_counter[2] at FF_X19_Y43_N20
+--row[6] is row[6] at FF_X18_Y43_N17
 --register power-up is low
 
-line_counter[2] = DFFEAS( , A1L182Q, A1L239Q,  , Vactive, A1L94,  ,  , VCC);
+row[6] = DFFEAS(A1L281, A1L242Q, A1L321Q,  , Vactive,  ,  ,  ,  );
 
 
---line_counter[6] is line_counter[6] at FF_X19_Y43_N34
+--row[5] is row[5] at FF_X19_Y43_N44
 --register power-up is low
 
-line_counter[6] = DFFEAS(A1L195, A1L182Q, A1L239Q,  , Vactive,  ,  ,  ,  );
+row[5] = DFFEAS(A1L279, A1L242Q, A1L321Q,  , Vactive,  ,  ,  ,  );
 
 
---line_counter[5] is line_counter[5] at FF_X19_Y43_N50
+--A1L251 is process_3~0 at LABCELL_X19_Y43_N0
+A1L251 = ( row[2] & ( row[5] & ( (row[3] & (row[4] & (row[6] & row[1]))) ) ) );
+
+
+--row[10] is row[10] at FF_X18_Y43_N7
 --register power-up is low
 
-line_counter[5] = DFFEAS( , A1L182Q, A1L239Q,  , Vactive, A1L102,  ,  , VCC);
+row[10] = DFFEAS(A1L289, A1L242Q, A1L321Q,  , Vactive,  ,  ,  ,  );
 
 
---A1L148 is Equal8~0 at MLABCELL_X18_Y43_N39
-A1L148 = ( !line_counter[5] & ( !line_counter[2] & ( (!line_counter[1] & (!line_counter[6] & (!line_counter[3] & !A1L191Q))) ) ) );
-
-
---line_counter[8] is line_counter[8] at FF_X19_Y43_N5
+--row[9] is row[9] at FF_X18_Y43_N13
 --register power-up is low
 
-line_counter[8] = DFFEAS( , A1L182Q, A1L239Q,  , Vactive, A1L106,  ,  , VCC);
+row[9] = DFFEAS(A1L287, A1L242Q, A1L321Q,  , Vactive,  ,  ,  ,  );
 
 
---line_counter[7] is line_counter[7] at FF_X19_Y43_N2
+--row[8] is row[8] at FF_X19_Y43_N47
 --register power-up is low
 
-line_counter[7] = DFFEAS( , A1L182Q, A1L239Q,  , Vactive, A1L110,  ,  , VCC);
+row[8] = DFFEAS(A1L285, A1L242Q, A1L321Q,  , Vactive,  ,  ,  ,  );
 
 
---line_counter[0] is line_counter[0] at FF_X19_Y43_N32
+--row[7] is row[7] at FF_X18_Y43_N4
 --register power-up is low
 
-line_counter[0] = DFFEAS( , A1L182Q, A1L239Q,  , Vactive, A1L186,  ,  , VCC);
+row[7] = DFFEAS(A1L283, A1L242Q, A1L321Q,  , Vactive,  ,  ,  ,  );
 
 
---line_counter[9] is line_counter[9] at FF_X19_Y43_N17
+--A1L204 is Equal8~0 at LABCELL_X19_Y43_N9
+A1L204 = ( row[9] & ( (row[10] & (row[8] & row[7])) ) );
+
+
+--A1L205 is Equal8~1 at LABCELL_X19_Y43_N51
+A1L205 = ( A1L204 & ( A1L251 ) );
+
+
+--col[2] is col[2] at FF_X18_Y44_N8
 --register power-up is low
 
-line_counter[9] = DFFEAS( , A1L182Q, A1L239Q,  , Vactive, A1L114,  ,  , VCC);
+col[2] = DFFEAS( , A1L250Q, A1L242Q,  , Hactive, A1L122,  ,  , VCC);
 
 
---A1L149 is Equal8~1 at MLABCELL_X18_Y43_N45
-A1L149 = ( !line_counter[7] & ( line_counter[0] & ( (!line_counter[8] & !line_counter[9]) ) ) );
+--col[3] is col[3] at FF_X19_Y44_N32
+--register power-up is low
 
+col[3] = DFFEAS( , A1L250Q, A1L242Q,  , Hactive, A1L126,  ,  , VCC);
 
---A1L221 is R~0 at LABCELL_X17_Y43_N3
-A1L221 = ( A1L148 & ( (Vactive & (Hactive & A1L149)) ) );
 
+--col[4] is col[4] at FF_X19_Y44_N11
+--register power-up is low
 
---A1L150 is Equal8~2 at LABCELL_X17_Y43_N9
-A1L150 = ( A1L148 & ( A1L149 ) );
+col[4] = DFFEAS( , A1L250Q, A1L242Q,  , Hactive, A1L130,  ,  , VCC);
 
 
---A1L151 is Equal8~3 at MLABCELL_X18_Y43_N48
-A1L151 = ( !line_counter[8] & ( !line_counter[7] ) );
+--col[5] is col[5] at FF_X19_Y44_N35
+--register power-up is low
 
+col[5] = DFFEAS( , A1L250Q, A1L242Q,  , Hactive, A1L134,  ,  , VCC);
 
---A1L183 is LessThan2~0 at MLABCELL_X18_Y43_N6
-A1L183 = ( line_counter[2] & ( (!line_counter[0] & (!A1L191Q & (!line_counter[1] & !line_counter[3]))) ) ) # ( !line_counter[2] & ( (!A1L191Q & !line_counter[3]) ) );
 
+--col[9] is col[9] at FF_X19_Y44_N41
+--register power-up is low
 
---A1L207 is process_3~0 at MLABCELL_X18_Y43_N24
-A1L207 = ( line_counter[2] & ( (A1L191Q & line_counter[3]) ) ) # ( !line_counter[2] & ( (A1L191Q & (line_counter[3] & ((line_counter[1]) # (line_counter[0])))) ) );
+col[9] = DFFEAS( , A1L250Q, A1L242Q,  , Hactive, A1L138,  ,  , VCC);
 
 
---A1L208 is process_3~1 at MLABCELL_X18_Y43_N33
-A1L208 = ( line_counter[6] & ( A1L151 & ( (!line_counter[9] & (line_counter[5] & (!A1L183))) # (line_counter[9] & (!line_counter[5] & ((!A1L207)))) ) ) ) # ( !line_counter[6] & ( A1L151 & ( line_counter[9] ) ) ) # ( line_counter[6] & ( !A1L151 & ( !line_counter[9] ) ) ) # ( !line_counter[6] & ( !A1L151 & ( !line_counter[9] ) ) );
+--col[6] is col[6] at FF_X19_Y44_N29
+--register power-up is low
 
+col[6] = DFFEAS( , A1L250Q, A1L242Q,  , Hactive, A1L142,  ,  , VCC);
 
---A1L209 is process_3~2 at MLABCELL_X18_Y43_N12
-A1L209 = ( line_counter[5] & ( A1L183 & ( (A1L151 & (!line_counter[9] & !A1L148)) ) ) ) # ( !line_counter[5] & ( A1L183 & ( (A1L151 & (!line_counter[9] & !A1L148)) ) ) ) # ( line_counter[5] & ( !A1L183 & ( (A1L151 & (!line_counter[6] & (!line_counter[9] & !A1L148))) ) ) ) # ( !line_counter[5] & ( !A1L183 & ( (A1L151 & (!line_counter[9] & !A1L148)) ) ) );
 
+--A1L290 is R~0 at MLABCELL_X18_Y44_N24
+A1L290 = ( col[5] & ( (col[3] & (col[6] & (col[9] & col[4]))) ) );
 
---A1L163 is G~0 at LABCELL_X17_Y43_N36
-A1L163 = ( Hactive & ( Vactive & ( (!A1L150 & ((A1L209) # (A1L208))) ) ) );
 
+--col[1] is col[1] at FF_X19_Y44_N50
+--register power-up is low
 
---A1L129 is B~0 at LABCELL_X17_Y43_N30
-A1L129 = ( Hactive & ( Vactive & ( (A1L208 & (!A1L150 & !A1L209)) ) ) ) # ( !Hactive & ( Vactive ) ) # ( Hactive & ( !Vactive ) ) # ( !Hactive & ( !Vactive ) );
+col[1] = DFFEAS( , A1L250Q, A1L242Q,  , Hactive, A1L146,  ,  , VCC);
 
 
---A1L132 is Equal0~0 at LABCELL_X19_Y44_N27
-A1L132 = ( !A1L6 & ( !A1L10 & ( (!A1L18 & (!A1L14 & (!A1L2 & !A1L22))) ) ) );
+--col[0] is col[0] at FF_X18_Y44_N2
+--register power-up is low
 
+col[0] = DFFEAS( , A1L250Q, A1L242Q,  , Hactive, A1L177,  ,  , VCC);
 
---A1L136 is Equal1~0 at LABCELL_X19_Y44_N3
-A1L136 = ( !A1L38 & ( A1L26 & ( (A1L34 & !A1L30) ) ) );
 
+--A1L291 is R~1 at MLABCELL_X18_Y44_N27
+A1L291 = ( !col[5] & ( (!col[3] & (!col[6] & (!col[9] & !col[4]))) ) );
 
---A1L133 is Equal0~1 at LABCELL_X19_Y44_N15
-A1L133 = ( A1L38 & ( !A1L26 & ( (!A1L34 & A1L30) ) ) );
 
+--col[8] is col[8] at FF_X19_Y44_N59
+--register power-up is low
 
---A1L134 is Equal0~2 at LABCELL_X19_Y44_N36
-A1L134 = ( !A1L18 & ( !A1L10 & ( (!A1L22 & !A1L14) ) ) );
+col[8] = DFFEAS( , A1L250Q, A1L242Q,  , Hactive, A1L150,  ,  , VCC);
 
 
---A1L137 is Equal1~1 at LABCELL_X19_Y44_N48
-A1L137 = ( A1L34 & ( !A1L38 ) );
+--col[7] is col[7] at FF_X19_Y44_N53
+--register power-up is low
 
+col[7] = DFFEAS( , A1L250Q, A1L242Q,  , Hactive, A1L154,  ,  , VCC);
 
---A1L138 is Equal2~0 at LABCELL_X19_Y44_N33
-A1L138 = ( A1L134 & ( A1L137 & ( (!A1L30 & (A1L6 & (A1L2 & !A1L26))) ) ) );
 
+--Hactive is Hactive at FF_X19_Y44_N2
+--register power-up is low
 
---A1L140 is Equal3~0 at LABCELL_X20_Y44_N0
-A1L140 = ( A1L2 & ( A1L141 & ( (!A1L30 & (A1L6 & (!A1L26 & A1L38))) ) ) );
+Hactive = DFFEAS( , A1L250Q,  ,  ,  , A1L222,  ,  , VCC);
 
 
---A1L180 is Hsync~0 at LABCELL_X19_Y44_N54
-A1L180 = ( A1L182Q & ( A1L138 ) ) # ( !A1L182Q & ( A1L138 & ( (A1L132 & A1L133) ) ) ) # ( A1L182Q & ( !A1L138 & ( (!A1L140) # ((A1L132 & ((A1L133) # (A1L136)))) ) ) ) # ( !A1L182Q & ( !A1L138 & ( (A1L132 & A1L133) ) ) );
+--Vactive is Vactive at FF_X18_Y43_N29
+--register power-up is low
 
+Vactive = DFFEAS( , !A1L242Q,  ,  ,  , A1L302,  ,  , VCC);
 
---A1L146 is Equal7~0 at LABCELL_X20_Y43_N12
-A1L146 = ( A1L147 & ( A1L42 & ( (!A1L58 & (!A1L54 & (!A1L66 & !A1L50))) ) ) );
 
+--dena is dena at LABCELL_X19_Y44_N6
+dena = (Vactive & Hactive);
 
---A1L142 is Equal4~0 at LABCELL_X20_Y43_N27
-A1L142 = ( A1L74 & ( !A1L78 ) );
 
+--A1L252 is process_3~1 at LABCELL_X19_Y43_N33
+A1L252 = ( row[1] & ( row[2] & ( (row[4] & row[3]) ) ) ) # ( !row[1] & ( row[2] & ( (row[4] & row[3]) ) ) ) # ( row[1] & ( !row[2] & ( (row[0] & (row[4] & row[3])) ) ) );
 
---A1L143 is Equal4~1 at LABCELL_X19_Y43_N54
-A1L143 = ( !A1L58 & ( A1L142 & ( (!A1L70 & (!A1L54 & (!A1L62 & !A1L66))) ) ) );
 
+--A1L169 is B~0 at LABCELL_X19_Y43_N6
+A1L169 = ( row[5] & ( A1L204 ) ) # ( !row[5] & ( (A1L204 & ((A1L252) # (row[6]))) ) );
 
---A1L237 is Vsync~0 at LABCELL_X19_Y43_N48
-A1L237 = ( A1L143 & ( A1L146 & ( (!A1L46 & (!A1L42 & (!A1L50))) # (A1L46 & (A1L239Q & (!A1L42 $ (!A1L50)))) ) ) ) # ( A1L143 & ( !A1L146 & ( ((!A1L46 & (!A1L42 & !A1L50))) # (A1L239Q) ) ) ) # ( !A1L143 & ( !A1L146 & ( A1L239Q ) ) );
 
+--A1L170 is B~1 at LABCELL_X19_Y43_N48
+A1L170 = ( A1L169 & ( (!A1L251 & !A1L297) ) );
 
---A1L135 is Equal0~3 at LABCELL_X19_Y44_N18
-A1L135 = ( !A1L14 & ( !A1L22 & ( !A1L18 ) ) );
 
+--A1L206 is Equal12~0 at LABCELL_X19_Y43_N15
+A1L206 = ( !row[7] & ( row[5] & ( (!row[3] & (!row[8] & (!row[4] & !row[6]))) ) ) );
 
---A1L139 is Equal2~1 at LABCELL_X19_Y44_N42
-A1L139 = ( A1L2 & ( A1L135 & ( (!A1L10 & (!A1L30 & (!A1L26 & A1L6))) ) ) );
 
+--A1L207 is Equal12~1 at LABCELL_X19_Y43_N18
+A1L207 = ( row[9] & ( (!row[0] & (!row[1] & (!row[2] & row[10]))) ) );
 
---A1L165 is Hactive~0 at LABCELL_X19_Y44_N6
-A1L165 = ( A1L132 & ( A1L139 & ( (!A1L133 & (((!A1L137 & Hactive)) # (A1L136))) # (A1L133 & (((Hactive)))) ) ) ) # ( !A1L132 & ( A1L139 & ( (!A1L137 & Hactive) ) ) ) # ( A1L132 & ( !A1L139 & ( ((A1L136 & !A1L133)) # (Hactive) ) ) ) # ( !A1L132 & ( !A1L139 & ( Hactive ) ) );
 
+--A1L292 is R~2 at LABCELL_X19_Y43_N24
+A1L292 = ( A1L204 & ( A1L207 & ( (!dena) # ((!A1L206 & ((!row[0]) # (!A1L251)))) ) ) ) # ( !A1L204 & ( A1L207 & ( (!dena) # (!A1L206) ) ) ) # ( A1L204 & ( !A1L207 & ( (!row[0]) # ((!dena) # (!A1L251)) ) ) ) # ( !A1L204 & ( !A1L207 ) );
 
---A1L144 is Equal4~2 at LABCELL_X20_Y43_N24
-A1L144 = ( !A1L62 & ( (!A1L58 & (!A1L54 & !A1L66)) ) );
 
+--A1L219 is G~0 at LABCELL_X19_Y43_N21
+A1L219 = ( A1L205 & ( (!row[0] & !A1L297) ) );
 
---A1L145 is Equal4~3 at LABCELL_X20_Y43_N18
-A1L145 = ( !A1L78 & ( !A1L70 & ( A1L74 ) ) );
 
+--A1L220 is G~1 at LABCELL_X20_Y43_N12
+A1L220 = ( A1L170 & ( A1L218 & ( (!A1L292) # (dena) ) ) ) # ( !A1L170 & ( A1L218 & ( (!A1L292) # ((!A1L219 & dena)) ) ) ) # ( A1L170 & ( !A1L218 & ( !A1L292 ) ) ) # ( !A1L170 & ( !A1L218 & ( (!A1L292) # ((!A1L219 & dena)) ) ) );
 
---A1L223 is Vactive~0 at LABCELL_X20_Y43_N9
-A1L223 = ( A1L42 & ( A1L144 & ( (Vactive & ((!A1L46) # ((!A1L145) # (A1L50)))) ) ) ) # ( !A1L42 & ( A1L144 & ( ((A1L46 & (A1L50 & A1L145))) # (Vactive) ) ) ) # ( A1L42 & ( !A1L144 & ( Vactive ) ) ) # ( !A1L42 & ( !A1L144 & ( Vactive ) ) );
 
+--A1L171 is B~2 at LABCELL_X20_Y43_N18
+A1L171 = ( A1L207 & ( (!A1L206 & A1L168) ) ) # ( !A1L207 & ( A1L168 ) );
 
---A1L141 is Equal3~1 at LABCELL_X20_Y44_N9
-A1L141 = ( !A1L10 & ( !A1L22 & ( (!A1L18 & (!A1L34 & !A1L14)) ) ) );
 
+--A1L172 is B~3 at LABCELL_X19_Y43_N57
+A1L172 = ( A1L169 & ( (!A1L297 & (dena & (A1L171 & !A1L251))) ) );
 
---A1L147 is Equal7~1 at LABCELL_X20_Y43_N0
-A1L147 = ( A1L78 & ( A1L70 & ( (A1L46 & (!A1L74 & !A1L62)) ) ) );
 
+--A1L188 is Equal0~0 at LABCELL_X19_Y44_N24
+A1L188 = ( !A1L6 & ( !A1L2 & ( (!A1L22 & (!A1L18 & (!A1L10 & !A1L14))) ) ) );
 
---A1L204 is pixel_clk~0 at LABCELL_X20_Y44_N21
-A1L204 = ( !A1L206Q );
 
+--A1L192 is Equal1~0 at LABCELL_X19_Y44_N9
+A1L192 = ( A1L26 & ( (!A1L38 & (A1L34 & !A1L30)) ) );
 
---A1L186 is line_counter[0]~0 at LABCELL_X19_Y43_N45
-A1L186 = !line_counter[0];
 
+--A1L189 is Equal0~1 at LABCELL_X19_Y44_N0
+A1L189 = ( !A1L34 & ( !A1L26 & ( (A1L38 & A1L30) ) ) );
 
 
---red_switch is red_switch at PIN_N16
-red_switch = INPUT();
+--A1L190 is Equal0~2 at LABCELL_X19_Y44_N12
+A1L190 = ( !A1L14 & ( !A1L22 & ( (!A1L18 & !A1L10) ) ) );
 
 
+--A1L193 is Equal1~1 at LABCELL_X19_Y44_N18
+A1L193 = ( A1L34 & ( !A1L38 ) );
 
---green_switch is green_switch at PIN_G12
-green_switch = INPUT();
 
+--A1L194 is Equal2~0 at LABCELL_X19_Y44_N54
+A1L194 = ( A1L2 & ( A1L193 & ( (!A1L30 & (A1L6 & (!A1L26 & A1L190))) ) ) );
 
 
---blue_switch is blue_switch at PIN_W21
-blue_switch = INPUT();
+--A1L196 is Equal3~0 at LABCELL_X20_Y44_N18
+A1L196 = ( A1L6 & ( A1L197 & ( (!A1L30 & (A1L38 & (!A1L26 & A1L2))) ) ) );
 
 
---A1L205 is pixel_clk~output at IOOBUF_X18_Y45_N2
-A1L205 = OUTPUT_BUFFER.O(.I(A1L206Q), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+--A1L240 is Hsync~0 at LABCELL_X19_Y44_N36
+A1L240 = ( A1L194 & ( A1L196 & ( ((A1L188 & A1L189)) # (A1L242Q) ) ) ) # ( !A1L194 & ( A1L196 & ( (A1L188 & (((A1L192 & A1L242Q)) # (A1L189))) ) ) ) # ( A1L194 & ( !A1L196 & ( ((A1L188 & A1L189)) # (A1L242Q) ) ) ) # ( !A1L194 & ( !A1L196 & ( ((A1L188 & A1L189)) # (A1L242Q) ) ) );
 
 
---pixel_clk is pixel_clk at PIN_J9
+--A1L202 is Equal7~0 at LABCELL_X16_Y43_N9
+A1L202 = ( A1L42 & ( A1L203 & ( (!A1L66 & (!A1L54 & (!A1L50 & !A1L58))) ) ) );
+
+
+--A1L198 is Equal4~0 at LABCELL_X17_Y43_N36
+A1L198 = ( A1L74 & ( !A1L78 ) );
+
+
+--A1L199 is Equal4~1 at LABCELL_X17_Y43_N9
+A1L199 = ( A1L198 & ( !A1L58 & ( (!A1L70 & (!A1L62 & (!A1L66 & !A1L54))) ) ) );
+
+
+--A1L319 is Vsync~0 at LABCELL_X17_Y43_N24
+A1L319 = ( A1L42 & ( A1L202 & ( (!A1L50 & (A1L321Q & (A1L46 & A1L199))) ) ) ) # ( !A1L42 & ( A1L202 & ( (A1L199 & ((!A1L50 & ((!A1L46))) # (A1L50 & (A1L321Q & A1L46)))) ) ) ) # ( A1L42 & ( !A1L202 & ( A1L321Q ) ) ) # ( !A1L42 & ( !A1L202 & ( ((!A1L50 & (!A1L46 & A1L199))) # (A1L321Q) ) ) );
+
+
+--A1L191 is Equal0~3 at LABCELL_X19_Y44_N42
+A1L191 = ( !A1L14 & ( !A1L22 & ( !A1L18 ) ) );
+
+
+--A1L195 is Equal2~1 at LABCELL_X19_Y44_N51
+A1L195 = ( A1L2 & ( A1L191 & ( (!A1L10 & (!A1L30 & (A1L6 & !A1L26))) ) ) );
+
+
+--A1L222 is Hactive~0 at LABCELL_X19_Y44_N30
+A1L222 = ( A1L189 & ( A1L195 & ( (Hactive & ((!A1L193) # (A1L188))) ) ) ) # ( !A1L189 & ( A1L195 & ( (!Hactive & (A1L192 & (A1L188))) # (Hactive & ((!A1L193) # ((A1L192 & A1L188)))) ) ) ) # ( A1L189 & ( !A1L195 & ( Hactive ) ) ) # ( !A1L189 & ( !A1L195 & ( ((A1L192 & A1L188)) # (Hactive) ) ) );
+
+
+--A1L200 is Equal4~2 at LABCELL_X17_Y43_N45
+A1L200 = ( !A1L66 & ( !A1L58 & ( (!A1L62 & !A1L54) ) ) );
+
+
+--A1L201 is Equal4~3 at LABCELL_X17_Y43_N12
+A1L201 = ( A1L74 & ( !A1L70 & ( !A1L78 ) ) );
+
+
+--A1L302 is Vactive~0 at MLABCELL_X18_Y43_N24
+A1L302 = ( A1L201 & ( A1L200 & ( (!A1L50 & (Vactive & ((!A1L46) # (!A1L42)))) # (A1L50 & (((A1L46 & !A1L42)) # (Vactive))) ) ) ) # ( !A1L201 & ( A1L200 & ( Vactive ) ) ) # ( A1L201 & ( !A1L200 & ( Vactive ) ) ) # ( !A1L201 & ( !A1L200 & ( Vactive ) ) );
+
+
+--A1L197 is Equal3~1 at LABCELL_X20_Y44_N24
+A1L197 = ( !A1L14 & ( !A1L22 & ( (!A1L10 & (!A1L18 & !A1L34)) ) ) );
+
+
+--A1L203 is Equal7~1 at LABCELL_X16_Y43_N12
+A1L203 = ( A1L78 & ( A1L70 & ( (A1L46 & (!A1L74 & !A1L62)) ) ) );
+
+
+--A1L248 is pixel_clk~0 at LABCELL_X17_Y44_N12
+A1L248 = ( !A1L250Q );
+
+
+--A1L266 is row[0]~0 at LABCELL_X19_Y43_N54
+A1L266 = ( !row[0] );
+
+
+--A1L276 is row[4]~1 at MLABCELL_X18_Y43_N18
+A1L276 = !A1L82;
+
+
+--A1L274 is row[3]~2 at MLABCELL_X18_Y43_N0
+A1L274 = !A1L86;
+
+
+--A1L268 is row[1]~3 at MLABCELL_X18_Y43_N21
+A1L268 = !A1L90;
+
+
+--A1L271 is row[2]~4 at MLABCELL_X18_Y43_N9
+A1L271 = !A1L94;
+
+
+--A1L281 is row[6]~5 at MLABCELL_X18_Y43_N15
+A1L281 = !A1L98;
+
+
+--A1L279 is row[5]~6 at LABCELL_X19_Y43_N42
+A1L279 = ( !A1L102 );
+
+
+--A1L289 is row[10]~7 at MLABCELL_X18_Y43_N6
+A1L289 = ( !A1L106 );
+
+
+--A1L287 is row[9]~8 at MLABCELL_X18_Y43_N12
+A1L287 = !A1L110;
+
+
+--A1L285 is row[8]~9 at LABCELL_X19_Y43_N45
+A1L285 = ( !A1L114 );
+
+
+--A1L283 is row[7]~10 at MLABCELL_X18_Y43_N3
+A1L283 = ( !A1L118 );
+
+
+--A1L177 is col[0]~0 at MLABCELL_X18_Y44_N9
+A1L177 = ( !col[0] );
+
+
+--A1L249 is pixel_clk~output at IOOBUF_X18_Y45_N36
+A1L249 = OUTPUT_BUFFER.O(.I(A1L250Q), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--pixel_clk is pixel_clk at PIN_A10
 pixel_clk = OUTPUT();
 
 
---A1L181 is Hsync~output at IOOBUF_X20_Y45_N36
-A1L181 = OUTPUT_BUFFER.O(.I(A1L182Q), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+--A1L241 is Hsync~output at IOOBUF_X20_Y45_N36
+A1L241 = OUTPUT_BUFFER.O(.I(A1L242Q), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
 
 
 --Hsync is Hsync at PIN_H8
 Hsync = OUTPUT();
 
 
---A1L238 is Vsync~output at IOOBUF_X20_Y45_N53
-A1L238 = OUTPUT_BUFFER.O(.I(A1L239Q), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+--A1L320 is Vsync~output at IOOBUF_X20_Y45_N53
+A1L320 = OUTPUT_BUFFER.O(.I(A1L321Q), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
 
 
 --Vsync is Vsync at PIN_G8
 Vsync = OUTPUT();
 
 
---A1L212 is R[0]~output at IOOBUF_X18_Y45_N53
-A1L212 = OUTPUT_BUFFER.O(.I(A1L221), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+--A1L255 is R[0]~output at IOOBUF_X18_Y45_N53
+A1L255 = OUTPUT_BUFFER.O(.I(A1L293), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
 
 
 --R[0] is R[0] at PIN_A9
 R[0] = OUTPUT();
 
 
---A1L214 is R[1]~output at IOOBUF_X16_Y45_N42
-A1L214 = OUTPUT_BUFFER.O(.I(A1L221), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+--A1L257 is R[1]~output at IOOBUF_X16_Y45_N42
+A1L257 = OUTPUT_BUFFER.O(.I(A1L293), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
 
 
 --R[1] is R[1] at PIN_B10
 R[1] = OUTPUT();
 
 
---A1L216 is R[2]~output at IOOBUF_X16_Y45_N59
-A1L216 = OUTPUT_BUFFER.O(.I(A1L221), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+--A1L259 is R[2]~output at IOOBUF_X16_Y45_N59
+A1L259 = OUTPUT_BUFFER.O(.I(A1L293), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
 
 
 --R[2] is R[2] at PIN_C9
 R[2] = OUTPUT();
 
 
---A1L218 is R[3]~output at IOOBUF_X16_Y45_N76
-A1L218 = OUTPUT_BUFFER.O(.I(A1L221), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+--A1L261 is R[3]~output at IOOBUF_X16_Y45_N76
+A1L261 = OUTPUT_BUFFER.O(.I(A1L293), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
 
 
 --R[3] is R[3] at PIN_A5
 R[3] = OUTPUT();
 
 
---A1L154 is G[0]~output at IOOBUF_X22_Y45_N36
-A1L154 = OUTPUT_BUFFER.O(.I(A1L163), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+--A1L210 is G[0]~output at IOOBUF_X22_Y45_N36
+A1L210 = OUTPUT_BUFFER.O(.I(A1L220), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
 
 
 --G[0] is G[0] at PIN_L7
 G[0] = OUTPUT();
 
 
---A1L156 is G[1]~output at IOOBUF_X22_Y45_N53
-A1L156 = OUTPUT_BUFFER.O(.I(A1L163), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+--A1L212 is G[1]~output at IOOBUF_X22_Y45_N53
+A1L212 = OUTPUT_BUFFER.O(.I(A1L220), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
 
 
 --G[1] is G[1] at PIN_K7
 G[1] = OUTPUT();
 
 
---A1L158 is G[2]~output at IOOBUF_X20_Y45_N2
-A1L158 = OUTPUT_BUFFER.O(.I(A1L163), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+--A1L214 is G[2]~output at IOOBUF_X20_Y45_N2
+A1L214 = OUTPUT_BUFFER.O(.I(A1L220), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
 
 
 --G[2] is G[2] at PIN_J7
 G[2] = OUTPUT();
 
 
---A1L160 is G[3]~output at IOOBUF_X20_Y45_N19
-A1L160 = OUTPUT_BUFFER.O(.I(A1L163), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+--A1L216 is G[3]~output at IOOBUF_X20_Y45_N19
+A1L216 = OUTPUT_BUFFER.O(.I(A1L220), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
 
 
 --G[3] is G[3] at PIN_J8
 G[3] = OUTPUT();
 
 
---A1L120 is B[0]~output at IOOBUF_X14_Y45_N36
-A1L120 = OUTPUT_BUFFER.O(.I(A1L129), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+--A1L160 is B[0]~output at IOOBUF_X14_Y45_N36
+A1L160 = OUTPUT_BUFFER.O(.I(A1L172), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
 
 
 --B[0] is B[0] at PIN_B6
 B[0] = OUTPUT();
 
 
---A1L122 is B[1]~output at IOOBUF_X14_Y45_N53
-A1L122 = OUTPUT_BUFFER.O(.I(A1L129), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+--A1L162 is B[1]~output at IOOBUF_X14_Y45_N53
+A1L162 = OUTPUT_BUFFER.O(.I(A1L172), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
 
 
 --B[1] is B[1] at PIN_B7
 B[1] = OUTPUT();
 
 
---A1L124 is B[2]~output at IOOBUF_X12_Y45_N2
-A1L124 = OUTPUT_BUFFER.O(.I(A1L129), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+--A1L164 is B[2]~output at IOOBUF_X12_Y45_N2
+A1L164 = OUTPUT_BUFFER.O(.I(A1L172), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
 
 
 --B[2] is B[2] at PIN_A8
 B[2] = OUTPUT();
 
 
---A1L126 is B[3]~output at IOOBUF_X12_Y45_N19
-A1L126 = OUTPUT_BUFFER.O(.I(A1L129), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+--A1L166 is B[3]~output at IOOBUF_X12_Y45_N19
+A1L166 = OUTPUT_BUFFER.O(.I(A1L172), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
 
 
 --B[3] is B[3] at PIN_A7
 B[3] = OUTPUT();
 
 
---A1L200 is nblanck~output at IOOBUF_X36_Y45_N36
-A1L200 = OUTPUT_BUFFER.O(.I(VCC), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+--A1L244 is nblanck~output at IOOBUF_X46_Y45_N59
+A1L244 = OUTPUT_BUFFER.O(.I(VCC), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
 
 
---nblanck is nblanck at PIN_B12
+--nblanck is nblanck at PIN_F15
 nblanck = OUTPUT();
 
 
---A1L202 is nsync~output at IOOBUF_X8_Y45_N93
-A1L202 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+--A1L246 is nsync~output at IOOBUF_X19_Y0_N53
+A1L246 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
 
 
---nsync is nsync at PIN_E7
+--nsync is nsync at PIN_AA8
 nsync = OUTPUT();
 
 
---A1L131 is clk~input at IOIBUF_X22_Y0_N1
-A1L131 = INPUT_BUFFER(.I(clk), );
+--A1L263 is red_switch~input at IOIBUF_X34_Y0_N1
+A1L263 = INPUT_BUFFER(.I(red_switch), );
+
+
+--red_switch is red_switch at PIN_T13
+red_switch = INPUT();
+
+
+--A1L218 is green_switch~input at IOIBUF_X33_Y0_N58
+A1L218 = INPUT_BUFFER(.I(green_switch), );
+
+
+--green_switch is green_switch at PIN_V13
+green_switch = INPUT();
+
+
+--A1L168 is blue_switch~input at IOIBUF_X33_Y0_N41
+A1L168 = INPUT_BUFFER(.I(blue_switch), );
+
+
+--blue_switch is blue_switch at PIN_U13
+blue_switch = INPUT();
+
+
+--A1L174 is clk~input at IOIBUF_X22_Y0_N1
+A1L174 = INPUT_BUFFER(.I(clk), );
 
 
 --clk is clk at PIN_M9
@@ -762,31 +995,57 @@ clk = INPUT();
 
 
 
---A1L175 is Hcount[6]~feeder at LABCELL_X20_Y44_N12
-A1L175 = ( A1L30 );
+--A1L230 is Hcount[3]~feeder at LABCELL_X20_Y44_N15
+A1L230 = ( A1L10 );
 
 
---A1L172 is Hcount[4]~feeder at LABCELL_X20_Y44_N24
-A1L172 = ( A1L34 );
+--A1L228 is Hcount[2]~feeder at LABCELL_X20_Y44_N6
+A1L228 = ( A1L14 );
 
 
---A1L195 is line_counter[6]~feeder at LABCELL_X19_Y43_N33
-A1L195 = ( A1L98 );
+--A1L225 is Hcount[0]~feeder at LABCELL_X20_Y44_N3
+A1L225 = ( A1L18 );
 
 
---A1L224 is Vactive~feeder at LABCELL_X19_Y43_N39
-A1L224 = ( A1L223 );
+--A1L236 is Hcount[7]~feeder at LABCELL_X20_Y44_N0
+A1L236 = ( A1L26 );
 
 
---A1L191Q is line_counter[4]~DUPLICATE at FF_X19_Y43_N28
+--A1L234 is Hcount[6]~feeder at LABCELL_X20_Y44_N9
+A1L234 = ( A1L30 );
+
+
+--A1L305 is Vcount[0]~feeder at LABCELL_X16_Y43_N18
+A1L305 = ( A1L46 );
+
+
+--A1L315 is Vcount[7]~feeder at LABCELL_X16_Y43_N21
+A1L315 = ( A1L58 );
+
+
+--A1L307 is Vcount[1]~feeder at LABCELL_X16_Y43_N3
+A1L307 = ( A1L74 );
+
+
+--A1L309 is Vcount[2]~feeder at LABCELL_X16_Y43_N24
+A1L309 = ( A1L78 );
+
+
+--A1L277Q is row[4]~DUPLICATE at FF_X18_Y43_N20
 --register power-up is low
 
-A1L191Q = DFFEAS( , A1L182Q, A1L239Q,  , Vactive, A1L82,  ,  , VCC);
+A1L277Q = DFFEAS(A1L276, A1L242Q, A1L321Q,  , Vactive,  ,  ,  ,  );
 
 
---A1L194Q is line_counter[6]~DUPLICATE at FF_X19_Y43_N35
+--A1L269Q is row[1]~DUPLICATE at FF_X18_Y43_N23
 --register power-up is low
 
-A1L194Q = DFFEAS(A1L195, A1L182Q, A1L239Q,  , Vactive,  ,  ,  ,  );
+A1L269Q = DFFEAS(A1L268, A1L242Q, A1L321Q,  , Vactive,  ,  ,  ,  );
+
+
+--A1L272Q is row[2]~DUPLICATE at FF_X18_Y43_N11
+--register power-up is low
+
+A1L272Q = DFFEAS(A1L271, A1L242Q, A1L321Q,  , Vactive,  ,  ,  ,  );
 
 
