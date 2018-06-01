@@ -1,0 +1,41 @@
+# do light_rotator.do 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module light_rotator
+# 
+# Top level modules:
+# 	light_rotator
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module light_rotator_vlg_sample_tst
+# -- Compiling module light_rotator_vlg_check_tst
+# -- Compiling module light_rotator_vlg_vec_tst
+# 
+# Top level modules:
+# 	light_rotator_vlg_vec_tst
+# vsim -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.light_rotator_vlg_vec_tst 
+# Loading work.light_rotator_vlg_vec_tst
+# Loading work.light_rotator
+# Loading cycloneii_ver.cycloneii_lcell_ff
+# Loading cycloneii_ver.cycloneii_lcell_comb
+# Loading cycloneii_ver.cycloneii_io
+# Loading cycloneii_ver.cycloneii_mux21
+# Loading cycloneii_ver.cycloneii_dffe
+# Loading cycloneii_ver.cycloneii_asynch_io
+# Loading cycloneii_ver.cycloneii_clkctrl
+# Loading cycloneii_ver.cycloneii_mux41
+# Loading cycloneii_ver.cycloneii_ena_reg
+# Loading work.light_rotator_vlg_sample_tst
+# Loading work.light_rotator_vlg_check_tst
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Loading instances from light_rotator_v.sdo
+# Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
+# Loading timing data from light_rotator_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /light_rotator_vlg_vec_tst File: light_rotator.vt
+# ** Error: c:/altera/13.0sp1/modelsim_ase/win32aloem/../altera/verilog/src/cycloneii_atoms.v(5354): $hold( posedge clk &&& sloaddata:1819 ps, sdata:1871 ps, 266 ps );
+#    Time: 1871 ps  Iteration: 0  Instance: /light_rotator_vlg_vec_tst/i1/\T1[18] 
+# ** Error: c:/altera/13.0sp1/modelsim_ase/win32aloem/../altera/verilog/src/cycloneii_atoms.v(5351): $hold( posedge clk &&& nosloadsclr:1832 ps, datain:1973 ps, 266 ps );
+#    Time: 1973 ps  Iteration: 0  Instance: /light_rotator_vlg_vec_tst/i1/\spd_index[2] 
+# Simulation passed !
+# ** Note: $finish    : light_rotator.vt(263)
+#    Time: 1 us  Iteration: 0  Instance: /light_rotator_vlg_vec_tst/tb_out

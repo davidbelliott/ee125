@@ -8,7 +8,7 @@ Z1 !s100 n:fLm]6Nz0@?bNjkCbadj0
 Z2 IQl5R_8lH4b_H2;YPJ5X;b1
 Z3 VTh`^k97oYBHKzl]KgZ=d<3
 Z4 dD:\Google Drive\School\Caltech\ee125_shared\ee125\hw4\log2_prob\simulation\qsim
-Z5 w1526276273
+Z5 w1526325857
 Z6 8log2_prob.vo
 Z7 Flog2_prob.vo
 L0 31
@@ -19,7 +19,7 @@ Z9 !s90 -work|work|log2_prob.vo|
 Z10 o-work work -O0
 !i10b 1
 !s85 0
-Z11 !s108 1526276274.738000
+Z11 !s108 1526325859.270000
 Z12 !s107 log2_prob.vo|
 !s101 -O0
 vlog2_prob_vlg_check_tst
@@ -28,7 +28,7 @@ Z13 !s100 k4NYk?4z853lD8B;Yk7CK3
 Z14 I?BDH0Y;zD5d;;Y@[md=H>3
 Z15 V8]j6:VJM<FWmZBelclVNh2
 R4
-Z16 w1526276272
+Z16 w1526325856
 Z17 8log2_prob.vt
 Z18 Flog2_prob.vt
 L0 57
@@ -36,7 +36,7 @@ R8
 r1
 !s85 0
 31
-Z19 !s108 1526276275.015000
+Z19 !s108 1526325859.516000
 Z20 !s107 log2_prob.vt|
 Z21 !s90 -work|work|log2_prob.vt|
 !s101 -O0
@@ -62,14 +62,14 @@ R21
 R10
 vlog2_prob_vlg_vec_tst
 !i10b 1
-!s100 5`@3oh8hWV4lJ:F8Q9NQS1
-I[^z3[_^<a5VSdj8^SWG_h3
-Z25 VD1[8@e9IQB7md7`RV6T[O3
+Z25 !s100 5`@3oh8hWV4lJ:F8Q9NQS1
+Z26 I[^z3[_^<a5VSdj8^SWG_h3
+Z27 VD1[8@e9IQB7md7`RV6T[O3
 R4
 R16
 R17
 R18
-Z26 L0 205
+Z28 L0 205
 R8
 r1
 !s85 0

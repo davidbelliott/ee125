@@ -1,0 +1,342 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "05/22/2018 22:38:45"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    light_rotator
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module light_rotator_vlg_sample_tst(
+	clk,
+	dir,
+	rst,
+	spd,
+	stp,
+	sampler_tx
+);
+input  clk;
+input  dir;
+input  rst;
+input  spd;
+input  stp;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(clk or dir or rst or spd or stp)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module light_rotator_vlg_check_tst (
+	ssd,
+	sampler_rx
+);
+input [6:0] ssd;
+input sampler_rx;
+
+reg [6:0] ssd_expected;
+
+reg [6:0] ssd_prev;
+
+reg [6:0] ssd_expected_prev;
+
+reg [6:0] last_ssd_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:1] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 1'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	ssd_prev = ssd;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	ssd_expected_prev = ssd_expected;
+end
+
+
+// expected ssd[ 6 ]
+initial
+begin
+	ssd_expected[6] = 1'bX;
+end 
+// expected ssd[ 5 ]
+initial
+begin
+	ssd_expected[5] = 1'bX;
+end 
+// expected ssd[ 4 ]
+initial
+begin
+	ssd_expected[4] = 1'bX;
+end 
+// expected ssd[ 3 ]
+initial
+begin
+	ssd_expected[3] = 1'bX;
+end 
+// expected ssd[ 2 ]
+initial
+begin
+	ssd_expected[2] = 1'bX;
+end 
+// expected ssd[ 1 ]
+initial
+begin
+	ssd_expected[1] = 1'bX;
+end 
+// expected ssd[ 0 ]
+initial
+begin
+	ssd_expected[0] = 1'bX;
+end 
+// generate trigger
+always @(ssd_expected or ssd)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected ssd = %b | ",ssd_expected_prev);
+	$display("| real ssd = %b | ",ssd_prev);
+`endif
+	if (
+		( ssd_expected_prev[0] !== 1'bx ) && ( ssd_prev[0] !== ssd_expected_prev[0] )
+		&& ((ssd_expected_prev[0] !== last_ssd_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ssd[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ssd_expected_prev);
+		$display ("     Real value = %b", ssd_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_ssd_exp[0] = ssd_expected_prev[0];
+	end
+	if (
+		( ssd_expected_prev[1] !== 1'bx ) && ( ssd_prev[1] !== ssd_expected_prev[1] )
+		&& ((ssd_expected_prev[1] !== last_ssd_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ssd[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ssd_expected_prev);
+		$display ("     Real value = %b", ssd_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_ssd_exp[1] = ssd_expected_prev[1];
+	end
+	if (
+		( ssd_expected_prev[2] !== 1'bx ) && ( ssd_prev[2] !== ssd_expected_prev[2] )
+		&& ((ssd_expected_prev[2] !== last_ssd_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ssd[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ssd_expected_prev);
+		$display ("     Real value = %b", ssd_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_ssd_exp[2] = ssd_expected_prev[2];
+	end
+	if (
+		( ssd_expected_prev[3] !== 1'bx ) && ( ssd_prev[3] !== ssd_expected_prev[3] )
+		&& ((ssd_expected_prev[3] !== last_ssd_exp[3]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ssd[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ssd_expected_prev);
+		$display ("     Real value = %b", ssd_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_ssd_exp[3] = ssd_expected_prev[3];
+	end
+	if (
+		( ssd_expected_prev[4] !== 1'bx ) && ( ssd_prev[4] !== ssd_expected_prev[4] )
+		&& ((ssd_expected_prev[4] !== last_ssd_exp[4]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ssd[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ssd_expected_prev);
+		$display ("     Real value = %b", ssd_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_ssd_exp[4] = ssd_expected_prev[4];
+	end
+	if (
+		( ssd_expected_prev[5] !== 1'bx ) && ( ssd_prev[5] !== ssd_expected_prev[5] )
+		&& ((ssd_expected_prev[5] !== last_ssd_exp[5]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ssd[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ssd_expected_prev);
+		$display ("     Real value = %b", ssd_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_ssd_exp[5] = ssd_expected_prev[5];
+	end
+	if (
+		( ssd_expected_prev[6] !== 1'bx ) && ( ssd_prev[6] !== ssd_expected_prev[6] )
+		&& ((ssd_expected_prev[6] !== last_ssd_exp[6]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ssd[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ssd_expected_prev);
+		$display ("     Real value = %b", ssd_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_ssd_exp[6] = ssd_expected_prev[6];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module light_rotator_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clk;
+reg dir;
+reg rst;
+reg spd;
+reg stp;
+// wires                                               
+wire [6:0] ssd;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+light_rotator i1 (
+// port map - connection between master ports and signals/registers   
+	.clk(clk),
+	.dir(dir),
+	.rst(rst),
+	.spd(spd),
+	.ssd(ssd),
+	.stp(stp)
+);
+
+// clk
+initial
+begin
+	repeat(16)
+	begin
+		clk = 1'b0;
+		clk = #30000 1'b1;
+		# 30000;
+	end
+	clk = 1'b0;
+	clk = #30000 1'b1;
+end 
+
+// dir
+initial
+begin
+	dir = 1'b1;
+end 
+
+// rst
+initial
+begin
+	rst = 1'b0;
+end 
+
+// spd
+initial
+begin
+	spd = 1'b0;
+end 
+
+// stp
+initial
+begin
+	stp = 1'b0;
+end 
+
+light_rotator_vlg_sample_tst tb_sample (
+	.clk(clk),
+	.dir(dir),
+	.rst(rst),
+	.spd(spd),
+	.stp(stp),
+	.sampler_tx(sampler)
+);
+
+light_rotator_vlg_check_tst tb_out(
+	.ssd(ssd),
+	.sampler_rx(sampler)
+);
+endmodule
+
