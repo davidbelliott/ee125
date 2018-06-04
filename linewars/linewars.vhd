@@ -1,5 +1,6 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
+USE work.linewars_package.all;
 ----------------------------------------------------------
 ENTITY linewars IS
 	--GENERIC ();

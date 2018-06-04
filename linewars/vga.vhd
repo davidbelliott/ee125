@@ -1,5 +1,6 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
+USE work.linewars_package.all;
 ----------------------------------------------------------
 ENTITY vga IS
 	GENERIC (
@@ -10,25 +11,23 @@ ENTITY vga IS
 		Va: INTEGER := 2; --Vpulse
 		Vb: INTEGER := 35; --Vpulse+VBP
 		Vc: INTEGER := 515; --Vpulse+VBP+Vactive
-		Vd: INTEGER := 525); --Vpulse+VBP+Vactive+VFP
+		Vd: INTEGER := 525; --Vpulse+VBP+Vactive+VFP
+		GAME_PIXEL_W: INTEGER := 640 / BOARD_W;
+		GAME_PIXEL_H: INTEGER := 480 / BOARD_H);
 	PORT (
 		clk: IN STD_LOGIC; --50MHz in our board
-		red_switch, green_switch, blue_switch: IN STD_LOGIC;
-		pixel_clk: BUFFER STD_LOGIC;
 		Hsync, Vsync: BUFFER STD_LOGIC;
 		R, G, B: OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-		nblanck, nsync : OUT STD_LOGIC);
+		display_buffer : IN t_buffer);
 END vga;
 ----------------------------------------------------------
 ARCHITECTURE vga OF vga IS
 	SIGNAL Hactive, Vactive, dena: STD_LOGIC;
+	SIGNAL pixel_clk: STD_LOGIC;
 BEGIN
 	-------------------------------------------------------
 	--Part 1: CONTROL GENERATOR
 	-------------------------------------------------------
-	--Static signals for DACs:
-	nblanck <= '1'; --no direct blanking
-	nsync <= '0'; --no sync on green
 	--Create pixel clock (50MHz->25MHz):
 	PROCESS (clk)
 	BEGIN
@@ -78,8 +77,7 @@ BEGIN
 	-------------------------------------------------------
 	--Part 2: IMAGE GENERATOR
 	-------------------------------------------------------
-	PROCESS (Hsync, Vsync, Vactive, dena, red_switch,
-		green_switch, blue_switch,pixel_clk)
+	PROCESS (Hsync, Vsync, Vactive, dena, pixel_clk)
 		VARIABLE row: INTEGER RANGE -1 TO Vc - 1;
 		VARIABLE col: INTEGER RANGE 0 TO Hc;
 	BEGIN
@@ -102,41 +100,51 @@ BEGIN
 		END IF;
 		
 		IF (dena='1') THEN
-			IF (row=1) THEN
+			IF (display_buffer(row / GAME_PIXEL_H)(col / GAME_PIXEL_W) = 1) THEN
 				R <= (OTHERS => '1');
 				G <= (OTHERS => '0');
 				B <= (OTHERS => '0');
-			ELSIF (row>1 AND row<=100) THEN
-				R <= (OTHERS => red_switch);
-				G <= (OTHERS => green_switch);
-				B <= (OTHERS => blue_switch);
-			ELSE 
+			ELSE
 				R <= (OTHERS => '0');
-				G <= (OTHERS => '1');
+				G <= (OTHERS => '0');
 				B <= (OTHERS => '0');
 			END IF;
 			
-			IF (col=639) THEN
-				R <= (OTHERS => '1');
-				G <= (OTHERS => '1');
-				B <= (OTHERS => '0');
-			END IF;
-			IF (col=0) THEN
-				R <= (OTHERS => '1');
-				G <= (OTHERS => '1');
-				B <= (OTHERS => '0');
-			END IF;
-			
-			IF (row=0) THEN
-				R <= (OTHERS => '1');
-				G <= (OTHERS => '1');
-				B <= (OTHERS => '0');
-			END IF;
-			IF (row=479) THEN
-				R <= (OTHERS => '1');
-				G <= (OTHERS => '1');
-				B <= (OTHERS => '0');
-			END IF;
+--			IF (row=1) THEN
+--				R <= (OTHERS => '1');
+--				G <= (OTHERS => '0');
+--				B <= (OTHERS => '0');
+--			ELSIF (row>1 AND row<=100) THEN
+--				R <= (OTHERS => '0');
+--				G <= (OTHERS => '0');
+--				B <= (OTHERS => '0');
+--			ELSE 
+--				R <= (OTHERS => '0');
+--				G <= (OTHERS => '1');
+--				B <= (OTHERS => '0');
+--			END IF;
+--			
+--			IF (col=639) THEN
+--				R <= (OTHERS => '1');
+--				G <= (OTHERS => '1');
+--				B <= (OTHERS => '0');
+--			END IF;
+--			IF (col=0) THEN
+--				R <= (OTHERS => '1');
+--				G <= (OTHERS => '1');
+--				B <= (OTHERS => '0');
+--			END IF;
+--			
+--			IF (row=0) THEN
+--				R <= (OTHERS => '1');
+--				G <= (OTHERS => '1');
+--				B <= (OTHERS => '0');
+--			END IF;
+--			IF (row=479) THEN
+--				R <= (OTHERS => '1');
+--				G <= (OTHERS => '1');
+--				B <= (OTHERS => '0');
+--			END IF;
 			
 		ELSE
 			R <= (OTHERS => '0');
