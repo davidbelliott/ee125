@@ -12,8 +12,8 @@ ENTITY vga IS
 		Vb: INTEGER := 35; --Vpulse+VBP
 		Vc: INTEGER := 515; --Vpulse+VBP+Vactive
 		Vd: INTEGER := 525; --Vpulse+VBP+Vactive+VFP
-		GAME_PIXEL_W: INTEGER := 640 / BOARD_W;
-		GAME_PIXEL_H: INTEGER := 480 / BOARD_H);
+		GAME_PIXEL_W: INTEGER := 8;
+		GAME_PIXEL_H: INTEGER := 8);
 	PORT (
 		clk: IN STD_LOGIC; --50MHz in our board
 		Hsync, Vsync: BUFFER STD_LOGIC;
@@ -23,15 +23,28 @@ END vga;
 ARCHITECTURE vga OF vga IS
 	SIGNAL Hactive, Vactive, dena: STD_LOGIC;
 	SIGNAL pixel_clk: STD_LOGIC;
-	shared variable display_buffer: t_buffer := ((others=> (others=>'0')));
+	shared variable display_buffer: memory_t;
 BEGIN
 	PROCESS (clk)
+	variable slow_clk: std_logic := '1';
+	variable count: integer range 0 to 50e6 - 1 := 0;
 	BEGIN
-		FOR i in 0 to (BOARD_H - 1) / 2 LOOP
-			FOR j in 0 to (BOARD_W - 1) / 2 LOOP
-				display_buffer(i*2)(j*2) := '1'
-			END LOOP;
-		END LOOP;
+		if rising_edge(clk) then
+			count := count + 1;
+			if count = 50e6 - 1 then
+				count := 0;
+				if display_buffer(3)(3) = '0' then
+					display_buffer(3)(3) := '1';
+				else
+					display_buffer(3)(3) := '0';
+				end if;
+			end if;
+  		end if;
+--		FOR i in 0 to (BOARD_H - 1) / 2 LOOP
+--			FOR j in 0 to (BOARD_W - 1) / 2 LOOP
+--				display_buffer(i*2)(j*2) := '1';
+--			END LOOP;
+--		END LOOP;
 	END PROCESS;
 	
 	-------------------------------------------------------

@@ -13,9 +13,14 @@ END linewars;
 
 ----------------------------------------------------------
 ARCHITECTURE linewars OF linewars IS
-	SIGNAL display_buffer: t_buffer;
+	SIGNAL addr: natural range 0 to 2**6 - 1;
+	SIGNAL data: std_logic_vector((8 - 1) downto 0);
+	SIGNAL we: std_logic;
+	SIGNAL q: std_logic_vector(7 downto 0);
+	
 BEGIN
-	vga: entity work.vga(vga) port map(clk, Hsync, Vsync,	R, G, B, display_buffer);
+	vga: entity work.vga(vga) port map(clk, Hsync, Vsync,	R, G, B);
+	--sdram: entity work.single_port_ram(rtl) port map(clk, addr, data, we, q);
 	--game: entity work.game(game) port map(clk, p1lswitch, p1rswitch, p2lswitch, p2rswitch, display_buffer);
 END linewars;
 ----------------------------------------------------------
