@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for linewars
-Tue Jun 05 16:25:57 2018
+Tue Jun 05 16:55:42 2018
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -56,10 +56,12 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
  48. Signal Integrity Metrics (Fast 1100mv 85c Model)
  49. Setup Transfers
  50. Hold Transfers
- 51. Report TCCS
- 52. Report RSKM
- 53. Unconstrained Paths
- 54. TimeQuest Timing Analyzer Messages
+ 51. Recovery Transfers
+ 52. Removal Transfers
+ 53. Report TCCS
+ 54. Report RSKM
+ 55. Unconstrained Paths
+ 56. TimeQuest Timing Analyzer Messages
 
 
 
@@ -112,19 +114,21 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Clock Name        ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets               ;
 +-------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------+
 ; clk               ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }               ;
+; p1lswitch         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { p1lswitch }         ;
 ; vga:vga|Hsync     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { vga:vga|Hsync }     ;
 ; vga:vga|pixel_clk ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { vga:vga|pixel_clk } ;
 +-------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------+
 
 
-+---------------------------------------------------------+
-; Slow 1100mV 85C Model Fmax Summary                      ;
-+------------+-----------------+-------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name        ; Note ;
-+------------+-----------------+-------------------+------+
-; 218.29 MHz ; 218.29 MHz      ; vga:vga|Hsync     ;      ;
-; 224.92 MHz ; 224.92 MHz      ; vga:vga|pixel_clk ;      ;
-+------------+-----------------+-------------------+------+
++---------------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary                                                                ;
++------------+-----------------+-------------------+------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name        ; Note                                           ;
++------------+-----------------+-------------------+------------------------------------------------+
+; 209.51 MHz ; 209.51 MHz      ; vga:vga|Hsync     ;                                                ;
+; 230.79 MHz ; 230.79 MHz      ; vga:vga|pixel_clk ;                                                ;
+; 652.32 MHz ; 650.2 MHz       ; p1lswitch         ; limit due to minimum period restriction (tmin) ;
++------------+-----------------+-------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -139,9 +143,10 @@ HTML report is unavailable in plain text report export.
 +-------------------+--------+---------------+
 ; Clock             ; Slack  ; End Point TNS ;
 +-------------------+--------+---------------+
-; vga:vga|Hsync     ; -3.581 ; -36.651       ;
-; vga:vga|pixel_clk ; -3.446 ; -35.345       ;
-; clk               ; 0.167  ; 0.000         ;
+; vga:vga|Hsync     ; -3.773 ; -60.228       ;
+; vga:vga|pixel_clk ; -3.333 ; -56.869       ;
+; p1lswitch         ; -0.533 ; -1.842        ;
+; clk               ; 0.232  ; 0.000         ;
 +-------------------+--------+---------------+
 
 
@@ -150,22 +155,31 @@ HTML report is unavailable in plain text report export.
 +-------------------+--------+---------------+
 ; Clock             ; Slack  ; End Point TNS ;
 +-------------------+--------+---------------+
-; clk               ; -1.012 ; -1.012        ;
-; vga:vga|pixel_clk ; -0.113 ; -0.113        ;
-; vga:vga|Hsync     ; 0.569  ; 0.000         ;
+; clk               ; -0.749 ; -0.749        ;
+; vga:vga|pixel_clk ; -0.283 ; -0.283        ;
+; p1lswitch         ; 0.131  ; 0.000         ;
+; vga:vga|Hsync     ; 0.358  ; 0.000         ;
 +-------------------+--------+---------------+
 
 
-------------------------------------------
-; Slow 1100mV 85C Model Recovery Summary ;
-------------------------------------------
-No paths to report.
++--------------------------------------------+
+; Slow 1100mV 85C Model Recovery Summary     ;
++-------------------+--------+---------------+
+; Clock             ; Slack  ; End Point TNS ;
++-------------------+--------+---------------+
+; vga:vga|Hsync     ; -0.879 ; -9.645        ;
+; vga:vga|pixel_clk ; 0.422  ; 0.000         ;
++-------------------+--------+---------------+
 
 
------------------------------------------
-; Slow 1100mV 85C Model Removal Summary ;
------------------------------------------
-No paths to report.
++--------------------------------------------+
+; Slow 1100mV 85C Model Removal Summary      ;
++-------------------+--------+---------------+
+; Clock             ; Slack  ; End Point TNS ;
++-------------------+--------+---------------+
+; vga:vga|pixel_clk ; -0.335 ; -3.640        ;
+; vga:vga|Hsync     ; 1.037  ; 0.000         ;
++-------------------+--------+---------------+
 
 
 +---------------------------------------------------+
@@ -173,32 +187,63 @@ No paths to report.
 +-------------------+--------+----------------------+
 ; Clock             ; Slack  ; End Point TNS        ;
 +-------------------+--------+----------------------+
-; clk               ; -0.544 ; -1.082               ;
-; vga:vga|pixel_clk ; -0.538 ; -8.594               ;
-; vga:vga|Hsync     ; -0.538 ; -8.490               ;
+; vga:vga|Hsync     ; -0.538 ; -18.836              ;
+; vga:vga|pixel_clk ; -0.538 ; -18.354              ;
+; p1lswitch         ; -0.538 ; -3.322               ;
+; clk               ; -0.538 ; -0.909               ;
 +-------------------+--------+----------------------+
 
 
-+--------------------------------------------------------------------------+
-; Clock to Output Times                                                    ;
-+-----------+---------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port    ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+---------------+-------+-------+------------+-----------------+
-; Hsync     ; vga:vga|Hsync ; 4.030 ;       ; Rise       ; vga:vga|Hsync   ;
-; Hsync     ; vga:vga|Hsync ;       ; 4.038 ; Fall       ; vga:vga|Hsync   ;
-; Vsync     ; vga:vga|Hsync ; 5.780 ; 5.912 ; Fall       ; vga:vga|Hsync   ;
-+-----------+---------------+-------+-------+------------+-----------------+
++----------------------------------------------------------------------------------+
+; Clock to Output Times                                                            ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; Data Port ; Clock Port        ; Rise   ; Fall   ; Clock Edge ; Clock Reference   ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; Hsync     ; vga:vga|Hsync     ; 6.420  ;        ; Rise       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|Hsync     ; 31.144 ; 32.127 ; Rise       ; vga:vga|Hsync     ;
+;  R[0]     ; vga:vga|Hsync     ; 31.144 ; 32.127 ; Rise       ; vga:vga|Hsync     ;
+;  R[1]     ; vga:vga|Hsync     ; 30.707 ; 31.547 ; Rise       ; vga:vga|Hsync     ;
+;  R[2]     ; vga:vga|Hsync     ; 30.709 ; 31.539 ; Rise       ; vga:vga|Hsync     ;
+;  R[3]     ; vga:vga|Hsync     ; 30.821 ; 31.657 ; Rise       ; vga:vga|Hsync     ;
+; Hsync     ; vga:vga|Hsync     ;        ; 6.505  ; Fall       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|Hsync     ; 12.380 ; 12.739 ; Fall       ; vga:vga|Hsync     ;
+;  R[0]     ; vga:vga|Hsync     ; 12.380 ; 12.739 ; Fall       ; vga:vga|Hsync     ;
+;  R[1]     ; vga:vga|Hsync     ; 11.943 ; 12.159 ; Fall       ; vga:vga|Hsync     ;
+;  R[2]     ; vga:vga|Hsync     ; 11.945 ; 12.151 ; Fall       ; vga:vga|Hsync     ;
+;  R[3]     ; vga:vga|Hsync     ; 12.057 ; 12.269 ; Fall       ; vga:vga|Hsync     ;
+; Vsync     ; vga:vga|Hsync     ; 9.379  ; 10.373 ; Fall       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|pixel_clk ; 28.370 ; 29.340 ; Rise       ; vga:vga|pixel_clk ;
+;  R[0]     ; vga:vga|pixel_clk ; 28.370 ; 29.340 ; Rise       ; vga:vga|pixel_clk ;
+;  R[1]     ; vga:vga|pixel_clk ; 27.933 ; 28.760 ; Rise       ; vga:vga|pixel_clk ;
+;  R[2]     ; vga:vga|pixel_clk ; 27.935 ; 28.752 ; Rise       ; vga:vga|pixel_clk ;
+;  R[3]     ; vga:vga|pixel_clk ; 28.047 ; 28.870 ; Rise       ; vga:vga|pixel_clk ;
++-----------+-------------------+--------+--------+------------+-------------------+
 
 
-+--------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                            ;
-+-----------+---------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port    ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+---------------+-------+-------+------------+-----------------+
-; Hsync     ; vga:vga|Hsync ; 3.622 ;       ; Rise       ; vga:vga|Hsync   ;
-; Hsync     ; vga:vga|Hsync ;       ; 3.622 ; Fall       ; vga:vga|Hsync   ;
-; Vsync     ; vga:vga|Hsync ; 4.848 ; 4.969 ; Fall       ; vga:vga|Hsync   ;
-+-----------+---------------+-------+-------+------------+-----------------+
++---------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                   ;
++-----------+-------------------+-------+--------+------------+-------------------+
+; Data Port ; Clock Port        ; Rise  ; Fall   ; Clock Edge ; Clock Reference   ;
++-----------+-------------------+-------+--------+------------+-------------------+
+; Hsync     ; vga:vga|Hsync     ; 5.561 ;        ; Rise       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|Hsync     ; 9.315 ; 9.533  ; Rise       ; vga:vga|Hsync     ;
+;  R[0]     ; vga:vga|Hsync     ; 9.698 ; 10.034 ; Rise       ; vga:vga|Hsync     ;
+;  R[1]     ; vga:vga|Hsync     ; 9.315 ; 9.541  ; Rise       ; vga:vga|Hsync     ;
+;  R[2]     ; vga:vga|Hsync     ; 9.317 ; 9.533  ; Rise       ; vga:vga|Hsync     ;
+;  R[3]     ; vga:vga|Hsync     ; 9.429 ; 9.652  ; Rise       ; vga:vga|Hsync     ;
+; Hsync     ; vga:vga|Hsync     ;       ; 5.801  ; Fall       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|Hsync     ; 8.083 ; 8.564  ; Fall       ; vga:vga|Hsync     ;
+;  R[0]     ; vga:vga|Hsync     ; 8.466 ; 9.065  ; Fall       ; vga:vga|Hsync     ;
+;  R[1]     ; vga:vga|Hsync     ; 8.083 ; 8.572  ; Fall       ; vga:vga|Hsync     ;
+;  R[2]     ; vga:vga|Hsync     ; 8.085 ; 8.564  ; Fall       ; vga:vga|Hsync     ;
+;  R[3]     ; vga:vga|Hsync     ; 8.197 ; 8.683  ; Fall       ; vga:vga|Hsync     ;
+; Vsync     ; vga:vga|Hsync     ; 7.834 ; 8.682  ; Fall       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|pixel_clk ; 7.181 ; 7.513  ; Rise       ; vga:vga|pixel_clk ;
+;  R[0]     ; vga:vga|pixel_clk ; 7.564 ; 8.014  ; Rise       ; vga:vga|pixel_clk ;
+;  R[1]     ; vga:vga|pixel_clk ; 7.181 ; 7.521  ; Rise       ; vga:vga|pixel_clk ;
+;  R[2]     ; vga:vga|pixel_clk ; 7.183 ; 7.513  ; Rise       ; vga:vga|pixel_clk ;
+;  R[3]     ; vga:vga|pixel_clk ; 7.295 ; 7.632  ; Rise       ; vga:vga|pixel_clk ;
++-----------+-------------------+-------+--------+------------+-------------------+
 
 
 ----------------------------------------------
@@ -212,8 +257,9 @@ No synchronizer chains to report.
 +------------+-----------------+-------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name        ; Note ;
 +------------+-----------------+-------------------+------+
-; 218.72 MHz ; 218.72 MHz      ; vga:vga|pixel_clk ;      ;
-; 221.53 MHz ; 221.53 MHz      ; vga:vga|Hsync     ;      ;
+; 208.03 MHz ; 208.03 MHz      ; vga:vga|Hsync     ;      ;
+; 220.65 MHz ; 220.65 MHz      ; vga:vga|pixel_clk ;      ;
+; 645.16 MHz ; 645.16 MHz      ; p1lswitch         ;      ;
 +------------+-----------------+-------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -223,9 +269,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------+--------+---------------+
 ; Clock             ; Slack  ; End Point TNS ;
 +-------------------+--------+---------------+
-; vga:vga|pixel_clk ; -3.572 ; -36.347       ;
-; vga:vga|Hsync     ; -3.514 ; -36.457       ;
-; clk               ; 0.093  ; 0.000         ;
+; vga:vga|Hsync     ; -3.807 ; -61.252       ;
+; vga:vga|pixel_clk ; -3.532 ; -58.466       ;
+; p1lswitch         ; -0.550 ; -1.889        ;
+; clk               ; 0.139  ; 0.000         ;
 +-------------------+--------+---------------+
 
 
@@ -234,22 +281,31 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------+--------+---------------+
 ; Clock             ; Slack  ; End Point TNS ;
 +-------------------+--------+---------------+
-; clk               ; -0.876 ; -0.876        ;
-; vga:vga|pixel_clk ; -0.018 ; -0.018        ;
-; vga:vga|Hsync     ; 0.579  ; 0.000         ;
+; clk               ; -0.617 ; -0.617        ;
+; vga:vga|pixel_clk ; -0.175 ; -0.175        ;
+; p1lswitch         ; 0.159  ; 0.000         ;
+; vga:vga|Hsync     ; 0.349  ; 0.000         ;
 +-------------------+--------+---------------+
 
 
------------------------------------------
-; Slow 1100mV 0C Model Recovery Summary ;
------------------------------------------
-No paths to report.
++--------------------------------------------+
+; Slow 1100mV 0C Model Recovery Summary      ;
++-------------------+--------+---------------+
+; Clock             ; Slack  ; End Point TNS ;
++-------------------+--------+---------------+
+; vga:vga|Hsync     ; -0.863 ; -9.471        ;
+; vga:vga|pixel_clk ; 0.396  ; 0.000         ;
++-------------------+--------+---------------+
 
 
-----------------------------------------
-; Slow 1100mV 0C Model Removal Summary ;
-----------------------------------------
-No paths to report.
++--------------------------------------------+
+; Slow 1100mV 0C Model Removal Summary       ;
++-------------------+--------+---------------+
+; Clock             ; Slack  ; End Point TNS ;
++-------------------+--------+---------------+
+; vga:vga|pixel_clk ; -0.255 ; -2.755        ;
+; vga:vga|Hsync     ; 1.021  ; 0.000         ;
++-------------------+--------+---------------+
 
 
 +--------------------------------------------------+
@@ -257,32 +313,63 @@ No paths to report.
 +-------------------+--------+---------------------+
 ; Clock             ; Slack  ; End Point TNS       ;
 +-------------------+--------+---------------------+
-; clk               ; -0.591 ; -1.129              ;
-; vga:vga|pixel_clk ; -0.538 ; -8.555              ;
-; vga:vga|Hsync     ; -0.538 ; -8.516              ;
+; vga:vga|Hsync     ; -0.538 ; -18.254             ;
+; vga:vga|pixel_clk ; -0.538 ; -18.070             ;
+; p1lswitch         ; -0.538 ; -3.260              ;
+; clk               ; -0.538 ; -0.919              ;
 +-------------------+--------+---------------------+
 
 
-+--------------------------------------------------------------------------+
-; Clock to Output Times                                                    ;
-+-----------+---------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port    ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+---------------+-------+-------+------------+-----------------+
-; Hsync     ; vga:vga|Hsync ; 3.887 ;       ; Rise       ; vga:vga|Hsync   ;
-; Hsync     ; vga:vga|Hsync ;       ; 3.898 ; Fall       ; vga:vga|Hsync   ;
-; Vsync     ; vga:vga|Hsync ; 5.460 ; 5.589 ; Fall       ; vga:vga|Hsync   ;
-+-----------+---------------+-------+-------+------------+-----------------+
++----------------------------------------------------------------------------------+
+; Clock to Output Times                                                            ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; Data Port ; Clock Port        ; Rise   ; Fall   ; Clock Edge ; Clock Reference   ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; Hsync     ; vga:vga|Hsync     ; 6.070  ;        ; Rise       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|Hsync     ; 30.305 ; 31.413 ; Rise       ; vga:vga|Hsync     ;
+;  R[0]     ; vga:vga|Hsync     ; 30.305 ; 31.413 ; Rise       ; vga:vga|Hsync     ;
+;  R[1]     ; vga:vga|Hsync     ; 29.886 ; 30.835 ; Rise       ; vga:vga|Hsync     ;
+;  R[2]     ; vga:vga|Hsync     ; 29.889 ; 30.830 ; Rise       ; vga:vga|Hsync     ;
+;  R[3]     ; vga:vga|Hsync     ; 30.002 ; 30.951 ; Rise       ; vga:vga|Hsync     ;
+; Hsync     ; vga:vga|Hsync     ;        ; 6.278  ; Fall       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|Hsync     ; 11.763 ; 12.242 ; Fall       ; vga:vga|Hsync     ;
+;  R[0]     ; vga:vga|Hsync     ; 11.763 ; 12.242 ; Fall       ; vga:vga|Hsync     ;
+;  R[1]     ; vga:vga|Hsync     ; 11.344 ; 11.664 ; Fall       ; vga:vga|Hsync     ;
+;  R[2]     ; vga:vga|Hsync     ; 11.347 ; 11.659 ; Fall       ; vga:vga|Hsync     ;
+;  R[3]     ; vga:vga|Hsync     ; 11.460 ; 11.780 ; Fall       ; vga:vga|Hsync     ;
+; Vsync     ; vga:vga|Hsync     ; 8.839  ; 9.899  ; Fall       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|pixel_clk ; 27.296 ; 28.404 ; Rise       ; vga:vga|pixel_clk ;
+;  R[0]     ; vga:vga|pixel_clk ; 27.296 ; 28.404 ; Rise       ; vga:vga|pixel_clk ;
+;  R[1]     ; vga:vga|pixel_clk ; 26.877 ; 27.826 ; Rise       ; vga:vga|pixel_clk ;
+;  R[2]     ; vga:vga|pixel_clk ; 26.880 ; 27.821 ; Rise       ; vga:vga|pixel_clk ;
+;  R[3]     ; vga:vga|pixel_clk ; 26.993 ; 27.942 ; Rise       ; vga:vga|pixel_clk ;
++-----------+-------------------+--------+--------+------------+-------------------+
 
 
-+--------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                            ;
-+-----------+---------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port    ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+---------------+-------+-------+------------+-----------------+
-; Hsync     ; vga:vga|Hsync ; 3.491 ;       ; Rise       ; vga:vga|Hsync   ;
-; Hsync     ; vga:vga|Hsync ;       ; 3.496 ; Fall       ; vga:vga|Hsync   ;
-; Vsync     ; vga:vga|Hsync ; 4.613 ; 4.731 ; Fall       ; vga:vga|Hsync   ;
-+-----------+---------------+-------+-------+------------+-----------------+
++--------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                  ;
++-----------+-------------------+-------+-------+------------+-------------------+
+; Data Port ; Clock Port        ; Rise  ; Fall  ; Clock Edge ; Clock Reference   ;
++-----------+-------------------+-------+-------+------------+-------------------+
+; Hsync     ; vga:vga|Hsync     ; 5.261 ;       ; Rise       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|Hsync     ; 8.896 ; 9.180 ; Rise       ; vga:vga|Hsync     ;
+;  R[0]     ; vga:vga|Hsync     ; 9.263 ; 9.676 ; Rise       ; vga:vga|Hsync     ;
+;  R[1]     ; vga:vga|Hsync     ; 8.896 ; 9.185 ; Rise       ; vga:vga|Hsync     ;
+;  R[2]     ; vga:vga|Hsync     ; 8.899 ; 9.180 ; Rise       ; vga:vga|Hsync     ;
+;  R[3]     ; vga:vga|Hsync     ; 9.013 ; 9.302 ; Rise       ; vga:vga|Hsync     ;
+; Hsync     ; vga:vga|Hsync     ;       ; 5.594 ; Fall       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|Hsync     ; 7.613 ; 8.164 ; Fall       ; vga:vga|Hsync     ;
+;  R[0]     ; vga:vga|Hsync     ; 7.980 ; 8.660 ; Fall       ; vga:vga|Hsync     ;
+;  R[1]     ; vga:vga|Hsync     ; 7.613 ; 8.169 ; Fall       ; vga:vga|Hsync     ;
+;  R[2]     ; vga:vga|Hsync     ; 7.616 ; 8.164 ; Fall       ; vga:vga|Hsync     ;
+;  R[3]     ; vga:vga|Hsync     ; 7.730 ; 8.286 ; Fall       ; vga:vga|Hsync     ;
+; Vsync     ; vga:vga|Hsync     ; 7.416 ; 8.314 ; Fall       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|pixel_clk ; 6.763 ; 7.128 ; Rise       ; vga:vga|pixel_clk ;
+;  R[0]     ; vga:vga|pixel_clk ; 7.130 ; 7.624 ; Rise       ; vga:vga|pixel_clk ;
+;  R[1]     ; vga:vga|pixel_clk ; 6.763 ; 7.133 ; Rise       ; vga:vga|pixel_clk ;
+;  R[2]     ; vga:vga|pixel_clk ; 6.766 ; 7.128 ; Rise       ; vga:vga|pixel_clk ;
+;  R[3]     ; vga:vga|pixel_clk ; 6.880 ; 7.250 ; Rise       ; vga:vga|pixel_clk ;
++-----------+-------------------+-------+-------+------------+-------------------+
 
 
 ---------------------------------------------
@@ -296,9 +383,10 @@ No synchronizer chains to report.
 +-------------------+--------+---------------+
 ; Clock             ; Slack  ; End Point TNS ;
 +-------------------+--------+---------------+
-; vga:vga|Hsync     ; -1.057 ; -9.969        ;
-; vga:vga|pixel_clk ; -1.023 ; -10.268       ;
-; clk               ; 0.172  ; 0.000         ;
+; vga:vga|Hsync     ; -1.098 ; -16.241       ;
+; vga:vga|pixel_clk ; -1.003 ; -15.624       ;
+; clk               ; 0.350  ; 0.000         ;
+; p1lswitch         ; 0.368  ; 0.000         ;
 +-------------------+--------+---------------+
 
 
@@ -307,22 +395,31 @@ No synchronizer chains to report.
 +-------------------+--------+---------------+
 ; Clock             ; Slack  ; End Point TNS ;
 +-------------------+--------+---------------+
-; clk               ; -0.410 ; -0.410        ;
-; vga:vga|pixel_clk ; -0.044 ; -0.044        ;
-; vga:vga|Hsync     ; 0.338  ; 0.000         ;
+; clk               ; -0.353 ; -0.353        ;
+; vga:vga|pixel_clk ; -0.128 ; -0.128        ;
+; p1lswitch         ; 0.148  ; 0.000         ;
+; vga:vga|Hsync     ; 0.208  ; 0.000         ;
 +-------------------+--------+---------------+
 
 
-------------------------------------------
-; Fast 1100mV 85C Model Recovery Summary ;
-------------------------------------------
-No paths to report.
++--------------------------------------------+
+; Fast 1100mV 85C Model Recovery Summary     ;
++-------------------+--------+---------------+
+; Clock             ; Slack  ; End Point TNS ;
++-------------------+--------+---------------+
+; vga:vga|Hsync     ; -0.229 ; -2.515        ;
+; vga:vga|pixel_clk ; 0.415  ; 0.000         ;
++-------------------+--------+---------------+
 
 
------------------------------------------
-; Fast 1100mV 85C Model Removal Summary ;
------------------------------------------
-No paths to report.
++--------------------------------------------+
+; Fast 1100mV 85C Model Removal Summary      ;
++-------------------+--------+---------------+
+; Clock             ; Slack  ; End Point TNS ;
++-------------------+--------+---------------+
+; vga:vga|pixel_clk ; -0.169 ; -1.851        ;
+; vga:vga|Hsync     ; 0.785  ; 0.000         ;
++-------------------+--------+---------------+
 
 
 +---------------------------------------------------+
@@ -330,32 +427,63 @@ No paths to report.
 +-------------------+--------+----------------------+
 ; Clock             ; Slack  ; End Point TNS        ;
 +-------------------+--------+----------------------+
-; clk               ; -0.504 ; -0.656               ;
-; vga:vga|pixel_clk ; 0.119  ; 0.000                ;
-; vga:vga|Hsync     ; 0.156  ; 0.000                ;
+; clk               ; -0.363 ; -0.374               ;
+; p1lswitch         ; -0.244 ; -1.029               ;
+; vga:vga|Hsync     ; 0.056  ; 0.000                ;
+; vga:vga|pixel_clk ; 0.084  ; 0.000                ;
 +-------------------+--------+----------------------+
 
 
-+--------------------------------------------------------------------------+
-; Clock to Output Times                                                    ;
-+-----------+---------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port    ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+---------------+-------+-------+------------+-----------------+
-; Hsync     ; vga:vga|Hsync ; 2.339 ;       ; Rise       ; vga:vga|Hsync   ;
-; Hsync     ; vga:vga|Hsync ;       ; 2.358 ; Fall       ; vga:vga|Hsync   ;
-; Vsync     ; vga:vga|Hsync ; 3.141 ; 3.244 ; Fall       ; vga:vga|Hsync   ;
-+-----------+---------------+-------+-------+------------+-----------------+
++----------------------------------------------------------------------------------+
+; Clock to Output Times                                                            ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; Data Port ; Clock Port        ; Rise   ; Fall   ; Clock Edge ; Clock Reference   ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; Hsync     ; vga:vga|Hsync     ; 3.578  ;        ; Rise       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|Hsync     ; 17.906 ; 18.926 ; Rise       ; vga:vga|Hsync     ;
+;  R[0]     ; vga:vga|Hsync     ; 17.906 ; 18.926 ; Rise       ; vga:vga|Hsync     ;
+;  R[1]     ; vga:vga|Hsync     ; 17.684 ; 18.587 ; Rise       ; vga:vga|Hsync     ;
+;  R[2]     ; vga:vga|Hsync     ; 17.683 ; 18.582 ; Rise       ; vga:vga|Hsync     ;
+;  R[3]     ; vga:vga|Hsync     ; 17.758 ; 18.664 ; Rise       ; vga:vga|Hsync     ;
+; Hsync     ; vga:vga|Hsync     ;        ; 3.800  ; Fall       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|Hsync     ; 6.502  ; 7.179  ; Fall       ; vga:vga|Hsync     ;
+;  R[0]     ; vga:vga|Hsync     ; 6.502  ; 7.179  ; Fall       ; vga:vga|Hsync     ;
+;  R[1]     ; vga:vga|Hsync     ; 6.280  ; 6.840  ; Fall       ; vga:vga|Hsync     ;
+;  R[2]     ; vga:vga|Hsync     ; 6.279  ; 6.835  ; Fall       ; vga:vga|Hsync     ;
+;  R[3]     ; vga:vga|Hsync     ; 6.354  ; 6.917  ; Fall       ; vga:vga|Hsync     ;
+; Vsync     ; vga:vga|Hsync     ; 5.452  ; 6.399  ; Fall       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|pixel_clk ; 17.165 ; 18.148 ; Rise       ; vga:vga|pixel_clk ;
+;  R[0]     ; vga:vga|pixel_clk ; 17.165 ; 18.148 ; Rise       ; vga:vga|pixel_clk ;
+;  R[1]     ; vga:vga|pixel_clk ; 16.943 ; 17.809 ; Rise       ; vga:vga|pixel_clk ;
+;  R[2]     ; vga:vga|pixel_clk ; 16.942 ; 17.804 ; Rise       ; vga:vga|pixel_clk ;
+;  R[3]     ; vga:vga|pixel_clk ; 17.017 ; 17.886 ; Rise       ; vga:vga|pixel_clk ;
++-----------+-------------------+--------+--------+------------+-------------------+
 
 
-+--------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                            ;
-+-----------+---------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port    ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+---------------+-------+-------+------------+-----------------+
-; Hsync     ; vga:vga|Hsync ; 2.174 ;       ; Rise       ; vga:vga|Hsync   ;
-; Hsync     ; vga:vga|Hsync ;       ; 2.186 ; Fall       ; vga:vga|Hsync   ;
-; Vsync     ; vga:vga|Hsync ; 2.746 ; 2.837 ; Fall       ; vga:vga|Hsync   ;
-+-----------+---------------+-------+-------+------------+-----------------+
++--------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                  ;
++-----------+-------------------+-------+-------+------------+-------------------+
+; Data Port ; Clock Port        ; Rise  ; Fall  ; Clock Edge ; Clock Reference   ;
++-----------+-------------------+-------+-------+------------+-------------------+
+; Hsync     ; vga:vga|Hsync     ; 3.191 ;       ; Rise       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|Hsync     ; 4.975 ; 5.224 ; Rise       ; vga:vga|Hsync     ;
+;  R[0]     ; vga:vga|Hsync     ; 5.174 ; 5.521 ; Rise       ; vga:vga|Hsync     ;
+;  R[1]     ; vga:vga|Hsync     ; 4.976 ; 5.230 ; Rise       ; vga:vga|Hsync     ;
+;  R[2]     ; vga:vga|Hsync     ; 4.975 ; 5.224 ; Rise       ; vga:vga|Hsync     ;
+;  R[3]     ; vga:vga|Hsync     ; 5.051 ; 5.306 ; Rise       ; vga:vga|Hsync     ;
+; Hsync     ; vga:vga|Hsync     ;       ; 3.470 ; Fall       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|Hsync     ; 4.515 ; 5.025 ; Fall       ; vga:vga|Hsync     ;
+;  R[0]     ; vga:vga|Hsync     ; 4.714 ; 5.322 ; Fall       ; vga:vga|Hsync     ;
+;  R[1]     ; vga:vga|Hsync     ; 4.516 ; 5.031 ; Fall       ; vga:vga|Hsync     ;
+;  R[2]     ; vga:vga|Hsync     ; 4.515 ; 5.025 ; Fall       ; vga:vga|Hsync     ;
+;  R[3]     ; vga:vga|Hsync     ; 4.591 ; 5.107 ; Fall       ; vga:vga|Hsync     ;
+; Vsync     ; vga:vga|Hsync     ; 4.694 ; 5.491 ; Fall       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|pixel_clk ; 3.939 ; 4.290 ; Rise       ; vga:vga|pixel_clk ;
+;  R[0]     ; vga:vga|pixel_clk ; 4.138 ; 4.587 ; Rise       ; vga:vga|pixel_clk ;
+;  R[1]     ; vga:vga|pixel_clk ; 3.940 ; 4.296 ; Rise       ; vga:vga|pixel_clk ;
+;  R[2]     ; vga:vga|pixel_clk ; 3.939 ; 4.290 ; Rise       ; vga:vga|pixel_clk ;
+;  R[3]     ; vga:vga|pixel_clk ; 4.015 ; 4.372 ; Rise       ; vga:vga|pixel_clk ;
++-----------+-------------------+-------+-------+------------+-------------------+
 
 
 ----------------------------------------------
@@ -369,9 +497,10 @@ No synchronizer chains to report.
 +-------------------+--------+---------------+
 ; Clock             ; Slack  ; End Point TNS ;
 +-------------------+--------+---------------+
-; vga:vga|pixel_clk ; -0.931 ; -9.234        ;
-; vga:vga|Hsync     ; -0.917 ; -8.778        ;
-; clk               ; 0.167  ; 0.000         ;
+; vga:vga|Hsync     ; -0.969 ; -14.153       ;
+; vga:vga|pixel_clk ; -0.903 ; -13.584       ;
+; clk               ; 0.313  ; 0.000         ;
+; p1lswitch         ; 0.402  ; 0.000         ;
 +-------------------+--------+---------------+
 
 
@@ -380,22 +509,31 @@ No synchronizer chains to report.
 +-------------------+--------+---------------+
 ; Clock             ; Slack  ; End Point TNS ;
 +-------------------+--------+---------------+
-; clk               ; -0.345 ; -0.345        ;
-; vga:vga|pixel_clk ; -0.012 ; -0.012        ;
-; vga:vga|Hsync     ; 0.308  ; 0.000         ;
+; clk               ; -0.294 ; -0.294        ;
+; vga:vga|pixel_clk ; -0.082 ; -0.082        ;
+; p1lswitch         ; 0.150  ; 0.000         ;
+; vga:vga|Hsync     ; 0.193  ; 0.000         ;
 +-------------------+--------+---------------+
 
 
------------------------------------------
-; Fast 1100mV 0C Model Recovery Summary ;
------------------------------------------
-No paths to report.
++--------------------------------------------+
+; Fast 1100mV 0C Model Recovery Summary      ;
++-------------------+--------+---------------+
+; Clock             ; Slack  ; End Point TNS ;
++-------------------+--------+---------------+
+; vga:vga|Hsync     ; -0.180 ; -1.974        ;
+; vga:vga|pixel_clk ; 0.400  ; 0.000         ;
++-------------------+--------+---------------+
 
 
-----------------------------------------
-; Fast 1100mV 0C Model Removal Summary ;
-----------------------------------------
-No paths to report.
++--------------------------------------------+
+; Fast 1100mV 0C Model Removal Summary       ;
++-------------------+--------+---------------+
+; Clock             ; Slack  ; End Point TNS ;
++-------------------+--------+---------------+
+; vga:vga|pixel_clk ; -0.136 ; -1.483        ;
+; vga:vga|Hsync     ; 0.758  ; 0.000         ;
++-------------------+--------+---------------+
 
 
 +--------------------------------------------------+
@@ -403,32 +541,63 @@ No paths to report.
 +-------------------+--------+---------------------+
 ; Clock             ; Slack  ; End Point TNS       ;
 +-------------------+--------+---------------------+
-; clk               ; -0.517 ; -0.692              ;
-; vga:vga|pixel_clk ; 0.126  ; 0.000               ;
-; vga:vga|Hsync     ; 0.158  ; 0.000               ;
+; clk               ; -0.376 ; -0.409              ;
+; p1lswitch         ; -0.254 ; -1.077              ;
+; vga:vga|Hsync     ; 0.076  ; 0.000               ;
+; vga:vga|pixel_clk ; 0.092  ; 0.000               ;
 +-------------------+--------+---------------------+
 
 
-+--------------------------------------------------------------------------+
-; Clock to Output Times                                                    ;
-+-----------+---------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port    ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+---------------+-------+-------+------------+-----------------+
-; Hsync     ; vga:vga|Hsync ; 2.184 ;       ; Rise       ; vga:vga|Hsync   ;
-; Hsync     ; vga:vga|Hsync ;       ; 2.202 ; Fall       ; vga:vga|Hsync   ;
-; Vsync     ; vga:vga|Hsync ; 2.894 ; 2.979 ; Fall       ; vga:vga|Hsync   ;
-+-----------+---------------+-------+-------+------------+-----------------+
++----------------------------------------------------------------------------------+
+; Clock to Output Times                                                            ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; Data Port ; Clock Port        ; Rise   ; Fall   ; Clock Edge ; Clock Reference   ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; Hsync     ; vga:vga|Hsync     ; 3.238  ;        ; Rise       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|Hsync     ; 16.087 ; 16.984 ; Rise       ; vga:vga|Hsync     ;
+;  R[0]     ; vga:vga|Hsync     ; 16.087 ; 16.984 ; Rise       ; vga:vga|Hsync     ;
+;  R[1]     ; vga:vga|Hsync     ; 15.884 ; 16.681 ; Rise       ; vga:vga|Hsync     ;
+;  R[2]     ; vga:vga|Hsync     ; 15.884 ; 16.676 ; Rise       ; vga:vga|Hsync     ;
+;  R[3]     ; vga:vga|Hsync     ; 15.961 ; 16.757 ; Rise       ; vga:vga|Hsync     ;
+; Hsync     ; vga:vga|Hsync     ;        ; 3.484  ; Fall       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|Hsync     ; 5.904  ; 6.502  ; Fall       ; vga:vga|Hsync     ;
+;  R[0]     ; vga:vga|Hsync     ; 5.904  ; 6.502  ; Fall       ; vga:vga|Hsync     ;
+;  R[1]     ; vga:vga|Hsync     ; 5.701  ; 6.199  ; Fall       ; vga:vga|Hsync     ;
+;  R[2]     ; vga:vga|Hsync     ; 5.701  ; 6.194  ; Fall       ; vga:vga|Hsync     ;
+;  R[3]     ; vga:vga|Hsync     ; 5.778  ; 6.275  ; Fall       ; vga:vga|Hsync     ;
+; Vsync     ; vga:vga|Hsync     ; 4.959  ; 5.751  ; Fall       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|pixel_clk ; 15.293 ; 16.149 ; Rise       ; vga:vga|pixel_clk ;
+;  R[0]     ; vga:vga|pixel_clk ; 15.293 ; 16.149 ; Rise       ; vga:vga|pixel_clk ;
+;  R[1]     ; vga:vga|pixel_clk ; 15.090 ; 15.846 ; Rise       ; vga:vga|pixel_clk ;
+;  R[2]     ; vga:vga|pixel_clk ; 15.090 ; 15.841 ; Rise       ; vga:vga|pixel_clk ;
+;  R[3]     ; vga:vga|pixel_clk ; 15.167 ; 15.922 ; Rise       ; vga:vga|pixel_clk ;
++-----------+-------------------+--------+--------+------------+-------------------+
 
 
-+--------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                            ;
-+-----------+---------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port    ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+---------------+-------+-------+------------+-----------------+
-; Hsync     ; vga:vga|Hsync ; 2.022 ;       ; Rise       ; vga:vga|Hsync   ;
-; Hsync     ; vga:vga|Hsync ;       ; 2.034 ; Fall       ; vga:vga|Hsync   ;
-; Vsync     ; vga:vga|Hsync ; 2.525 ; 2.599 ; Fall       ; vga:vga|Hsync   ;
-+-----------+---------------+-------+-------+------------+-----------------+
++--------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                  ;
++-----------+-------------------+-------+-------+------------+-------------------+
+; Data Port ; Clock Port        ; Rise  ; Fall  ; Clock Edge ; Clock Reference   ;
++-----------+-------------------+-------+-------+------------+-------------------+
+; Hsync     ; vga:vga|Hsync     ; 2.888 ;       ; Rise       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|Hsync     ; 4.535 ; 4.768 ; Rise       ; vga:vga|Hsync     ;
+;  R[0]     ; vga:vga|Hsync     ; 4.715 ; 5.034 ; Rise       ; vga:vga|Hsync     ;
+;  R[1]     ; vga:vga|Hsync     ; 4.535 ; 4.773 ; Rise       ; vga:vga|Hsync     ;
+;  R[2]     ; vga:vga|Hsync     ; 4.535 ; 4.768 ; Rise       ; vga:vga|Hsync     ;
+;  R[3]     ; vga:vga|Hsync     ; 4.611 ; 4.849 ; Rise       ; vga:vga|Hsync     ;
+; Hsync     ; vga:vga|Hsync     ;       ; 3.176 ; Fall       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|Hsync     ; 4.072 ; 4.535 ; Fall       ; vga:vga|Hsync     ;
+;  R[0]     ; vga:vga|Hsync     ; 4.252 ; 4.801 ; Fall       ; vga:vga|Hsync     ;
+;  R[1]     ; vga:vga|Hsync     ; 4.072 ; 4.540 ; Fall       ; vga:vga|Hsync     ;
+;  R[2]     ; vga:vga|Hsync     ; 4.072 ; 4.535 ; Fall       ; vga:vga|Hsync     ;
+;  R[3]     ; vga:vga|Hsync     ; 4.148 ; 4.616 ; Fall       ; vga:vga|Hsync     ;
+; Vsync     ; vga:vga|Hsync     ; 4.267 ; 4.931 ; Fall       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|pixel_clk ; 3.553 ; 3.878 ; Rise       ; vga:vga|pixel_clk ;
+;  R[0]     ; vga:vga|pixel_clk ; 3.733 ; 4.144 ; Rise       ; vga:vga|pixel_clk ;
+;  R[1]     ; vga:vga|pixel_clk ; 3.553 ; 3.883 ; Rise       ; vga:vga|pixel_clk ;
+;  R[2]     ; vga:vga|pixel_clk ; 3.553 ; 3.878 ; Rise       ; vga:vga|pixel_clk ;
+;  R[3]     ; vga:vga|pixel_clk ; 3.629 ; 3.959 ; Rise       ; vga:vga|pixel_clk ;
++-----------+-------------------+-------+-------+------------+-------------------+
 
 
 ---------------------------------------------
@@ -437,42 +606,74 @@ No paths to report.
 No synchronizer chains to report.
 
 
++-----------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                               ;
++--------------------+----------+--------+----------+---------+---------------------+
+; Clock              ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++--------------------+----------+--------+----------+---------+---------------------+
+; Worst-case Slack   ; -3.807   ; -0.749 ; -0.879   ; -0.335  ; -0.538              ;
+;  clk               ; 0.139    ; -0.749 ; N/A      ; N/A     ; -0.538              ;
+;  p1lswitch         ; -0.550   ; 0.131  ; N/A      ; N/A     ; -0.538              ;
+;  vga:vga|Hsync     ; -3.807   ; 0.193  ; -0.879   ; 0.758   ; -0.538              ;
+;  vga:vga|pixel_clk ; -3.532   ; -0.283 ; 0.396    ; -0.335  ; -0.538              ;
+; Design-wide TNS    ; -121.607 ; -1.032 ; -9.645   ; -3.64   ; -41.421             ;
+;  clk               ; 0.000    ; -0.749 ; N/A      ; N/A     ; -0.919              ;
+;  p1lswitch         ; -1.889   ; 0.000  ; N/A      ; N/A     ; -3.322              ;
+;  vga:vga|Hsync     ; -61.252  ; 0.000  ; -9.645   ; 0.000   ; -18.836             ;
+;  vga:vga|pixel_clk ; -58.466  ; -0.283 ; 0.000    ; -3.640  ; -18.354             ;
++--------------------+----------+--------+----------+---------+---------------------+
+
+
 +----------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                              ;
-+--------------------+---------+--------+----------+---------+---------------------+
-; Clock              ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
-+--------------------+---------+--------+----------+---------+---------------------+
-; Worst-case Slack   ; -3.581  ; -1.012 ; N/A      ; N/A     ; -0.591              ;
-;  clk               ; 0.093   ; -1.012 ; N/A      ; N/A     ; -0.591              ;
-;  vga:vga|Hsync     ; -3.581  ; 0.308  ; N/A      ; N/A     ; -0.538              ;
-;  vga:vga|pixel_clk ; -3.572  ; -0.113 ; N/A      ; N/A     ; -0.538              ;
-; Design-wide TNS    ; -72.804 ; -1.125 ; 0.0      ; 0.0     ; -18.2               ;
-;  clk               ; 0.000   ; -1.012 ; N/A      ; N/A     ; -1.129              ;
-;  vga:vga|Hsync     ; -36.651 ; 0.000  ; N/A      ; N/A     ; -8.516              ;
-;  vga:vga|pixel_clk ; -36.347 ; -0.113 ; N/A      ; N/A     ; -8.594              ;
-+--------------------+---------+--------+----------+---------+---------------------+
+; Clock to Output Times                                                            ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; Data Port ; Clock Port        ; Rise   ; Fall   ; Clock Edge ; Clock Reference   ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; Hsync     ; vga:vga|Hsync     ; 6.420  ;        ; Rise       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|Hsync     ; 31.144 ; 32.127 ; Rise       ; vga:vga|Hsync     ;
+;  R[0]     ; vga:vga|Hsync     ; 31.144 ; 32.127 ; Rise       ; vga:vga|Hsync     ;
+;  R[1]     ; vga:vga|Hsync     ; 30.707 ; 31.547 ; Rise       ; vga:vga|Hsync     ;
+;  R[2]     ; vga:vga|Hsync     ; 30.709 ; 31.539 ; Rise       ; vga:vga|Hsync     ;
+;  R[3]     ; vga:vga|Hsync     ; 30.821 ; 31.657 ; Rise       ; vga:vga|Hsync     ;
+; Hsync     ; vga:vga|Hsync     ;        ; 6.505  ; Fall       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|Hsync     ; 12.380 ; 12.739 ; Fall       ; vga:vga|Hsync     ;
+;  R[0]     ; vga:vga|Hsync     ; 12.380 ; 12.739 ; Fall       ; vga:vga|Hsync     ;
+;  R[1]     ; vga:vga|Hsync     ; 11.943 ; 12.159 ; Fall       ; vga:vga|Hsync     ;
+;  R[2]     ; vga:vga|Hsync     ; 11.945 ; 12.151 ; Fall       ; vga:vga|Hsync     ;
+;  R[3]     ; vga:vga|Hsync     ; 12.057 ; 12.269 ; Fall       ; vga:vga|Hsync     ;
+; Vsync     ; vga:vga|Hsync     ; 9.379  ; 10.373 ; Fall       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|pixel_clk ; 28.370 ; 29.340 ; Rise       ; vga:vga|pixel_clk ;
+;  R[0]     ; vga:vga|pixel_clk ; 28.370 ; 29.340 ; Rise       ; vga:vga|pixel_clk ;
+;  R[1]     ; vga:vga|pixel_clk ; 27.933 ; 28.760 ; Rise       ; vga:vga|pixel_clk ;
+;  R[2]     ; vga:vga|pixel_clk ; 27.935 ; 28.752 ; Rise       ; vga:vga|pixel_clk ;
+;  R[3]     ; vga:vga|pixel_clk ; 28.047 ; 28.870 ; Rise       ; vga:vga|pixel_clk ;
++-----------+-------------------+--------+--------+------------+-------------------+
 
 
-+--------------------------------------------------------------------------+
-; Clock to Output Times                                                    ;
-+-----------+---------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port    ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+---------------+-------+-------+------------+-----------------+
-; Hsync     ; vga:vga|Hsync ; 4.030 ;       ; Rise       ; vga:vga|Hsync   ;
-; Hsync     ; vga:vga|Hsync ;       ; 4.038 ; Fall       ; vga:vga|Hsync   ;
-; Vsync     ; vga:vga|Hsync ; 5.780 ; 5.912 ; Fall       ; vga:vga|Hsync   ;
-+-----------+---------------+-------+-------+------------+-----------------+
-
-
-+--------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                            ;
-+-----------+---------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port    ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+---------------+-------+-------+------------+-----------------+
-; Hsync     ; vga:vga|Hsync ; 2.022 ;       ; Rise       ; vga:vga|Hsync   ;
-; Hsync     ; vga:vga|Hsync ;       ; 2.034 ; Fall       ; vga:vga|Hsync   ;
-; Vsync     ; vga:vga|Hsync ; 2.525 ; 2.599 ; Fall       ; vga:vga|Hsync   ;
-+-----------+---------------+-------+-------+------------+-----------------+
++--------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                  ;
++-----------+-------------------+-------+-------+------------+-------------------+
+; Data Port ; Clock Port        ; Rise  ; Fall  ; Clock Edge ; Clock Reference   ;
++-----------+-------------------+-------+-------+------------+-------------------+
+; Hsync     ; vga:vga|Hsync     ; 2.888 ;       ; Rise       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|Hsync     ; 4.535 ; 4.768 ; Rise       ; vga:vga|Hsync     ;
+;  R[0]     ; vga:vga|Hsync     ; 4.715 ; 5.034 ; Rise       ; vga:vga|Hsync     ;
+;  R[1]     ; vga:vga|Hsync     ; 4.535 ; 4.773 ; Rise       ; vga:vga|Hsync     ;
+;  R[2]     ; vga:vga|Hsync     ; 4.535 ; 4.768 ; Rise       ; vga:vga|Hsync     ;
+;  R[3]     ; vga:vga|Hsync     ; 4.611 ; 4.849 ; Rise       ; vga:vga|Hsync     ;
+; Hsync     ; vga:vga|Hsync     ;       ; 3.176 ; Fall       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|Hsync     ; 4.072 ; 4.535 ; Fall       ; vga:vga|Hsync     ;
+;  R[0]     ; vga:vga|Hsync     ; 4.252 ; 4.801 ; Fall       ; vga:vga|Hsync     ;
+;  R[1]     ; vga:vga|Hsync     ; 4.072 ; 4.540 ; Fall       ; vga:vga|Hsync     ;
+;  R[2]     ; vga:vga|Hsync     ; 4.072 ; 4.535 ; Fall       ; vga:vga|Hsync     ;
+;  R[3]     ; vga:vga|Hsync     ; 4.148 ; 4.616 ; Fall       ; vga:vga|Hsync     ;
+; Vsync     ; vga:vga|Hsync     ; 4.267 ; 4.931 ; Fall       ; vga:vga|Hsync     ;
+; R[*]      ; vga:vga|pixel_clk ; 3.553 ; 3.878 ; Rise       ; vga:vga|pixel_clk ;
+;  R[0]     ; vga:vga|pixel_clk ; 3.733 ; 4.144 ; Rise       ; vga:vga|pixel_clk ;
+;  R[1]     ; vga:vga|pixel_clk ; 3.553 ; 3.883 ; Rise       ; vga:vga|pixel_clk ;
+;  R[2]     ; vga:vga|pixel_clk ; 3.553 ; 3.878 ; Rise       ; vga:vga|pixel_clk ;
+;  R[3]     ; vga:vga|pixel_clk ; 3.629 ; 3.959 ; Rise       ; vga:vga|pixel_clk ;
++-----------+-------------------+-------+-------+------------+-------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -502,12 +703,12 @@ No synchronizer chains to report.
 +-----------+--------------+-----------------+-----------------+
 ; Pin       ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +-----------+--------------+-----------------+-----------------+
-; rst       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; p1lswitch ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; p1rswitch ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; p2lswitch ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; p2rswitch ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rst       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; clk       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; p1lswitch ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +-----------+--------------+-----------------+-----------------+
 
 
@@ -605,9 +806,10 @@ No synchronizer chains to report.
 ; From Clock        ; To Clock          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------+-------------------+----------+----------+----------+----------+
 ; vga:vga|pixel_clk ; clk               ; 1        ; 1        ; 0        ; 0        ;
-; vga:vga|Hsync     ; vga:vga|Hsync     ; 0        ; 0        ; 0        ; 671      ;
+; p1lswitch         ; p1lswitch         ; 0        ; 0        ; 0        ; 6        ;
+; vga:vga|Hsync     ; vga:vga|Hsync     ; 66       ; 11       ; 0        ; 772      ;
 ; vga:vga|Hsync     ; vga:vga|pixel_clk ; 1        ; 1        ; 0        ; 0        ;
-; vga:vga|pixel_clk ; vga:vga|pixel_clk ; 660      ; 0        ; 0        ; 0        ;
+; vga:vga|pixel_clk ; vga:vga|pixel_clk ; 927      ; 0        ; 0        ; 0        ;
 +-------------------+-------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -618,10 +820,33 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; From Clock        ; To Clock          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------+-------------------+----------+----------+----------+----------+
 ; vga:vga|pixel_clk ; clk               ; 1        ; 1        ; 0        ; 0        ;
-; vga:vga|Hsync     ; vga:vga|Hsync     ; 0        ; 0        ; 0        ; 671      ;
+; p1lswitch         ; p1lswitch         ; 0        ; 0        ; 0        ; 6        ;
+; vga:vga|Hsync     ; vga:vga|Hsync     ; 66       ; 11       ; 0        ; 772      ;
 ; vga:vga|Hsync     ; vga:vga|pixel_clk ; 1        ; 1        ; 0        ; 0        ;
-; vga:vga|pixel_clk ; vga:vga|pixel_clk ; 660      ; 0        ; 0        ; 0        ;
+; vga:vga|pixel_clk ; vga:vga|pixel_clk ; 927      ; 0        ; 0        ; 0        ;
 +-------------------+-------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------+
+; Recovery Transfers                                                            ;
++---------------+-------------------+----------+----------+----------+----------+
+; From Clock    ; To Clock          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------+-------------------+----------+----------+----------+----------+
+; vga:vga|Hsync ; vga:vga|Hsync     ; 0        ; 11       ; 0        ; 0        ;
+; vga:vga|Hsync ; vga:vga|pixel_clk ; 11       ; 11       ; 0        ; 0        ;
++---------------+-------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------+
+; Removal Transfers                                                             ;
++---------------+-------------------+----------+----------+----------+----------+
+; From Clock    ; To Clock          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------+-------------------+----------+----------+----------+----------+
+; vga:vga|Hsync ; vga:vga|Hsync     ; 0        ; 11       ; 0        ; 0        ;
+; vga:vga|Hsync ; vga:vga|pixel_clk ; 11       ; 11       ; 0        ; 0        ;
++---------------+-------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -637,18 +862,18 @@ No dedicated SERDES Transmitter circuitry present in device or used in design
 No dedicated SERDES Receiver circuitry present in device or used in design
 
 
-+------------------------------------------------+
-; Unconstrained Paths                            ;
-+---------------------------------+-------+------+
-; Property                        ; Setup ; Hold ;
-+---------------------------------+-------+------+
-; Illegal Clocks                  ; 0     ; 0    ;
-; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 0     ; 0    ;
-; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 2     ; 2    ;
-; Unconstrained Output Port Paths ; 2     ; 2    ;
-+---------------------------------+-------+------+
++-------------------------------------------------+
+; Unconstrained Paths                             ;
++---------------------------------+-------+-------+
+; Property                        ; Setup ; Hold  ;
++---------------------------------+-------+-------+
+; Illegal Clocks                  ; 0     ; 0     ;
+; Unconstrained Clocks            ; 0     ; 0     ;
+; Unconstrained Input Ports       ; 1     ; 1     ;
+; Unconstrained Input Port Paths  ; 4819  ; 4819  ;
+; Unconstrained Output Ports      ; 6     ; 6     ;
+; Unconstrained Output Port Paths ; 19278 ; 19278 ;
++---------------------------------+-------+-------+
 
 
 +------------------------------------+
@@ -657,7 +882,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Tue Jun 05 16:25:49 2018
+    Info: Processing started: Tue Jun 05 16:55:14 2018
 Info: Command: quartus_sta linewars -c linewars
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -666,35 +891,174 @@ Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'linewars.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name vga:vga|Hsync vga:vga|Hsync
     Info (332105): create_clock -period 1.000 -name vga:vga|pixel_clk vga:vga|pixel_clk
     Info (332105): create_clock -period 1.000 -name clk clk
-    Info (332105): create_clock -period 1.000 -name vga:vga|Hsync vga:vga|Hsync
+    Info (332105): create_clock -period 1.000 -name p1lswitch p1lswitch
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "vga|game_clk~0|combout"
+    Warning (332126): Node "vga|game_clk~0|dataf"
+Warning (332125): Found combinational loop of 119 nodes
+    Warning (332126): Node "vga|Equal4~4|combout"
+    Warning (332126): Node "vga|Add0~1|datab"
+    Warning (332126): Node "vga|Add0~1|sumout"
+    Warning (332126): Node "vga|Add0~1|dataf"
+    Warning (332126): Node "vga|Equal4~0|dataf"
+    Warning (332126): Node "vga|Equal4~0|combout"
+    Warning (332126): Node "vga|Equal4~4|datad"
+    Warning (332126): Node "vga|Add0~33|datac"
+    Warning (332126): Node "vga|Add0~33|sumout"
+    Warning (332126): Node "vga|Equal4~1|dataa"
+    Warning (332126): Node "vga|Equal4~1|combout"
+    Warning (332126): Node "vga|Equal4~4|datab"
+    Warning (332126): Node "vga|Add0~33|dataf"
+    Warning (332126): Node "vga|Add0~33|cout"
+    Warning (332126): Node "vga|Add0~25|cin"
+    Warning (332126): Node "vga|Add0~25|cout"
+    Warning (332126): Node "vga|Add0~21|cin"
+    Warning (332126): Node "vga|Add0~21|cout"
+    Warning (332126): Node "vga|Add0~17|cin"
+    Warning (332126): Node "vga|Add0~17|cout"
+    Warning (332126): Node "vga|Add0~13|cin"
+    Warning (332126): Node "vga|Add0~13|cout"
+    Warning (332126): Node "vga|Add0~5|cin"
+    Warning (332126): Node "vga|Add0~5|cout"
+    Warning (332126): Node "vga|Add0~9|cin"
+    Warning (332126): Node "vga|Add0~9|cout"
+    Warning (332126): Node "vga|Add0~1|cin"
+    Warning (332126): Node "vga|Add0~9|sumout"
+    Warning (332126): Node "vga|Equal4~0|datae"
+    Warning (332126): Node "vga|Add0~9|dataa"
+    Warning (332126): Node "vga|Add0~5|sumout"
+    Warning (332126): Node "vga|Equal4~0|datac"
+    Warning (332126): Node "vga|Add0~5|dataf"
+    Warning (332126): Node "vga|Add0~13|sumout"
+    Warning (332126): Node "vga|Equal4~1|datae"
+    Warning (332126): Node "vga|Add0~13|dataa"
+    Warning (332126): Node "vga|Add0~17|sumout"
+    Warning (332126): Node "vga|Equal4~1|datac"
+    Warning (332126): Node "vga|Add0~17|dataf"
+    Warning (332126): Node "vga|Add0~21|sumout"
+    Warning (332126): Node "vga|Equal4~1|dataf"
+    Warning (332126): Node "vga|Add0~21|dataf"
+    Warning (332126): Node "vga|Add0~25|sumout"
+    Warning (332126): Node "vga|Equal4~1|datad"
+    Warning (332126): Node "vga|Add0~25|dataf"
+    Warning (332126): Node "vga|Add0~25|datab"
+    Warning (332126): Node "vga|Add0~17|datab"
+    Warning (332126): Node "vga|Add0~9|datac"
+    Warning (332126): Node "vga|Add0~49|dataa"
+    Warning (332126): Node "vga|Add0~49|sumout"
+    Warning (332126): Node "vga|Equal4~2|datac"
+    Warning (332126): Node "vga|Equal4~2|combout"
+    Warning (332126): Node "vga|Equal4~4|datac"
+    Warning (332126): Node "vga|Add0~49|dataf"
+    Warning (332126): Node "vga|Add0~49|cout"
+    Warning (332126): Node "vga|Add0~45|cin"
+    Warning (332126): Node "vga|Add0~45|cout"
+    Warning (332126): Node "vga|Add0~41|cin"
+    Warning (332126): Node "vga|Add0~41|cout"
+    Warning (332126): Node "vga|Add0~37|cin"
+    Warning (332126): Node "vga|Add0~37|cout"
+    Warning (332126): Node "vga|Add0~73|cin"
+    Warning (332126): Node "vga|Add0~73|cout"
+    Warning (332126): Node "vga|Add0~65|cin"
+    Warning (332126): Node "vga|Add0~65|cout"
+    Warning (332126): Node "vga|Add0~69|cin"
+    Warning (332126): Node "vga|Add0~69|cout"
+    Warning (332126): Node "vga|Add0~61|cin"
+    Warning (332126): Node "vga|Add0~61|cout"
+    Warning (332126): Node "vga|Add0~57|cin"
+    Warning (332126): Node "vga|Add0~57|cout"
+    Warning (332126): Node "vga|Add0~53|cin"
+    Warning (332126): Node "vga|Add0~53|cout"
+    Warning (332126): Node "vga|Add0~77|cin"
+    Warning (332126): Node "vga|Add0~77|cout"
+    Warning (332126): Node "vga|Add0~29|cin"
+    Warning (332126): Node "vga|Add0~29|cout"
+    Warning (332126): Node "vga|Add0~33|cin"
+    Warning (332126): Node "vga|Add0~29|sumout"
+    Warning (332126): Node "vga|Equal4~1|datab"
+    Warning (332126): Node "vga|Add0~29|dataf"
+    Warning (332126): Node "vga|Add0~77|sumout"
+    Warning (332126): Node "vga|Add0~77|datad"
+    Warning (332126): Node "vga|Equal4~4|dataf"
+    Warning (332126): Node "vga|Add0~53|sumout"
+    Warning (332126): Node "vga|Equal4~3|datab"
+    Warning (332126): Node "vga|Equal4~3|combout"
+    Warning (332126): Node "vga|Equal4~4|dataa"
+    Warning (332126): Node "vga|Add0~53|datac"
+    Warning (332126): Node "vga|Add0~57|sumout"
+    Warning (332126): Node "vga|Equal4~3|datae"
+    Warning (332126): Node "vga|Add0~57|datab"
+    Warning (332126): Node "vga|Add0~61|sumout"
+    Warning (332126): Node "vga|Equal4~3|datac"
+    Warning (332126): Node "vga|Add0~61|datac"
+    Warning (332126): Node "vga|Add0~69|sumout"
+    Warning (332126): Node "vga|Equal4~3|dataf"
+    Warning (332126): Node "vga|Add0~69|dataf"
+    Warning (332126): Node "vga|Add0~65|sumout"
+    Warning (332126): Node "vga|Equal4~3|dataa"
+    Warning (332126): Node "vga|Add0~65|dataf"
+    Warning (332126): Node "vga|Add0~73|sumout"
+    Warning (332126): Node "vga|Equal4~4|datae"
+    Warning (332126): Node "vga|Add0~73|datab"
+    Warning (332126): Node "vga|Add0~37|sumout"
+    Warning (332126): Node "vga|Equal4~2|datad"
+    Warning (332126): Node "vga|Add0~37|dataf"
+    Warning (332126): Node "vga|Add0~41|sumout"
+    Warning (332126): Node "vga|Equal4~2|datab"
+    Warning (332126): Node "vga|Add0~41|dataf"
+    Warning (332126): Node "vga|Add0~45|sumout"
+    Warning (332126): Node "vga|Equal4~2|datae"
+    Warning (332126): Node "vga|Add0~45|datac"
+    Warning (332126): Node "vga|Add0~41|dataa"
+    Warning (332126): Node "vga|Add0~73|dataa"
+    Warning (332126): Node "vga|Add0~65|datac"
+    Warning (332126): Node "vga|Add0~57|dataa"
+    Warning (332126): Node "vga|Add0~53|datab"
+    Warning (332126): Node "vga|Add0~77|datab"
+Critical Warning (332081): Design contains combinational loop of 119 nodes. Estimating the delays through the loop.
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "vga|countdown[0]~21|combout"
+    Warning (332126): Node "vga|countdown[0]~21|dataf"
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.581
+Info (332146): Worst-case setup slack is -3.773
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -3.581       -36.651 vga:vga|Hsync 
-    Info (332119):    -3.446       -35.345 vga:vga|pixel_clk 
-    Info (332119):     0.167         0.000 clk 
-Info (332146): Worst-case hold slack is -1.012
+    Info (332119):    -3.773       -60.228 vga:vga|Hsync 
+    Info (332119):    -3.333       -56.869 vga:vga|pixel_clk 
+    Info (332119):    -0.533        -1.842 p1lswitch 
+    Info (332119):     0.232         0.000 clk 
+Info (332146): Worst-case hold slack is -0.749
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.012        -1.012 clk 
-    Info (332119):    -0.113        -0.113 vga:vga|pixel_clk 
-    Info (332119):     0.569         0.000 vga:vga|Hsync 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.544
+    Info (332119):    -0.749        -0.749 clk 
+    Info (332119):    -0.283        -0.283 vga:vga|pixel_clk 
+    Info (332119):     0.131         0.000 p1lswitch 
+    Info (332119):     0.358         0.000 vga:vga|Hsync 
+Info (332146): Worst-case recovery slack is -0.879
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -0.544        -1.082 clk 
-    Info (332119):    -0.538        -8.594 vga:vga|pixel_clk 
-    Info (332119):    -0.538        -8.490 vga:vga|Hsync 
+    Info (332119):    -0.879        -9.645 vga:vga|Hsync 
+    Info (332119):     0.422         0.000 vga:vga|pixel_clk 
+Info (332146): Worst-case removal slack is -0.335
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.335        -3.640 vga:vga|pixel_clk 
+    Info (332119):     1.037         0.000 vga:vga|Hsync 
+Info (332146): Worst-case minimum pulse width slack is -0.538
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.538       -18.836 vga:vga|Hsync 
+    Info (332119):    -0.538       -18.354 vga:vga|pixel_clk 
+    Info (332119):    -0.538        -3.322 p1lswitch 
+    Info (332119):    -0.538        -0.909 clk 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 5CEBA4F23C7 are preliminary
@@ -702,26 +1066,37 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.572
+Info (332146): Worst-case setup slack is -3.807
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -3.572       -36.347 vga:vga|pixel_clk 
-    Info (332119):    -3.514       -36.457 vga:vga|Hsync 
-    Info (332119):     0.093         0.000 clk 
-Info (332146): Worst-case hold slack is -0.876
+    Info (332119):    -3.807       -61.252 vga:vga|Hsync 
+    Info (332119):    -3.532       -58.466 vga:vga|pixel_clk 
+    Info (332119):    -0.550        -1.889 p1lswitch 
+    Info (332119):     0.139         0.000 clk 
+Info (332146): Worst-case hold slack is -0.617
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -0.876        -0.876 clk 
-    Info (332119):    -0.018        -0.018 vga:vga|pixel_clk 
-    Info (332119):     0.579         0.000 vga:vga|Hsync 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.591
+    Info (332119):    -0.617        -0.617 clk 
+    Info (332119):    -0.175        -0.175 vga:vga|pixel_clk 
+    Info (332119):     0.159         0.000 p1lswitch 
+    Info (332119):     0.349         0.000 vga:vga|Hsync 
+Info (332146): Worst-case recovery slack is -0.863
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -0.591        -1.129 clk 
-    Info (332119):    -0.538        -8.555 vga:vga|pixel_clk 
-    Info (332119):    -0.538        -8.516 vga:vga|Hsync 
+    Info (332119):    -0.863        -9.471 vga:vga|Hsync 
+    Info (332119):     0.396         0.000 vga:vga|pixel_clk 
+Info (332146): Worst-case removal slack is -0.255
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.255        -2.755 vga:vga|pixel_clk 
+    Info (332119):     1.021         0.000 vga:vga|Hsync 
+Info (332146): Worst-case minimum pulse width slack is -0.538
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.538       -18.254 vga:vga|Hsync 
+    Info (332119):    -0.538       -18.070 vga:vga|pixel_clk 
+    Info (332119):    -0.538        -3.260 p1lswitch 
+    Info (332119):    -0.538        -0.919 clk 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 5CEBA4F23C7 are preliminary
@@ -729,56 +1104,78 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.057
+Info (332146): Worst-case setup slack is -1.098
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.057        -9.969 vga:vga|Hsync 
-    Info (332119):    -1.023       -10.268 vga:vga|pixel_clk 
-    Info (332119):     0.172         0.000 clk 
-Info (332146): Worst-case hold slack is -0.410
+    Info (332119):    -1.098       -16.241 vga:vga|Hsync 
+    Info (332119):    -1.003       -15.624 vga:vga|pixel_clk 
+    Info (332119):     0.350         0.000 clk 
+    Info (332119):     0.368         0.000 p1lswitch 
+Info (332146): Worst-case hold slack is -0.353
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -0.410        -0.410 clk 
-    Info (332119):    -0.044        -0.044 vga:vga|pixel_clk 
-    Info (332119):     0.338         0.000 vga:vga|Hsync 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.504
+    Info (332119):    -0.353        -0.353 clk 
+    Info (332119):    -0.128        -0.128 vga:vga|pixel_clk 
+    Info (332119):     0.148         0.000 p1lswitch 
+    Info (332119):     0.208         0.000 vga:vga|Hsync 
+Info (332146): Worst-case recovery slack is -0.229
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -0.504        -0.656 clk 
-    Info (332119):     0.119         0.000 vga:vga|pixel_clk 
-    Info (332119):     0.156         0.000 vga:vga|Hsync 
+    Info (332119):    -0.229        -2.515 vga:vga|Hsync 
+    Info (332119):     0.415         0.000 vga:vga|pixel_clk 
+Info (332146): Worst-case removal slack is -0.169
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.169        -1.851 vga:vga|pixel_clk 
+    Info (332119):     0.785         0.000 vga:vga|Hsync 
+Info (332146): Worst-case minimum pulse width slack is -0.363
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.363        -0.374 clk 
+    Info (332119):    -0.244        -1.029 p1lswitch 
+    Info (332119):     0.056         0.000 vga:vga|Hsync 
+    Info (332119):     0.084         0.000 vga:vga|pixel_clk 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.931
+Info (332146): Worst-case setup slack is -0.969
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -0.931        -9.234 vga:vga|pixel_clk 
-    Info (332119):    -0.917        -8.778 vga:vga|Hsync 
-    Info (332119):     0.167         0.000 clk 
-Info (332146): Worst-case hold slack is -0.345
+    Info (332119):    -0.969       -14.153 vga:vga|Hsync 
+    Info (332119):    -0.903       -13.584 vga:vga|pixel_clk 
+    Info (332119):     0.313         0.000 clk 
+    Info (332119):     0.402         0.000 p1lswitch 
+Info (332146): Worst-case hold slack is -0.294
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -0.345        -0.345 clk 
-    Info (332119):    -0.012        -0.012 vga:vga|pixel_clk 
-    Info (332119):     0.308         0.000 vga:vga|Hsync 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.517
+    Info (332119):    -0.294        -0.294 clk 
+    Info (332119):    -0.082        -0.082 vga:vga|pixel_clk 
+    Info (332119):     0.150         0.000 p1lswitch 
+    Info (332119):     0.193         0.000 vga:vga|Hsync 
+Info (332146): Worst-case recovery slack is -0.180
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -0.517        -0.692 clk 
-    Info (332119):     0.126         0.000 vga:vga|pixel_clk 
-    Info (332119):     0.158         0.000 vga:vga|Hsync 
+    Info (332119):    -0.180        -1.974 vga:vga|Hsync 
+    Info (332119):     0.400         0.000 vga:vga|pixel_clk 
+Info (332146): Worst-case removal slack is -0.136
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.136        -1.483 vga:vga|pixel_clk 
+    Info (332119):     0.758         0.000 vga:vga|Hsync 
+Info (332146): Worst-case minimum pulse width slack is -0.376
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.376        -0.409 clk 
+    Info (332119):    -0.254        -1.077 p1lswitch 
+    Info (332119):     0.076         0.000 vga:vga|Hsync 
+    Info (332119):     0.092         0.000 vga:vga|pixel_clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 5136 megabytes
-    Info: Processing ended: Tue Jun 05 16:25:57 2018
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:08
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 135 warnings
+    Info: Peak virtual memory: 5256 megabytes
+    Info: Processing ended: Tue Jun 05 16:55:42 2018
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:27
 
 

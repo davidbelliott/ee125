@@ -24,7 +24,23 @@ B[3] <= vga:vga.B[3]
 
 |linewars|vga:vga
 clk => pixel_clk.CLK
-rst => ~NO_FANOUT~
+rst => display_buffer~14.DATAIN
+rst => p1y[0].PRESET
+rst => p1y[1].PRESET
+rst => p1y[2].ACLR
+rst => p1y[3].ACLR
+rst => p1y[4].ACLR
+rst => p1y[5].ACLR
+rst => p1x[0].PRESET
+rst => p1x[1].PRESET
+rst => p1x[2].ACLR
+rst => p1x[3].ACLR
+rst => p1x[4].ACLR
+rst => p1x[5].ACLR
+rst => p1x[6].ACLR
+rst => p1d[0].PRESET
+rst => p1d[1].ACLR
+rst => display_buffer.WE
 Hsync <= Hsync~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Vsync <= Vsync~reg0.DB_MAX_OUTPUT_PORT_TYPE
 R[0] <= R.DB_MAX_OUTPUT_PORT_TYPE
@@ -39,7 +55,8 @@ B[0] <= <GND>
 B[1] <= <GND>
 B[2] <= <GND>
 B[3] <= <GND>
-p1lswitch => ~NO_FANOUT~
+p1lswitch => p1d[0].CLK
+p1lswitch => p1d[1].CLK
 
 
 |linewars|switch_debouncer:p1l_debouncer

@@ -3,10 +3,10 @@ USE ieee.std_logic_1164.all;
 ----------------------------------------------------------
 PACKAGE linewars_package IS
 	constant CLOCK_FREQ: INTEGER := 50_000_000;
-	constant GAME_FREQ: INTEGER := 30;
+	constant GAME_FREQ: INTEGER := 15;
 	constant SCREEN_W: INTEGER := 640;
 	constant SCREEN_H: INTEGER := 480;
-	constant BLOCK_W: INTEGER := 32;
+	constant BLOCK_W: INTEGER := 8;
 	constant BLOCK_H: INTEGER := BLOCK_W;
 	constant BOARD_W: INTEGER := SCREEN_W / BLOCK_W;
 	constant BOARD_H: INTEGER := SCREEN_H / BLOCK_H;

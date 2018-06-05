@@ -46,7 +46,16 @@ BEGIN
 		end if;
 	END PROCESS;
 	
-	
+	PROCESS(clk)
+	constant COUNTDOWN_MAX: integer := (CLOCK_FREQ / GAME_FREQ) / 2;
+	VARIABLE countdown: integer range 0 to COUNTDOWN_MAX := COUNTDOWN_MAX;
+	BEGIN
+		countdown := countdown - 1;
+		if countdown = 0 then
+			countdown := COUNTDOWN_MAX;
+			game_clk <= not game_clk;
+		end if;
+	END PROCESS;
 	
 	PROCESS(game_clk)
 	VARIABLE p1x: integer range 0 to BOARD_W - 1 := 3;
@@ -66,7 +75,7 @@ BEGIN
 			elsif(p1d = 'R') then
 				p1x := p1x + 1;
 			end if;
-			display_buffer(1)(1) <= '1';
+			display_buffer(p1y)(p1x) <= '1';
 		end if;
 	END PROCESS;
 
