@@ -1,24 +1,50 @@
-|vga
-clk => pixel_clk~reg0.CLK
-red_switch => R.DATAB
-green_switch => G.DATAB
-blue_switch => B.DATAB
-pixel_clk << pixel_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Hsync << Hsync~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Vsync << Vsync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+|linewars
+clk => vga:vga.clk
+clk => switch_debouncer:p1l_debouncer.clk
+rst => vga:vga.rst
+p1lswitch => switch_debouncer:p1l_debouncer.x
+p1rswitch => ~NO_FANOUT~
+p2lswitch => ~NO_FANOUT~
+p2rswitch => ~NO_FANOUT~
+Hsync << vga:vga.Hsync
+Vsync << vga:vga.Vsync
+R[0] <= vga:vga.R[0]
+R[1] <= vga:vga.R[1]
+R[2] <= vga:vga.R[2]
+R[3] <= vga:vga.R[3]
+G[0] <= vga:vga.G[0]
+G[1] <= vga:vga.G[1]
+G[2] <= vga:vga.G[2]
+G[3] <= vga:vga.G[3]
+B[0] <= vga:vga.B[0]
+B[1] <= vga:vga.B[1]
+B[2] <= vga:vga.B[2]
+B[3] <= vga:vga.B[3]
+
+
+|linewars|vga:vga
+clk => pixel_clk.CLK
+rst => ~NO_FANOUT~
+Hsync <= Hsync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Vsync <= Vsync~reg0.DB_MAX_OUTPUT_PORT_TYPE
 R[0] <= R.DB_MAX_OUTPUT_PORT_TYPE
 R[1] <= R.DB_MAX_OUTPUT_PORT_TYPE
 R[2] <= R.DB_MAX_OUTPUT_PORT_TYPE
 R[3] <= R.DB_MAX_OUTPUT_PORT_TYPE
-G[0] <= G.DB_MAX_OUTPUT_PORT_TYPE
-G[1] <= G.DB_MAX_OUTPUT_PORT_TYPE
-G[2] <= G.DB_MAX_OUTPUT_PORT_TYPE
-G[3] <= G.DB_MAX_OUTPUT_PORT_TYPE
-B[0] <= B.DB_MAX_OUTPUT_PORT_TYPE
-B[1] <= B.DB_MAX_OUTPUT_PORT_TYPE
-B[2] <= B.DB_MAX_OUTPUT_PORT_TYPE
-B[3] <= B.DB_MAX_OUTPUT_PORT_TYPE
-nblanck <= <VCC>
-nsync <= <GND>
+G[0] <= <GND>
+G[1] <= <GND>
+G[2] <= <GND>
+G[3] <= <GND>
+B[0] <= <GND>
+B[1] <= <GND>
+B[2] <= <GND>
+B[3] <= <GND>
+p1lswitch => ~NO_FANOUT~
+
+
+|linewars|switch_debouncer:p1l_debouncer
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+clk => ~NO_FANOUT~
 
 

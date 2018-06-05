@@ -6,6 +6,7 @@ ENTITY linewars IS
 	--GENERIC ();
 	PORT (
 		clk: IN STD_LOGIC; --50MHz in our board
+		rst: IN STD_LOGIC;
 		p1lswitch, p1rswitch, p2lswitch, p2rswitch: IN STD_LOGIC;
 		Hsync, Vsync: BUFFER STD_LOGIC;
 		R, G, B: OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
@@ -13,14 +14,10 @@ END linewars;
 
 ----------------------------------------------------------
 ARCHITECTURE linewars OF linewars IS
-	SIGNAL addr: natural range 0 to 2**6 - 1;
-	SIGNAL data: std_logic_vector((8 - 1) downto 0);
-	SIGNAL we: std_logic;
-	SIGNAL q: std_logic_vector(7 downto 0);
-	
+signal p1ldebounced: std_logic;
 BEGIN
-	vga: entity work.vga(vga) port map(clk, Hsync, Vsync,	R, G, B);
-	--sdram: entity work.single_port_ram(rtl) port map(clk, addr, data, we, q);
-	--game: entity work.game(game) port map(clk, p1lswitch, p1rswitch, p2lswitch, p2rswitch, display_buffer);
+	vga: entity work.vga(vga) port map(clk, rst, Hsync, Vsync,	R, G, B, p1ldebounced);
+	p1l_debouncer: entity work.switch_debouncer(switch_debouncer) port map(p1lswitch, p1ldebounced, clk);
+	--game: entity work.game(game) port map(clk, p1lswitch, p1rswitch, p2lswitch, p2rswitch);
 END linewars;
 ----------------------------------------------------------

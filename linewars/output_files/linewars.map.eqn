@@ -11,910 +11,441 @@
 -- programming logic devices manufactured by Altera and sold by 
 -- Altera or its authorized distributors.  Please refer to the 
 -- applicable agreement for further details.
---A1L2 is Add0~1
-A1L2_adder_eqn = ( Hcount[9] ) + ( GND ) + ( A1L7 );
-A1L2 = SUM(A1L2_adder_eqn);
+--C1L2 is vga:vga|Add0~1
+C1L2_adder_eqn = ( C1_Hcount[7] ) + ( GND ) + ( C1L35 );
+C1L2 = SUM(C1L2_adder_eqn);
 
+--C1L3 is vga:vga|Add0~2
+C1L3_adder_eqn = ( C1_Hcount[7] ) + ( GND ) + ( C1L35 );
+C1L3 = CARRY(C1L3_adder_eqn);
 
---A1L6 is Add0~5
-A1L6_adder_eqn = ( Hcount[8] ) + ( GND ) + ( A1L27 );
-A1L6 = SUM(A1L6_adder_eqn);
 
---A1L7 is Add0~6
-A1L7_adder_eqn = ( Hcount[8] ) + ( GND ) + ( A1L27 );
-A1L7 = CARRY(A1L7_adder_eqn);
+--C1L6 is vga:vga|Add0~5
+C1L6_adder_eqn = ( C1_Hcount[5] ) + ( GND ) + ( C1L11 );
+C1L6 = SUM(C1L6_adder_eqn);
 
+--C1L7 is vga:vga|Add0~6
+C1L7_adder_eqn = ( C1_Hcount[5] ) + ( GND ) + ( C1L11 );
+C1L7 = CARRY(C1L7_adder_eqn);
 
---A1L10 is Add0~9
-A1L10_adder_eqn = ( Hcount[3] ) + ( GND ) + ( A1L15 );
-A1L10 = SUM(A1L10_adder_eqn);
 
---A1L11 is Add0~10
-A1L11_adder_eqn = ( Hcount[3] ) + ( GND ) + ( A1L15 );
-A1L11 = CARRY(A1L11_adder_eqn);
+--C1L10 is vga:vga|Add0~9
+C1L10_adder_eqn = ( C1_Hcount[4] ) + ( GND ) + ( C1L15 );
+C1L10 = SUM(C1L10_adder_eqn);
 
+--C1L11 is vga:vga|Add0~10
+C1L11_adder_eqn = ( C1_Hcount[4] ) + ( GND ) + ( C1L15 );
+C1L11 = CARRY(C1L11_adder_eqn);
 
---A1L14 is Add0~13
-A1L14_adder_eqn = ( Hcount[2] ) + ( GND ) + ( A1L23 );
-A1L14 = SUM(A1L14_adder_eqn);
 
---A1L15 is Add0~14
-A1L15_adder_eqn = ( Hcount[2] ) + ( GND ) + ( A1L23 );
-A1L15 = CARRY(A1L15_adder_eqn);
+--C1L14 is vga:vga|Add0~13
+C1L14_adder_eqn = ( C1_Hcount[3] ) + ( GND ) + ( C1L19 );
+C1L14 = SUM(C1L14_adder_eqn);
 
+--C1L15 is vga:vga|Add0~14
+C1L15_adder_eqn = ( C1_Hcount[3] ) + ( GND ) + ( C1L19 );
+C1L15 = CARRY(C1L15_adder_eqn);
 
---A1L18 is Add0~17
-A1L18_adder_eqn = ( Hcount[0] ) + ( VCC ) + ( !VCC );
-A1L18 = SUM(A1L18_adder_eqn);
 
---A1L19 is Add0~18
-A1L19_adder_eqn = ( Hcount[0] ) + ( VCC ) + ( !VCC );
-A1L19 = CARRY(A1L19_adder_eqn);
+--C1L18 is vga:vga|Add0~17
+C1L18_adder_eqn = ( C1_Hcount[2] ) + ( GND ) + ( C1L27 );
+C1L18 = SUM(C1L18_adder_eqn);
 
+--C1L19 is vga:vga|Add0~18
+C1L19_adder_eqn = ( C1_Hcount[2] ) + ( GND ) + ( C1L27 );
+C1L19 = CARRY(C1L19_adder_eqn);
 
---A1L22 is Add0~21
-A1L22_adder_eqn = ( Hcount[1] ) + ( GND ) + ( A1L19 );
-A1L22 = SUM(A1L22_adder_eqn);
 
---A1L23 is Add0~22
-A1L23_adder_eqn = ( Hcount[1] ) + ( GND ) + ( A1L19 );
-A1L23 = CARRY(A1L23_adder_eqn);
+--C1L22 is vga:vga|Add0~21
+C1L22_adder_eqn = ( C1_Hcount[0] ) + ( VCC ) + ( !VCC );
+C1L22 = SUM(C1L22_adder_eqn);
 
+--C1L23 is vga:vga|Add0~22
+C1L23_adder_eqn = ( C1_Hcount[0] ) + ( VCC ) + ( !VCC );
+C1L23 = CARRY(C1L23_adder_eqn);
 
---A1L26 is Add0~25
-A1L26_adder_eqn = ( Hcount[7] ) + ( GND ) + ( A1L31 );
-A1L26 = SUM(A1L26_adder_eqn);
 
---A1L27 is Add0~26
-A1L27_adder_eqn = ( Hcount[7] ) + ( GND ) + ( A1L31 );
-A1L27 = CARRY(A1L27_adder_eqn);
+--C1L26 is vga:vga|Add0~25
+C1L26_adder_eqn = ( C1_Hcount[1] ) + ( GND ) + ( C1L23 );
+C1L26 = SUM(C1L26_adder_eqn);
 
+--C1L27 is vga:vga|Add0~26
+C1L27_adder_eqn = ( C1_Hcount[1] ) + ( GND ) + ( C1L23 );
+C1L27 = CARRY(C1L27_adder_eqn);
 
---A1L30 is Add0~29
-A1L30_adder_eqn = ( Hcount[6] ) + ( GND ) + ( A1L39 );
-A1L30 = SUM(A1L30_adder_eqn);
 
---A1L31 is Add0~30
-A1L31_adder_eqn = ( Hcount[6] ) + ( GND ) + ( A1L39 );
-A1L31 = CARRY(A1L31_adder_eqn);
+--C1L30 is vga:vga|Add0~29
+C1L30_adder_eqn = ( C1_Hcount[9] ) + ( GND ) + ( C1L39 );
+C1L30 = SUM(C1L30_adder_eqn);
 
 
---A1L34 is Add0~33
-A1L34_adder_eqn = ( Hcount[4] ) + ( GND ) + ( A1L11 );
-A1L34 = SUM(A1L34_adder_eqn);
+--C1L34 is vga:vga|Add0~33
+C1L34_adder_eqn = ( C1_Hcount[6] ) + ( GND ) + ( C1L7 );
+C1L34 = SUM(C1L34_adder_eqn);
 
---A1L35 is Add0~34
-A1L35_adder_eqn = ( Hcount[4] ) + ( GND ) + ( A1L11 );
-A1L35 = CARRY(A1L35_adder_eqn);
+--C1L35 is vga:vga|Add0~34
+C1L35_adder_eqn = ( C1_Hcount[6] ) + ( GND ) + ( C1L7 );
+C1L35 = CARRY(C1L35_adder_eqn);
 
 
---A1L38 is Add0~37
-A1L38_adder_eqn = ( Hcount[5] ) + ( GND ) + ( A1L35 );
-A1L38 = SUM(A1L38_adder_eqn);
+--C1L38 is vga:vga|Add0~37
+C1L38_adder_eqn = ( C1_Hcount[8] ) + ( GND ) + ( C1L3 );
+C1L38 = SUM(C1L38_adder_eqn);
 
---A1L39 is Add0~38
-A1L39_adder_eqn = ( Hcount[5] ) + ( GND ) + ( A1L35 );
-A1L39 = CARRY(A1L39_adder_eqn);
+--C1L39 is vga:vga|Add0~38
+C1L39_adder_eqn = ( C1_Hcount[8] ) + ( GND ) + ( C1L3 );
+C1L39 = CARRY(C1L39_adder_eqn);
 
 
---A1L42 is Add1~1
-A1L42_adder_eqn = ( Vcount[9] ) + ( GND ) + ( A1L55 );
-A1L42 = SUM(A1L42_adder_eqn);
+--C1L42 is vga:vga|Add1~1
+C1L42_adder_eqn = ( C1_Vcount[8] ) + ( GND ) + ( C1L47 );
+C1L42 = SUM(C1L42_adder_eqn);
 
+--C1L43 is vga:vga|Add1~2
+C1L43_adder_eqn = ( C1_Vcount[8] ) + ( GND ) + ( C1L47 );
+C1L43 = CARRY(C1L43_adder_eqn);
 
---A1L46 is Add1~5
-A1L46_adder_eqn = ( Vcount[0] ) + ( VCC ) + ( !VCC );
-A1L46 = SUM(A1L46_adder_eqn);
 
---A1L47 is Add1~6
-A1L47_adder_eqn = ( Vcount[0] ) + ( VCC ) + ( !VCC );
-A1L47 = CARRY(A1L47_adder_eqn);
+--C1L46 is vga:vga|Add1~5
+C1L46_adder_eqn = ( C1_Vcount[7] ) + ( GND ) + ( C1L51 );
+C1L46 = SUM(C1L46_adder_eqn);
 
+--C1L47 is vga:vga|Add1~6
+C1L47_adder_eqn = ( C1_Vcount[7] ) + ( GND ) + ( C1L51 );
+C1L47 = CARRY(C1L47_adder_eqn);
 
---A1L50 is Add1~9
-A1L50_adder_eqn = ( Vcount[5] ) + ( GND ) + ( A1L63 );
-A1L50 = SUM(A1L50_adder_eqn);
 
---A1L51 is Add1~10
-A1L51_adder_eqn = ( Vcount[5] ) + ( GND ) + ( A1L63 );
-A1L51 = CARRY(A1L51_adder_eqn);
+--C1L50 is vga:vga|Add1~9
+C1L50_adder_eqn = ( C1_Vcount[6] ) + ( GND ) + ( C1L59 );
+C1L50 = SUM(C1L50_adder_eqn);
 
+--C1L51 is vga:vga|Add1~10
+C1L51_adder_eqn = ( C1_Vcount[6] ) + ( GND ) + ( C1L59 );
+C1L51 = CARRY(C1L51_adder_eqn);
 
---A1L54 is Add1~13
-A1L54_adder_eqn = ( Vcount[8] ) + ( GND ) + ( A1L59 );
-A1L54 = SUM(A1L54_adder_eqn);
 
---A1L55 is Add1~14
-A1L55_adder_eqn = ( Vcount[8] ) + ( GND ) + ( A1L59 );
-A1L55 = CARRY(A1L55_adder_eqn);
+--C1L54 is vga:vga|Add1~13
+C1L54_adder_eqn = ( C1_Vcount[4] ) + ( GND ) + ( C1L67 );
+C1L54 = SUM(C1L54_adder_eqn);
 
+--C1L55 is vga:vga|Add1~14
+C1L55_adder_eqn = ( C1_Vcount[4] ) + ( GND ) + ( C1L67 );
+C1L55 = CARRY(C1L55_adder_eqn);
 
---A1L58 is Add1~17
-A1L58_adder_eqn = ( Vcount[7] ) + ( GND ) + ( A1L67 );
-A1L58 = SUM(A1L58_adder_eqn);
 
---A1L59 is Add1~18
-A1L59_adder_eqn = ( Vcount[7] ) + ( GND ) + ( A1L67 );
-A1L59 = CARRY(A1L59_adder_eqn);
+--C1L58 is vga:vga|Add1~17
+C1L58_adder_eqn = ( C1_Vcount[5] ) + ( GND ) + ( C1L55 );
+C1L58 = SUM(C1L58_adder_eqn);
 
+--C1L59 is vga:vga|Add1~18
+C1L59_adder_eqn = ( C1_Vcount[5] ) + ( GND ) + ( C1L55 );
+C1L59 = CARRY(C1L59_adder_eqn);
 
---A1L62 is Add1~21
-A1L62_adder_eqn = ( Vcount[4] ) + ( GND ) + ( A1L71 );
-A1L62 = SUM(A1L62_adder_eqn);
 
---A1L63 is Add1~22
-A1L63_adder_eqn = ( Vcount[4] ) + ( GND ) + ( A1L71 );
-A1L63 = CARRY(A1L63_adder_eqn);
+--C1L62 is vga:vga|Add1~21
+C1L62_adder_eqn = ( C1_Vcount[9] ) + ( GND ) + ( C1L43 );
+C1L62 = SUM(C1L62_adder_eqn);
 
 
---A1L66 is Add1~25
-A1L66_adder_eqn = ( Vcount[6] ) + ( GND ) + ( A1L51 );
-A1L66 = SUM(A1L66_adder_eqn);
+--C1L66 is vga:vga|Add1~25
+C1L66_adder_eqn = ( C1_Vcount[3] ) + ( GND ) + ( C1L71 );
+C1L66 = SUM(C1L66_adder_eqn);
 
---A1L67 is Add1~26
-A1L67_adder_eqn = ( Vcount[6] ) + ( GND ) + ( A1L51 );
-A1L67 = CARRY(A1L67_adder_eqn);
+--C1L67 is vga:vga|Add1~26
+C1L67_adder_eqn = ( C1_Vcount[3] ) + ( GND ) + ( C1L71 );
+C1L67 = CARRY(C1L67_adder_eqn);
 
 
---A1L70 is Add1~29
-A1L70_adder_eqn = ( Vcount[3] ) + ( GND ) + ( A1L79 );
-A1L70 = SUM(A1L70_adder_eqn);
+--C1L70 is vga:vga|Add1~29
+C1L70_adder_eqn = ( C1_Vcount[2] ) + ( GND ) + ( C1L79 );
+C1L70 = SUM(C1L70_adder_eqn);
 
---A1L71 is Add1~30
-A1L71_adder_eqn = ( Vcount[3] ) + ( GND ) + ( A1L79 );
-A1L71 = CARRY(A1L71_adder_eqn);
+--C1L71 is vga:vga|Add1~30
+C1L71_adder_eqn = ( C1_Vcount[2] ) + ( GND ) + ( C1L79 );
+C1L71 = CARRY(C1L71_adder_eqn);
 
 
---A1L74 is Add1~33
-A1L74_adder_eqn = ( Vcount[1] ) + ( GND ) + ( A1L47 );
-A1L74 = SUM(A1L74_adder_eqn);
+--C1L74 is vga:vga|Add1~33
+C1L74_adder_eqn = ( C1_Vcount[0] ) + ( VCC ) + ( !VCC );
+C1L74 = SUM(C1L74_adder_eqn);
 
---A1L75 is Add1~34
-A1L75_adder_eqn = ( Vcount[1] ) + ( GND ) + ( A1L47 );
-A1L75 = CARRY(A1L75_adder_eqn);
+--C1L75 is vga:vga|Add1~34
+C1L75_adder_eqn = ( C1_Vcount[0] ) + ( VCC ) + ( !VCC );
+C1L75 = CARRY(C1L75_adder_eqn);
 
 
---A1L78 is Add1~37
-A1L78_adder_eqn = ( Vcount[2] ) + ( GND ) + ( A1L75 );
-A1L78 = SUM(A1L78_adder_eqn);
+--C1L78 is vga:vga|Add1~37
+C1L78_adder_eqn = ( C1_Vcount[1] ) + ( GND ) + ( C1L75 );
+C1L78 = SUM(C1L78_adder_eqn);
 
---A1L79 is Add1~38
-A1L79_adder_eqn = ( Vcount[2] ) + ( GND ) + ( A1L75 );
-A1L79 = CARRY(A1L79_adder_eqn);
+--C1L79 is vga:vga|Add1~38
+C1L79_adder_eqn = ( C1_Vcount[1] ) + ( GND ) + ( C1L75 );
+C1L79 = CARRY(C1L79_adder_eqn);
 
 
---A1L82 is Add2~1
-A1L82_adder_eqn = ( !row[4] ) + ( GND ) + ( A1L87 );
-A1L82 = SUM(A1L82_adder_eqn);
-
---A1L83 is Add2~2
-A1L83_adder_eqn = ( !row[4] ) + ( GND ) + ( A1L87 );
-A1L83 = CARRY(A1L83_adder_eqn);
-
-
---A1L86 is Add2~5
-A1L86_adder_eqn = ( !row[3] ) + ( GND ) + ( A1L95 );
-A1L86 = SUM(A1L86_adder_eqn);
-
---A1L87 is Add2~6
-A1L87_adder_eqn = ( !row[3] ) + ( GND ) + ( A1L95 );
-A1L87 = CARRY(A1L87_adder_eqn);
-
-
---A1L90 is Add2~9
-A1L90_adder_eqn = ( !row[0] ) + ( !row[1] ) + ( !VCC );
-A1L90 = SUM(A1L90_adder_eqn);
-
---A1L91 is Add2~10
-A1L91_adder_eqn = ( !row[0] ) + ( !row[1] ) + ( !VCC );
-A1L91 = CARRY(A1L91_adder_eqn);
-
-
---A1L94 is Add2~13
-A1L94_adder_eqn = ( !row[2] ) + ( GND ) + ( A1L91 );
-A1L94 = SUM(A1L94_adder_eqn);
-
---A1L95 is Add2~14
-A1L95_adder_eqn = ( !row[2] ) + ( GND ) + ( A1L91 );
-A1L95 = CARRY(A1L95_adder_eqn);
-
-
---A1L98 is Add2~17
-A1L98_adder_eqn = ( !row[6] ) + ( GND ) + ( A1L103 );
-A1L98 = SUM(A1L98_adder_eqn);
-
---A1L99 is Add2~18
-A1L99_adder_eqn = ( !row[6] ) + ( GND ) + ( A1L103 );
-A1L99 = CARRY(A1L99_adder_eqn);
-
-
---A1L102 is Add2~21
-A1L102_adder_eqn = ( !row[5] ) + ( GND ) + ( A1L83 );
-A1L102 = SUM(A1L102_adder_eqn);
-
---A1L103 is Add2~22
-A1L103_adder_eqn = ( !row[5] ) + ( GND ) + ( A1L83 );
-A1L103 = CARRY(A1L103_adder_eqn);
-
-
---A1L106 is Add2~25
-A1L106_adder_eqn = ( !row[10] ) + ( GND ) + ( A1L111 );
-A1L106 = SUM(A1L106_adder_eqn);
-
-
---A1L110 is Add2~29
-A1L110_adder_eqn = ( !row[9] ) + ( GND ) + ( A1L115 );
-A1L110 = SUM(A1L110_adder_eqn);
-
---A1L111 is Add2~30
-A1L111_adder_eqn = ( !row[9] ) + ( GND ) + ( A1L115 );
-A1L111 = CARRY(A1L111_adder_eqn);
-
-
---A1L114 is Add2~33
-A1L114_adder_eqn = ( !row[8] ) + ( GND ) + ( A1L119 );
-A1L114 = SUM(A1L114_adder_eqn);
-
---A1L115 is Add2~34
-A1L115_adder_eqn = ( !row[8] ) + ( GND ) + ( A1L119 );
-A1L115 = CARRY(A1L115_adder_eqn);
-
-
---A1L118 is Add2~37
-A1L118_adder_eqn = ( !row[7] ) + ( GND ) + ( A1L99 );
-A1L118 = SUM(A1L118_adder_eqn);
-
---A1L119 is Add2~38
-A1L119_adder_eqn = ( !row[7] ) + ( GND ) + ( A1L99 );
-A1L119 = CARRY(A1L119_adder_eqn);
-
-
---A1L122 is Add3~1
-A1L122_adder_eqn = ( col[2] ) + ( GND ) + ( A1L147 );
-A1L122 = SUM(A1L122_adder_eqn);
-
---A1L123 is Add3~2
-A1L123_adder_eqn = ( col[2] ) + ( GND ) + ( A1L147 );
-A1L123 = CARRY(A1L123_adder_eqn);
-
-
---A1L126 is Add3~5
-A1L126_adder_eqn = ( col[3] ) + ( GND ) + ( A1L123 );
-A1L126 = SUM(A1L126_adder_eqn);
-
---A1L127 is Add3~6
-A1L127_adder_eqn = ( col[3] ) + ( GND ) + ( A1L123 );
-A1L127 = CARRY(A1L127_adder_eqn);
-
-
---A1L130 is Add3~9
-A1L130_adder_eqn = ( col[4] ) + ( GND ) + ( A1L127 );
-A1L130 = SUM(A1L130_adder_eqn);
-
---A1L131 is Add3~10
-A1L131_adder_eqn = ( col[4] ) + ( GND ) + ( A1L127 );
-A1L131 = CARRY(A1L131_adder_eqn);
-
-
---A1L134 is Add3~13
-A1L134_adder_eqn = ( col[5] ) + ( GND ) + ( A1L131 );
-A1L134 = SUM(A1L134_adder_eqn);
-
---A1L135 is Add3~14
-A1L135_adder_eqn = ( col[5] ) + ( GND ) + ( A1L131 );
-A1L135 = CARRY(A1L135_adder_eqn);
-
-
---A1L138 is Add3~17
-A1L138_adder_eqn = ( col[9] ) + ( GND ) + ( A1L151 );
-A1L138 = SUM(A1L138_adder_eqn);
-
-
---A1L142 is Add3~21
-A1L142_adder_eqn = ( col[6] ) + ( GND ) + ( A1L135 );
-A1L142 = SUM(A1L142_adder_eqn);
-
---A1L143 is Add3~22
-A1L143_adder_eqn = ( col[6] ) + ( GND ) + ( A1L135 );
-A1L143 = CARRY(A1L143_adder_eqn);
-
-
---A1L146 is Add3~25
-A1L146_adder_eqn = ( col[0] ) + ( col[1] ) + ( !VCC );
-A1L146 = SUM(A1L146_adder_eqn);
-
---A1L147 is Add3~26
-A1L147_adder_eqn = ( col[0] ) + ( col[1] ) + ( !VCC );
-A1L147 = CARRY(A1L147_adder_eqn);
-
-
---A1L150 is Add3~29
-A1L150_adder_eqn = ( col[8] ) + ( GND ) + ( A1L155 );
-A1L150 = SUM(A1L150_adder_eqn);
-
---A1L151 is Add3~30
-A1L151_adder_eqn = ( col[8] ) + ( GND ) + ( A1L155 );
-A1L151 = CARRY(A1L151_adder_eqn);
-
-
---A1L154 is Add3~33
-A1L154_adder_eqn = ( col[7] ) + ( GND ) + ( A1L143 );
-A1L154 = SUM(A1L154_adder_eqn);
-
---A1L155 is Add3~34
-A1L155_adder_eqn = ( col[7] ) + ( GND ) + ( A1L143 );
-A1L155 = CARRY(A1L155_adder_eqn);
-
-
---Hcount[9] is Hcount[9]
+--C1_Hcount[7] is vga:vga|Hcount[7]
 --register power-up is low
 
-Hcount[9] = DFFEAS(A1L2, A1L229Q,  ,  ,  ,  ,  , A1L189,  );
+C1_Hcount[7] = DFFEAS(C1L2, C1_pixel_clk,  ,  ,  ,  ,  , C1L83,  );
 
 
---Hcount[8] is Hcount[8]
+--C1_Hcount[5] is vga:vga|Hcount[5]
 --register power-up is low
 
-Hcount[8] = DFFEAS(A1L6, A1L229Q,  ,  ,  ,  ,  , A1L189,  );
+C1_Hcount[5] = DFFEAS(C1L6, C1_pixel_clk,  ,  ,  ,  ,  , C1L83,  );
 
 
---Hcount[3] is Hcount[3]
+--C1_Hcount[4] is vga:vga|Hcount[4]
 --register power-up is low
 
-Hcount[3] = DFFEAS(A1L10, A1L229Q,  ,  ,  ,  ,  , A1L189,  );
+C1_Hcount[4] = DFFEAS(C1L10, C1_pixel_clk,  ,  ,  ,  ,  , C1L83,  );
 
 
---Hcount[2] is Hcount[2]
+--C1_Hcount[3] is vga:vga|Hcount[3]
 --register power-up is low
 
-Hcount[2] = DFFEAS(A1L14, A1L229Q,  ,  ,  ,  ,  , A1L189,  );
+C1_Hcount[3] = DFFEAS(C1L14, C1_pixel_clk,  ,  ,  ,  ,  , C1L83,  );
 
 
---Hcount[0] is Hcount[0]
+--C1_Hcount[2] is vga:vga|Hcount[2]
 --register power-up is low
 
-Hcount[0] = DFFEAS(A1L18, A1L229Q,  ,  ,  ,  ,  , A1L189,  );
+C1_Hcount[2] = DFFEAS(C1L18, C1_pixel_clk,  ,  ,  ,  ,  , C1L83,  );
 
 
---Hcount[1] is Hcount[1]
+--C1_Hcount[0] is vga:vga|Hcount[0]
 --register power-up is low
 
-Hcount[1] = DFFEAS(A1L22, A1L229Q,  ,  ,  ,  ,  , A1L189,  );
+C1_Hcount[0] = DFFEAS(C1L22, C1_pixel_clk,  ,  ,  ,  ,  , C1L83,  );
 
 
---Hcount[7] is Hcount[7]
+--C1_Hcount[1] is vga:vga|Hcount[1]
 --register power-up is low
 
-Hcount[7] = DFFEAS(A1L26, A1L229Q,  ,  ,  ,  ,  , A1L189,  );
+C1_Hcount[1] = DFFEAS(C1L26, C1_pixel_clk,  ,  ,  ,  ,  , C1L83,  );
 
 
---Hcount[6] is Hcount[6]
+--C1_Hcount[9] is vga:vga|Hcount[9]
 --register power-up is low
 
-Hcount[6] = DFFEAS(A1L30, A1L229Q,  ,  ,  ,  ,  , A1L189,  );
+C1_Hcount[9] = DFFEAS(C1L30, C1_pixel_clk,  ,  ,  ,  ,  , C1L83,  );
 
 
---Hcount[4] is Hcount[4]
+--C1_Hcount[6] is vga:vga|Hcount[6]
 --register power-up is low
 
-Hcount[4] = DFFEAS(A1L34, A1L229Q,  ,  ,  ,  ,  , A1L189,  );
+C1_Hcount[6] = DFFEAS(C1L34, C1_pixel_clk,  ,  ,  ,  ,  , C1L83,  );
 
 
---Hcount[5] is Hcount[5]
+--C1_Hcount[8] is vga:vga|Hcount[8]
 --register power-up is low
 
-Hcount[5] = DFFEAS(A1L38, A1L229Q,  ,  ,  ,  ,  , A1L189,  );
+C1_Hcount[8] = DFFEAS(C1L38, C1_pixel_clk,  ,  ,  ,  ,  , C1L83,  );
 
 
---Vcount[9] is Vcount[9]
+--C1_Vcount[8] is vga:vga|Vcount[8]
 --register power-up is low
 
-Vcount[9] = DFFEAS(A1L42, !A1L224Q,  ,  ,  ,  ,  , A1L195,  );
+C1_Vcount[8] = DFFEAS(C1L42, !C1_Hsync,  ,  ,  ,  ,  , C1L86,  );
 
 
---Vcount[0] is Vcount[0]
+--C1_Vcount[7] is vga:vga|Vcount[7]
 --register power-up is low
 
-Vcount[0] = DFFEAS(A1L46, !A1L224Q,  ,  ,  ,  ,  , A1L195,  );
+C1_Vcount[7] = DFFEAS(C1L46, !C1_Hsync,  ,  ,  ,  ,  , C1L86,  );
 
 
---Vcount[5] is Vcount[5]
+--C1_Vcount[6] is vga:vga|Vcount[6]
 --register power-up is low
 
-Vcount[5] = DFFEAS(A1L50, !A1L224Q,  ,  ,  ,  ,  , A1L195,  );
+C1_Vcount[6] = DFFEAS(C1L50, !C1_Hsync,  ,  ,  ,  ,  , C1L86,  );
 
 
---Vcount[8] is Vcount[8]
+--C1_Vcount[4] is vga:vga|Vcount[4]
 --register power-up is low
 
-Vcount[8] = DFFEAS(A1L54, !A1L224Q,  ,  ,  ,  ,  , A1L195,  );
+C1_Vcount[4] = DFFEAS(C1L54, !C1_Hsync,  ,  ,  ,  ,  , C1L86,  );
 
 
---Vcount[7] is Vcount[7]
+--C1_Vcount[5] is vga:vga|Vcount[5]
 --register power-up is low
 
-Vcount[7] = DFFEAS(A1L58, !A1L224Q,  ,  ,  ,  ,  , A1L195,  );
+C1_Vcount[5] = DFFEAS(C1L58, !C1_Hsync,  ,  ,  ,  ,  , C1L86,  );
 
 
---Vcount[4] is Vcount[4]
+--C1_Vcount[9] is vga:vga|Vcount[9]
 --register power-up is low
 
-Vcount[4] = DFFEAS(A1L62, !A1L224Q,  ,  ,  ,  ,  , A1L195,  );
+C1_Vcount[9] = DFFEAS(C1L62, !C1_Hsync,  ,  ,  ,  ,  , C1L86,  );
 
 
---Vcount[6] is Vcount[6]
+--C1_Vcount[3] is vga:vga|Vcount[3]
 --register power-up is low
 
-Vcount[6] = DFFEAS(A1L66, !A1L224Q,  ,  ,  ,  ,  , A1L195,  );
+C1_Vcount[3] = DFFEAS(C1L66, !C1_Hsync,  ,  ,  ,  ,  , C1L86,  );
 
 
---Vcount[3] is Vcount[3]
+--C1_Vcount[2] is vga:vga|Vcount[2]
 --register power-up is low
 
-Vcount[3] = DFFEAS(A1L70, !A1L224Q,  ,  ,  ,  ,  , A1L195,  );
+C1_Vcount[2] = DFFEAS(C1L70, !C1_Hsync,  ,  ,  ,  ,  , C1L86,  );
 
 
---Vcount[1] is Vcount[1]
+--C1_Vcount[0] is vga:vga|Vcount[0]
 --register power-up is low
 
-Vcount[1] = DFFEAS(A1L74, !A1L224Q,  ,  ,  ,  ,  , A1L195,  );
+C1_Vcount[0] = DFFEAS(C1L74, !C1_Hsync,  ,  ,  ,  ,  , C1L86,  );
 
 
---Vcount[2] is Vcount[2]
+--C1_Vcount[1] is vga:vga|Vcount[1]
 --register power-up is low
 
-Vcount[2] = DFFEAS(A1L78, !A1L224Q,  ,  ,  ,  ,  , A1L195,  );
+C1_Vcount[1] = DFFEAS(C1L78, !C1_Hsync,  ,  ,  ,  ,  , C1L86,  );
 
 
---A1L264 is R~3
-A1L264 = ( !A1L164 & ( (!A1L263) # ((dena & (((A1L198 & !row[0])) # (A1L268)))) ) ) # ( A1L164 & ( (((!A1L263) # ((red_switch & dena)))) ) );
+--rst is rst
+rst = INPUT();
 
 
---A1L268 is R~7
-A1L268 = ( !col[0] & ( (!col[7] & (!col[8] & (A1L262 & (!col[1] & !col[2])))) ) ) # ( col[0] & ( (!col[7] & (!col[8] & (A1L261 & (col[1] & col[2])))) ) );
+--p1lswitch is p1lswitch
+p1lswitch = INPUT();
 
 
---pixel_clk is pixel_clk
-pixel_clk = OUTPUT(A1L229Q);
+--p1rswitch is p1rswitch
+p1rswitch = INPUT();
+
+
+--p2lswitch is p2lswitch
+p2lswitch = INPUT();
+
+
+--p2rswitch is p2rswitch
+p2rswitch = INPUT();
 
 
 --Hsync is Hsync
-Hsync = OUTPUT(A1L224Q);
+Hsync = OUTPUT(C1_Hsync);
 
 
 --Vsync is Vsync
-Vsync = OUTPUT(A1L287Q);
+Vsync = OUTPUT(C1_Vsync);
 
 
 --R[0] is R[0]
-R[0] = OUTPUT(A1L264);
+R[0] = OUTPUT(A1L24);
 
 
 --R[1] is R[1]
-R[1] = OUTPUT(A1L264);
+R[1] = OUTPUT(A1L24);
 
 
 --R[2] is R[2]
-R[2] = OUTPUT(A1L264);
+R[2] = OUTPUT(A1L24);
 
 
 --R[3] is R[3]
-R[3] = OUTPUT(A1L264);
+R[3] = OUTPUT(A1L24);
 
 
 --G[0] is G[0]
-G[0] = OUTPUT(A1L208);
+G[0] = OUTPUT(A1L24);
 
 
 --G[1] is G[1]
-G[1] = OUTPUT(A1L208);
+G[1] = OUTPUT(A1L24);
 
 
 --G[2] is G[2]
-G[2] = OUTPUT(A1L208);
+G[2] = OUTPUT(A1L24);
 
 
 --G[3] is G[3]
-G[3] = OUTPUT(A1L208);
+G[3] = OUTPUT(A1L24);
 
 
 --B[0] is B[0]
-B[0] = OUTPUT(A1L166);
+B[0] = OUTPUT(A1L24);
 
 
 --B[1] is B[1]
-B[1] = OUTPUT(A1L166);
+B[1] = OUTPUT(A1L24);
 
 
 --B[2] is B[2]
-B[2] = OUTPUT(A1L166);
+B[2] = OUTPUT(A1L24);
 
 
 --B[3] is B[3]
-B[3] = OUTPUT(A1L166);
+B[3] = OUTPUT(A1L24);
 
 
---nblanck is nblanck
-nblanck = OUTPUT(A1L289);
-
-
---nsync is nsync
-nsync = OUTPUT(A1L288);
-
-
---A1L229Q is pixel_clk~reg0
+--C1_Hsync is vga:vga|Hsync
 --register power-up is low
 
-A1L229Q = DFFEAS(A1L228, clk,  ,  ,  ,  ,  ,  ,  );
+C1_Hsync = DFFEAS(C1L100, C1_pixel_clk,  ,  ,  ,  ,  ,  ,  );
 
 
---A1L224Q is Hsync~reg0
+--C1_Vsync is vga:vga|Vsync
 --register power-up is low
 
-A1L224Q = DFFEAS(A1L223, A1L229Q,  ,  ,  ,  ,  ,  ,  );
+C1_Vsync = DFFEAS(C1L116, !C1_Hsync,  ,  ,  ,  ,  ,  ,  );
 
 
---A1L287Q is Vsync~reg0
+--C1L81 is vga:vga|Equal3~0
+C1L81 = ( !C1L22 & ( !C1L26 & ( (C1L6 & (!C1L10 & (!C1L14 & !C1L18))) ) ) );
+
+
+--C1L100 is vga:vga|Hsync~0
+C1L100 = ( C1L34 & ( C1L38 & ( C1_Hsync ) ) ) # ( !C1L34 & ( C1L38 & ( (C1_Hsync & (((!C1L81) # (!C1L30)) # (C1L2))) ) ) ) # ( C1L34 & ( !C1L38 & ( ((!C1L2 & (C1L81 & !C1L30))) # (C1_Hsync) ) ) ) # ( !C1L34 & ( !C1L38 & ( C1_Hsync ) ) );
+
+
+--C1_pixel_clk is vga:vga|pixel_clk
 --register power-up is low
 
-A1L287Q = DFFEAS(A1L286, !A1L224Q,  ,  ,  ,  ,  ,  ,  );
+C1_pixel_clk = DFFEAS(C1L102, clk,  ,  ,  ,  ,  ,  ,  );
 
 
---row[0] is row[0]
---register power-up is low
+--C1L84 is vga:vga|Equal7~0
+C1L84 = (!C1L46 & (!C1L50 & (!C1L54 & !C1L58)));
 
-row[0] = DFFEAS(A1L240, A1L224Q, A1L287Q,  , Vactive,  ,  ,  ,  );
 
+--C1L85 is vga:vga|Equal7~1
+C1L85 = (C1L66 & (C1L70 & (C1L74 & !C1L78)));
 
---row[4] is row[4]
---register power-up is low
 
-row[4] = DFFEAS(A1L248, A1L224Q, A1L287Q,  , Vactive,  ,  ,  ,  );
+--C1L115 is vga:vga|Vsync~0
+C1L115 = (!C1L66 & (!C1L70 & (!C1L74 & C1L78)));
 
 
---row[3] is row[3]
---register power-up is low
-
-row[3] = DFFEAS(A1L246, A1L224Q, A1L287Q,  , Vactive,  ,  ,  ,  );
-
-
---row[1] is row[1]
---register power-up is low
-
-row[1] = DFFEAS(A1L242, A1L224Q, A1L287Q,  , Vactive,  ,  ,  ,  );
-
-
---row[2] is row[2]
---register power-up is low
-
-row[2] = DFFEAS(A1L244, A1L224Q, A1L287Q,  , Vactive,  ,  ,  ,  );
-
-
---row[6] is row[6]
---register power-up is low
-
-row[6] = DFFEAS(A1L252, A1L224Q, A1L287Q,  , Vactive,  ,  ,  ,  );
-
-
---row[5] is row[5]
---register power-up is low
-
-row[5] = DFFEAS(A1L250, A1L224Q, A1L287Q,  , Vactive,  ,  ,  ,  );
-
-
---A1L230 is process_3~0
-A1L230 = ( row[6] & ( row[5] & ( (row[4] & (row[3] & (row[1] & row[2]))) ) ) );
-
-
---row[10] is row[10]
---register power-up is low
-
-row[10] = DFFEAS(A1L260, A1L224Q, A1L287Q,  , Vactive,  ,  ,  ,  );
-
-
---row[9] is row[9]
---register power-up is low
-
-row[9] = DFFEAS(A1L258, A1L224Q, A1L287Q,  , Vactive,  ,  ,  ,  );
-
-
---row[8] is row[8]
---register power-up is low
-
-row[8] = DFFEAS(A1L256, A1L224Q, A1L287Q,  , Vactive,  ,  ,  ,  );
-
-
---row[7] is row[7]
---register power-up is low
-
-row[7] = DFFEAS(A1L254, A1L224Q, A1L287Q,  , Vactive,  ,  ,  ,  );
-
-
---A1L197 is Equal8~0
-A1L197 = (row[10] & (row[9] & (row[8] & row[7])));
-
-
---A1L198 is Equal8~1
-A1L198 = (A1L230 & A1L197);
-
-
---col[2] is col[2]
---register power-up is low
-
-col[2] = DFFEAS(A1L122, A1L229Q, A1L224Q,  , Hactive,  ,  ,  ,  );
-
-
---col[3] is col[3]
---register power-up is low
-
-col[3] = DFFEAS(A1L126, A1L229Q, A1L224Q,  , Hactive,  ,  ,  ,  );
-
-
---col[4] is col[4]
---register power-up is low
-
-col[4] = DFFEAS(A1L130, A1L229Q, A1L224Q,  , Hactive,  ,  ,  ,  );
-
-
---col[5] is col[5]
---register power-up is low
-
-col[5] = DFFEAS(A1L134, A1L229Q, A1L224Q,  , Hactive,  ,  ,  ,  );
-
-
---col[9] is col[9]
---register power-up is low
-
-col[9] = DFFEAS(A1L138, A1L229Q, A1L224Q,  , Hactive,  ,  ,  ,  );
-
-
---col[6] is col[6]
---register power-up is low
-
-col[6] = DFFEAS(A1L142, A1L229Q, A1L224Q,  , Hactive,  ,  ,  ,  );
-
-
---A1L261 is R~0
-A1L261 = ( col[6] & ( (col[3] & (col[4] & (col[5] & col[9]))) ) );
-
-
---col[1] is col[1]
---register power-up is low
-
-col[1] = DFFEAS(A1L146, A1L229Q, A1L224Q,  , Hactive,  ,  ,  ,  );
-
-
---col[0] is col[0]
---register power-up is low
-
-col[0] = DFFEAS(A1L170, A1L229Q, A1L224Q,  , Hactive,  ,  ,  ,  );
-
-
---A1L262 is R~1
-A1L262 = ( !col[6] & ( (!col[3] & (!col[4] & (!col[5] & !col[9]))) ) );
-
-
---col[8] is col[8]
---register power-up is low
-
-col[8] = DFFEAS(A1L150, A1L229Q, A1L224Q,  , Hactive,  ,  ,  ,  );
-
-
---col[7] is col[7]
---register power-up is low
-
-col[7] = DFFEAS(A1L154, A1L229Q, A1L224Q,  , Hactive,  ,  ,  ,  );
-
-
---Hactive is Hactive
---register power-up is low
-
-Hactive = DFFEAS(A1L210, A1L229Q,  ,  ,  ,  ,  ,  ,  );
-
-
---Vactive is Vactive
---register power-up is low
-
-Vactive = DFFEAS(A1L273, !A1L224Q,  ,  ,  ,  ,  ,  ,  );
-
-
---dena is dena
-dena = (Hactive & Vactive);
-
-
---A1L231 is process_3~1
-A1L231 = ( row[2] & ( (row[4] & row[3]) ) ) # ( !row[2] & ( (row[0] & (row[4] & (row[3] & row[1]))) ) );
-
-
---A1L163 is B~0
-A1L163 = (A1L197 & (((A1L231) # (row[5])) # (row[6])));
-
-
---A1L164 is B~1
-A1L164 = (!A1L230 & (!A1L268 & A1L163));
-
-
---red_switch is red_switch
-red_switch = INPUT();
-
-
---A1L199 is Equal12~0
-A1L199 = ( !row[8] & ( !row[7] & ( (!row[4] & (!row[3] & (!row[6] & row[5]))) ) ) );
-
-
---A1L200 is Equal12~1
-A1L200 = ( row[9] & ( (!row[0] & (!row[1] & (!row[2] & row[10]))) ) );
-
-
---A1L263 is R~2
-A1L263 = ( A1L199 & ( A1L200 & ( !dena ) ) ) # ( !A1L199 & ( A1L200 & ( (!row[0]) # ((!A1L230) # ((!A1L197) # (!dena))) ) ) ) # ( A1L199 & ( !A1L200 & ( (!row[0]) # ((!A1L230) # ((!A1L197) # (!dena))) ) ) ) # ( !A1L199 & ( !A1L200 & ( (!row[0]) # ((!A1L230) # ((!A1L197) # (!dena))) ) ) );
-
-
---A1L207 is G~0
-A1L207 = (!row[0] & (A1L198 & !A1L268));
-
-
---green_switch is green_switch
-green_switch = INPUT();
-
-
---A1L208 is G~1
-A1L208 = ( green_switch & ( (!A1L263) # ((dena & ((!A1L207) # (A1L164)))) ) ) # ( !green_switch & ( (!A1L263) # ((dena & (!A1L164 & !A1L207))) ) );
-
-
---blue_switch is blue_switch
-blue_switch = INPUT();
-
-
---A1L165 is B~2
-A1L165 = (blue_switch & ((!A1L199) # (!A1L200)));
-
-
---A1L166 is B~3
-A1L166 = ( A1L165 & ( (!A1L230 & (!A1L268 & (dena & A1L163))) ) );
+--C1L116 is vga:vga|Vsync~1
+C1L116 = ( C1L85 & ( C1L115 & ( (!C1L42 & ((!C1L84 & (C1_Vsync)) # (C1L84 & ((!C1L62))))) # (C1L42 & (C1_Vsync)) ) ) ) # ( !C1L85 & ( C1L115 & ( ((!C1L42 & (C1L84 & !C1L62))) # (C1_Vsync) ) ) ) # ( C1L85 & ( !C1L115 & ( (C1_Vsync & (((!C1L84) # (!C1L62)) # (C1L42))) ) ) ) # ( !C1L85 & ( !C1L115 & ( C1_Vsync ) ) );
 
 
 --clk is clk
 clk = INPUT();
 
 
---A1L181 is Equal0~0
-A1L181 = ( !A1L18 & ( !A1L22 & ( (!A1L2 & (!A1L6 & (!A1L10 & !A1L14))) ) ) );
+--C1L82 is vga:vga|Equal3~1
+C1L82 = ( !C1L26 & ( (!C1L10 & (!C1L14 & (!C1L18 & !C1L22))) ) );
 
 
---A1L185 is Equal1~0
-A1L185 = (A1L26 & (!A1L30 & (A1L34 & !A1L38)));
+--C1L83 is vga:vga|Equal3~2
+C1L83 = ( !C1L34 & ( C1L38 & ( (!C1L2 & (C1L6 & (C1L82 & C1L30))) ) ) );
 
 
---A1L182 is Equal0~1
-A1L182 = (!A1L26 & (A1L30 & (!A1L34 & A1L38)));
+--C1L86 is vga:vga|Equal7~2
+C1L86 = ( !C1L58 & ( C1L87 & ( (!C1L42 & (!C1L46 & (!C1L50 & C1L62))) ) ) );
 
 
---A1L183 is Equal0~2
-A1L183 = (!A1L10 & (!A1L14 & (!A1L18 & !A1L22)));
+--C1L87 is vga:vga|Equal7~3
+C1L87 = ( !C1L78 & ( (!C1L54 & (C1L66 & (C1L70 & C1L74))) ) );
 
 
---A1L186 is Equal1~1
-A1L186 = (A1L34 & !A1L38);
+--C1L102 is vga:vga|pixel_clk~0
+C1L102 = !C1_pixel_clk;
 
 
---A1L187 is Equal2~0
-A1L187 = ( !A1L30 & ( A1L186 & ( (A1L2 & (A1L6 & (A1L183 & !A1L26))) ) ) );
-
-
---A1L189 is Equal3~0
-A1L189 = ( A1L38 & ( A1L190 & ( (A1L2 & (A1L6 & (!A1L26 & !A1L30))) ) ) );
-
-
---A1L223 is Hsync~0
-A1L223 = ( A1L187 & ( A1L189 & ( ((A1L181 & A1L182)) # (A1L224Q) ) ) ) # ( !A1L187 & ( A1L189 & ( (A1L181 & (((A1L224Q & A1L185)) # (A1L182))) ) ) ) # ( A1L187 & ( !A1L189 & ( ((A1L181 & A1L182)) # (A1L224Q) ) ) ) # ( !A1L187 & ( !A1L189 & ( ((A1L181 & A1L182)) # (A1L224Q) ) ) );
-
-
---A1L195 is Equal7~0
-A1L195 = ( !A1L50 & ( A1L196 & ( (!A1L54 & (!A1L58 & (A1L42 & !A1L66))) ) ) );
-
-
---A1L191 is Equal4~0
-A1L191 = (A1L74 & !A1L78);
-
-
---A1L192 is Equal4~1
-A1L192 = ( !A1L70 & ( A1L191 & ( (!A1L54 & (!A1L58 & (!A1L62 & !A1L66))) ) ) );
-
-
---A1L286 is Vsync~0
-A1L286 = ( A1L195 & ( A1L192 & ( (!A1L46 & (((!A1L42 & !A1L50)))) # (A1L46 & (A1L287Q & (!A1L42 $ (!A1L50)))) ) ) ) # ( !A1L195 & ( A1L192 & ( ((!A1L42 & (!A1L46 & !A1L50))) # (A1L287Q) ) ) ) # ( !A1L195 & ( !A1L192 & ( A1L287Q ) ) );
-
-
---A1L184 is Equal0~3
-A1L184 = (!A1L14 & (!A1L18 & !A1L22));
-
-
---A1L188 is Equal2~1
-A1L188 = ( !A1L26 & ( !A1L30 & ( (A1L2 & (A1L6 & (!A1L10 & A1L184))) ) ) );
-
-
---A1L210 is Hactive~0
-A1L210 = ( A1L182 & ( A1L188 & ( (Hactive & ((!A1L186) # (A1L181))) ) ) ) # ( !A1L182 & ( A1L188 & ( (!Hactive & (A1L181 & ((A1L185)))) # (Hactive & ((!A1L186) # ((A1L181 & A1L185)))) ) ) ) # ( A1L182 & ( !A1L188 & ( Hactive ) ) ) # ( !A1L182 & ( !A1L188 & ( ((A1L181 & A1L185)) # (Hactive) ) ) );
-
-
---A1L193 is Equal4~2
-A1L193 = (!A1L54 & (!A1L58 & (!A1L62 & !A1L66)));
-
-
---A1L194 is Equal4~3
-A1L194 = (!A1L70 & (A1L74 & !A1L78));
-
-
---A1L273 is Vactive~0
-A1L273 = ( A1L50 & ( A1L194 & ( ((A1L193 & (!A1L42 & A1L46))) # (Vactive) ) ) ) # ( !A1L50 & ( A1L194 & ( (Vactive & ((!A1L193) # ((!A1L42) # (!A1L46)))) ) ) ) # ( A1L50 & ( !A1L194 & ( Vactive ) ) ) # ( !A1L50 & ( !A1L194 & ( Vactive ) ) );
-
-
---A1L190 is Equal3~1
-A1L190 = ( !A1L22 & ( (!A1L34 & (!A1L10 & (!A1L14 & !A1L18))) ) );
-
-
---A1L196 is Equal7~1
-A1L196 = ( A1L78 & ( (!A1L62 & (A1L46 & (A1L70 & !A1L74))) ) );
-
-
---A1L228 is pixel_clk~0
-A1L228 = !A1L229Q;
-
-
---A1L240 is row[0]~0
-A1L240 = !row[0];
-
-
---A1L248 is row[4]~1
-A1L248 = !A1L82;
-
-
---A1L246 is row[3]~2
-A1L246 = !A1L86;
-
-
---A1L242 is row[1]~3
-A1L242 = !A1L90;
-
-
---A1L244 is row[2]~4
-A1L244 = !A1L94;
-
-
---A1L252 is row[6]~5
-A1L252 = !A1L98;
-
-
---A1L250 is row[5]~6
-A1L250 = !A1L102;
-
-
---A1L260 is row[10]~7
-A1L260 = !A1L106;
-
-
---A1L258 is row[9]~8
-A1L258 = !A1L110;
-
-
---A1L256 is row[8]~9
-A1L256 = !A1L114;
-
-
---A1L254 is row[7]~10
-A1L254 = !A1L118;
-
-
---A1L170 is col[0]~0
-A1L170 = !col[0];
-
-
---A1L289 is ~VCC
-A1L289 = VCC;
-
-
---A1L288 is ~GND
-A1L288 = GND;
+--A1L24 is ~GND
+A1L24 = GND;
 
 

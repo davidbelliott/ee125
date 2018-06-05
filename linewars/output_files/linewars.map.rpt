@@ -1,6 +1,6 @@
 Analysis & Synthesis report for linewars
-Thu May 31 22:24:08 2018
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Tue Jun 05 16:29:26 2018
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
 ---------------------
@@ -13,13 +13,14 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Inverted Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |vga
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Equations
- 14. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: vga:vga
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Equations
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -42,29 +43,29 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                          ;
-+-------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status         ; Successful - Thu May 31 22:24:08 2018           ;
-; Quartus II 32-bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                       ; linewars                                        ;
-; Top-level Entity Name               ; vga                                             ;
-; Family                              ; Cyclone V                                       ;
-; Logic utilization (in ALMs)         ; N/A                                             ;
-; Total registers                     ; 46                                              ;
-; Total pins                          ; 21                                              ;
-; Total virtual pins                  ; 0                                               ;
-; Total block memory bits             ; 0                                               ;
-; Total DSP Blocks                    ; 0                                               ;
-; Total HSSI RX PCSs                  ; 0                                               ;
-; Total HSSI PMA RX Deserializers     ; 0                                               ;
-; Total HSSI PMA RX ATT Deserializers ; 0                                               ;
-; Total HSSI TX PCSs                  ; 0                                               ;
-; Total HSSI PMA TX Serializers       ; 0                                               ;
-; Total HSSI PMA TX ATT Serializers   ; 0                                               ;
-; Total PLLs                          ; 0                                               ;
-; Total DLLs                          ; 0                                               ;
-+-------------------------------------+-------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++-------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status         ; Successful - Tue Jun 05 16:29:26 2018      ;
+; Quartus II 64-Bit Version           ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name                       ; linewars                                   ;
+; Top-level Entity Name               ; linewars                                   ;
+; Family                              ; Cyclone V                                  ;
+; Logic utilization (in ALMs)         ; N/A                                        ;
+; Total registers                     ; 23                                         ;
+; Total pins                          ; 20                                         ;
+; Total virtual pins                  ; 0                                          ;
+; Total block memory bits             ; 0                                          ;
+; Total DSP Blocks                    ; 0                                          ;
+; Total HSSI RX PCSs                  ; 0                                          ;
+; Total HSSI PMA RX Deserializers     ; 0                                          ;
+; Total HSSI PMA RX ATT Deserializers ; 0                                          ;
+; Total HSSI TX PCSs                  ; 0                                          ;
+; Total HSSI PMA TX Serializers       ; 0                                          ;
+; Total HSSI PMA TX ATT Serializers   ; 0                                          ;
+; Total PLLs                          ; 0                                          ;
+; Total DLLs                          ; 0                                          ;
++-------------------------------------+--------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -73,7 +74,7 @@ applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CEBA4F23C7        ;                    ;
-; Top-level entity name                                                           ; vga                ; linewars           ;
+; Top-level entity name                                                           ; linewars           ; linewars           ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone IV GX      ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
@@ -165,38 +166,41 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                        ;
-+----------------------------------+-----------------+-----------------+------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------+---------+
-; vga.vhd                          ; yes             ; User VHDL File  ; D:/ee125/linewars/vga.vhd    ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                  ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+; linewars_package.vhd             ; yes             ; User VHDL File  ; C:/Users/ellio/Documents/ee_125/linewars/linewars_package.vhd ;         ;
+; vga.vhd                          ; yes             ; User VHDL File  ; C:/Users/ellio/Documents/ee_125/linewars/vga.vhd              ;         ;
+; linewars.vhd                     ; yes             ; User VHDL File  ; C:/Users/ellio/Documents/ee_125/linewars/linewars.vhd         ;         ;
+; switch_debouncer.vhd             ; yes             ; User VHDL File  ; C:/Users/ellio/Documents/ee_125/linewars/switch_debouncer.vhd ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 53         ;
-;                                             ;            ;
-; Combinational ALUT usage for logic          ; 90         ;
-;     -- 7 input functions                    ; 2          ;
-;     -- 6 input functions                    ; 13         ;
-;     -- 5 input functions                    ; 8          ;
-;     -- 4 input functions                    ; 6          ;
-;     -- <=3 input functions                  ; 61         ;
-;                                             ;            ;
-; Dedicated logic registers                   ; 46         ;
-;                                             ;            ;
-; I/O pins                                    ; 21         ;
-; Total DSP Blocks                            ; 0          ;
-; Maximum fan-out node                        ; Hsync~reg0 ;
-; Maximum fan-out                             ; 35         ;
-; Total fan-out                               ; 458        ;
-; Average fan-out                             ; 2.57       ;
-+---------------------------------------------+------------+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimate of Logic utilization (ALMs needed) ; 18            ;
+;                                             ;               ;
+; Combinational ALUT usage for logic          ; 31            ;
+;     -- 7 input functions                    ; 0             ;
+;     -- 6 input functions                    ; 5             ;
+;     -- 5 input functions                    ; 2             ;
+;     -- 4 input functions                    ; 3             ;
+;     -- <=3 input functions                  ; 21            ;
+;                                             ;               ;
+; Dedicated logic registers                   ; 23            ;
+;                                             ;               ;
+; I/O pins                                    ; 20            ;
+; Total DSP Blocks                            ; 0             ;
+; Maximum fan-out node                        ; vga:vga|Hsync ;
+; Maximum fan-out                             ; 13            ;
+; Total fan-out                               ; 179           ;
+; Average fan-out                             ; 1.90          ;
++---------------------------------------------+---------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -204,9 +208,36 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
-; |vga                       ; 90 (90)           ; 46 (46)      ; 0                 ; 0          ; 21   ; 0            ; |vga                ; work         ;
+; |linewars                  ; 31 (0)            ; 23 (0)       ; 0                 ; 0          ; 20   ; 0            ; |linewars           ;              ;
+;    |vga:vga|               ; 31 (31)           ; 23 (23)      ; 0                 ; 0          ; 0    ; 0            ; |linewars|vga:vga   ;              ;
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; vga:vga|col[0..9]                      ; Lost fanout        ;
+; vga:vga|row[0..8,10]                   ; Lost fanout        ;
+; vga:vga|Hactive                        ; Lost fanout        ;
+; vga:vga|Vactive                        ; Lost fanout        ;
+; vga:vga|row[9]                         ; Lost fanout        ;
+; Total Number of Removed Registers = 23 ;                    ;
++----------------------------------------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                           ;
++----------------+--------------------+---------------------------------------------------------------------------------+
+; Register name  ; Reason for Removal ; Registers Removed due to This Register                                          ;
++----------------+--------------------+---------------------------------------------------------------------------------+
+; vga:vga|col[9] ; Lost Fanouts       ; vga:vga|col[5], vga:vga|col[1], vga:vga|col[0], vga:vga|col[2], vga:vga|col[3], ;
+;                ;                    ; vga:vga|col[4], vga:vga|Hactive                                                 ;
+; vga:vga|row[4] ; Lost Fanouts       ; vga:vga|row[3], vga:vga|row[2], vga:vga|row[1], vga:vga|row[0], vga:vga|row[5], ;
+;                ;                    ; vga:vga|Vactive                                                                 ;
++----------------+--------------------+---------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -214,61 +245,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 46    ;
+; Total registers                              ; 23    ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 21    ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 21    ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------+
-; Inverted Register Statistics                      ;
-+-----------------------------------------+---------+
-; Inverted Register                       ; Fan out ;
-+-----------------------------------------+---------+
-; row[0]                                  ; 7       ;
-; row[4]                                  ; 4       ;
-; row[3]                                  ; 4       ;
-; row[1]                                  ; 4       ;
-; row[2]                                  ; 4       ;
-; row[6]                                  ; 4       ;
-; row[5]                                  ; 4       ;
-; row[10]                                 ; 3       ;
-; row[9]                                  ; 3       ;
-; row[8]                                  ; 3       ;
-; row[7]                                  ; 3       ;
-; Total number of inverted registers = 11 ;         ;
-+-----------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |linewars|vga:vga|Hcount[9] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |linewars|vga:vga|Vcount[9] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |vga|Hcount[9]             ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |vga|Vcount[9]             ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 15 LEs               ; 0 LEs                  ; No         ; |vga|R                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |vga ;
-+----------------+-------+--------------------------------------------+
-; Parameter Name ; Value ; Type                                       ;
-+----------------+-------+--------------------------------------------+
-; Ha             ; 96    ; Signed Integer                             ;
-; Hb             ; 144   ; Signed Integer                             ;
-; Hc             ; 784   ; Signed Integer                             ;
-; Hd             ; 800   ; Signed Integer                             ;
-; Va             ; 2     ; Signed Integer                             ;
-; Vb             ; 35    ; Signed Integer                             ;
-; Vc             ; 515   ; Signed Integer                             ;
-; Vd             ; 525   ; Signed Integer                             ;
-+----------------+-------+--------------------------------------------+
++------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vga:vga ;
++----------------+-------+-----------------------------+
+; Parameter Name ; Value ; Type                        ;
++----------------+-------+-----------------------------+
+; ha             ; 96    ; Signed Integer              ;
+; hb             ; 144   ; Signed Integer              ;
+; hc             ; 784   ; Signed Integer              ;
+; hd             ; 800   ; Signed Integer              ;
+; va             ; 2     ; Signed Integer              ;
+; vb             ; 35    ; Signed Integer              ;
+; vc             ; 515   ; Signed Integer              ;
+; vd             ; 525   ; Signed Integer              ;
++----------------+-------+-----------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -284,35 +294,66 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------------------+
 ; Analysis & Synthesis Equations ;
 +--------------------------------+
-The equations can be found in D:/ee125/linewars/output_files/linewars.map.eqn.
+The equations can be found in C:/Users/ellio/Documents/ee_125/linewars/output_files/linewars.map.eqn.
 
 
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Analysis & Synthesis
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu May 31 22:24:06 2018
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Tue Jun 05 16:29:24 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off linewars -c linewars
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 0 entities, in source file linewars_package.vhd
+    Info (12022): Found design unit 1: linewars_package
 Info (12021): Found 2 design units, including 1 entities, in source file vga.vhd
     Info (12022): Found design unit 1: vga-vga
     Info (12023): Found entity 1: vga
-Info (12127): Elaborating entity "vga" for the top level hierarchy
+Info (12021): Found 2 design units, including 1 entities, in source file linewars.vhd
+    Info (12022): Found design unit 1: linewars-linewars
+    Info (12023): Found entity 1: linewars
+Info (12021): Found 2 design units, including 1 entities, in source file switch_debouncer.vhd
+    Info (12022): Found design unit 1: switch_debouncer-switch_debouncer
+    Info (12023): Found entity 1: switch_debouncer
+Info (12127): Elaborating entity "linewars" for the top level hierarchy
+Info (12129): Elaborating entity "vga" using architecture "A:vga" for hierarchy "vga:vga"
+Warning (10541): VHDL Signal Declaration warning at vga.vhd(26): used implicit default value for signal "game_clk" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10492): VHDL Process Statement warning at vga.vhd(34): signal "rst" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at vga.vhd(55): signal "rst" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at vga.vhd(149): signal "display_buffer" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12129): Elaborating entity "switch_debouncer" using architecture "A:switch_debouncer" for hierarchy "switch_debouncer:p1l_debouncer"
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "nblanck" is stuck at VCC
-    Warning (13410): Pin "nsync" is stuck at GND
+    Warning (13410): Pin "R[0]" is stuck at GND
+    Warning (13410): Pin "R[1]" is stuck at GND
+    Warning (13410): Pin "R[2]" is stuck at GND
+    Warning (13410): Pin "R[3]" is stuck at GND
+    Warning (13410): Pin "G[0]" is stuck at GND
+    Warning (13410): Pin "G[1]" is stuck at GND
+    Warning (13410): Pin "G[2]" is stuck at GND
+    Warning (13410): Pin "G[3]" is stuck at GND
+    Warning (13410): Pin "B[0]" is stuck at GND
+    Warning (13410): Pin "B[1]" is stuck at GND
+    Warning (13410): Pin "B[2]" is stuck at GND
+    Warning (13410): Pin "B[3]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 23 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 131 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 110 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 436 megabytes
-    Info: Processing ended: Thu May 31 22:24:08 2018
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "rst"
+    Warning (15610): No output dependent on input pin "p1lswitch"
+    Warning (15610): No output dependent on input pin "p1rswitch"
+    Warning (15610): No output dependent on input pin "p2lswitch"
+    Warning (15610): No output dependent on input pin "p2rswitch"
+Info (21057): Implemented 71 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 14 output pins
+    Info (21061): Implemented 51 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 4705 megabytes
+    Info: Processing ended: Tue Jun 05 16:29:26 2018
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

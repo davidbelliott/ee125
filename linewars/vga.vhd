@@ -27,20 +27,7 @@ ARCHITECTURE vga OF vga IS
 	signal display_buffer: memory_t := (others => (others => '0'));
 	shared VARIABLE p1d: direction_t := 'D';
 BEGIN
-	PROCESS(clk)
-		CONSTANT TICK_COUNTDOWN_MAX: integer := CLOCK_FREQ / GAME_FREQ / 2;
-		VARIABLE tick_countdown: integer range 0 to TICK_COUNTDOWN_MAX := TICK_COUNTDOWN_MAX;
-	BEGIN
-		if rst = '0' then
-			tick_countdown := TICK_COUNTDOWN_MAX;
-		elsif(rising_edge(clk)) then
-			tick_countdown := tick_countdown - 1;
-			if(tick_countdown = 0) then
-				tick_countdown := TICK_COUNTDOWN_MAX;
-				game_clk <= not game_clk;
-			end if;
-		end if;
-	END PROCESS;
+
 	
 	PROCESS(p1lswitch)
 	BEGIN
@@ -59,6 +46,8 @@ BEGIN
 		end if;
 	END PROCESS;
 	
+	
+	
 	PROCESS(game_clk)
 	VARIABLE p1x: integer range 0 to BOARD_W - 1 := 3;
 	VARIABLE p1y: integer range 0 to BOARD_H - 1 := 3;
@@ -66,7 +55,7 @@ BEGIN
 		if rst = '0' then
 			p1x := 3;
 			p1y := 3;
-			display_buffer <= (others => (others => '0'));
+			--display_buffer <= (others => (others => '0'));
 		elsif(rising_edge(game_clk)) then
 			if(p1d = 'U') then
 				p1y := p1y - 1;
@@ -77,7 +66,7 @@ BEGIN
 			elsif(p1d = 'R') then
 				p1x := p1x + 1;
 			end if;
-			display_buffer(p1y)(p1x) <= '1';
+			display_buffer(1)(1) <= '1';
 		end if;
 	END PROCESS;
 
