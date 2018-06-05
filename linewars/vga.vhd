@@ -17,18 +17,28 @@ ENTITY vga IS
 	PORT (
 		clk: IN STD_LOGIC; --50MHz in our board
 		Hsync, Vsync: BUFFER STD_LOGIC;
-		R, G, B: OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-		display_buffer : IN t_buffer);
+		R, G, B: OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
 END vga;
 ----------------------------------------------------------
 ARCHITECTURE vga OF vga IS
 	SIGNAL Hactive, Vactive, dena: STD_LOGIC;
 	SIGNAL pixel_clk: STD_LOGIC;
+	shared variable display_buffer: t_buffer := ((others=> (others=>'0')));
 BEGIN
+	PROCESS (clk)
+	BEGIN
+		FOR i in 0 to (BOARD_H - 1) / 2 LOOP
+			FOR j in 0 to (BOARD_W - 1) / 2 LOOP
+				display_buffer(i*2)(j*2) := '1'
+			END LOOP;
+		END LOOP;
+	END PROCESS;
+	
 	-------------------------------------------------------
 	--Part 1: CONTROL GENERATOR
 	-------------------------------------------------------
 	--Create pixel clock (50MHz->25MHz):
+	
 	PROCESS (clk)
 	BEGIN
 	IF (clk'EVENT AND clk='1') THEN
@@ -100,52 +110,17 @@ BEGIN
 		END IF;
 		
 		IF (dena='1') THEN
-			IF (display_buffer(row / GAME_PIXEL_H)(col / GAME_PIXEL_W) = 1) THEN
+			IF (display_buffer(row / GAME_PIXEL_H)(col / GAME_PIXEL_W) = '1') THEN
+				-- color if game pixel is on
 				R <= (OTHERS => '1');
 				G <= (OTHERS => '0');
 				B <= (OTHERS => '0');
 			ELSE
+				-- color if game pixel is off
 				R <= (OTHERS => '0');
 				G <= (OTHERS => '0');
 				B <= (OTHERS => '0');
 			END IF;
-			
---			IF (row=1) THEN
---				R <= (OTHERS => '1');
---				G <= (OTHERS => '0');
---				B <= (OTHERS => '0');
---			ELSIF (row>1 AND row<=100) THEN
---				R <= (OTHERS => '0');
---				G <= (OTHERS => '0');
---				B <= (OTHERS => '0');
---			ELSE 
---				R <= (OTHERS => '0');
---				G <= (OTHERS => '1');
---				B <= (OTHERS => '0');
---			END IF;
---			
---			IF (col=639) THEN
---				R <= (OTHERS => '1');
---				G <= (OTHERS => '1');
---				B <= (OTHERS => '0');
---			END IF;
---			IF (col=0) THEN
---				R <= (OTHERS => '1');
---				G <= (OTHERS => '1');
---				B <= (OTHERS => '0');
---			END IF;
---			
---			IF (row=0) THEN
---				R <= (OTHERS => '1');
---				G <= (OTHERS => '1');
---				B <= (OTHERS => '0');
---			END IF;
---			IF (row=479) THEN
---				R <= (OTHERS => '1');
---				G <= (OTHERS => '1');
---				B <= (OTHERS => '0');
---			END IF;
-			
 		ELSE
 			R <= (OTHERS => '0');
 			G <= (OTHERS => '0');
