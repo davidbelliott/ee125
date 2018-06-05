@@ -11,42 +11,76 @@ ENTITY vga IS
 		Va: INTEGER := 2; --Vpulse
 		Vb: INTEGER := 35; --Vpulse+VBP
 		Vc: INTEGER := 515; --Vpulse+VBP+Vactive
-		Vd: INTEGER := 525; --Vpulse+VBP+Vactive+VFP
-		GAME_PIXEL_W: INTEGER := 8;
-		GAME_PIXEL_H: INTEGER := 8);
+		Vd: INTEGER := 525); --Vpulse+VBP+Vactive+VFP
 	PORT (
 		clk: IN STD_LOGIC; --50MHz in our board
+		rst: IN STD_LOGIC;
 		Hsync, Vsync: BUFFER STD_LOGIC;
-		R, G, B: OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
+		R, G, B: OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+		p1lswitch: IN std_logic);
 END vga;
 ----------------------------------------------------------
 ARCHITECTURE vga OF vga IS
 	SIGNAL Hactive, Vactive, dena: STD_LOGIC;
 	SIGNAL pixel_clk: STD_LOGIC;
-	shared variable display_buffer: memory_t;
+	signal game_clk: std_logic;
+	signal display_buffer: memory_t := (others => (others => '0'));
+	shared VARIABLE p1d: direction_t := 'D';
 BEGIN
-	PROCESS (clk)
-	variable slow_clk: std_logic := '1';
-	variable count: integer range 0 to 50e6 - 1 := 0;
+	PROCESS(clk)
+		CONSTANT TICK_COUNTDOWN_MAX: integer := CLOCK_FREQ / GAME_FREQ / 2;
+		VARIABLE tick_countdown: integer range 0 to TICK_COUNTDOWN_MAX := TICK_COUNTDOWN_MAX;
 	BEGIN
-		if rising_edge(clk) then
-			count := count + 1;
-			if count = 50e6 - 1 then
-				count := 0;
-				if display_buffer(3)(3) = '0' then
-					display_buffer(3)(3) := '1';
-				else
-					display_buffer(3)(3) := '0';
-				end if;
+		if rst = '0' then
+			tick_countdown := TICK_COUNTDOWN_MAX;
+		elsif(rising_edge(clk)) then
+			tick_countdown := tick_countdown - 1;
+			if(tick_countdown = 0) then
+				tick_countdown := TICK_COUNTDOWN_MAX;
+				game_clk <= not game_clk;
 			end if;
-  		end if;
---		FOR i in 0 to (BOARD_H - 1) / 2 LOOP
---			FOR j in 0 to (BOARD_W - 1) / 2 LOOP
---				display_buffer(i*2)(j*2) := '1';
---			END LOOP;
---		END LOOP;
+		end if;
 	END PROCESS;
 	
+	PROCESS(p1lswitch)
+	BEGIN
+		if rst = '0' then
+			p1d := 'D';
+		elsif falling_edge(p1lswitch) then
+			if(p1d = 'U') then
+				p1d := 'L';
+			elsif(p1d = 'D') then
+				p1d := 'R';
+			elsif(p1d = 'L') then
+				p1d := 'D';
+			elsif(p1d = 'R') then
+				p1d := 'U';
+			end if;
+		end if;
+	END PROCESS;
+	
+	PROCESS(game_clk)
+	VARIABLE p1x: integer range 0 to BOARD_W - 1 := 3;
+	VARIABLE p1y: integer range 0 to BOARD_H - 1 := 3;
+	BEGIN
+		if rst = '0' then
+			p1x := 3;
+			p1y := 3;
+			display_buffer <= (others => (others => '0'));
+		elsif(rising_edge(game_clk)) then
+			if(p1d = 'U') then
+				p1y := p1y - 1;
+			elsif(p1d = 'D') then
+				p1y := p1y + 1;
+			elsif(p1d = 'L') then
+				p1x := p1x - 1;
+			elsif(p1d = 'R') then
+				p1x := p1x + 1;
+			end if;
+			display_buffer(p1y)(p1x) <= '1';
+		end if;
+	END PROCESS;
+
 	-------------------------------------------------------
 	--Part 1: CONTROL GENERATOR
 	-------------------------------------------------------
@@ -123,7 +157,7 @@ BEGIN
 		END IF;
 		
 		IF (dena='1') THEN
-			IF (display_buffer(row / GAME_PIXEL_H)(col / GAME_PIXEL_W) = '1') THEN
+			IF (display_buffer(row / BLOCK_H)(col / BLOCK_W) = '1') THEN
 				-- color if game pixel is on
 				R <= (OTHERS => '1');
 				G <= (OTHERS => '0');
