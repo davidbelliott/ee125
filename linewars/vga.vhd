@@ -50,10 +50,12 @@ BEGIN
 	constant COUNTDOWN_MAX: integer := (CLOCK_FREQ / GAME_FREQ) / 2;
 	VARIABLE countdown: integer range 0 to COUNTDOWN_MAX := COUNTDOWN_MAX;
 	BEGIN
-		countdown := countdown - 1;
-		if countdown = 0 then
-			countdown := COUNTDOWN_MAX;
-			game_clk <= not game_clk;
+		if rising_edge(clk) then
+			countdown := countdown - 1;
+			if countdown = 0 then
+				countdown := COUNTDOWN_MAX;
+				game_clk <= not game_clk;
+			end if;
 		end if;
 	END PROCESS;
 	
