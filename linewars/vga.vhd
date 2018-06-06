@@ -17,19 +17,20 @@ ENTITY vga IS
 		rst: IN STD_LOGIC;
 		Hsync, Vsync: BUFFER STD_LOGIC;
 		R, G, B: OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-		p1lswitch: IN std_logic);
+		p1lswitch, p1rswitch, p2lswitch, p2rswitch: IN std_logic);
 END vga;
 ----------------------------------------------------------
 ARCHITECTURE vga OF vga IS
 	SIGNAL Hactive, Vactive, dena: STD_LOGIC;
 	SIGNAL pixel_clk: STD_LOGIC;
 	signal game_clk: std_logic;
-	signal display_buffer: memory_t := (others => (others => '0'));
+	signal p1_buffer: memory_t := (others => (others => '0'));
+	signal p2_buffer: memory_t := (others => (others => '0'));
 	shared variable p1d: direction_t := 'D';
-	shared variable p1lost: boolean := false;
+	shared variable p2d: direction_t := 'U';
+	shared variable p1lost: std_logic := '0';
+	shared variable p2lost: std_logic := '0';
 BEGIN
-
-	
 	PROCESS(p1lswitch)
 	BEGIN
 		if rst = '0' then
@@ -47,6 +48,57 @@ BEGIN
 		end if;
 	END PROCESS;
 	
+	PROCESS(p1rswitch)
+	BEGIN
+		if rst = '0' then
+			p1d := 'D';
+		elsif falling_edge(p1rswitch) then
+			if(p1d = 'U') then
+				p1d := 'R';
+			elsif(p1d = 'D') then
+				p1d := 'L';
+			elsif(p1d = 'L') then
+				p1d := 'U';
+			elsif(p1d = 'R') then
+				p1d := 'D';
+			end if;
+		end if;
+	END PROCESS;
+	
+	PROCESS(p2lswitch)
+	BEGIN
+		if rst = '0' then
+			p2d := 'D';
+		elsif falling_edge(p2lswitch) then
+			if(p2d = 'U') then
+				p2d := 'L';
+			elsif(p2d = 'D') then
+				p2d := 'R';
+			elsif(p2d = 'L') then
+				p2d := 'D';
+			elsif(p1d = 'R') then
+				p2d := 'U';
+			end if;
+		end if;
+	END PROCESS;
+	
+	PROCESS(p2rswitch)
+	BEGIN
+		if rst = '0' then
+			p2d := 'U';
+		elsif falling_edge(p2rswitch) then
+			if(p2d = 'U') then
+				p2d := 'R';
+			elsif(p2d = 'D') then
+				p2d := 'L';
+			elsif(p2d = 'L') then
+				p2d := 'U';
+			elsif(p2d = 'R') then
+				p2d := 'D';
+			end if;
+		end if;
+	END PROCESS;
+
 	PROCESS(clk)
 	constant COUNTDOWN_MAX: integer := (CLOCK_FREQ / GAME_FREQ) / 2;
 	VARIABLE countdown: integer range 0 to COUNTDOWN_MAX := COUNTDOWN_MAX;
@@ -60,15 +112,21 @@ BEGIN
 		end if;
 	END PROCESS;
 	
+	--player movement and collision
 	PROCESS(game_clk)
 	VARIABLE p1x: integer range 0 to BOARD_W - 1 := 3;
 	VARIABLE p1y: integer range 0 to BOARD_H - 1 := 3;
+	VARIABLE p2x: integer range 0 to BOARD_W - 1 := BOARD_W - 1 - 3;
+	VARIABLE p2y: integer range 0 to BOARD_H - 1 := BOARD_H - 1 - 3;
 	BEGIN
 		if rst = '0' then
 			p1x := 3;
 			p1y := 3;
+			p2x := BOARD_W - 1 - 3;
+			p2y := BOARD_H - 1 - 3;
 			--display_buffer <= (others => (others => '0'));
 		elsif(rising_edge(game_clk)) then
+			--updating player 1's position
 			if(p1d = 'U') then
 				p1y := p1y - 1;
 			elsif(p1d = 'D') then
@@ -79,12 +137,31 @@ BEGIN
 				p1x := p1x + 1;
 			end if;
 			
-			--tile is already occupied
-			if(display_buffer(p1y)(p1x) = '1') then
-				p1lost := true;
+			--updating player 2's position
+			if(p2d = 'U') then
+				p2y := p2y - 2;
+			elsif(p2d = 'D') then
+				p2y := p2y + 2;
+			elsif(p2d = 'L') then
+				p2x := p2x - 2;
+			elsif(p2d = 'R') then
+				p2x := p2x + 2;
 			end if;
 			
-			display_buffer(p1y)(p1x) <= '1';
+			--collision detection for player 1
+			--tile is already occupied
+			if(p1_buffer(p1y)(p1x) = '1' or p2_buffer(p1y)(p1x) = '1') then
+				p1lost := '1';
+			end if;
+			--collision detection for player 2
+			--tile is already occupied
+			if(p1_buffer(p2y)(p2x) = '1' or p2_buffer(p2y)(p2x) = '1') then
+				p2lost := '1';
+			end if;
+			
+			--turn on pixel
+			p1_buffer(p1y)(p1x) <= '1';
+			p2_buffer(p2y)(p2x) <= '1';
 		end if;
 	END PROCESS;
 
@@ -164,22 +241,27 @@ BEGIN
 		END IF;
 		
 		IF (dena='1') THEN
-			IF (p1lost = true) THEN
+			IF (p1lost = '1') THEN
 				--p2's color
 				R <= (OTHERS => '0');
 				G <= (OTHERS => '0');
 				B <= (OTHERS => '1');
---			ELSIF (p2lost = true) THEN
---				--p1's color
---				R <= (OTHERS => '0');
---				G <= (OTHERS => '0');
---				B <= (OTHERS => '0');
+			ELSIF (p2lost = '1') THEN
+				--p1's color
+				R <= (OTHERS => '1');
+				G <= (OTHERS => '0');
+				B <= (OTHERS => '0');
 			ELSE	-- no one has won/lost, display game state
-				IF (display_buffer(row / BLOCK_H)(col / BLOCK_W) = '1') THEN
-					-- color if game pixel is on
+				IF (p1_buffer(row / BLOCK_H)(col / BLOCK_W) = '1') THEN
+					-- p1's color
 					R <= (OTHERS => '1');
 					G <= (OTHERS => '0');
 					B <= (OTHERS => '0');
+				ELSIF (p2_buffer(row / BLOCK_H)(col / BLOCK_W) = '1') THEN
+					-- p2's color 
+					R <= (OTHERS => '0');
+					G <= (OTHERS => '0');
+					B <= (OTHERS => '1');
 				ELSE
 					-- color if game pixel is off
 					R <= (OTHERS => '0');
