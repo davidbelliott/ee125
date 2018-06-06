@@ -2,260 +2,260 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'vga:vga|Hsync'
-Slack : -3.773
-TNS   : -60.228
-
-Type  : Slow 1100mV 85C Model Setup 'vga:vga|pixel_clk'
-Slack : -3.333
-TNS   : -56.869
-
-Type  : Slow 1100mV 85C Model Setup 'p1lswitch'
-Slack : -0.533
-TNS   : -1.842
+Type  : Slow 1100mV 85C Model Setup 'vga:vga|game_clk'
+Slack : -7.455
+TNS   : -3148.045
 
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : 0.232
-TNS   : 0.000
+Slack : -5.525
+TNS   : -116.527
+
+Type  : Slow 1100mV 85C Model Setup 'vga:vga|Hsync'
+Slack : -3.912
+TNS   : -70.629
+
+Type  : Slow 1100mV 85C Model Setup 'vga:vga|pixel_clk'
+Slack : -3.738
+TNS   : -59.902
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : -0.749
-TNS   : -0.749
+Slack : -1.391
+TNS   : -2.307
 
 Type  : Slow 1100mV 85C Model Hold 'vga:vga|pixel_clk'
-Slack : -0.283
-TNS   : -0.283
-
-Type  : Slow 1100mV 85C Model Hold 'p1lswitch'
-Slack : 0.131
-TNS   : 0.000
+Slack : -0.039
+TNS   : -0.039
 
 Type  : Slow 1100mV 85C Model Hold 'vga:vga|Hsync'
-Slack : 0.358
+Slack : 0.323
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'vga:vga|game_clk'
+Slack : 0.440
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'vga:vga|Hsync'
-Slack : -0.879
-TNS   : -9.645
+Slack : -1.211
+TNS   : -15.387
 
 Type  : Slow 1100mV 85C Model Recovery 'vga:vga|pixel_clk'
-Slack : 0.422
-TNS   : 0.000
+Slack : -0.005
+TNS   : -0.020
 
 Type  : Slow 1100mV 85C Model Removal 'vga:vga|pixel_clk'
-Slack : -0.335
-TNS   : -3.640
-
-Type  : Slow 1100mV 85C Model Removal 'vga:vga|Hsync'
-Slack : 1.037
+Slack : 0.089
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'vga:vga|Hsync'
-Slack : -0.538
-TNS   : -18.836
+Type  : Slow 1100mV 85C Model Removal 'vga:vga|Hsync'
+Slack : 1.285
+TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'vga:vga|pixel_clk'
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'vga:vga|game_clk'
 Slack : -0.538
-TNS   : -18.354
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'p1lswitch'
-Slack : -0.538
-TNS   : -3.322
+TNS   : -501.344
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
 Slack : -0.538
-TNS   : -0.909
+TNS   : -26.669
 
-Type  : Slow 1100mV 0C Model Setup 'vga:vga|Hsync'
-Slack : -3.807
-TNS   : -61.252
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'vga:vga|Hsync'
+Slack : -0.538
+TNS   : -21.524
 
-Type  : Slow 1100mV 0C Model Setup 'vga:vga|pixel_clk'
-Slack : -3.532
-TNS   : -58.466
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'vga:vga|pixel_clk'
+Slack : -0.538
+TNS   : -17.132
 
-Type  : Slow 1100mV 0C Model Setup 'p1lswitch'
-Slack : -0.550
-TNS   : -1.889
+Type  : Slow 1100mV 0C Model Setup 'vga:vga|game_clk'
+Slack : -7.456
+TNS   : -3119.019
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : 0.139
-TNS   : 0.000
+Slack : -5.732
+TNS   : -116.793
+
+Type  : Slow 1100mV 0C Model Setup 'vga:vga|Hsync'
+Slack : -3.909
+TNS   : -71.081
+
+Type  : Slow 1100mV 0C Model Setup 'vga:vga|pixel_clk'
+Slack : -3.828
+TNS   : -61.621
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : -0.617
-TNS   : -0.617
+Slack : -1.345
+TNS   : -2.225
 
 Type  : Slow 1100mV 0C Model Hold 'vga:vga|pixel_clk'
-Slack : -0.175
-TNS   : -0.175
-
-Type  : Slow 1100mV 0C Model Hold 'p1lswitch'
-Slack : 0.159
-TNS   : 0.000
+Slack : -0.007
+TNS   : -0.007
 
 Type  : Slow 1100mV 0C Model Hold 'vga:vga|Hsync'
-Slack : 0.349
+Slack : 0.321
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'vga:vga|game_clk'
+Slack : 0.486
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'vga:vga|Hsync'
-Slack : -0.863
-TNS   : -9.471
+Slack : -1.168
+TNS   : -14.625
 
 Type  : Slow 1100mV 0C Model Recovery 'vga:vga|pixel_clk'
-Slack : 0.396
+Slack : 0.003
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'vga:vga|pixel_clk'
-Slack : -0.255
-TNS   : -2.755
-
-Type  : Slow 1100mV 0C Model Removal 'vga:vga|Hsync'
-Slack : 1.021
+Slack : 0.100
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'vga:vga|Hsync'
-Slack : -0.538
-TNS   : -18.254
+Type  : Slow 1100mV 0C Model Removal 'vga:vga|Hsync'
+Slack : 1.276
+TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'vga:vga|pixel_clk'
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'vga:vga|game_clk'
 Slack : -0.538
-TNS   : -18.070
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'p1lswitch'
-Slack : -0.538
-TNS   : -3.260
+TNS   : -493.651
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
 Slack : -0.538
-TNS   : -0.919
+TNS   : -27.325
 
-Type  : Fast 1100mV 85C Model Setup 'vga:vga|Hsync'
-Slack : -1.098
-TNS   : -16.241
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'vga:vga|Hsync'
+Slack : -0.538
+TNS   : -20.808
 
-Type  : Fast 1100mV 85C Model Setup 'vga:vga|pixel_clk'
-Slack : -1.003
-TNS   : -15.624
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'vga:vga|pixel_clk'
+Slack : -0.538
+TNS   : -17.089
+
+Type  : Fast 1100mV 85C Model Setup 'vga:vga|game_clk'
+Slack : -3.300
+TNS   : -1401.125
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : 0.350
-TNS   : 0.000
+Slack : -2.634
+TNS   : -45.613
 
-Type  : Fast 1100mV 85C Model Setup 'p1lswitch'
-Slack : 0.368
-TNS   : 0.000
+Type  : Fast 1100mV 85C Model Setup 'vga:vga|pixel_clk'
+Slack : -1.187
+TNS   : -16.978
+
+Type  : Fast 1100mV 85C Model Setup 'vga:vga|Hsync'
+Slack : -1.140
+TNS   : -20.442
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : -0.353
-TNS   : -0.353
+Slack : -0.627
+TNS   : -0.934
 
 Type  : Fast 1100mV 85C Model Hold 'vga:vga|pixel_clk'
-Slack : -0.128
-TNS   : -0.128
+Slack : -0.077
+TNS   : -0.077
 
-Type  : Fast 1100mV 85C Model Hold 'p1lswitch'
-Slack : 0.148
+Type  : Fast 1100mV 85C Model Hold 'vga:vga|game_clk'
+Slack : 0.027
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'vga:vga|Hsync'
-Slack : 0.208
+Slack : 0.191
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'vga:vga|Hsync'
-Slack : -0.229
-TNS   : -2.515
+Slack : -0.366
+TNS   : -4.741
 
 Type  : Fast 1100mV 85C Model Recovery 'vga:vga|pixel_clk'
-Slack : 0.415
+Slack : 0.233
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'vga:vga|pixel_clk'
-Slack : -0.169
-TNS   : -1.851
+Slack : 0.001
+TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'vga:vga|Hsync'
-Slack : 0.785
+Slack : 0.888
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.363
-TNS   : -0.374
+Slack : -0.430
+TNS   : -4.022
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'p1lswitch'
-Slack : -0.244
-TNS   : -1.029
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'vga:vga|game_clk'
+Slack : 0.019
+TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'vga:vga|Hsync'
-Slack : 0.056
+Slack : 0.026
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'vga:vga|pixel_clk'
-Slack : 0.084
+Slack : 0.126
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Setup 'vga:vga|Hsync'
-Slack : -0.969
-TNS   : -14.153
-
-Type  : Fast 1100mV 0C Model Setup 'vga:vga|pixel_clk'
-Slack : -0.903
-TNS   : -13.584
+Type  : Fast 1100mV 0C Model Setup 'vga:vga|game_clk'
+Slack : -2.947
+TNS   : -1210.406
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : 0.313
-TNS   : 0.000
+Slack : -2.523
+TNS   : -40.766
 
-Type  : Fast 1100mV 0C Model Setup 'p1lswitch'
-Slack : 0.402
-TNS   : 0.000
+Type  : Fast 1100mV 0C Model Setup 'vga:vga|pixel_clk'
+Slack : -1.073
+TNS   : -15.143
+
+Type  : Fast 1100mV 0C Model Setup 'vga:vga|Hsync'
+Slack : -1.000
+TNS   : -17.675
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : -0.294
-TNS   : -0.294
+Slack : -0.556
+TNS   : -0.830
 
 Type  : Fast 1100mV 0C Model Hold 'vga:vga|pixel_clk'
-Slack : -0.082
-TNS   : -0.082
+Slack : -0.056
+TNS   : -0.056
 
-Type  : Fast 1100mV 0C Model Hold 'p1lswitch'
-Slack : 0.150
+Type  : Fast 1100mV 0C Model Hold 'vga:vga|game_clk'
+Slack : 0.066
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'vga:vga|Hsync'
-Slack : 0.193
+Slack : 0.178
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'vga:vga|Hsync'
-Slack : -0.180
-TNS   : -1.974
+Slack : -0.293
+TNS   : -3.793
 
 Type  : Fast 1100mV 0C Model Recovery 'vga:vga|pixel_clk'
-Slack : 0.400
+Slack : 0.244
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'vga:vga|pixel_clk'
-Slack : -0.136
-TNS   : -1.483
+Slack : 0.006
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'vga:vga|Hsync'
-Slack : 0.758
+Slack : 0.857
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.376
-TNS   : -0.409
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'p1lswitch'
-Slack : -0.254
-TNS   : -1.077
+Slack : -0.445
+TNS   : -4.134
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'vga:vga|Hsync'
-Slack : 0.076
+Slack : 0.049
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'vga:vga|game_clk'
+Slack : 0.064
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'vga:vga|pixel_clk'
-Slack : 0.092
+Slack : 0.128
 TNS   : 0.000
 
 ------------------------------------------------------------
