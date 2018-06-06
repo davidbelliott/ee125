@@ -25,7 +25,8 @@ ARCHITECTURE vga OF vga IS
 	SIGNAL pixel_clk: STD_LOGIC;
 	signal game_clk: std_logic;
 	signal display_buffer: memory_t := (others => (others => '0'));
-	shared VARIABLE p1d: direction_t := 'D';
+	shared variable p1d: direction_t := 'D';
+	shared variable p1lost: boolean := false;
 BEGIN
 
 	
@@ -77,6 +78,12 @@ BEGIN
 			elsif(p1d = 'R') then
 				p1x := p1x + 1;
 			end if;
+			
+			--tile is already occupied
+			if(display_buffer(p1y)(p1x) = '1') then
+				p1lost := true;
+			end if;
+			
 			display_buffer(p1y)(p1x) <= '1';
 		end if;
 	END PROCESS;
@@ -157,17 +164,30 @@ BEGIN
 		END IF;
 		
 		IF (dena='1') THEN
-			IF (display_buffer(row / BLOCK_H)(col / BLOCK_W) = '1') THEN
-				-- color if game pixel is on
-				R <= (OTHERS => '1');
-				G <= (OTHERS => '0');
-				B <= (OTHERS => '0');
-			ELSE
-				-- color if game pixel is off
+			IF (p1lost = true) THEN
+				--p2's color
 				R <= (OTHERS => '0');
 				G <= (OTHERS => '0');
-				B <= (OTHERS => '0');
+				B <= (OTHERS => '1');
+--			ELSIF (p2lost = true) THEN
+--				--p1's color
+--				R <= (OTHERS => '0');
+--				G <= (OTHERS => '0');
+--				B <= (OTHERS => '0');
+			ELSE	-- no one has won/lost, display game state
+				IF (display_buffer(row / BLOCK_H)(col / BLOCK_W) = '1') THEN
+					-- color if game pixel is on
+					R <= (OTHERS => '1');
+					G <= (OTHERS => '0');
+					B <= (OTHERS => '0');
+				ELSE
+					-- color if game pixel is off
+					R <= (OTHERS => '0');
+					G <= (OTHERS => '0');
+					B <= (OTHERS => '0');
+				END IF;
 			END IF;
+			
 		ELSE
 			R <= (OTHERS => '0');
 			G <= (OTHERS => '0');
