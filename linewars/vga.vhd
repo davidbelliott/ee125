@@ -1,33 +1,33 @@
-LIBRARY ieee;
-USE ieee.std_logic_1164.all;
-USE work.linewars_package.all;
+library ieee;
+use ieee.std_logic_1164.all;
+use work.linewars_package.all;
 ----------------------------------------------------------
-ENTITY vga IS
-	GENERIC (
-		Ha: INTEGER := 96; --Hpulse
-		Hb: INTEGER := 144; --Hpulse+HBP
-		Hc: INTEGER := 784; --Hpulse+HBP+Hactive
-		Hd: INTEGER := 800; --Hpulse+HBP+Hactive+HFP
-		Va: INTEGER := 2; --Vpulse
-		Vb: INTEGER := 35; --Vpulse+VBP
-		Vc: INTEGER := 515; --Vpulse+VBP+Vactive
-		Vd: INTEGER := 525); --Vpulse+VBP+Vactive+VFP
-	PORT (
-		clk: IN STD_LOGIC; --50MHz in our board
-		rst: IN STD_LOGIC;
-		Hsync, Vsync: BUFFER STD_LOGIC;
-		R, G, B: OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-		p1lswitch, p1rswitch, p2lswitch, p2rswitch: IN std_logic);
-END vga;
+entity vga is
+	generic (
+		Ha: integer := 96; --Hpulse
+		Hb: integer := 144; --Hpulse+HBP
+		Hc: integer := 784; --Hpulse+HBP+Hactive
+		Hd: integer := 800; --Hpulse+HBP+Hactive+HFP
+		Va: integer := 2; --Vpulse
+		Vb: integer := 35; --Vpulse+VBP
+		Vc: integer := 515; --Vpulse+VBP+Vactive
+		Vd: integer := 525); --Vpulse+VBP+Vactive+VFP
+	port (
+		clk: in std_logic; --50MHz in our board
+		rst: in std_logic;
+		Hsync, Vsync: buffer std_logic;
+		R, G, B: out std_logic_vector(3 downto 0);
+		p1lswitch, p1rswitch, p2lswitch, p2rswitch: in std_logic_vector);
+end vga;
 ----------------------------------------------------------
-ARCHITECTURE vga OF vga IS
-	SIGNAL Hactive, Vactive, dena: STD_LOGIC;
-	SIGNAL pixel_clk: STD_LOGIC;
+architecture vga of vga is
+	signal Hactive, Vactive, dena: std_logic;
+	signal pixel_clk: std_logic;
 	signal game_clk: std_logic;
 	shared variable p1_buffer: memory_t := (others => (others => '0'));
 	shared variable p2_buffer: memory_t := (others => (others => '0'));
-	shared variable p1d: direction_t := 'D';
-	shared variable p2d: direction_t := 'U';
+	shared variable p1d: direction_t := 'd';
+	shared variable p2d: direction_t := 'u';
 	shared variable p1lost: std_logic := '0';
 	shared variable p2lost: std_logic := '0';
 	signal p1l_down: std_logic := '0';
@@ -35,10 +35,10 @@ ARCHITECTURE vga OF vga IS
 	signal p2l_down: std_logic := '0';
 	signal p2r_down: std_logic := '0';
 	signal paused: std_logic := '1';
-BEGIN
-
-	PROCESS(clk)
-	BEGIN
+begin
+    --player 1 button presses
+	process(clk)
+	begin
 		if rst = '0' then
 			p1d := 'D';
 			paused <= '1';
@@ -78,10 +78,11 @@ BEGIN
 				p1r_down <= '0';
 			end if;
 		end if;
-	END PROCESS;
+	end process;
 	
-	PROCESS(clk)
-	BEGIN
+    --player 2 button presses
+	process(clk)
+	begin
 		if rst = '0' then
 			p2d := 'U';
 		elsif rising_edge(clk) then
@@ -118,12 +119,13 @@ BEGIN
 				p2r_down <= '0';
 			end if;
 		end if;
-	END PROCESS;
+	end process;
 	
-	PROCESS(clk)
+    --game clock generation
+	process(clk)
 	constant COUNTDOWN_MAX: integer := (CLOCK_FREQ / GAME_FREQ) / 2;
-	VARIABLE countdown: integer range 0 to COUNTDOWN_MAX := COUNTDOWN_MAX;
-	BEGIN
+	variable countdown: integer range 0 to COUNTDOWN_MAX := COUNTDOWN_MAX;
+	begin
 		if rising_edge(clk) then
 			countdown := countdown - 1;
 			if countdown = 0 then
@@ -131,17 +133,17 @@ BEGIN
 				game_clk <= not game_clk;
 			end if;
 		end if;
-	END PROCESS;
+	end process;
 	
 	--player movement and collision
-	PROCESS(game_clk)
-	VARIABLE p1x: integer range 0 to BOARD_W - 1 := 3;
-	VARIABLE p1y: integer range 0 to BOARD_H - 1 := 3;
-	VARIABLE p2x: integer range 0 to BOARD_W - 1 := BOARD_W - 1 - 3;
-	VARIABLE p2y: integer range 0 to BOARD_H - 1 := BOARD_H - 1 - 3;
+	process(game_clk)
+	variable p1x: integer range 0 to BOARD_W - 1 := 3;
+	variable p1y: integer range 0 to BOARD_H - 1 := 3;
+	variable p2x: integer range 0 to BOARD_W - 1 := BOARD_W - 1 - 3;
+	variable p2y: integer range 0 to BOARD_H - 1 := BOARD_H - 1 - 3;
 	variable row: integer range 0 to BOARD_H - 1;
 	variable col: integer range 0 to BOARD_W - 1;
-	BEGIN
+	begin
 		if rst = '0' then
 			p1x := 3;
 			p1y := 3;
@@ -151,20 +153,6 @@ BEGIN
 			p2lost := '0';
 			p1_buffer := (others => (others => '0'));
 			p2_buffer := (others => (others => '0'));
---			if rising_edge(game_clk) then
---				p1_buffer(row)(col) <= '0';
---				p2_buffer(row)(col) <= '0';
---				if col = BOARD_W - 1 then
---					col := 0;
---					if row = BOARD_H - 1 then 
---						row := 0;
---					else
---						row := row + 1;
---					end if;
---				else
---					col := col + 1;
---				end if;
---			end if;
 		elsif(rising_edge(game_clk)) then
 			if paused = '0' and p1lost = '0' and p2lost = '0' then
 				--updating player 1's position
@@ -194,6 +182,7 @@ BEGIN
 				if(p1_buffer(p1y)(p1x) = '1' or p2_buffer(p1y)(p1x) = '1') or p1y < 0 or p1y > BOARD_H - 1 or p1x < 0 or p1x > BOARD_W - 1 then
 					p1lost := '1';
 				end if;
+                
 				--collision detection for player 2
 				--tile is already occupied
 				if(p1_buffer(p2y)(p2x) = '1' or p2_buffer(p2y)(p2x) = '1') or p2y < 0 or p2y > BOARD_H - 1 or p2x < 0 or p2x > BOARD_W - 1 then
@@ -205,118 +194,118 @@ BEGIN
 			p2_buffer(p2y)(p2x) := '1';
 		end if;
 
-	END PROCESS;
+	end process;
 
 	-------------------------------------------------------
 	--Part 1: CONTROL GENERATOR
 	-------------------------------------------------------
 	--Create pixel clock (50MHz->25MHz):
 	
-	PROCESS (clk)
-	BEGIN
-	IF (clk'EVENT AND clk='1') THEN
-		pixel_clk <= NOT pixel_clk;
-	END IF;
-	END PROCESS;
+	process (clk)
+	begin
+	if (clk'event and clk='1') then
+		pixel_clk <= not pixel_clk;
+	end if;
+	end process;
 	--Horizontal signals generation:
-	PROCESS (pixel_clk)
-		VARIABLE Hcount: INTEGER RANGE 0 TO Hd;
-	BEGIN
-	IF (pixel_clk'EVENT AND pixel_clk='1') THEN
+	process (pixel_clk)
+		variable hcount: integer range 0 to Hd;
+	begin
+	if (pixel_clk'event and pixel_clk='1') then
 		Hcount := Hcount + 1;
-		IF (Hcount=Ha) THEN
+		if (Hcount=Ha) then
 			Hsync <= '1';
-		ELSIF (Hcount=Hb) THEN
+		elsif (Hcount=Hb) then
 			Hactive <= '1';
-		ELSIF (Hcount=Hc) THEN
+		elsif (Hcount=Hc) then
 			Hactive <= '0';
-		ELSIF (Hcount=Hd) THEN
+		elsif (Hcount=Hd) then
 			Hsync <= '0';
 			Hcount := 0;
-		END IF;
-	END IF;
+		end if;
+	end if;
 
-	END PROCESS;
+	end process;
 	--Vertical signals generation:
-	PROCESS (Hsync)
-		VARIABLE Vcount: INTEGER RANGE 0 TO Vd;
-	BEGIN
-		IF (Hsync'EVENT AND Hsync='0') THEN
+	process (Hsync)
+		variable Vcount: integer range 0 to Vd;
+	begin
+		if (Hsync'event and Hsync='0') then
 			Vcount := Vcount + 1;
-		IF (Vcount=Va) THEN
+		if (Vcount=Va) then
 			Vsync <= '1';
-		ELSIF (Vcount=Vb) THEN
+		elsif (Vcount=Vb) then
 			Vactive <= '1';
-		ELSIF (Vcount=Vc) THEN
+		elsif (Vcount=Vc) then
 			Vactive <= '0';
-		ELSIF (Vcount=Vd) THEN
+		elsif (Vcount=Vd) then
 			Vsync <= '0';
 			Vcount := 0;
-		END IF;
-		END IF;
-	END PROCESS;
+		end if;
+		end if;
+	end process;
 	---Display enable generation:
-	dena <= Hactive AND Vactive;
+	dena <= Hactive and Vactive;
 	-------------------------------------------------------
 	--Part 2: IMAGE GENERATOR
 	-------------------------------------------------------
-	PROCESS (Hsync, Vsync, Vactive, dena, pixel_clk)
-		VARIABLE row: INTEGER RANGE -1 TO Vc - 1;
-		VARIABLE col: INTEGER RANGE 0 TO Hc;
-	BEGIN
-		-- row updating
-		IF (Vsync='0') THEN
+	process (Hsync, Vsync, Vactive, dena, pixel_clk)
+		variable row: integer range -1 to Vc - 1;
+		variable col: integer range 0 to Hc;
+	begin
+		--row updating
+		if (Vsync='0') then
 			row := -1;
-		ELSIF (Hsync'EVENT AND Hsync='1') THEN
-			IF (Vactive='1') THEN
+		elsif (Hsync'event and Hsync='1') then
+			if (Vactive='1') then
 				row := row + 1;
-			END IF;
-		END IF;
+			end if;
+		end if;
 		
-		-- col updating
-		IF (Hsync='0') THEN
+		--col updating
+		if (Hsync='0') then
 			col := 0;
-		ELSIF (pixel_clk'EVENT AND pixel_clk='1') THEN
-			IF (Hactive='1') THEN
+		elsif (pixel_clk'event and pixel_clk='1') then
+			if (Hactive='1') then
 				col := col + 1;
-			END IF;
-		END IF;
+			end if;
+		end if;
 		
-		IF (dena='1') THEN
-			IF (p1lost = '1') THEN
+		if (dena='1') then
+			if (p1lost = '1') then
 				--p2's color
-				R <= (OTHERS => '0');
-				G <= (OTHERS => '1');
-				B <= (OTHERS => '1');
-			ELSIF (p2lost = '1') THEN
+				r <= (others => '0');
+				g <= (others => '1');
+				b <= (others => '1');
+			elsif (p2lost = '1') then
 				--p1's color
-				R <= (OTHERS => '1');
-				G <= (OTHERS => '0');
-				B <= (OTHERS => '1');
-			ELSE	-- no one has won/lost, display game state
-				IF (p1_buffer(row / BLOCK_H)(col / BLOCK_W) = '1') THEN
-					-- p1's color
-					R <= (OTHERS => '1');
-					G <= (OTHERS => '0');
-					B <= (OTHERS => '1');
-				ELSIF (p2_buffer(row / BLOCK_H)(col / BLOCK_W) = '1') THEN
-					-- p2's color 
-					R <= (OTHERS => '0');
-					G <= (OTHERS => '1');
-					B <= (OTHERS => '1');
-				ELSE
-					-- color if game pixel is off
-					R <= (OTHERS => '0');
-					G <= (OTHERS => '0');
-					B <= (OTHERS => '0');
-				END IF;
-			END IF;
+				r <= (others => '1');
+				g <= (others => '0');
+				b <= (others => '1');
+			else	--no one has won/lost, display game state
+				if (p1_buffer(row / BLOCK_H)(col / BLOCK_W) = '1') then
+					--p1's color
+					r <= (others => '1');
+					g <= (others => '0');
+					b <= (others => '1');
+				elsif (p2_buffer(row / BLOCK_H)(col / BLOCK_W) = '1') then
+					--p2's color 
+					r <= (others => '0');
+					g <= (others => '1');
+					b <= (others => '1');
+				else
+					--color if game pixel is off
+					r <= (others => '0');
+					g <= (others => '0');
+					b <= (others => '0');
+				end if;
+			end if;
 			
-		ELSE
-			R <= (OTHERS => '0');
-			G <= (OTHERS => '0');
-			B <= (OTHERS => '0');
-		END IF;
-	END PROCESS;
-END vga;
+		else
+			r <= (others => '0');
+			g <= (others => '0');
+			b <= (others => '0');
+		end if;
+	end process;
+end vga;
 ----------------------------------------------------------
